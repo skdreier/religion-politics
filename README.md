@@ -3,6 +3,8 @@
 
 ## Running scripts
 
+(Note: since you'll probably need to run your program in a tmux window in order to keep it from quitting out, open the tmux window before doing step 2; otherwise, the changes made to your class paths by add_dependencies_to_classpath.sh won't persist for your pig script.)
+
 1. Copy the repository up to your personal workbench
 
 2. Run the command `source add_dependencies_to_classpath.sh` (this will add the jar files in the lib directory to your classpath and pig_classpath)
