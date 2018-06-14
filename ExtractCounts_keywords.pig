@@ -9,7 +9,7 @@
 -- These first four lines are defaults and also help with memory (if you dont have them, sometimes the cluster kicks you out)
 
 SET default_parallel 100;
-SET mapreduce.map.memory.mb 20000;--8192;
+SET mapreduce.map.memory.mb 8192;
 SET mapred.max.map.failures.percent 10;
 --REGISTER lib/ia-porky-jar-with-dependencies.jar;
 REGISTER lib/porky-abbreviated.jar;
