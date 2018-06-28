@@ -107,3 +107,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Scala/sbt
+target/
