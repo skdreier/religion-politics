@@ -1,9 +1,12 @@
+package relpol.similarity
+
 import org.apache.spark.ml.Transformer
-import org.apache.spark.ml.feature.{RegexTokenizer, Tokenizer}
+import org.apache.spark.ml.feature.RegexTokenizer
+import org.apache.spark.ml.feature.Word2VecModel
 import org.apache.spark.sql._
 
 
-object SentenceSimilarity {  // i have no idea what to name this
+object SentenceSimilarity {
   def main(args: Array[String]) : Unit = {
     args match {
       case Array(action, warcPath, _*) => {
@@ -24,13 +27,14 @@ object SentenceSimilarity {  // i have no idea what to name this
     val pages = loadValidPages(spark, warcPath)
 
     pages.count() match {
-      case 0 => println("no pages found")
+      case 0 => println("No pages found")
       case _ => {
         val transformed = transformers.foldLeft(pages) {
           (dataset, t) => t.transform(dataset)
         }
 
-        println(transformed.first())
+        // for now, just print what the hell we're doing
+        println(transformed.first)
       }
     }
 
@@ -48,8 +52,7 @@ object SentenceSimilarity {  // i have no idea what to name this
   def initTransformers() : List[Transformer] = {
     // operations:
     // (DONE, ish) tokenize the "content" column -> "words" column
-    // (TODO) compute the sentence vector for the "words" column
-    // (TODO) compute cosine similarity with the (set of) proposition vectors
+    //     maybe replace with spark-nlp tokenizer, which handles sentences properly
     // (TODO) take top n (say, 100) of these
 
     val tokenizer = new RegexTokenizer()
@@ -57,7 +60,17 @@ object SentenceSimilarity {  // i have no idea what to name this
       .setOutputCol("tokens")
       .setPattern("\\W")  // TODO: refine this
 
-    tokenizer :: Nil
+    // val vectorMap = loadWordVectors(file)
+    val vectorizer = new SentenceVectorizer()
+      .setInputCol("tokens")
+      .setOutputCol("vectors")
+      //.setVectorMap(vectorMap)
+
+    // val similarity = new BatchCosineSimilarity()
+    //   .setInputCol("vectors")
+    //   .setOutputCol("similarity")
+
+    tokenizer :: vectorizer :: Nil
   }
 
 
@@ -67,20 +80,20 @@ object SentenceSimilarity {  // i have no idea what to name this
       .map(r => r._2)  // the url in the key is replicated in the json, so just keep the latter
 
     spark.read.json(records)
-      .filter("code == 200")  // TODO: double check this
+      .filter("code == 200")  // TODO: double check this; perhaps also filter on mime-type?
   }
 
 
-  // just to sanity check that we can load /derived-data/.../*.warc.gz
+  // just to sanity check that we can load /dataset-derived/.../*.warc.gz
   def peekAtDerivedData(warcPath: String) : Unit = {
     val spark = initSpark()
     val pages = loadValidPages(spark, warcPath)
 
     pages.count() match {
-      case 0 => println("no pages found")
+      case 0 => println("No pages found")
       case _ => {
-        println(pages.first()(1))
-        println(pages.count())
+        println(pages.first(1))
+        println(pages.count)
       }
     }
 
