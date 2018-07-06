@@ -22,4 +22,12 @@
    ```
 
    providing the local path from this directory to your desired pig script, and making sure that your provided values for O_DATA_DIR and O_DATA_DIR_2 are not already preexisting directories in the hadoop file system at `hdfs://nn-ia.s3s.altiscale.com:8020/user/<your_workbench_username>/`. (If, for example, `hdfs://nn-ia.s3s.altiscale.com:8020/user/<your_workbench_username>/outputARC2` already existed when the example command was run, the script would quit out for reasons related to "output validation.")
+   
+   (To see the contents of `hdfs://nn-ia.s3s.altiscale.com:8020/user/<your_workbench_username>/`, run the command
+   
+   ```
+   hdfs dfs -ls hdfs://nn-ia.s3s.altiscale.com:8020/user/<your_workbench_username>/
+   ``` 
+   
+   from any directory. Other unix commands can be run on files located there by changing `-ls` to a different command.)
 
