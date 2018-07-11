@@ -1,5 +1,5 @@
 # Religion and Politics
-## Lucy Lin, Sofia Serrano, Emily Gade, Sarah Dreier
+## Lucy Lin, Sofia Serrano, Emily Kalah Gade, Sarah Dreier
 
 ## Running scripts
 
