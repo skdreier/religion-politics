@@ -1,12 +1,22 @@
 # Cooccurrence Search Words
 # Current list is union of chapp_relig.csv and liwc_relig.csv lists,
-# but the script will work if replaced with any list of at least one
-# word. Matches will be case-insensitive. Each phrase to search must
+# but the script will work if replaced with any list of at least two
+# words. Matches will be case-insensitive. Each phrase to search must
 # be contained in exactly one line.
+#
+# Words removed from the original list:
+#     all repeated words
+#     angle (I think it might have been a typo of angel?)
+#     agonstic (changed to "agnostic" instead, seemed like typo)
+#
 # Reserved phrases (also case-insensitive):
 #     anysearchword
 #     allsearchwords
 #     _insertnonletterdigitchar_
+#     anything that includes `````````````` or starts/ends with `
+#     anything containing # (since # is used to denote the start of a list
+#        of phrases, and subsequent separations between phrases, that *aren't*
+#        supposed to be captured as a match for the expression)
 
 god
 faith
@@ -14,17 +24,17 @@ bless
 relig
 church
 pray
-amen
+amen            # fundamental # lament # ornament # armament # amenit # amenable
 crusade
-minister
+minister        # administer
 soul
 spiritual
 christ
 easter
-mass
-angel
+mass            # massive
+angel           # angelo # angela # angelica
 god's
-hell
+hell            # hello
 preach
 evil
 churches
@@ -32,7 +42,7 @@ catholic
 creed
 mirac
 creator
-lord
+lord            # landlord # overlord # warlord
 heaven
 worship
 christian
@@ -45,9 +55,9 @@ pastor
 cardinal
 prophet
 baptist
-vigil
+vigil           # vigilant
 congregation
-magi
+magi            # imagi
 pope
 bishop
 sins
@@ -72,7 +82,7 @@ holy
 saint
 christians
 scripture
-sin
+sin             # sing # single # since # singular
 methodist
 clergy
 isaiah
@@ -87,7 +97,7 @@ pulpit
 believers
 commandment
 preached
-lord's
+lord's          # landlord's
 apostle
 godless
 monsignor
@@ -104,7 +114,7 @@ exalted
 preaches
 altar
 denomination
-pew
+pew             # typewrit # spew
 preachers
 proverb
 scriptures
@@ -125,7 +135,7 @@ puritan
 repent
 flock
 godsend
-lent
+lent            # equivalent # lently # talent # relent
 priests
 redemption
 sanctuaries
@@ -143,7 +153,7 @@ exodus
 lutheran
 missionaries
 parishioner
-pews
+pews            # spews
 prayerfully
 prophecies
 sabbath
@@ -167,7 +177,7 @@ fundamentalist
 holier
 martyrs
 messiah
-ministered
+ministered      # administer
 ministries
 preacher's
 prophesy
@@ -176,7 +186,6 @@ psalms
 sacredness
 theology
 vatican
-angles
 baptized
 catholicism
 chaplain
@@ -187,7 +196,7 @@ clergyman
 congregants
 creator's
 crucifix
-dios
+dios            # studios # radios # audios #grandios
 disciples
 ecclesiastes
 epistle
@@ -204,7 +213,7 @@ theologian
 adventists
 angelic
 apostolic
-ark
+ark             # mark # dark # spark # embark # park # stark # lark # bark # hark
 atonement
 baptism
 christ's
@@ -261,7 +270,7 @@ faithfuls
 fundamentalists
 godgiven
 godly
-halo
+halo            # halog # haloc # halob # halom # halose # halop # haloid
 heavenly
 herod
 holiest
@@ -325,8 +334,8 @@ vestments
 vicar
 zaccheus
 afterlife
-agonstic
-alla
+agnostic
+alla            # gallant # call # parallax
 allah
 angels
 baptize
@@ -352,7 +361,7 @@ imam
 immoral
 immortal
 islam
-jew
+jew             # jewel
 jewish
 juda
 karma
@@ -404,7 +413,7 @@ testament
 torah
 veil
 yiddish
-zen
+zen             # citizen # dozen # zenith # brazen
 zion
 pagans
 believer

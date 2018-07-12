@@ -20,6 +20,7 @@ SET mapreduce.reduce.memory.mb 8192;
 SET mapred.max.map.failures.percent 10;
 REGISTER lib/porky-abbreviated.jar;
 REGISTER lib/webarchive-commons-1.1.7.jar;
+REGISTER lib/datafu-pig-1.4.0.jar;
 
 REGISTER 'emilys_python_udfs.py' USING jython AS emilysfuncs;
 REGISTER 'cooccurrence_udfs.py' USING jython AS cooccurrencefuncs;
@@ -28,6 +29,7 @@ DEFINE FROMJSON org.archive.porky.FromJSON();
 DEFINE SequenceFileLoader org.archive.porky.SequenceFileLoader();
 DEFINE docmakingudf cooccurrencefuncs.docmakingudf();
 DEFINE converttochararray cooccurrencefuncs.converttochararray();
+define BagConcat datafu.pig.bags.BagConcat();
 
 -- This flips the URL back to front so the important parts are at the beginning e.g. gov.whitehouse.frontpage......
 -- I haven't really figured out why this is helpful, but it does help with using existing scripts because the
@@ -90,21 +92,25 @@ prechecksum_instance = FOREACH instance GENERATE URLs AS URLs:chararray,
 Checksum = LOAD '$I_CHECKSUM_DATA' USING PigStorage() AS (surt:chararray, date:chararray, checksum:chararray);
 
 term_specific_doc_snippet = FOREACH prechecksum_instance GENERATE
-                               STARTLINEREPEAT
-							   FLATTEN(docmakingudf(document, INSERTTERMHERE, INSERTREGEXHERE, INSERTWINDOWSIZEHERE)),
+                               FLATTEN(BagConcat(
+                                  STARTLINEREPEAT
+							      docmakingudf(document, INSERTTERMHERE, INSERTREGEXHERE, INSERTWINDOWSIZEHERE)
+							      ENDLINEREPEAT
+                               )),
 							   surt AS surt:chararray,
-                               checksum AS checksum:chararray
-							   ENDLINEREPEAT
+                               checksum AS checksum:chararray,
+                               date AS date:chararray;
 
         -- format of term_specific_doc_snippet: ('pray', 'doc snippet with term edited out', surt, checksum)
 		--                                      ('pray', 'and another fake document snippet', surt, checksum)
         --                                      ('crusade', 'suppose this term only had one match', surt, checksum)
 
 searchterm_foundterm = FOREACH term_specific_doc_snippet GENERATE
-                               term_specific_doc_snippet.searchterm AS search_term,
-                               FLATTEN(TOKENIZE(term_specific_doc_snippet.text)),
+                               searchterm AS search_term,
+                               FLATTEN(TOKENIZE(text)) AS term,
                                surt AS surt:chararray,
-                               checksum AS checksum:chararray;
+                               checksum AS checksum:chararray,
+                               date AS date:chararray;
 
         -- format of searchterm_foundterm: ('pray', 'doc', surt, checksum)
         --                                 ('pray', 'snippet', surt, checksum)
@@ -113,52 +119,86 @@ searchterm_foundterm = FOREACH term_specific_doc_snippet GENERATE
         --                                 ('crusade', 'suppose', surt, checksum)
         --                                 ...
 
--- IF NOT BOTHERING WITH CHECKSUM: just comment the next line out
+-- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
 
-searchterm_foundterm = JOIN searchterm_foundterm BY (surt, checksum), Checksum BY (surt, checksum);
+searchterm_foundterm_intermediate = JOIN searchterm_foundterm BY (surt, checksum), Checksum BY (surt, checksum);
 
-searchterm_foundterm_count = FOREACH (GROUP searchterm_foundterm BY (search_term, $1)) GENERATE
+-- IF NOT BOTHERING WITH CHECKSUM: change searchterm_foundterm_intermediate to searchterm_foundterm in next line,
+--                                 and remove references to searchterm_foundterm AND Checksum in the subsequent
+--                                 three lines
+
+searchterm_foundterm_flattened = FOREACH searchterm_foundterm_intermediate GENERATE
+                                                           searchterm_foundterm::search_term AS search_term:chararray,
+                                                           searchterm_foundterm::term AS term:chararray,
+                                                           Checksum::date AS date:chararray;
+
+
+searchterm_foundterm_count = FOREACH (GROUP searchterm_foundterm_flattened BY (search_term, term)) GENERATE
                                 FLATTEN(group) AS (search_term, term),
-                                COUNT(searchterm_foundterm) AS foundtermcount;
+                                COUNT(searchterm_foundterm_flattened) AS foundtermcount;
 
-searchterm_foundterm_count = FOREACH (GROUP searchterm_foundterm_count by (search_term)) GENERATE
-                                search_term AS search_term:chararray,
-                                term AS term:chararray,
-                                foundtermcount AS foundtermcount:int,
-                                SUM(foundtermcount) AS numwordsinsearchtermdoc;
+searchterm_numwordsinsearchtermdoc = FOREACH (GROUP searchterm_foundterm_count BY (search_term)) GENERATE
+                                        FLATTEN(group) AS search_term,
+                                        SUM(searchterm_foundterm_count.foundtermcount) AS numwordsinsearchtermdoc;
 
-foundterm_count_all_searchwords = FOREACH(GROUP searchterm_foundterm BY $1) GENERATE
-                                                group.$1 AS term,
-                                                COUNT(searchterm_foundterm) AS foundtermcount;
+searchterm_foundterm_count_prelim = JOIN searchterm_foundterm_count BY search_term LEFT OUTER,
+                                         searchterm_numwordsinsearchtermdoc BY search_term;
+
+searchterm_foundterm_count = FOREACH searchterm_foundterm_count_prelim GENERATE
+                                              searchterm_foundterm_count::search_term AS search_term:chararray,
+                                              searchterm_foundterm_count::term AS term:chararray,
+                                              searchterm_foundterm_count::foundtermcount AS foundtermcount:int,
+                                              searchterm_numwordsinsearchtermdoc::numwordsinsearchtermdoc AS numwordsinsearchtermdoc:int;
+
+foundterm_count_all_searchwords = FOREACH(GROUP searchterm_foundterm_flattened BY (term)) GENERATE
+                                                FLATTEN(group) AS term,
+                                                COUNT(searchterm_foundterm_flattened) AS foundtermcount;
 
 -- Now compute word totals across the corpus that will be used as the IDF piece
 
 Docs = FOREACH prechecksum_instance GENERATE document AS doc,
                                              surt AS surt:chararray,
                                              checksum AS checksum:chararray,
-                                             date AS date:chararray,
-                                             FLATTEN(TOKENIZE(document)) as term;
+                                             FLATTEN(TOKENIZE(document)) as term,
+                                             date AS date:chararray;
 
--- IF NOT BOTHERING WITH CHECKSUM: just comment the next line out
+-- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
 
-Docs = JOIN Docs BY (surt, checksum), Checksum BY (surt, checksum);
+Docs_intermediate = JOIN Docs BY (surt, checksum), Checksum BY (surt, checksum);
 
-DocWordTotals = FOREACH (GROUP Docs by (doc, term)) GENERATE FLATTEN(group) as (doc, term), COUNT(Docs) as docTotal;
+-- IF NOT BOTHERING WITH CHECKSUM: change Docs_intermediate to Docs in next line, and remove
+--                                 references to Docs AND Checksum in the subsequent three lines
 
-TermCounts = FOREACH (GROUP DocWordTotals by doc) GENERATE
-                      group AS doc,
+Docs_flattened = FOREACH Docs_intermediate GENERATE
+                                      Docs::doc AS doc:chararray,
+                                      Docs::term AS term:chararray,
+                                      Checksum::date AS date:chararray;
+
+DocWordTotals = FOREACH (GROUP Docs_flattened by (doc, term, date)) GENERATE FLATTEN(group) as (doc, term, date),
+                                                                             COUNT(Docs_flattened) as docTotal;
+
+TermCounts = FOREACH (GROUP DocWordTotals by (doc, date)) GENERATE
+                      FLATTEN(group) AS (doc, date),
                       FLATTEN(DocWordTotals.(term, docTotal)) as (term, docTotal),
                       SUM(DocWordTotals.docTotal) as docSize;
 
 -- get number of docs containing a given term
-word_totals = FOREACH (GROUP TermCounts BY term) GENERATE term AS term,
-                                                          SUM(docTotal) AS corpuscount;
+word_totals = FOREACH (GROUP TermCounts BY term) GENERATE FLATTEN(group) AS term,
+                                                          SUM(TermCounts.docTotal) AS corpuscount,
                                                           COUNT(TermCounts) AS occursinnumdocs;
 
 -- now add that new information to previously computed information to compute scores that will be used
 -- to rank words in two separate ways
 
-info_to_compute_term_scores = JOIN searchterm_foundterm_count BY term LEFT OUTER, word_totals BY term;
+info_to_compute_term_scores_prelim = JOIN searchterm_foundterm_count BY term LEFT OUTER, word_totals BY term;
+
+info_to_compute_term_scores = FOREACH info_to_compute_term_scores_prelim GENERATE
+                                          searchterm_foundterm_count::search_term AS search_term:chararray,
+                                          searchterm_foundterm_count::term AS term:chararray,
+                                          searchterm_foundterm_count::foundtermcount AS foundtermcount:int,
+                                          searchterm_foundterm_count::numwordsinsearchtermdoc AS numwordsinsearchtermdoc:int,
+                                          word_totals::corpuscount AS corpuscount:int,
+                                          word_totals::occursinnumdocs AS occursinnumdocs:int;
 
         -- format of output: ('pray', 'a', docpieceafreq, #aincorpus, #docswitha, numwordsinsearchtermdoc)
         --                   ('pray', 'fake', docpiecefakefreq, #fakeincorpus, #docswithfake, numwordsinsearchtermdoc)
@@ -199,7 +239,13 @@ STORE subtable_to_dump INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-anysearchword-
 
 -------------- Output from collapsing all search words into one "keyword" --------------
 
-info_to_compute_agg_term_scores = JOIN foundterm_count_all_searchwords BY term LEFT OUTER, word_totals BY term;
+info_to_compute_agg_term_scores_prelim = JOIN foundterm_count_all_searchwords BY term LEFT OUTER, word_totals BY term;
+
+info_to_compute_agg_term_scores = FOREACH info_to_compute_agg_term_scores_prelim GENERATE
+                                              foundterm_count_all_searchwords::term AS term:chararray,
+                                              foundterm_count_all_searchwords::foundtermcount AS foundtermcount:int,
+                                              word_totals::corpuscount AS corpuscount:int,
+                                              word_totals::occursinnumdocs AS occursinnumdocs:int;
 
         -- format of output: ('a', docpieceafreq, #aincorpus, #docswitha, numwordsinsearchtermdoc)
         --                   ('fake', docpiecefakefreq, #fakeincorpus, #docswithfake, numwordsinsearchtermdoc)
@@ -210,13 +256,12 @@ table_with_log_agg_scores = FOREACH info_to_compute_agg_term_scores {
                                log_idf_corpus = 0.0 - LOG((double) corpuscount);
                                log_idf_doc = 0.0 - LOG((double) occursinnumdocs);
                                log_tf_score = LOG((double) foundtermcount);
-                               GENERATE search_term AS search_term,
-                                        term AS term,
+                               GENERATE term AS term,
                                         log_tf_score + log_idf_corpus AS score_corpus,
                                         log_tf_score + log_idf_doc AS score_doc;
 };
 
-subtable = table_with_agg_log_scores;
+subtable = table_with_log_agg_scores;
 order_by_score_corpus = ORDER subtable BY score_corpus DESC;
 order_by_score_corpus = LIMIT order_by_score_corpus INSERTNUMTERMSTOCOLLECT;
 subtable_to_dump = FOREACH order_by_score_corpus GENERATE term as term,
