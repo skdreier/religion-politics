@@ -4,8 +4,25 @@
 # words. Matches will be case-insensitive. Each phrase to search must
 # be contained in exactly one line.
 #
+# It's worth mentioning that text will be considered a match for one
+# of the provided search terms as long as the (case-insensitive) search
+# term is contained within the text; in other words, matches can be made
+# with the search term making up only a substring of the word/phrase it
+# was matched to.
+#
+# To get around some of the issues that might arise from either
+# double-counting matches (for example, since "amen" is a substring
+# of "fundamentalist", every match for "fundamentalist" would also be
+# considered a match for "amen") or flagging some words that are
+# completely unrelated as matches (for example, "amenity" as a match
+# for "amen"), a possible match occurring in text will only be made
+# to the longest search term provided here that is a valid candidate.
+# In addition, adding a string (such as one for amenity) after a # on
+# the same line as a search term will keep occurrences of that string
+# from being flagged as matches for the search term.
+#
 # Words removed from the original list:
-#     all repeated words
+#     all repeated words (though the script would have filtered them out anyway)
 #     angle (I think it might have been a typo of angel?)
 #     agonstic (changed to "agnostic" instead, seemed like typo)
 #
@@ -23,7 +40,7 @@ faith
 bless
 relig
 church
-pray
+pray            # spray
 amen            # fundamental # lament # ornament # armament # amenit # amenable
 crusade
 minister        # administer
@@ -36,7 +53,7 @@ angel           # angelo # angela # angelica
 god's
 hell            # hello
 preach
-evil
+evil            # revile # eville
 churches
 catholic
 creed
@@ -57,7 +74,7 @@ prophet
 baptist
 vigil           # vigilant
 congregation
-magi            # imagi
+magi            # imagi # damagi
 pope
 bishop
 sins
@@ -167,7 +184,7 @@ minister's
 monotheistic
 orthodox
 scriptural
-sect
+sect            # intersect # section # dissect # bisect # trisect # sector
 seminary
 unholy
 worshiper
@@ -177,7 +194,7 @@ fundamentalist
 holier
 martyrs
 messiah
-ministered      # administer
+ministered      # administered
 ministries
 preacher's
 prophesy
@@ -228,7 +245,7 @@ nehemiah
 pope's
 redeemer
 sanctif
-sects
+sects           # intersects # dissects # bisects # trisects
 serpent
 steeple
 testaments
@@ -295,7 +312,7 @@ monotheism
 multisectarian
 navidad
 nazarenes
-nun
+nun             # nunci # inundat # nonuni
 papal
 pastorate
 pentecostal
@@ -313,7 +330,7 @@ prophesizing
 prophetess
 purgatories
 reverend's
-rites
+rites           # writes # favorites
 rosaries
 sacrilegious
 satan
@@ -335,7 +352,7 @@ vicar
 zaccheus
 afterlife
 agnostic
-alla            # gallant # call # parallax
+alla            # gallant # calla # parallax
 allah
 angels
 baptize
@@ -382,7 +399,7 @@ mosque
 muhammed
 mujahids
 muslim
-pagan
+pagan           # propagand
 paradise
 passover
 penance
@@ -396,7 +413,7 @@ rabbi
 rabbinica
 ramadan
 religion
-rite
+rite            # write # favorite # criteri
 ritual
 rosary
 sacrifice
@@ -411,7 +428,7 @@ sunni
 temple
 testament
 torah
-veil
+veil            # surveil # unveil
 yiddish
 zen             # citizen # dozen # zenith # brazen
 zion
@@ -419,4 +436,4 @@ pagans
 believer
 blessed
 wrath
-grace
+grace           # disgrace

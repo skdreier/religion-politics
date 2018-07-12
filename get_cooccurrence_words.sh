@@ -6,6 +6,8 @@ then
 	exit 1
 fi
 
+source add_dependencies_to_classpath.sh  # just in case this hasn't been done yet
+
 windowsize=$1
 numresultstocollect=$2
 outputdirprefix=$3

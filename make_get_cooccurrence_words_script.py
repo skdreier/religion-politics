@@ -1,5 +1,28 @@
 """
 Author: Sofia Serrano
+Python version: either 2 or 3, both work for this script.
+
+This script is responsible for generating get_cooccurrence_words.pig using information
+from both get_cooccurrence_wordsTEMPLATE.pig and cooccurrence_search_words.txt.
+
+Steps this script takes:
+
+    1. Figures out what the keywords are in cooccurrence_search_words.txt, filters
+       out any duplicates, takes note of any string matches for keywords to exclude,
+       and orders the keywords from longest to shortest (to help with regex generation
+       later).
+    2. For each keyword, generate three versions of it:
+           - the keyword with single quotes around it
+           - a regex version of the keyword (with single quotes around the regex) taking
+             into account things we DON'T want to match to this keyword, including both
+             the strings that were provided in cooccurrence_search_words.txt with # AND
+             other, longer search keywords that any given shorter keyword might be part
+             of (so that we avoid double-matching)
+           - a version of the keyword with any non-letter or non-digit characters
+             replaced by letters (which will be used in naming directories for output
+             files)
+    3. Generate pig script, repeating marked sections as necessary and replacing
+       INSERT<BLANK>HERE mentions with the appropriate string
 """
 
 import sys

@@ -10,6 +10,19 @@
 -- Example usage:
 --     pig -p I_PARSED_DATA=/dataset-derived/gov/parsed/arcs/bucket-2/ \
 --         -p I_CHECKSUM_DATA=/dataset/gov/url-ts-checksum/ get_cooccurrence_words.pig
+--
+-- FOR DEBUGGING PURPOSES: this is a good command to run, as there's not much text in that file.
+--     bash get_cooccurrence_words.sh 10 1000 cooccuroutput \
+--         /dataset-derived/gov/parsed/arcs/bucket-0/DOTGOV-EXTRACTION-1995-FY2013-MIME-VIDEO-ARCS-PART-00034-000030.arc.gz \
+--         /dataset/gov/url-ts-checksum/
+--     The text (after it's been lowercased) consists of:
+--         briefing daily press briefing department of state public affairs    (* 75 when merged with checksum)
+--         dial-up modem -- 8/30/06 bureau of public affairs                   (* 26 when merged with checksum)
+--     Search terms to run on:
+--         a
+--         daily press
+--         press
+--         g
 
 -- These first four lines are defaults and also help with memory
 -- (if you don't have them, sometimes the cluster kicks you out)
@@ -147,8 +160,8 @@ searchterm_foundterm_count_prelim = JOIN searchterm_foundterm_count BY search_te
 searchterm_foundterm_count = FOREACH searchterm_foundterm_count_prelim GENERATE
                                               searchterm_foundterm_count::search_term AS search_term:chararray,
                                               searchterm_foundterm_count::term AS term:chararray,
-                                              searchterm_foundterm_count::foundtermcount AS foundtermcount:int,
-                                              searchterm_numwordsinsearchtermdoc::numwordsinsearchtermdoc AS numwordsinsearchtermdoc:int;
+                                              searchterm_foundterm_count::foundtermcount AS foundtermcount:long,
+                                              searchterm_numwordsinsearchtermdoc::numwordsinsearchtermdoc AS numwordsinsearchtermdoc:long;
 
 foundterm_count_all_searchwords = FOREACH(GROUP searchterm_foundterm_flattened BY (term)) GENERATE
                                                 FLATTEN(group) AS term,
@@ -195,10 +208,10 @@ info_to_compute_term_scores_prelim = JOIN searchterm_foundterm_count BY term LEF
 info_to_compute_term_scores = FOREACH info_to_compute_term_scores_prelim GENERATE
                                           searchterm_foundterm_count::search_term AS search_term:chararray,
                                           searchterm_foundterm_count::term AS term:chararray,
-                                          searchterm_foundterm_count::foundtermcount AS foundtermcount:int,
-                                          searchterm_foundterm_count::numwordsinsearchtermdoc AS numwordsinsearchtermdoc:int,
-                                          word_totals::corpuscount AS corpuscount:int,
-                                          word_totals::occursinnumdocs AS occursinnumdocs:int;
+                                          searchterm_foundterm_count::foundtermcount AS foundtermcount:long,
+                                          searchterm_foundterm_count::numwordsinsearchtermdoc AS numwordsinsearchtermdoc:long,
+                                          word_totals::corpuscount AS corpuscount:long,
+                                          word_totals::occursinnumdocs AS occursinnumdocs:long;
 
         -- format of output: ('pray', 'a', docpieceafreq, #aincorpus, #docswitha, numwordsinsearchtermdoc)
         --                   ('pray', 'fake', docpiecefakefreq, #fakeincorpus, #docswithfake, numwordsinsearchtermdoc)
@@ -243,9 +256,9 @@ info_to_compute_agg_term_scores_prelim = JOIN foundterm_count_all_searchwords BY
 
 info_to_compute_agg_term_scores = FOREACH info_to_compute_agg_term_scores_prelim GENERATE
                                               foundterm_count_all_searchwords::term AS term:chararray,
-                                              foundterm_count_all_searchwords::foundtermcount AS foundtermcount:int,
-                                              word_totals::corpuscount AS corpuscount:int,
-                                              word_totals::occursinnumdocs AS occursinnumdocs:int;
+                                              foundterm_count_all_searchwords::foundtermcount AS foundtermcount:long,
+                                              word_totals::corpuscount AS corpuscount:long,
+                                              word_totals::occursinnumdocs AS occursinnumdocs:long;
 
         -- format of output: ('a', docpieceafreq, #aincorpus, #docswitha, numwordsinsearchtermdoc)
         --                   ('fake', docpiecefakefreq, #fakeincorpus, #docswithfake, numwordsinsearchtermdoc)

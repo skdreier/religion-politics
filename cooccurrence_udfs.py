@@ -22,6 +22,7 @@ def docmakingudf(text, term, regex_to_match, window_size):
         text = str(text).strip()
         if text == '' or text == "None":
             return []
+
     match_start_end_inds = [(m.start(0), m.end(0)) for m in re.finditer(regex_to_match, text, flags=re.IGNORECASE)]
     bag_to_return = []
     if len(match_start_end_inds) == 0:
@@ -33,6 +34,7 @@ def docmakingudf(text, term, regex_to_match, window_size):
         end_ind_of_match_plus_1 = match_inds[1]
         string_matches.insert(0, text[starting_ind_of_match:end_ind_of_match_plus_1])
         text = text[:starting_ind_of_match] + placeholder_str + text[end_ind_of_match_plus_1:]
+
     tokenized_text = text.split()
     match_inds = []
     num_matches_found_so_far = 0
@@ -43,6 +45,7 @@ def docmakingudf(text, term, regex_to_match, window_size):
             tokenized_text[i] = tokenized_text[i].replace(placeholder_str,
                                                           string_matches[num_matches_found_so_far], 1)
             num_matches_found_so_far += 1
+
     for match_ind in match_inds:
         start_start_ind = max([match_ind - window_size, 0])
         start_end_ind = match_ind

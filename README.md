@@ -14,6 +14,8 @@
    ```
 
    (this will add the jar files in the lib directory to your classpath and pig_classpath)
+   
+### Running non-template pig script (i.e., ExtractCounts)
 
 4. From the top-level directory of the repository, run some variation on the command
 
@@ -30,4 +32,21 @@
    ``` 
    
    from any directory. Other unix commands can be run on files located there by changing `-ls` to a different command.)
+   
+### Running pig scripts from a template (i.e., get_cooccurrence_words)
 
+4. From the top-level directory of the repository, run some variation on the command
+
+   ```
+   bash get_cooccurrence_words.sh 30 1000 cooccuroutput /dataset-derived/gov/parsed/arcs/bucket-0/ /dataset/gov/url-ts-checksum/
+   ```
+
+   For get_cooccurrence_words.sh, these are the five arguments in the order they're provided:
+   
+   * half window size: the number of words to take both before and after an appearance of a search term as "cooccurring" with that term
+   * number of top results to output: for each search term (as well as the two aggregated result types, anysearchword and allsearchwords), the number of top-scoring cooccurring words to report
+   * output directory name stub: the string to prepend to the directories of all the results files. Make sure that the directories starting with this string and ending in the provided search terms don't already exist in the hadoop file system, or hadoop will throw an error.
+   * I_PARSED_DATA: the full path on the hadoop file system to the input parsed data
+   * CHECKSUM_DATA: the full path on the hadoop file system to the checksum data
+   
+   The bash script will first run a separate script to generate a pig script from the template in the repository with the provided search terms hard-coded in (for get_cooccurrence_words.sh, those are read from cooccurrence_search_words.txt). Then, the script will run that automatically generated script.
