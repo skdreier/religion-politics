@@ -94,15 +94,15 @@ Checksum = LOAD '$I_CHECKSUM_DATA' USING PigStorage() AS (surt:chararray, date:c
 term_specific_doc_snippet = FOREACH prechecksum_instance GENERATE
                                FLATTEN(BagConcat(
                                   STARTLINEREPEAT
-							      docmakingudf(document, INSERTTERMHERE, INSERTREGEXHERE, INSERTWINDOWSIZEHERE)
-							      ENDLINEREPEAT
+                                  docmakingudf(document, INSERTTERMHERE, INSERTREGEXHERE, INSERTWINDOWSIZEHERE)
+                                  ENDLINEREPEAT
                                )),
-							   surt AS surt:chararray,
+                               surt AS surt:chararray,
                                checksum AS checksum:chararray,
                                date AS date:chararray;
 
         -- format of term_specific_doc_snippet: ('pray', 'doc snippet with term edited out', surt, checksum)
-		--                                      ('pray', 'and another fake document snippet', surt, checksum)
+        --                                      ('pray', 'and another fake document snippet', surt, checksum)
         --                                      ('crusade', 'suppose this term only had one match', surt, checksum)
 
 searchterm_foundterm = FOREACH term_specific_doc_snippet GENERATE
