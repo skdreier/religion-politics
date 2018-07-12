@@ -35,7 +35,7 @@ keywords = []
 strings_to_avoid_for_keyword = {}
 with open("cooccurrence_search_words.txt", "r") as f:
     for line in f:
-        line = line.strip()
+        line = line.strip().lower()
         if line == '' or line.startswith("#"):
             continue
         if "#" in line:
@@ -44,7 +44,7 @@ with open("cooccurrence_search_words.txt", "r") as f:
             for i in range(len(words_to_exclude)):
                 words_to_exclude[i] = words_to_exclude[i].strip()
                 if i > 0 and words_to_exclude[i] != '':
-                    list_of_words_for_dict.append(words_to_exclude[i].lower())
+                    list_of_words_for_dict.append(words_to_exclude[i])
             line = words_to_exclude[0]
             try:
                 # if this keyword is a duplicate, but still contributed new strings
@@ -54,7 +54,7 @@ with open("cooccurrence_search_words.txt", "r") as f:
             except:
                 strings_to_avoid_for_keyword[line] = list_of_words_for_dict
         if line not in keywords:
-            keywords.append(line.lower())
+            keywords.append(line)
 
 assert len(keywords) > 1, ("At least two keywords must be provided in cooccurrence_search_words.txt " +
                            "in order for get_cooccurrence_words.pig to be generated successfully.\n" +
