@@ -12,6 +12,6 @@ windowsize=$1
 numresultstocollect=$2
 outputdirprefix=$3
 
-python make_get_cooccurrence_words_script.py $windowsize $numresultstocollect $outputdirprefix
+python make_get_cooccurrence_words_script.py $windowsize $numresultstocollect $outputdirprefix $5
 
 pig -p I_PARSED_DATA=$4 -p I_CHECKSUM_DATA=$5 get_cooccurrence_words.pig

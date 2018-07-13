@@ -47,6 +47,6 @@
    * number of top results to output: for each search term (as well as the two aggregated result types, anysearchword and allsearchwords), the number of top-scoring cooccurring words to report
    * output directory name stub: the string to prepend to the directories of all the results files. Make sure that the directories starting with this string and ending in the provided search terms don't already exist in the hadoop file system, or hadoop will throw an error.
    * I_PARSED_DATA: the full path on the hadoop file system to the input parsed data
-   * CHECKSUM_DATA: the full path on the hadoop file system to the checksum data
+   * CHECKSUM_DATA: the full path on the hadoop file system to the checksum data. (If not using checksum data, replace this argument with the string None)
    
    The bash script will first run a separate script to generate a pig script from the template in the repository with the provided search terms hard-coded in (for get_cooccurrence_words.sh, those are read from cooccurrence_search_words.txt). Then, the script will run that automatically generated script.

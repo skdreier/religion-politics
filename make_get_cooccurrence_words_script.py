@@ -30,6 +30,11 @@ import sys
 window_size = sys.argv[1]
 num_terms_to_collect = sys.argv[2]
 output_dir_stub = sys.argv[3]
+use_checksum = sys.argv[4]
+if use_checksum == "None":
+    use_checksum = False
+else:
+    use_checksum = True
 
 keywords = []
 strings_to_avoid_for_keyword = {}
@@ -198,6 +203,10 @@ def fill_in_repeated_line_section(lines_to_repeat_inner, pig_script_inner):
 
 pig_script = open("get_cooccurrence_words.pig", "w")
 in_repeat_section = False
+collecting_checksum_changes = False
+comment_out_next_operative_line = False
+applying_checksum_changes = False
+next_checksum_change_to_apply = -1
 with open("get_cooccurrence_wordsTEMPLATE.pig", "r") as f:
     for line in f:
         if line.startswith("-- Get Cooccurrence Words TEMPLATE Pig Script: Template for a"):
@@ -223,6 +232,46 @@ with open("get_cooccurrence_wordsTEMPLATE.pig", "r") as f:
             fill_in_repeated_line_section(lines_to_repeat, pig_script)
             in_repeat_section = False
             continue
+        elif not use_checksum and collecting_checksum_changes:
+            if line.strip() != '':
+                line = line[line.index(":") + 2:].strip()
+                thing_to_change = line[:line.index('-->')].strip()
+                thing_to_change_to = line[line.index('-->') + 3:].strip()
+                checksum_changes.append((thing_to_change, thing_to_change_to))
+            else:
+                collecting_checksum_changes = False
+                applying_checksum_changes = True
+                next_checksum_change_to_apply = 0
+        elif not use_checksum and line.startswith("-- IF NOT BOTHERING WITH CHECKSUM") \
+                and not collecting_checksum_changes:
+            part_of_line_with_change = line[line.index(":") + 2:].strip()
+            if part_of_line_with_change.startswith("comment the next line out"):
+                comment_out_next_operative_line = True
+            else:
+                # we're assuming that each of the next few lines contains -->
+                checksum_changes = []
+                thing_to_change = part_of_line_with_change[:part_of_line_with_change.index('-->')].strip()
+                thing_to_change_to = part_of_line_with_change[part_of_line_with_change.index('-->') + 3:].strip()
+                checksum_changes.append((thing_to_change, thing_to_change_to))
+                collecting_checksum_changes = True
+        elif not use_checksum and line.strip() != '' and comment_out_next_operative_line:
+            comment_out_next_operative_line = False
+            line = "-- " + line
+            line = line.replace("INSERTWINDOWSIZEHERE", str(window_size))
+            line = line.replace("INSERTNUMTERMSTOCOLLECT", str(num_terms_to_collect))
+            line = line.replace("INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES", output_dir_stub)
+            pig_script.write(line)
+            continue
+        elif not use_checksum and applying_checksum_changes:
+            line = line.replace(checksum_changes[next_checksum_change_to_apply][0],
+                                checksum_changes[next_checksum_change_to_apply][1])
+            line = line.replace("INSERTWINDOWSIZEHERE", str(window_size))
+            line = line.replace("INSERTNUMTERMSTOCOLLECT", str(num_terms_to_collect))
+            line = line.replace("INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES", output_dir_stub)
+            pig_script.write(line)
+            next_checksum_change_to_apply += 1
+            if next_checksum_change_to_apply == len(checksum_changes):
+                applying_checksum_changes = False
         else:
             line = line.replace("INSERTWINDOWSIZEHERE", str(window_size))
             line = line.replace("INSERTNUMTERMSTOCOLLECT", str(num_terms_to_collect))

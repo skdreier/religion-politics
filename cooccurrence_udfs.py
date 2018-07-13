@@ -34,8 +34,8 @@ def docmakingudf(text, term, regex_to_match, window_size):
         end_ind_of_match_plus_1 = match_inds[1]
         string_matches.insert(0, text[starting_ind_of_match:end_ind_of_match_plus_1])
         text = text[:starting_ind_of_match] + placeholder_str + text[end_ind_of_match_plus_1:]
-
-    tokenized_text = text.split()
+    # ideally, this would be more types of whitespace, but pig only does space in its TOKENIZE method
+    tokenized_text = text.split(' ')
     match_inds = []
     num_matches_found_so_far = 0
     for i in range(len(tokenized_text)):

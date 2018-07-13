@@ -102,6 +102,8 @@ prechecksum_instance = FOREACH instance GENERATE URLs AS URLs:chararray,
 -- analysis. The checksum data stores instances when a page *would* have been captured, but nothing had
 -- changed; merging with the checksum data fixes the consistent page underrepresentation problem.)
 
+-- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
+
 Checksum = LOAD '$I_CHECKSUM_DATA' USING PigStorage() AS (surt:chararray, date:chararray, checksum:chararray);
 
 term_specific_doc_snippet = FOREACH prechecksum_instance GENERATE
@@ -136,9 +138,10 @@ searchterm_foundterm = FOREACH term_specific_doc_snippet GENERATE
 
 searchterm_foundterm_intermediate = JOIN searchterm_foundterm BY (surt, checksum), Checksum BY (surt, checksum);
 
--- IF NOT BOTHERING WITH CHECKSUM: change searchterm_foundterm_intermediate to searchterm_foundterm in next line,
---                                 and remove references to searchterm_foundterm AND Checksum in the subsequent
---                                 three lines
+-- IF NOT BOTHERING WITH CHECKSUM: searchterm_foundterm_intermediate --> searchterm_foundterm
+-- IF NOT BOTHERING WITH CHECKSUM: searchterm_foundterm:: -->
+-- IF NOT BOTHERING WITH CHECKSUM: searchterm_foundterm:: -->
+-- IF NOT BOTHERING WITH CHECKSUM: Checksum:: -->
 
 searchterm_foundterm_flattened = FOREACH searchterm_foundterm_intermediate GENERATE
                                                            searchterm_foundterm::search_term AS search_term:chararray,
@@ -179,8 +182,10 @@ Docs = FOREACH prechecksum_instance GENERATE document AS doc,
 
 Docs_intermediate = JOIN Docs BY (surt, checksum), Checksum BY (surt, checksum);
 
--- IF NOT BOTHERING WITH CHECKSUM: change Docs_intermediate to Docs in next line, and remove
---                                 references to Docs AND Checksum in the subsequent three lines
+-- IF NOT BOTHERING WITH CHECKSUM: Docs_intermediate --> Docs
+-- IF NOT BOTHERING WITH CHECKSUM: Docs:: -->
+-- IF NOT BOTHERING WITH CHECKSUM: Docs:: -->
+-- IF NOT BOTHERING WITH CHECKSUM: Checksum:: -->
 
 Docs_flattened = FOREACH Docs_intermediate GENERATE
                                       Docs::doc AS doc:chararray,
@@ -218,13 +223,16 @@ info_to_compute_term_scores = FOREACH info_to_compute_term_scores_prelim GENERAT
         --                   ...
 
 table_with_log_scores = FOREACH info_to_compute_term_scores {
-                           log_idf_corpus = 0.0 - LOG((double) corpuscount);
-                           log_idf_doc = 0.0 - LOG((double) occursinnumdocs);
+                           log_df_corpus = LOG((double) corpuscount);
+                           log_df_doc = LOG((double) occursinnumdocs);
                            log_tf_score = LOG((double) foundtermcount);
                            GENERATE search_term AS search_term,
                                     term AS term,
-                                    log_tf_score + log_idf_corpus AS score_corpus,
-                                    log_tf_score + log_idf_doc AS score_doc,
+                                    log_tf_score - log_df_corpus AS score_corpus,
+                                    log_tf_score AS log_tf,
+                                    log_df_corpus AS log_df_corpus,
+                                    log_tf_score - log_df_doc AS score_doc,
+                                    log_df_doc AS log_df_doc,
                                     LOG(numwordsinsearchtermdoc) AS lognumwordsinsearchtermdoc;
 };
 
@@ -235,19 +243,29 @@ table_with_log_scores = FOREACH info_to_compute_term_scores {
 subtable = FOREACH table_with_log_scores GENERATE search_term AS search_term,
                                                   term AS term,
                                                   score_corpus - lognumwordsinsearchtermdoc AS score_corpus,
-                                                  score_doc - lognumwordsinsearchtermdoc AS score_doc;
+                                                  score_doc - lognumwordsinsearchtermdoc AS score_doc,
+                                                  log_tf AS log_tf,
+                                                  log_df_corpus AS log_df_corpus,
+                                                  log_df_doc AS log_df_doc,
+                                                  lognumwordsinsearchtermdoc AS lognumwordsinsearchtermdoc;;
 order_by_score_corpus = ORDER subtable BY score_corpus DESC;
 order_by_score_corpus = LIMIT order_by_score_corpus INSERTNUMTERMSTOCOLLECT;
 subtable_to_dump = FOREACH order_by_score_corpus GENERATE search_term AS search_term,
                                                           term AS term,
-                                                          score_corpus AS score;
+                                                          score_corpus AS score,
+                                                          log_tf AS log_tf,
+                                                          log_df_corpus AS log_df_corpus,
+                                                          lognumwordsinsearchtermdoc AS lognumwordsinsearchtermdoc;
 STORE subtable_to_dump INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-anysearchword-corpus/';
 
 order_by_score_doc = ORDER subtable BY score_doc DESC;
 order_by_score_doc = LIMIT order_by_score_doc INSERTNUMTERMSTOCOLLECT;
 subtable_to_dump = FOREACH order_by_score_doc GENERATE search_term AS search_term,
                                                        term AS term,
-                                                       score_doc AS score;
+                                                       score_doc AS score,
+                                                       log_tf AS log_tf,
+                                                       log_df_doc AS log_df_doc,
+                                                       lognumwordsinsearchtermdoc AS lognumwordsinsearchtermdoc;
 STORE subtable_to_dump INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-anysearchword-doc/';
 
 -------------- Output from collapsing all search words into one "keyword" --------------
@@ -265,26 +283,32 @@ info_to_compute_agg_term_scores = FOREACH info_to_compute_agg_term_scores_prelim
         --                   ...
 
 
-table_with_log_agg_scores = FOREACH info_to_compute_agg_term_scores {
-                               log_idf_corpus = 0.0 - LOG((double) corpuscount);
-                               log_idf_doc = 0.0 - LOG((double) occursinnumdocs);
+subtable = FOREACH info_to_compute_agg_term_scores {
+                               log_df_corpus = LOG((double) corpuscount);
+                               log_df_doc = LOG((double) occursinnumdocs);
                                log_tf_score = LOG((double) foundtermcount);
                                GENERATE term AS term,
-                                        log_tf_score + log_idf_corpus AS score_corpus,
-                                        log_tf_score + log_idf_doc AS score_doc;
+                                        log_tf_score - log_df_corpus AS score_corpus,
+                                        log_tf_score AS log_tf,
+                                        log_df_corpus AS log_df_corpus,
+                                        log_tf_score - log_df_doc AS score_doc,
+                                        log_df_doc AS log_df_doc;
 };
 
-subtable = table_with_log_agg_scores;
 order_by_score_corpus = ORDER subtable BY score_corpus DESC;
 order_by_score_corpus = LIMIT order_by_score_corpus INSERTNUMTERMSTOCOLLECT;
 subtable_to_dump = FOREACH order_by_score_corpus GENERATE term AS term,
-                                                          score_corpus AS score;
+                                                          score_corpus AS score,
+                                                          log_tf AS log_tf,
+                                                          log_df_corpus AS log_df_corpus;
 STORE subtable_to_dump INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-allsearchwords-corpus/';
 
 order_by_score_doc = ORDER subtable BY score_doc DESC;
 order_by_score_doc = LIMIT order_by_score_doc INSERTNUMTERMSTOCOLLECT;
 subtable_to_dump = FOREACH order_by_score_doc GENERATE term AS term,
-                                                       score_doc AS score;
+                                                       score_doc AS score,
+                                                       log_tf AS log_tf,
+                                                       log_df_doc AS log_df_doc;
 STORE subtable_to_dump INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-allsearchwords-doc/';
 
 -------------- Output from each individual search word --------------
@@ -295,14 +319,20 @@ order_by_score_corpus = ORDER subtable BY score_corpus DESC;
 order_by_score_corpus = LIMIT order_by_score_corpus INSERTNUMTERMSTOCOLLECT;
 subtable_to_dump = FOREACH order_by_score_corpus GENERATE search_term AS search_term,
                                                           term AS term,
-                                                          score_corpus AS score;
+                                                          score_corpus AS score,
+                                                          log_tf AS log_tf,
+                                                          log_df_corpus AS log_df_corpus,
+                                                          lognumwordsinsearchtermdoc AS lognumwordsinsearchtermdoc;
 STORE subtable_to_dump INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES-corpus/';
 
 order_by_score_doc = ORDER subtable BY score_doc DESC;
 order_by_score_doc = LIMIT order_by_score_doc INSERTNUMTERMSTOCOLLECT;
 subtable_to_dump = FOREACH order_by_score_doc GENERATE search_term AS search_term,
                                                        term AS term,
-                                                       score_doc AS score;
+                                                       score_doc AS score,
+                                                       log_tf AS log_tf,
+                                                       log_df_doc AS log_df_doc,
+                                                       lognumwordsinsearchtermdoc AS lognumwordsinsearchtermdoc;
 STORE subtable_to_dump INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES-doc/';
 
 ENDLINEREPEAT
