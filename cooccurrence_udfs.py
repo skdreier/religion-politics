@@ -62,7 +62,12 @@ def converttochararray(text):
     try:
         text = text.decode('utf-8')
     except:
-        text = str(text)
-        if text == "None":
-            return ""
+        try:
+            text = str(text).strip()
+            # if the entire document is < 5 chars long, it's not going to have useful cooccurrences
+            # anyway
+            if text == 'None' or len(text) < 5:
+                return ''
+        except:
+            return ''
     return text.lower()

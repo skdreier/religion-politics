@@ -85,7 +85,7 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
 
               REPLACE(SUBSTRING(m#'date', 0, 8), '[^\\p{Graph}]', ' ')              AS date:chararray;
 
-prechecksum_instance = FOREACH instance GENERATE URLs AS URLs:chararray,
+prechecksum_instance_prelim = FOREACH instance GENERATE URLs AS URLs:chararray,
                                                  src AS src:chararray,
                                                  surt AS surt:chararray,
                                                  checksum AS checksum:chararray,
@@ -94,6 +94,8 @@ prechecksum_instance = FOREACH instance GENERATE URLs AS URLs:chararray,
                                                  description AS description:chararray,
                                                  converttochararray(document) AS document:chararray,
                                                  date AS date:chararray;
+
+prechecksum_instance = FILTER prechecksum_instance_prelim BY document != '';
 
 -- to get TOTAL number of counts, rather than simply unique observations, merge with checksum data.
 -- (A unique capture will only have been taken if something changed on the page, but if one page changed
