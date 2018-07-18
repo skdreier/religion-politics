@@ -1,0 +1,439 @@
+# Cooccurrence Search Words
+# Current list is union of chapp_relig.csv and liwc_relig.csv lists,
+# but the script will work if replaced with any list of at least two
+# words. Matches will be case-insensitive. Each phrase to search must
+# be contained in exactly one line.
+#
+# It's worth mentioning that text will be considered a match for one
+# of the provided search terms as long as the (case-insensitive) search
+# term is contained within the text; in other words, matches can be made
+# with the search term making up only a substring of the word/phrase it
+# was matched to.
+#
+# To get around some of the issues that might arise from either
+# double-counting matches (for example, since "amen" is a substring
+# of "fundamentalist", every match for "fundamentalist" would also be
+# considered a match for "amen") or flagging some words that are
+# completely unrelated as matches (for example, "amenity" as a match
+# for "amen"), a possible match occurring in text will only be made
+# to the longest search term provided here that is a valid candidate.
+# In addition, adding a string (such as one for amenity) after a # on
+# the same line as a search term will keep occurrences of that string
+# from being flagged as matches for the search term.
+#
+# Words removed from the original list:
+#     all repeated words (though the script would have filtered them out anyway)
+#     angle (I think it might have been a typo of angel?)
+#     agonstic (changed to "agnostic" instead, seemed like typo)
+#
+# Reserved phrases (also case-insensitive):
+#     anysearchword
+#     allsearchwords
+#     _insertnonletterdigitchar_
+#     anything that includes `````````````` or starts/ends with `
+#     anything containing # (since # is used to denote the start of a list
+#        of phrases, and subsequent separations between phrases, that *aren't*
+#        supposed to be captured as a match for the expression)
+
+god
+faith
+bless
+relig
+church
+pray            # spray
+amen            # fundamental # lament # ornament # armament # amenit # amenable
+crusade
+minister        # administer
+soul
+spiritual
+christ
+easter
+mass            # massive
+angel           # angelo # angela # angelica
+god's
+hell            # hello
+preach
+evil            # revile # eville
+churches
+catholic
+creed
+mirac
+creator
+lord            # landlord # overlord # warlord
+heaven
+worship
+christian
+almighty
+reverend
+christmas
+bible
+sacred
+pastor
+cardinal
+prophet
+baptist
+vigil           # vigilant
+congregation
+magi            # imagi # damagi
+pope
+bishop
+sins
+protestant
+catholics
+preacher
+devil
+spiritually
+congregations
+evangelic
+evangelical
+hymn
+preaching
+covenant
+revelation
+salvation
+sermon
+divine
+evangelicals
+ministers
+holy
+saint
+christians
+scripture
+sin             # sing # single # since # singular
+methodist
+clergy
+isaiah
+revelations
+fellowship
+quaker
+pastors
+biblical
+priest
+prophets
+pulpit
+believers
+commandment
+preached
+lord's          # landlord's
+apostle
+godless
+monsignor
+godspeed
+baptists
+chapel
+kingdom
+cathedral
+parish
+archbishop
+christianity
+crusader
+exalted
+preaches
+altar
+denomination
+pew             # typewrit # spew
+preachers
+proverb
+scriptures
+tabernacle
+eternity
+ministry
+monk
+sanctity
+conversions
+denominations
+jesus
+presbyterian
+saints
+apostles
+devout
+forsak
+puritan
+repent
+flock
+godsend
+lent            # equivalent # lently # talent # relent
+priests
+redemption
+sanctuaries
+deacon
+jesuit
+savior
+archdiocese
+devine
+missionary
+mormon
+psalm
+pulpits
+theological
+exodus
+lutheran
+missionaries
+parishioner
+pews            # spews
+prayerfully
+prophecies
+sabbath
+samaritan
+sinner
+clergymen
+communion
+diocese
+gabriel
+minister's
+monotheistic
+orthodox
+scriptural
+sect            # intersect # section # dissect # bisect # trisect # sector
+seminary
+unholy
+worshiper
+emmanuel
+episcopal
+fundamentalist
+holier
+martyrs
+messiah
+ministered      # administered
+ministries
+preacher's
+prophesy
+psalmist
+psalms
+sacredness
+theology
+vatican
+baptized
+catholicism
+chaplain
+christened
+christening
+churchgoer
+clergyman
+congregants
+creator's
+crucifix
+dios            # studios # radios # audios #grandios
+disciples
+ecclesiastes
+epistle
+evildoer
+genesis
+holiness
+moses
+nuns
+pastor's
+pharaoh
+proselyt
+reverends
+theologian
+adventists
+angelic
+apostolic
+ark             # mark # dark # spark # embark # park # stark # lark # bark # hark
+atonement
+baptism
+christ's
+crucifixion
+evangelism
+exaltation
+galatians
+hallelujah
+micah
+monsignors
+nehemiah
+pope's
+redeemer
+sanctif
+sects           # intersects # dissects # bisects # trisects
+serpent
+steeple
+testaments
+ungodly
+vigils
+agape
+amish
+anglicans
+archabbey
+archabbot
+baptistries
+basilica
+beatitude
+believeth
+bible's
+bibles
+calvinists
+canonized
+catholicos
+cbn
+christian's
+churchgoing
+churchyard
+convent
+coreligionists
+corinthians
+deity
+deuteronomy
+diocesan
+dioceses
+easter's
+emmanual
+ephesians
+espiritual
+evangelist
+exalteth
+ezekiel
+faithfuls
+fundamentalists
+godgiven
+godly
+halo            # halog # haloc # halob # halom # halose # halop # haloid
+heavenly
+herod
+holiest
+interreligious
+irreligious
+isaiah's
+ishmael
+israelites
+lazarus
+lenten
+leviathan
+leviticus
+lucifer
+malachi
+mennonite
+messianic
+ministership
+monasteries
+monastery
+monks
+monotheism
+multisectarian
+navidad
+nazarenes
+nun             # nunci # inundat # nonuni
+papal
+pastorate
+pentecostal
+pharoah
+pieties
+pietists
+pontiff
+pontifical
+pontius
+popes
+priesthood
+prophesied
+prophesized
+prophesizing
+prophetess
+purgatories
+reverend's
+rites           # writes # favorites
+rosaries
+sacrilegious
+satan
+satanic
+savior's
+saviour
+sectarianism
+seminarian
+seminaries
+sinful
+sinned
+spirituality
+spirituals
+theocracy
+theocratic
+theologically
+vestments
+vicar
+zaccheus
+afterlife
+agnostic
+alla            # gallant # calla # parallax
+allah
+angels
+baptize
+belief
+biblic
+buddha
+christen
+confess
+convents
+crucify
+demon
+demonic
+demons
+doom
+gentile
+goddess
+gospel
+hashanal
+hellish
+hells
+hindu
+imam
+immoral
+immortal
+islam
+jew             # jewel
+jewish
+juda
+karma
+kippur
+koran
+kosher
+mecca
+meditate
+mercifull
+mercy
+mitzvah
+mohammad
+monastry
+moral
+morality
+morals
+mosque
+muhammed
+mujahids
+muslim
+pagan           # propagand
+paradise
+passover
+penance
+pentecost
+piet
+pilgrim
+pious
+prayer
+quran
+rabbi
+rabbinica
+ramadan
+religion
+rite            # write # favorite # criteri
+ritual
+rosary
+sacrifice
+salvatior
+sectarian
+shia
+shiite
+shrine
+sikh
+spirit
+sunni
+temple
+testament
+torah
+veil            # surveil # unveil
+yiddish
+zen             # citizen # dozen # zenith # brazen
+zion
+pagans
+believer
+blessed
+wrath
+grace           # disgrace

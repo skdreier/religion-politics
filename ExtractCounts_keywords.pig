@@ -47,27 +47,27 @@ Archive = FOREACH Archive GENERATE FROMJSON(value) AS m:[];
 Archive = FILTER Archive BY m#'errorMessage' is null;
 
 -- this is saying for each value and key pair, pull out the following fields.
--- the myfuncs. lines call the python functions from emily_python_udfs.py, also in this repository
+-- the myfuncs. lines call the python functions from emilys_python_udfs.py, also in this repository
 
-ExtractedCounts = FOREACH Archive GENERATE myfuncs.pickURLs(m#'url'),
-           m#'url' AS src:chararray,
-           myfuncs.Threat_countWords(m#'boiled'),
-           SURTURL(m#'url') AS surt:chararray,
-           REPLACE(m#'digest','sha1:','') AS checksum:chararray,
+ExtractedCounts = FOREACH Archive GENERATE myfuncs.pickURLs(m#'url'),              -- adds URLs:chararray
+           m#'url' AS src:chararray,                                               -- adds src:chararray
+           myfuncs.Threat_countWords(REPLACE(m#'content', '[^\\p{Graph}]', ' ')),  -- adds counts:bag{tuple(word:chararray,count:int)}
+           SURTURL(m#'url') AS surt:chararray,                                     -- adds surt:chararray
+           REPLACE(m#'digest','sha1:','') AS checksum:chararray,                   -- adds checksum:chararray
 
--- This selects the first eight characters of the date string (year, month, day) -- I did this because the
--- (year, month, day, hour, second) format is confusing for a lot of time formats down the line - python, postgresql, etc.
+           -- I kept getting unicode errors in the below fields, so I found a regular expression that means "all printed characters"
+           -- e.g. NOT new lines, carriage returns, etc. SO. this finds anything that is not text, punctuation and white space,
+           -- and replaces it with a space
 
-           SUBSTRING(m#'date', 0, 8) AS date:chararray,
+           REPLACE(m#'code', '[^\\p{Graph}]', ' ')                               AS code:chararray,
+           REPLACE(m#'title', '[^\\p{Graph}]', ' ')                              AS title:chararray,
+           REPLACE(m#'description', '[^\\p{Graph}]', ' ')                        AS description:chararray,
+           REPLACE(m#'content', '[^\\p{Graph}]', ' ')                            AS content:chararray,
 
--- I kept getting unicode errors in the below fields, so I found a regular expression that means "all printed charactures"
--- e.g. NOT new lines, carriage returns, etc. SO. this finds anything that is not text, punctuation and white space,
--- and replaces it with a space
+           -- This selects the first eight characters of the date string (year, month, day) -- I did this because the
+           -- (year, month, day, hour, second) format is confusing for a lot of time formats down the line - python, postgresql, etc.
 
-           REPLACE(m#'code', '[^\\p{Graph}]', ' ')          AS code:chararray,
-           REPLACE(m#'title', '[^\\p{Graph}]', ' ')         AS title:chararray,
-           REPLACE(m#'description', '[^\\p{Graph}]', ' ')   AS description:chararray,
-           REPLACE(m#'content', '[^\\p{Graph}]', ' ')       AS content:chararray;
+           REPLACE(SUBSTRING(m#'date', 0, 8), '[^\\p{Graph}]', ' ')              AS date:chararray;
 
 -- This takes each of the previous fields (the url, date, content, etc.) and searches
 -- through the content field looking for any RegEx matches to these terms
@@ -88,51 +88,51 @@ UniqueCaptures = FILTER ExtractedCounts BY content MATCHES '.*natural\\s+disaste
                                         OR content MATCHES '.*fresh\\s+water.*'
                                         OR content MATCHES '.*forest\\s+conservation.*'
                                         OR content MATCHES '.*food\\s+security.*'
-                                        OR content MATCHES '.*wmd.*.'
-                                        OR content MATCHES  '.*weapon[a-z]+?\\sof\\smass\\s+destruction*.'
-                                        OR content MATCHES  '.*violat[a-z]+?\\s?o?f?\\su?n?i?v?e?r?s?a?l?\\s?human\\sright*.'
-                                        OR content MATCHES '.*transnational\\s+crim*.'
-                                        OR content MATCHES '.*terrorist*.'
-                                        OR content MATCHES '.*terrorism*.'
-                                        OR content MATCHES '.*taliban*.'
-                                        OR content MATCHES '.*proliferat*.'
-                                        OR content MATCHES '*.iran.*'
-                                        OR content MATCHES '.*north\\s+korea*.'
-                                        OR content MATCHES '.*natural\\s+disaster*.'
-                                        OR content MATCHES '.*money\\s+launder*.'
-                                        OR content MATCHES '.*ksts*.'
-                                        OR content MATCHES '.*known\\s+and\\s+suspected\\s+terror*.'
-                                        OR content MATCHES '.*organized\\s+crime*.'
-                                        OR content MATCHES '.*human\\s+rights\\s+violat*.'
-                                        OR content MATCHES '.*human\\s+rights\\s+abuse*.'
-                                        OR content MATCHES '.*fresh\\s+water*.'
-                                        OR content MATCHES '.*fragile\\s+state*.'
-                                        OR content MATCHES '.*failed\\s+state*.'
-                                        OR content MATCHES '.*state\\s+failure*.'
-                                        OR content MATCHES '.*drug\\s+traffic*.'
-                                        OR content MATCHES '.*disease*.'
-                                        OR content MATCHES '.*pandemic*.'
-                                        OR content MATCHES '.*cyberwar*.'
-                                        OR content MATCHES '.*cyberterror*.'
-                                        OR content MATCHES '.*cybersecurit*.'
-                                        OR content MATCHES '.*cyber\\s+attack*.'
-                                        OR content MATCHES '.*criminal\\s+network*.'
-                                        OR content MATCHES '.*criminal\\s+baron*.'
+                                        OR content MATCHES '.*wmd..*'
+                                        OR content MATCHES  '.*weapon[a-z]+?\\sof\\smass\\s+destruction.*'
+                                        OR content MATCHES  '.*violat[a-z]+?\\s?o?f?\\su?n?i?v?e?r?s?a?l?\\s?human\\sright.*'
+                                        OR content MATCHES '.*transnational\\s+crim.*'
+                                        OR content MATCHES '.*terrorist.*'
+                                        OR content MATCHES '.*terrorism.*'
+                                        OR content MATCHES '.*taliban.*'
+                                        OR content MATCHES '.*proliferat.*'
+                                        OR content MATCHES '.*iran.*'
+                                        OR content MATCHES '.*north\\s+korea.*'
+                                        OR content MATCHES '.*natural\\s+disaster.*'
+                                        OR content MATCHES '.*money\\s+launder.*'
+                                        OR content MATCHES '.*ksts.*'
+                                        OR content MATCHES '.*known\\s+and\\s+suspected\\s+terror.*'
+                                        OR content MATCHES '.*organized\\s+crime.*'
+                                        OR content MATCHES '.*human\\s+rights\\s+violat.*'
+                                        OR content MATCHES '.*human\\s+rights\\s+abuse.*'
+                                        OR content MATCHES '.*fresh\\s+water.*'
+                                        OR content MATCHES '.*fragile\\s+state.*'
+                                        OR content MATCHES '.*failed\\s+state.*'
+                                        OR content MATCHES '.*state\\s+failure.*'
+                                        OR content MATCHES '.*drug\\s+traffic.*'
+                                        OR content MATCHES '.*disease.*'
+                                        OR content MATCHES '.*pandemic.*'
+                                        OR content MATCHES '.*cyberwar.*'
+                                        OR content MATCHES '.*cyberterror.*'
+                                        OR content MATCHES '.*cybersecurit.*'
+                                        OR content MATCHES '.*cyber\\s+attack.*'
+                                        OR content MATCHES '.*criminal\\s+network.*'
+                                        OR content MATCHES '.*criminal\\s+baron.*'
                                         OR content MATCHES '.*chemical\\?\\sbiological\\?\\so?r?\\s?a?n?d?\\s?nuclear\\s?w?e?a?p?o?n?.*'
-                                        OR content MATCHES '.*nuclear\\s+weapon*.'
-                                        OR content MATCHES '.*chemical\\s+weapon*.'
-                                        OR content MATCHES '.*bioterror*.'
-                                        OR content MATCHES '.*biological\\s+weapon*.'
-                                        OR content MATCHES '.*securities*.'
-                                        OR content MATCHES'.*housing\\s+crisis*.'
-                                        OR content MATCHES '.*subprime\\s+mortgage*.'
-                                        OR content MATCHES '.*lending\\s+crisis*.'
-                                        OR content MATCHES '.*market*.'
-                                        OR content MATCHES '.*mortgage*.'
-                                        OR content MATCHES '.*loan*.'
-                                        OR content MATCHES '.*bankrupt*.'
-                                        OR content MATCHES '.*toxic\\s+asset*.'
-                                        OR content MATCHES '.*securities*.';
+                                        OR content MATCHES '.*nuclear\\s+weapon.*'
+                                        OR content MATCHES '.*chemical\\s+weapon.*'
+                                        OR content MATCHES '.*bioterror.*'
+                                        OR content MATCHES '.*biological\\s+weapon.*'
+                                        OR content MATCHES '.*securities.*'
+                                        OR content MATCHES'.*housing\\s+crisis.*'
+                                        OR content MATCHES '.*subprime\\s+mortgage.*'
+                                        OR content MATCHES '.*lending\\s+crisis.*'
+                                        OR content MATCHES '.*market.*'
+                                        OR content MATCHES '.*mortgage.*'
+                                        OR content MATCHES '.*loan.*'
+                                        OR content MATCHES '.*bankrupt.*'
+                                        OR content MATCHES '.*toxic\\s+asset.*'
+                                        OR content MATCHES '.*securities.*';
 
 -- If you then wanted to further filter those terms by another set of terms, for example, you wanted a page
 -- that mentioned global warming but also talked about it as a "threat" or a "crisis"... You could run this bit:
@@ -144,13 +144,16 @@ UniqueCaptures = FILTER UniqueCaptures BY content MATCHES '.*threat.*'
                                        OR content MATCHES '.*catastroph.*'
                                        OR content MATCHES '.*disaster.*';
 
--- to get TOTAL number of counts, rather than simply unique observations, merge with checksum data
+-- to get TOTAL number of counts, rather than simply unique observations, merge with checksum data.
+-- (A unique capture will only have been taken if something changed on the page, but if one page changed
+-- many times over a period of time and another stayed the same during that time, taking only the unique
+-- captures into account will cause data from pages with consistent text to be underrepresented in our
+-- analysis. The checksum data stores instances when a page *would* have been captured, but nothing had
+-- changed; merging with the checksum data fixes the consistent page underrepresentation problem.)
 
 Checksum = LOAD '$I_CHECKSUM_DATA' USING PigStorage() AS (surt:chararray, date:chararray, checksum:chararray);
 
 -- this joins the unique counts with duplicate counts
-
-CountsJoinChecksum = JOIN ExtractedCounts BY (surt, checksum), Checksum BY (surt, checksum);
 
 CountsJoinChecksum = JOIN UniqueCaptures BY (surt, checksum), Checksum BY (surt, checksum);
 
@@ -158,17 +161,17 @@ CountsJoinChecksum = JOIN UniqueCaptures BY (surt, checksum), Checksum BY (surt,
 -- I only kept the fields I was interested in - because I'm planning to aggregate across URL group, I dropped the content field
 
 FullCounts = FOREACH CountsJoinChecksum GENERATE
-                         UniqueCaptures::src as src,
-                         Checksum::date as date,
-                         UniqueCaptures::counts as counts,
-                         UniqueCaptures::URLs as URLs;
+                            UniqueCaptures::src as src,
+                            Checksum::date as date,
+                            UniqueCaptures::counts as counts,
+                            UniqueCaptures::URLs as URLs;
 
--- This would sort counts by original "source"or URL
+-- This would sort counts by original "source" or URL
 
 GroupedCounts = GROUP FullCounts BY URLs;
 
---This fills in the missing counts (it assumes the counts are the same for time in-between two captures,
--- rather than that the page disappeared. If the page did disaper (no last capture) this stops replicating it)
+-- This fills in the missing counts (it assumes the counts are the same for time in-between two captures,
+-- rather than that the page disappeared. If the page did disappear (no last capture) this stops replicating it)
 
 GroupedCounts = FOREACH GroupedCounts GENERATE
       group AS src,
@@ -178,8 +181,7 @@ GroupedCounts = FOREACH GroupedCounts GENERATE
 GroupedCounts2 = FOREACH GroupedCounts GENERATE
       year AS year, month AS month, word AS word, count AS count, afterlast AS afterlast, URLs AS URLs;
 
-
--- This stores the counts the file name you gave it
+-- This stores the counts in the file name you gave it
 
 STORE GroupedCounts2 INTO '$O_DATA_DIR';
 
