@@ -45,8 +45,28 @@
    
    * half window size: the number of words to take both before and after an appearance of a search term as "cooccurring" with that term
    * number of top results to output: for each search term (as well as the two aggregated result types, anysearchword and allsearchwords), the number of top-scoring cooccurring words to report
-   * output directory name stub: the string to prepend to the directories of all the results files. Make sure that the directories starting with this string and ending in the provided search terms don't already exist in the hadoop file system, or hadoop will throw an error.
+   * output directory name stub: the string to prepend to the directories of all the results files. Make sure that the directories starting with this string and ending in the provided search terms don't already exist in the hadoop file system, or hadoop will throw an error. Do not end this with /
    * I_PARSED_DATA: the full path on the hadoop file system to the input parsed data
    * CHECKSUM_DATA: the full path on the hadoop file system to the checksum data. (If not using checksum data, replace this argument with the string None)
    
-   The bash script will first run a separate script to generate a pig script from the template in the repository with the provided search terms hard-coded in (for get_cooccurrence_words.sh, those are read from cooccurrence_search_words.txt). Then, the script will run that automatically generated script.
+   For get_keyword_counts.sh, these are the three arguments in the order they're provided:
+   
+   * output directory name (doubles as base of name of text file that will store aggregated results). Do not end this with /
+   * I_PARSED_DATA: the full path on the hadoop file system to the input parsed data
+   * CHECKSUM_DATA: the full path on the hadoop file system to the checksum data. (If not using checksum data, replace this argument with the string None)
+   
+   The bash script will first run a separate script to generate a pig script from the template in the repository with the provided search terms in the corresponding .txt file hard-coded in (for get_cooccurrence_words.sh, those are read from get_cooccurrence_words_words_to_search.txt). Then, the script will run that automatically generated script.
+   
+## Troubleshooting Issues
+
+* A pig script sets up successfully, but then gets stuck at 0% completion for hours: after killing this job, check whether there's a phantom yarn thread running from a previous job, and if so, kill it.
+
+   * From the workbench, run the command 
+   
+     ```
+     yarn application -list
+     ```
+     and if there's an old thread running there that shouldn't be, run the command
+     ```
+     yarn application -kill <Application ID>
+     ```
