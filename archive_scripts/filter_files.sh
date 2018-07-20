@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# run this once on arcs folder and once on warcs folder
+
 I_PARSED_DATA_DIR=/dataset-derived/gov/parsed/arcs
-O_DATA_DIR=/user/lucylin/arcs
+O_DATA_DIR_PREFIX=/user/lucylin/arcs
 
 I_CHECKSUM_DATA=/dataset/gov/url-ts-checksum
 
@@ -21,8 +23,10 @@ for I_PARSED_DATA in $I_PARSED_DATA_LIST
 do
     echo "Input: $I_PARSED_DATA"
 
-    pig -p $I_PARSED_DATA \
-        -p $I_CHECKSUM_DATA \
-        -p $O_DATA_DIR \
+    O_DATA_DIR=$O_DATA_DIR_PREFIX/`basename $I_PARSED_DATA`
+
+    pig -p I_PARSED_DATA=$I_PARSED_DATA \
+        -p I_CHECKSUM_DATA=$I_CHECKSUM_DATA \
+        -p O_DATA_DIR=$O_DATA_DIR \
         $PIG_SCRIPT
 done
