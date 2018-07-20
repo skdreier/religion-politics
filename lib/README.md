@@ -2,8 +2,6 @@
 
 ### Source of jar files:
 
-- datafu-pig-1.4.0.jar: https://repository.apache.org/content/groups/public/org/apache/datafu/datafu-pig/
-
 - lucene-core-7.3.1.jar: http://www.apache.org/dyn/closer.lua/lucene/java
 
 - org.json-20161124.jar: http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.codeartisans%22%20AND%20a%3A%22org.json%22
