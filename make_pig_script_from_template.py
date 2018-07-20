@@ -310,7 +310,7 @@ if __name__ == '__main__':
     comment_out_next_operative_line = False
     applying_checksum_changes = False
     next_checksum_change_to_apply = -1
-    with open("get_" + template_to_make + "TEMPLATE.pig", "r") as f:
+    with open("templates/get_" + template_to_make + "TEMPLATE.pig", "r") as f:
         for line in f:
             if line.startswith("-- Get Cooccurrence Words TEMPLATE Pig Script: Template for a"):
                 line = line.replace("-- Get Cooccurrence Words TEMPLATE Pig Script: Template for a",
@@ -417,7 +417,7 @@ if __name__ == '__main__':
 
     udfs = open("get_" + template_to_make + "_udfs.py", "w")
     in_repeat_section = False
-    with open("get_" + template_to_make + "_udfsTEMPLATE.py", "r") as f:
+    with open("templates/get_" + template_to_make + "_udfsTEMPLATE.py", "r") as f:
         for line in f:
             if not in_repeat_section and line.strip().startswith("STARTLINEREPEAT"):
                 in_repeat_section = True
