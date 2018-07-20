@@ -1,10 +1,10 @@
 -- Author: Sofia Serrano
 -- Get Cooccurrence Words TEMPLATE Pig Script: Template for automatically produced pig script which will find
 -- notable words (i.e., not words like "and" or "the") that tend to cooccur with the words provided in
--- cooccurrence_search_words.txt.
+-- get_cooccurrence_words_words_to_search.txt.
 -- For questions contact sofias6@cs.washington.edu
 -- This template script itself should never be run.
--- The automatically generated script can be run with only I_PARSED_DATA and I_CHECKSUM_DATA argument,
+-- The automatically generated script can be run with only I_PARSED_DATA and I_CHECKSUM_DATA arguments,
 -- assuming the output directory stub stub provided to the bash script that generated the script describes
 -- directories that don't exist yet.
 -- Example usage:
@@ -16,10 +16,12 @@
 --         /dataset-derived/gov/parsed/arcs/bucket-0/DOTGOV-EXTRACTION-1995-FY2013-MIME-VIDEO-ARCS-PART-00034-000030.arc.gz \
 --         /dataset/gov/url-ts-checksum/
 --     The text (after it's been lowercased) consists of:
---         briefing daily press briefing department of state public affairs    (* 75 when merged with checksum)
---         dial-up modem -- 8/30/06 bureau of public affairs                   (* 26 when merged with checksum)
+--         briefing daily press briefing department of state public affairs
+--                                     (* 3 before checksum, * 75 when merged with checksum)
+--         dial-up modem -- 8/30/06 bureau of public affairs
+--                                     (* 1 before checksum, * 26 when merged with checksum)
 --     Search terms to run on:
---         a
+--         e
 --         daily press
 --         press
 --         g
@@ -33,16 +35,14 @@ SET mapreduce.reduce.memory.mb 8192;
 SET mapred.max.map.failures.percent 10;
 REGISTER lib/porky-abbreviated.jar;
 REGISTER lib/webarchive-commons-1.1.7.jar;
-REGISTER lib/datafu-pig-1.4.0.jar;
 
 REGISTER 'emilys_python_udfs.py' USING jython AS emilysfuncs;
-REGISTER 'cooccurrence_udfs.py' USING jython AS cooccurrencefuncs;
+REGISTER 'get_cooccurrence_words_udfs.py' USING jython AS cooccurrencefuncs;
 
 DEFINE FROMJSON org.archive.porky.FromJSON();
 DEFINE SequenceFileLoader org.archive.porky.SequenceFileLoader();
 DEFINE docmakingudf cooccurrencefuncs.docmakingudf();
 DEFINE converttochararray cooccurrencefuncs.converttochararray();
-DEFINE BagConcat datafu.pig.bags.BagConcat();
 
 -- This flips the URL back to front so the important parts are at the beginning e.g. gov.whitehouse.frontpage......
 -- I haven't really figured out why this is helpful, but it does help with using existing scripts because the
@@ -77,13 +77,21 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
               REPLACE(m#'code', '[^\\p{Graph}]', ' ')                               AS code:chararray,
               REPLACE(m#'title', '[^\\p{Graph}]', ' ')                              AS title:chararray,
               REPLACE(m#'description', '[^\\p{Graph}]', ' ')                        AS description:chararray,
-              REPLACE(m#'content', '[^\\p{Graph}]', ' ')                            AS document:chararray,
+              REPLACE(m#'content', '[^\\p{Alnum}\']', ' ')                          AS document:chararray,
 
               -- This selects the first eight characters of the date string (year, month, day) -- I did this because
               -- the (year, month, day, hour, second) format is confusing for a lot of time formats down the line -
               -- python, postgresql, etc.
 
               REPLACE(SUBSTRING(m#'date', 0, 8), '[^\\p{Graph}]', ' ')              AS date:chararray;
+
+instance = FILTER instance BY NOT(document MATCHES '');
+
+-- don't bother looking through tokenized text for pages containing no matches
+instance = FILTER instance BY
+                     STARTLINEREPEATATMOST75
+                     document MATCHES INSERTPIGREGEXHERE
+                     ENDLINEREPEATATMOST75
 
 prechecksum_instance_prelim = FOREACH instance GENERATE URLs AS URLs:chararray,
                                                  src AS src:chararray,
@@ -109,11 +117,9 @@ prechecksum_instance = FILTER prechecksum_instance_prelim BY NOT(document MATCHE
 Checksum = LOAD '$I_CHECKSUM_DATA' USING PigStorage() AS (surt:chararray, date:chararray, checksum:chararray);
 
 term_specific_doc_snippet = FOREACH prechecksum_instance GENERATE
-                               FLATTEN(BagConcat(
-                                  STARTLINEREPEAT
-                                  docmakingudf(document, INSERTTERMHERE, INSERTREGEXHERE, INSERTWINDOWSIZEHERE)
-                                  ENDLINEREPEAT
-                               )),
+                               FLATTEN(
+                                  docmakingudf(document, INSERTWINDOWSIZEHERE)
+                               ),
                                surt AS surt:chararray,
                                checksum AS checksum:chararray,
                                date AS date:chararray;
@@ -121,6 +127,8 @@ term_specific_doc_snippet = FOREACH prechecksum_instance GENERATE
         -- format of term_specific_doc_snippet: ('pray', 'doc snippet with term edited out', surt, checksum)
         --                                      ('pray', 'and another fake document snippet', surt, checksum)
         --                                      ('crusade', 'suppose this term only had one match', surt, checksum)
+
+-- IF NOT BOTHERING WITH CHECKSUM: searchterm_foundterm --> searchterm_foundterm_flattened
 
 searchterm_foundterm = FOREACH term_specific_doc_snippet GENERATE
                                searchterm AS search_term,
@@ -140,16 +148,12 @@ searchterm_foundterm = FOREACH term_specific_doc_snippet GENERATE
 
 searchterm_foundterm_intermediate = JOIN searchterm_foundterm BY (surt, checksum), Checksum BY (surt, checksum);
 
--- IF NOT BOTHERING WITH CHECKSUM: searchterm_foundterm_intermediate --> searchterm_foundterm
--- IF NOT BOTHERING WITH CHECKSUM: searchterm_foundterm:: -->
--- IF NOT BOTHERING WITH CHECKSUM: searchterm_foundterm:: -->
--- IF NOT BOTHERING WITH CHECKSUM: Checksum:: -->
+-- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
 
 searchterm_foundterm_flattened = FOREACH searchterm_foundterm_intermediate GENERATE
                                                            searchterm_foundterm::search_term AS search_term:chararray,
                                                            searchterm_foundterm::term AS term:chararray,
                                                            Checksum::date AS date:chararray;
-
 
 searchterm_foundterm_count = FOREACH (GROUP searchterm_foundterm_flattened BY (search_term, term)) GENERATE
                                 FLATTEN(group) AS (search_term, term),
@@ -312,29 +316,3 @@ subtable_to_dump = FOREACH order_by_score_doc GENERATE term AS term,
                                                        log_tf AS log_tf,
                                                        log_df_doc AS log_df_doc;
 STORE subtable_to_dump INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-allsearchwords-doc/';
-
--------------- Output from each individual search word --------------
-
-STARTLINEREPEAT
-subtable = FILTER table_with_log_scores BY search_term == INSERTTERMHERE;
-order_by_score_corpus = ORDER subtable BY score_corpus DESC;
-order_by_score_corpus = LIMIT order_by_score_corpus INSERTNUMTERMSTOCOLLECT;
-subtable_to_dump = FOREACH order_by_score_corpus GENERATE search_term AS search_term,
-                                                          term AS term,
-                                                          score_corpus AS score,
-                                                          log_tf AS log_tf,
-                                                          log_df_corpus AS log_df_corpus,
-                                                          lognumwordsinsearchtermdoc AS lognumwordsinsearchtermdoc;
-STORE subtable_to_dump INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES-corpus/';
-
-order_by_score_doc = ORDER subtable BY score_doc DESC;
-order_by_score_doc = LIMIT order_by_score_doc INSERTNUMTERMSTOCOLLECT;
-subtable_to_dump = FOREACH order_by_score_doc GENERATE search_term AS search_term,
-                                                       term AS term,
-                                                       score_doc AS score,
-                                                       log_tf AS log_tf,
-                                                       log_df_doc AS log_df_doc,
-                                                       lognumwordsinsearchtermdoc AS lognumwordsinsearchtermdoc;
-STORE subtable_to_dump INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES-doc/';
-
-ENDLINEREPEAT

@@ -1,4 +1,7 @@
-# Cooccurrence Search Words
+# Keyword-Counting Search Words
+#
+# All search words must be single words with no whitespace.
+#
 # Current list is union of chapp_relig.csv and liwc_relig.csv lists,
 # but the script will work if replaced with any list of at least two
 # words. Matches will be case-insensitive. Each phrase to search must
@@ -27,9 +30,6 @@
 #     agonstic (changed to "agnostic" instead, seemed like typo)
 #
 # Reserved phrases (also case-insensitive):
-#     anysearchword
-#     allsearchwords
-#     _insertnonletterdigitchar_
 #     anything that includes `````````````` or starts/ends with `
 #     anything containing # (since # is used to denote the start of a list
 #        of phrases, and subsequent separations between phrases, that *aren't*
@@ -40,26 +40,26 @@ faith
 bless
 relig
 church
-pray            # spray
-amen            # fundamental # lament # ornament # armament # amenit # amenable
+pray
+amen            # amend
 crusade
-minister        # administer
+minister
 soul
 spiritual
-christ
-easter
-mass            # massive
-angel           # angelo # angela # angelica
+christ          # christina # christopher # christie
+easter          # eastern
+mass            # massach # massage # massap
+angel
 god's
-hell            # hello
+hell
 preach
-evil            # revile # eville
+evil
 churches
 catholic
 creed
 mirac
 creator
-lord            # landlord # overlord # warlord
+lord
 heaven
 worship
 christian
@@ -74,9 +74,9 @@ prophet
 baptist
 vigil           # vigilant
 congregation
-magi            # imagi # damagi
+magi            # magistrate
 pope
-bishop
+bishop          # bishopville
 sins
 protestant
 catholics
@@ -99,7 +99,7 @@ holy
 saint
 christians
 scripture
-sin             # sing # single # since # singular
+sin             # sing
 methodist
 clergy
 isaiah
@@ -114,7 +114,7 @@ pulpit
 believers
 commandment
 preached
-lord's          # landlord's
+lord's
 apostle
 godless
 monsignor
@@ -123,7 +123,7 @@ baptists
 chapel
 kingdom
 cathedral
-parish
+parish          # parishville
 archbishop
 christianity
 crusader
@@ -131,14 +131,14 @@ exalted
 preaches
 altar
 denomination
-pew             # typewrit # spew
+pew             # pewam
 preachers
 proverb
 scriptures
 tabernacle
 eternity
 ministry
-monk
+monk            # monkey
 sanctity
 conversions
 denominations
@@ -152,7 +152,7 @@ puritan
 repent
 flock
 godsend
-lent            # equivalent # lently # talent # relent
+lent
 priests
 redemption
 sanctuaries
@@ -170,7 +170,7 @@ exodus
 lutheran
 missionaries
 parishioner
-pews            # spews
+pews
 prayerfully
 prophecies
 sabbath
@@ -184,7 +184,7 @@ minister's
 monotheistic
 orthodox
 scriptural
-sect            # intersect # section # dissect # bisect # trisect # sector
+sect            # section # sector
 seminary
 unholy
 worshiper
@@ -194,7 +194,7 @@ fundamentalist
 holier
 martyrs
 messiah
-ministered      # administered
+ministered
 ministries
 preacher's
 prophesy
@@ -213,7 +213,7 @@ clergyman
 congregants
 creator's
 crucifix
-dios            # studios # radios # audios #grandios
+dios
 disciples
 ecclesiastes
 epistle
@@ -230,7 +230,7 @@ theologian
 adventists
 angelic
 apostolic
-ark             # mark # dark # spark # embark # park # stark # lark # bark # hark
+ark             # arkans
 atonement
 baptism
 christ's
@@ -245,7 +245,7 @@ nehemiah
 pope's
 redeemer
 sanctif
-sects           # intersects # dissects # bisects # trisects
+sects
 serpent
 steeple
 testaments
@@ -269,7 +269,7 @@ cbn
 christian's
 churchgoing
 churchyard
-convent
+convent         # convention
 coreligionists
 corinthians
 deity
@@ -287,7 +287,7 @@ faithfuls
 fundamentalists
 godgiven
 godly
-halo            # halog # haloc # halob # halom # halose # halop # haloid
+halo
 heavenly
 herod
 holiest
@@ -312,7 +312,7 @@ monotheism
 multisectarian
 navidad
 nazarenes
-nun             # nunci # inundat # nonuni
+nun
 papal
 pastorate
 pentecostal
@@ -330,7 +330,7 @@ prophesizing
 prophetess
 purgatories
 reverend's
-rites           # writes # favorites
+rites
 rosaries
 sacrilegious
 satan
@@ -352,7 +352,7 @@ vicar
 zaccheus
 afterlife
 agnostic
-alla            # gallant # calla # parallax
+alla
 allah
 angels
 baptize
@@ -363,9 +363,9 @@ christen
 confess
 convents
 crucify
-demon
+demon           # demonst
 demonic
-demons
+demons          # demonst
 doom
 gentile
 goddess
@@ -399,21 +399,21 @@ mosque
 muhammed
 mujahids
 muslim
-pagan           # propagand
+pagan
 paradise
 passover
 penance
 pentecost
-piet
+piet            # pieter
 pilgrim
 pious
 prayer
 quran
-rabbi
+rabbi           # rabbit
 rabbinica
 ramadan
 religion
-rite            # write # favorite # criteri
+rite
 ritual
 rosary
 sacrifice
@@ -428,12 +428,12 @@ sunni
 temple
 testament
 torah
-veil            # surveil # unveil
+veil
 yiddish
-zen             # citizen # dozen # zenith # brazen
+zen
 zion
 pagans
 believer
 blessed
 wrath
-grace           # disgrace
+grace           # graceperiod
