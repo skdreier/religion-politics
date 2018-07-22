@@ -85,13 +85,12 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
 
               REPLACE(SUBSTRING(m#'date', 0, 8), '[^\\p{Graph}]', ' ')              AS date:chararray;
 
-instance = FILTER instance BY NOT(document MATCHES '');
-
 -- don't bother looking through tokenized text for pages containing no matches
-instance = FILTER instance BY
-                     STARTLINEREPEATATMOST75
+instance = FILTER instance BY NOT(document MATCHES '') AND (
+                     STARTLINEREPEATATMOST25
                      document MATCHES INSERTPIGREGEXHERE
-                     ENDLINEREPEATATMOST75
+                     ENDLINEREPEATATMOST25
+                     );
 
 prechecksum_instance_prelim = FOREACH instance GENERATE URLs AS URLs:chararray,
                                                  src AS src:chararray,

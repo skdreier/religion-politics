@@ -205,7 +205,7 @@ if __name__ == '__main__':
 ###########################################################
 
 
-def fill_in_repeated_line_section(lines_to_repeat_inner, script_inner):
+def fill_in_repeated_line_section(lines_to_repeat_inner, script_inner, needs_closure):
     for keyword_ind in range(len(keyword_tuples)):
         keyword_tuple = keyword_tuples[keyword_ind]
         term_itself = keyword_tuple[0]
@@ -226,18 +226,24 @@ def fill_in_repeated_line_section(lines_to_repeat_inner, script_inner):
                 line_inner = line_inner.rstrip()
                 if ' MATCHES ' in line_inner:
                     if keyword_ind == len(keyword_tuples) - 1:
-                        line_inner += ';\n'
+                        if needs_closure:
+                            line_inner += ';\n'
+                        else:
+                            line_inner += '\n'
                     else:
                         line_inner += ' OR\n'
                 else:
                     if keyword_ind == len(keyword_tuples) - 1:
-                        line_inner += '\n'
+                        if needs_closure:
+                            line_inner += '\n'
+                        else:
+                            line_inner += '\n'
                     else:
                         line_inner += ',\n'
             script_inner.write(line_inner)
 
 
-def fill_in_repeated_line_section_limited(lines_to_repeat_inner, script_inner, limit):
+def fill_in_repeated_line_section_limited(lines_to_repeat_inner, script_inner, limit, needs_closure):
     adjusted_keyword_groupings = [[] for i in range(limit)]
     for i in range(len(keyword_tuples)):
         adjusted_keyword_groupings[i % limit].append(keyword_tuples[i])
@@ -269,41 +275,49 @@ def fill_in_repeated_line_section_limited(lines_to_repeat_inner, script_inner, l
                 line_inner = line_inner.rstrip()
                 if ' MATCHES ' in line_inner:
                     if keyword_ind == len(adjusted_keyword_tuples) - 1:
-                        line_inner += ';\n'
+                        if needs_closure:
+                            line_inner += ';\n'
+                        else:
+                            line_inner += '\n'
                     else:
                         line_inner += ' OR\n'
                 else:
                     if keyword_ind == len(adjusted_keyword_tuples) - 1:
-                        line_inner += '\n'
+                        if needs_closure:
+                            line_inner += '\n'
+                        else:
+                            line_inner += '\n'
                     else:
                         line_inner += ',\n'
             script_inner.write(line_inner)
 
 
 def get_all_regexes(some_keyword_tuples):
-    all_regexes = "'"
+    all_regexes_inner = "'"
     for i in range(len(some_keyword_tuples) - 1):
         regex_with_quotes = some_keyword_tuples[i][1]
         try:
             regex_with_quotes[2:].index('(')
             # there are multiple parentheses within regex, so we need another layer
-            all_regexes += "(" + regex_with_quotes[1:-1] + ")|"
+            all_regexes_inner += "(" + regex_with_quotes[1:-1] + ")|"
         except:
-            all_regexes += regex_with_quotes[1:-1] + "|"
+            all_regexes_inner += regex_with_quotes[1:-1] + "|"
     regex_with_quotes = some_keyword_tuples[-1][1]
     try:
         regex_with_quotes[2:].index('(')
         # there are multiple parentheses within regex, so we need another layer
-        all_regexes += "(?:" + regex_with_quotes[1:-1] + ")"
+        all_regexes_inner += "(?:" + regex_with_quotes[1:-1] + ")"
     except:
-        all_regexes += regex_with_quotes[1:-1]
-    all_regexes += "'"
-    return all_regexes
+        all_regexes_inner += regex_with_quotes[1:-1]
+    all_regexes_inner += "'"
+    return all_regexes_inner
 
 
 if __name__ == '__main__':
     pig_script = open("get_" + template_to_make + ".pig", "w")
     in_repeat_section = False
+    prev_line = ''
+    repeat_section_needs_closure = False
     limited_repeat_section = False
     limit_on_repeat_section = 0
     collecting_checksum_changes = False
@@ -316,18 +330,22 @@ if __name__ == '__main__':
                 line = line.replace("-- Get Cooccurrence Words TEMPLATE Pig Script: Template for a",
                                     "-- Get Cooccurrence Words Pig Script: A")
                 pig_script.write(line)
+                prev_line = line
                 continue
             elif line.startswith("-- Get Keyword Counts TEMPLATE Pig Script: Template for a"):
                 line = line.replace("-- Get Keyword Counts TEMPLATE Pig Script: Template for a",
                                     "-- Get Keyword Counts Pig Script: A")
                 pig_script.write(line)
+                prev_line = line
                 continue
             elif line.startswith("-- This template script"):
+                prev_line = line
                 continue
             elif line.startswith("-- The automatically generated script"):
                 line = line.replace("-- The automatically generated script",
                                     "-- This automatically generated script")
                 pig_script.write(line)
+                prev_line = line
                 continue
             elif not in_repeat_section and line.strip().startswith("STARTLINEREPEAT"):
                 in_repeat_section = True
@@ -336,17 +354,25 @@ if __name__ == '__main__':
                     limit_on_repeat_section = int(line.strip()[line.strip().index("ATMOST") + 6:])
                 else:
                     limited_repeat_section = False
+                if prev_line.rfind('(') > prev_line.rfind(')'):
+                    repeat_section_needs_closure = False
+                else:
+                    repeat_section_needs_closure = True
                 lines_to_repeat = []
+                prev_line = line
                 continue
             elif in_repeat_section and not line.strip().startswith("ENDLINEREPEAT"):
                 lines_to_repeat.append(line)
+                prev_line = line
                 continue
             elif line.strip().startswith("ENDLINEREPEAT"):
                 if limited_repeat_section:
-                    fill_in_repeated_line_section_limited(lines_to_repeat, pig_script, limit_on_repeat_section)
+                    fill_in_repeated_line_section_limited(lines_to_repeat, pig_script, limit_on_repeat_section,
+                                                          repeat_section_needs_closure)
                 else:
-                    fill_in_repeated_line_section(lines_to_repeat, pig_script)
+                    fill_in_repeated_line_section(lines_to_repeat, pig_script, repeat_section_needs_closure)
                 in_repeat_section = False
+                prev_line = line
                 continue
             elif not use_checksum and collecting_checksum_changes:
                 if line.strip() != '':
@@ -384,6 +410,7 @@ if __name__ == '__main__':
                     else:
                         line = line.replace("INSERTALLREGEXESHERE", all_regexes)
                 pig_script.write(line)
+                prev_line = line
                 continue
             elif not use_checksum and applying_checksum_changes:
                 line = line.replace(checksum_changes[next_checksum_change_to_apply][0],
@@ -412,11 +439,12 @@ if __name__ == '__main__':
                     else:
                         line = line.replace("INSERTALLREGEXESHERE", all_regexes)
                 pig_script.write(line)
+            prev_line = line
     pig_script.close()
-
 
     udfs = open("get_" + template_to_make + "_udfs.py", "w")
     in_repeat_section = False
+    prev_line = ''
     with open("templates/get_" + template_to_make + "_udfsTEMPLATE.py", "r") as f:
         for line in f:
             if not in_repeat_section and line.strip().startswith("STARTLINEREPEAT"):
@@ -426,14 +454,21 @@ if __name__ == '__main__':
                     limit_on_repeat_section = int(line.strip()[line.strip().index("ATMOST") + 6:])
                 else:
                     limited_repeat_section = False
+                if prev_line.rfind('(') > prev_line.rfind(')'):
+                    repeat_section_needs_closure = False
+                else:
+                    repeat_section_needs_closure = True
                 lines_to_repeat = []
+                prev_line = line
                 continue
             elif in_repeat_section and not line.strip().startswith("ENDLINEREPEAT"):
                 lines_to_repeat.append(line)
+                prev_line = line
                 continue
             elif line.strip().startswith("ENDLINEREPEAT"):
-                fill_in_repeated_line_section(lines_to_repeat, udfs)
+                fill_in_repeated_line_section(lines_to_repeat, udfs, repeat_section_needs_closure)
                 in_repeat_section = False
+                prev_line = line
                 continue
             else:
                 line = line.replace("INSERTWINDOWSIZEHERE", str(window_size))
@@ -446,4 +481,5 @@ if __name__ == '__main__':
                     else:
                         line = line.replace("INSERTALLREGEXESHERE", all_regexes)
                 udfs.write(line)
+            prev_line = line
     udfs.close()

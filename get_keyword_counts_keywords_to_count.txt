@@ -35,7 +35,7 @@
 #        of phrases, and subsequent separations between phrases, that *aren't*
 #        supposed to be captured as a match for the expression)
 
-god
+god             # egod
 faith
 bless
 relig
@@ -99,7 +99,7 @@ holy
 saint
 christians
 scripture
-sin             # sing
+sin             # sing # msin # gsin
 methodist
 clergy
 isaiah
@@ -230,7 +230,7 @@ theologian
 adventists
 angelic
 apostolic
-ark             # arkans
+ark             # arkans # park # bark # mark # stark # shark # arkark # lark # dark # clark
 atonement
 baptism
 christ's
@@ -351,8 +351,8 @@ vestments
 vicar
 zaccheus
 afterlife
-agnostic
-alla
+agnostic        # diagnostic
+alla            # dalla # walla # ualla # palla # halla
 allah
 angels
 baptize
@@ -425,13 +425,13 @@ shrine
 sikh
 spirit
 sunni
-temple
+temple          # templeton
 testament
 torah
 veil
 yiddish
-zen
-zion
+zen             # zena # zenk # zenn # zense
+zion            # zionc # zions # ziont # zionn # zionl
 pagans
 believer
 blessed

@@ -70,13 +70,12 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
 
               REPLACE(SUBSTRING(m#'date', 0, 8), '[^\\p{Graph}]', ' ')              AS date:chararray;
 
-instance = FILTER instance BY NOT(document MATCHES '');
-
 -- don't bother looking through tokenized text for pages containing no matches
-instance = FILTER instance BY
-                     STARTLINEREPEATATMOST75
+instance = FILTER instance BY NOT(document MATCHES '') AND (
+                     STARTLINEREPEATATMOST25
                      document MATCHES INSERTPIGREGEXHERE
-                     ENDLINEREPEATATMOST75
+                     ENDLINEREPEATATMOST25
+                     );
 
 prechecksum_instance_prelim = FOREACH instance GENERATE surt AS surt:chararray,
                                                  checksum AS checksum:chararray,
@@ -84,9 +83,9 @@ prechecksum_instance_prelim = FOREACH instance GENERATE surt AS surt:chararray,
                                                  date AS date:chararray;
 
 all_matches = FILTER prechecksum_instance_prelim BY
-                     STARTLINEREPEATATMOST75
+                     STARTLINEREPEATATMOST25
                      word MATCHES INSERTPIGREGEXHERE
-                     ENDLINEREPEATATMOST75
+                     ENDLINEREPEATATMOST25
 
 -- to get TOTAL number of counts, rather than simply unique observations, merge with checksum data.
 -- (A unique capture will only have been taken if something changed on the page, but if one page changed

@@ -35,20 +35,20 @@
 #        of phrases, and subsequent separations between phrases, that *aren't*
 #        supposed to be captured as a match for the expression)
 
-god
+god             # egod
 faith
 bless
 relig
 church
 pray            # spray
-amen            # fundamental # lament # ornament # armament # amenit # amenable
+amen            # ament # amenit # amenabl # amend
 crusade
 minister        # administer
 soul
 spiritual
-christ
-easter
-mass            # massive
+christ          # christina # christopher # christie
+easter          # eastern
+mass            # massive # massach # massag # massap
 angel           # angelo # angela # angelica # changel # angelfish
 god's
 hell            # hello
@@ -74,9 +74,9 @@ prophet
 baptist
 vigil           # vigilant
 congregation
-magi            # imagi # damagi
+magi            # imagi # damagi # magistrate
 pope
-bishop
+bishop          # bishopvil
 sins            # assassins # asins # esins # ysins
 protestant
 catholics
@@ -99,7 +99,7 @@ holy
 saint
 christians
 scripture
-sin             # sing # single # since # singular
+sin             # sing # single # since # singular # msin # gsin
 methodist
 clergy
 isaiah
@@ -123,7 +123,7 @@ baptists
 chapel
 kingdom
 cathedral
-parish
+parish          # parishvil
 archbishop
 christianity
 crusader
@@ -131,14 +131,14 @@ exalted
 preaches
 altar
 denomination
-pew             # typewrit # spew
+pew             # typewrit # spew # pewam
 preachers
 proverb
 scriptures
 tabernacle
 eternity
 ministry
-monk
+monk            # monkey
 sanctity
 conversions
 denominations
@@ -230,7 +230,7 @@ theologian
 adventists
 angelic
 apostolic
-ark             # mark # dark # spark # embark # park # stark # lark # bark # hark
+ark             # mark # arkans # park # bark # stark # shark # arkark # lark # dark
 atonement
 baptism
 christ's
@@ -269,7 +269,7 @@ cbn
 christian's
 churchgoing
 churchyard
-convent
+convent         # convention
 coreligionists
 corinthians
 deity
@@ -351,8 +351,8 @@ vestments
 vicar
 zaccheus
 afterlife
-agnostic
-alla            # gallant # calla # parallax
+agnostic        # diagnostic
+alla            # gallant # calla # parallax # dalla # walla # ualla # palla # halla
 allah
 angels
 baptize
@@ -365,7 +365,7 @@ convents
 crucify
 demon
 demonic
-demons
+demons          # demonst
 doom
 gentile
 goddess
@@ -404,12 +404,12 @@ paradise
 passover
 penance
 pentecost
-piet
+piet            # pieter
 pilgrim
 pious
 prayer
 quran
-rabbi
+rabbi           # rabbit
 rabbinica
 ramadan
 religion
@@ -425,15 +425,15 @@ shrine
 sikh
 spirit
 sunni
-temple
+temple          # templeton
 testament
 torah
 veil            # surveil # unveil
 yiddish
-zen             # citizen # dozen # zenith # brazen
-zion
+zen             # citizen # dozen # zenith # brazen # zena # zenk # zenn # zense
+zion            # zionc # zions # ziont # zionn # zionl
 pagans
 believer
 blessed
 wrath
-grace           # disgrace
+grace           # disgrace # graceperiod
