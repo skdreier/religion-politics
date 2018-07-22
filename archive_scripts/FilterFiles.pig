@@ -22,9 +22,8 @@ DEFINE FROMJSON org.archive.porky.FromJSON();
 DEFINE SequenceFileLoader org.archive.porky.SequenceFileLoader();
 DEFINE SURTURL org.archive.porky.SurtUrlKey();
 
--- originally: %declare UNPRINTABLE '[^\\\\p{Graph}]'
 -- (\ are doubly escaped b/c one of them will be stripped away)
-%declare UNPRINTABLE '[^\\\\p{Graph}\\\\n]'
+%declare UNPRINTABLE '[^\\\\p{Graph}]'
 
 
 -- load data
