@@ -35,405 +35,405 @@
 #        of phrases, and subsequent separations between phrases, that *aren't*
 #        supposed to be captured as a match for the expression)
 
-god             # egod
-faith
-bless
-relig
-church
-pray            # spray
-amen            # ament # amenit # amenabl # amend
-crusade
-minister        # administer
-soul
-spiritual
-christ          # christina # christopher # christie
-easter          # eastern
-mass            # massive # massach # massag # massap
-angel           # angelo # angela # angelica # changel # angelfish
-god's
-hell            # hello
-preach
-evil            # revile # eville
-churches
-catholic
-creed
-mirac
-creator
-lord            # landlord # overlord # warlord
-heaven
-worship
-christian
-almighty
-reverend
-christmas
-bible
-sacred
-pastor
-cardinal
-prophet
-baptist
-vigil           # vigilant
-congregation
-magi            # imagi # damagi # magistrate
-pope
-bishop          # bishopvil
-sins            # assassins # asins # esins # ysins
-protestant
-catholics
-preacher
-devil
-spiritually
-congregations
-evangelic
-evangelical
-hymn
-preaching
-covenant
-revelation
-salvation
-sermon
-divine          # divined # divines
-evangelicals
-ministers
-holy
-saint
-christians
-scripture
-sin             # sing # single # since # singular # msin # gsin
-methodist
-clergy
-isaiah
-revelations
-fellowship
-quaker
-pastors
-biblical
-priest
-prophets
-pulpit
-believers
-commandment
-preached
-lord's          # landlord's
-apostle
-godless
-monsignor
-godspeed
-baptists
-chapel
-kingdom
-cathedral
-parish          # parishvil
-archbishop
-christianity
-crusader
-exalted
-preaches
-altar
-denomination
-pew             # typewrit # spew # pewam
-preachers
-proverb
-scriptures
-tabernacle
-eternity
-ministry
-monk            # monkey
-sanctity
-conversions
-denominations
-jesus
-presbyterian
-saints
-apostles
-devout
-forsak
-puritan
-repent
-flock
-godsend
-lent            # equivalent # lently # talent # relent
-priests
-redemption
-sanctuaries
-deacon
-jesuit
-savior
-archdiocese
-devine
-missionary
-mormon
-psalm
-pulpits
-theological
-exodus
-lutheran
-missionaries
-parishioner
-pews            # spews
-prayerfully
-prophecies
-sabbath
-samaritan
-sinner
-clergymen
-communion
-diocese
-gabriel
-minister's
-monotheistic
-orthodox
-scriptural
-sect            # intersect # section # dissect # bisect # trisect # sector
-seminary
-unholy
-worshiper
-emmanuel
-episcopal
-fundamentalist
-holier
-martyrs
-messiah
-ministered      # administered
-ministries
-preacher's
-prophesy
-psalmist
-psalms
-sacredness
-theology
-vatican
-baptized
-catholicism
-chaplain
-christened
-christening
-churchgoer
-clergyman
-congregants
-creator's
-crucifix
-dios            # studios # radios # audios #grandios
-disciples
-ecclesiastes
-epistle
-evildoer
-genesis
-holiness
-moses
-nuns
-pastor's
-pharaoh
-proselyt
-reverends
-theologian
 adventists
-angelic
-apostolic
-ark             # mark # arkans # park # bark # stark # shark # arkark # lark # dark
-atonement
-baptism
-christ's
-crucifixion
-evangelism
-exaltation
-galatians
-hallelujah
-micah
-monsignors
-nehemiah
-pope's
-redeemer
-sanctif
-sects           # intersects # dissects # bisects # trisects
-serpent
-steeple
-testaments
-ungodly
-vigils
-agape
-amish
-anglicans
-archabbey
-archabbot
-baptistries
-basilica
-beatitude
-believeth
-bible's
-bibles
-calvinists
-canonized
-catholicos
-cbn
-christian's
-churchgoing
-churchyard
-convent         # convention
-coreligionists
-corinthians
-deity
-deuteronomy
-diocesan
-dioceses
-easter's
-emmanual
-ephesians
-espiritual
-evangelist
-exalteth
-ezekiel
-faithfuls
-fundamentalists
-godgiven
-godly
-halo            # halog # haloc # halob # halom # halose # halop # haloid
-heavenly
-herod
-holiest
-interreligious
-irreligious
-isaiah's
-ishmael
-israelites
-lazarus
-lenten
-leviathan
-leviticus
-lucifer
-malachi
-mennonite
-messianic
-ministership
-monasteries
-monastery
-monks
-monotheism
-multisectarian
-navidad
-nazarenes
-nun             # nunci # inundat # nonuni
-papal
-pastorate
-pentecostal
-pharoah
-pieties
-pietists
-pontiff
-pontifical
-pontius
-popes
-priesthood
-prophesied
-prophesized
-prophesizing
-prophetess
-purgatories
-reverend's
-rites           # writes # favorites
-rosaries
-sacrilegious
-satan
-satanic
-savior's
-saviour
-sectarianism
-seminarian
-seminaries
-sinful
-sinned
-spirituality
-spirituals
-theocracy
-theocratic
-theologically
-vestments
-vicar
-zaccheus
 afterlife
+agape
 agnostic        # diagnostic
 alla            # gallant # calla # parallax # dalla # walla # ualla # palla # halla
 allah
+almighty
+altar
+amen            # ament # amenit # amenabl # amend
+amish
+angel           # angelo # angela # angelica # changel # angelfish
+angelic
 angels
+anglicans
+apostle
+apostles
+apostolic
+archabbey
+archabbot
+archbishop
+archdiocese
+ark             # mark # arkans # park # bark # stark # shark # arkark # lark # dark
+atonement
+baptism
+baptist
+baptistries
+baptists
 baptize
+baptized
+basilica
+beatitude
 belief
+believer
+believers
+believeth
+bible
+bible's
+bibles
 biblic
+biblical
+bishop          # bishopvil
+bless
+blessed
 buddha
+calvinists
+canonized
+cardinal
+cathedral
+catholic
+catholicism
+catholicos
+catholics
+cbn
+chapel
+chaplain
+christ          # christina # christopher # christie
+christ's
 christen
+christened
+christening
+christian
+christian's
+christianity
+christians
+christmas
+church
+churches
+churchgoer
+churchgoing
+churchyard
+clergy
+clergyman
+clergymen
+commandment
+communion
 confess
+congregants
+congregation
+congregations
+convent         # convention
 convents
+conversions
+coreligionists
+corinthians
+covenant
+creator
+creator's
+creed
+crucifix
+crucifixion
 crucify
+crusade
+crusader
+deacon
+deity
 demon
 demonic
 demons          # demonst
+denomination
+denominations
+deuteronomy
+devil
+devine
+devout
+diocesan
+diocese
+dioceses
+dios            # studios # radios # audios #grandios
+disciples
+divine          # divined # divines
 doom
+easter          # eastern
+easter's
+ecclesiastes
+emmanual
+emmanuel
+ephesians
+episcopal
+epistle
+espiritual
+eternity
+evangelic
+evangelical
+evangelicals
+evangelism
+evangelist
+evil            # revile # eville
+evildoer
+exaltation
+exalted
+exalteth
+exodus
+ezekiel
+faith
+faithfuls
+fellowship
+flock
+forsak
+fundamentalist
+fundamentalists
+gabriel
+galatians
+genesis
 gentile
+god             # egod
+god's
 goddess
+godgiven
+godless
+godly
+godsend
+godspeed
 gospel
+grace           # disgrace # graceperiod
+hallelujah
+halo            # halog # haloc # halob # halom # halose # halop # haloid
 hashanal
+heaven
+heavenly
+hell            # hello
 hellish
 hells
+herod
 hindu
+holier
+holiest
+holiness
+holy
+hymn
 imam
 immoral
 immortal
+interreligious
+irreligious
+isaiah
+isaiah's
+ishmael
 islam
+israelites
+jesuit
+jesus
 jew             # jewel
 jewish
 juda
 karma
+kingdom
 kippur
 koran
 kosher
+lazarus
+lent            # equivalent # lently # talent # relent
+lenten
+leviathan
+leviticus
+lord            # landlord # overlord # warlord
+lord's          # landlord's
+lucifer
+lutheran
+magi            # imagi # damagi # magistrate
+malachi
+martyrs
+mass            # massive # massach # massag # massap
 mecca
 meditate
+mennonite
 mercifull
 mercy
+messiah
+messianic
+methodist
+micah
+minister        # administer
+minister's
+ministered      # administered
+ministers
+ministership
+ministries
+ministry
+mirac
+missionaries
+missionary
 mitzvah
 mohammad
+monasteries
+monastery
 monastry
+monk            # monkey
+monks
+monotheism
+monotheistic
+monsignor
+monsignors
 moral
 morality
 morals
+mormon
+moses
 mosque
 muhammed
 mujahids
+multisectarian
 muslim
+navidad
+nazarenes
+nehemiah
+nun             # nunci # inundat # nonuni
+nuns
+orthodox
 pagan           # propagand
+pagans
+papal
 paradise
+parish          # parishvil
+parishioner
 passover
+pastor
+pastor's
+pastorate
+pastors
 penance
 pentecost
+pentecostal
+pew             # typewrit # spew # pewam
+pews            # spews
+pharaoh
+pharoah
 piet            # pieter
+pieties
+pietists
 pilgrim
 pious
+pontiff
+pontifical
+pontius
+pope
+pope's
+popes
+pray            # spray
 prayer
+prayerfully
+preach
+preached
+preacher
+preacher's
+preachers
+preaches
+preaching
+presbyterian
+priest
+priesthood
+priests
+prophecies
+prophesied
+prophesized
+prophesizing
+prophesy
+prophet
+prophetess
+prophets
+proselyt
+protestant
+proverb
+psalm
+psalmist
+psalms
+pulpit
+pulpits
+purgatories
+puritan
+quaker
 quran
 rabbi           # rabbit
 rabbinica
 ramadan
+redeemer
+redemption
+relig
 religion
+repent
+revelation
+revelations
+reverend
+reverend's
+reverends
 rite            # write # favorite # criteri
+rites           # writes # favorites
 ritual
+rosaries
 rosary
+sabbath
+sacred
+sacredness
 sacrifice
+sacrilegious
+saint
+saints
+salvation
 salvatior
+samaritan
+sanctif
+sanctity
+sanctuaries
+satan
+satanic
+savior
+savior's
+saviour
+scriptural
+scripture
+scriptures
+sect            # intersect # section # dissect # bisect # trisect # sector
 sectarian
+sectarianism
+sects           # intersects # dissects # bisects # trisects
+seminarian
+seminaries
+seminary
+sermon
+serpent
 shia
 shiite
 shrine
 sikh
+sin             # sing # single # since # singular # msin # gsin
+sinful
+sinned
+sinner
+sins            # assassins # asins # esins # ysins
+soul
 spirit
+spiritual
+spirituality
+spiritually
+spirituals
+steeple
 sunni
+tabernacle
 temple          # templeton
 testament
+testaments
+theocracy
+theocratic
+theologian
+theological
+theologically
+theology
 torah
+ungodly
+unholy
+vatican
 veil            # surveil # unveil
+vestments
+vicar
+vigil           # vigilant
+vigils
+worship
+worshiper
+wrath
 yiddish
+zaccheus
 zen             # citizen # dozen # zenith # brazen # zena # zenk # zenn # zense
 zion            # zionc # zions # ziont # zionn # zionl
-pagans
-believer
-blessed
-wrath
-grace           # disgrace # graceperiod
