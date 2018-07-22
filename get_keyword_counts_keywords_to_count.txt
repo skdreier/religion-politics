@@ -44,7 +44,7 @@ allah
 almighty
 altar
 amen            # amend
-amish
+amish           # hamish
 angel
 angelic
 angels

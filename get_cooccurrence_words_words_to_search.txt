@@ -44,7 +44,7 @@ allah
 almighty
 altar
 amen            # ament # amenit # amenabl # amend
-amish
+amish           # hamish
 angel           # angelo # angela # angelica # changel # angelfish
 angelic
 angels
