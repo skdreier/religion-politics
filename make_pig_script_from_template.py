@@ -245,8 +245,28 @@ def fill_in_repeated_line_section(lines_to_repeat_inner, script_inner, needs_clo
 
 def fill_in_repeated_line_section_limited(lines_to_repeat_inner, script_inner, limit, needs_closure):
     adjusted_keyword_groupings = [[] for i in range(limit)]
+    # sort keyword tuples by their regex's approximate complexity, measured by number of ( in regex
+    resorted_keyword_tuples = sorted(keyword_tuples, key=(lambda x: [char for char in x[1]].count('(')), reverse=True)
+
+    # for some reason grouping regexes as unevenly as possible seems to run much faster, so that's what we do
+    num_each_one_gets = int(len(keyword_tuples) * 1.0 / limit)
+    num_getting_an_extra = len(keyword_tuples) % limit
+    counter = 0
+    for i in range(limit):
+        for j in range(num_each_one_gets):
+            adjusted_keyword_groupings[i].append(resorted_keyword_tuples[counter])
+            counter += 1
+        if i < num_getting_an_extra:
+            adjusted_keyword_groupings[i].append(resorted_keyword_tuples[counter])
+            counter += 1
+
+    """# fill regexes in in a zig-zag pattern so each group gets a set of regexes of roughly equivalent complexity
     for i in range(len(keyword_tuples)):
-        adjusted_keyword_groupings[i % limit].append(keyword_tuples[i])
+        group = i % (limit * 2)
+        if group >= limit:
+            group = (limit * 2) - group - 1
+        adjusted_keyword_groupings[group].append(resorted_keyword_tuples[i])"""
+
     adjusted_keyword_tuples = []
     for keyword_grouping in adjusted_keyword_groupings:
         term_itself = "_".join([kt[0] for kt in keyword_grouping])
@@ -439,7 +459,8 @@ if __name__ == '__main__':
                     else:
                         line = line.replace("INSERTALLREGEXESHERE", all_regexes)
                 pig_script.write(line)
-            prev_line = line
+            if line.strip() != '':
+                prev_line = line
     pig_script.close()
 
     udfs = open("get_" + template_to_make + "_udfs.py", "w")
@@ -481,5 +502,6 @@ if __name__ == '__main__':
                     else:
                         line = line.replace("INSERTALLREGEXESHERE", all_regexes)
                 udfs.write(line)
-            prev_line = line
+            if line.strip() != '':
+                prev_line = line
     udfs.close()
