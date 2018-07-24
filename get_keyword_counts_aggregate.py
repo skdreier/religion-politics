@@ -4,7 +4,10 @@ import re
 from make_pig_script_from_template import get_keywords_and_keywords_strs_to_avoid
 from make_pig_script_from_template import make_keyword_tuples
 
-output_filename = sys.argv[1] + ".txt"
+results_dir = 'script_output/'
+if not os.path.isdir(results_dir):
+    os.makedirs(results_dir)
+output_filename = results_dir + sys.argv[1] + ".txt"
 total_num_files = str(sys.argv[2])
 
 already_loaded_in_previous_file = False
@@ -77,10 +80,10 @@ for line in sys.stdin:  # line is formatted as foundword    foundwordcount
             get_keywords_and_keywords_strs_to_avoid("get_keyword_counts_keywords_to_count.txt")
         keyword_tuples = make_keyword_tuples(keywords, strings_to_avoid_for_keyword)
         keyword_tuples = [(kt[0][1:-1].replace('\\\\', '\\').replace('\\\'', '\''),
-                           kt[1][1:-1].replace('\\\\', '\\').replace('\\\'', '\'').replace('\\[', '[').replace('\\^',
-                                                                                                               '^')
-                           .replace('\\$', '$').replace('\\.', '.').replace('\\|', '|').replace('\\?', '?')
-                           .replace('\\*', '*').replace('\\+', '+').replace('\\(', '(').replace('\\)', ')'), kt)
+                           kt[1][1:-1].replace('\\\\', '\\').replace('\\\'', '\'').replace('\\[', '[')
+                           .replace('\\^', '^').replace('\\$', '$').replace('\\.', '.').replace('\\|', '|')
+                           .replace('\\?', '?').replace('\\*', '*').replace('\\+', '+').replace('\\(', '(')
+                           .replace('\\)', ')'), kt)
                           for kt in keyword_tuples]
 
     match_inds = []

@@ -9,6 +9,7 @@ __pycache__/
 *hadoop-map*.jar
 *pig-*.jar
 get_cooccurrence_words.pig
+script_output/
 
 # C extensions
 *.so

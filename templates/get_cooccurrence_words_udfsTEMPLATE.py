@@ -2,7 +2,21 @@
 Author: Sofia Serrano
 """
 
-import re
+
+@outputSchema("description:chararray")
+def append_placeholder(text):
+    placeholder = '````````'
+    try:
+        text = text.decode('utf-8')
+    except:
+        try:
+            text = str(text).strip()
+        except:
+            return placeholder
+    if text == 'None':
+        return placeholder
+    else:
+        return text + placeholder
 
 
 @outputSchema("document:chararray")

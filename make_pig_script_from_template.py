@@ -12,7 +12,7 @@ keyword_counts
 Steps this script takes:
 
     1. Figures out what the keywords are in the corresponding text file, filters
-       out any duplicates, takes note of any string matches for keywords to exclude,
+       out any obvious duplicates, takes note of any string matches for keywords to exclude,
        and orders the keywords from longest to shortest (to help with regex generation
        later).
     2. For each keyword, generate three versions of it:
@@ -45,6 +45,12 @@ if __name__ == '__main__':
         num_terms_to_collect = sys.argv[3]
         output_dir_stub = sys.argv[4]
         use_checksum = sys.argv[5]
+    elif template_to_make == 'keyword_doc_counts':
+        corresponding_text_file = "get_keyword_doc_counts_keywords_to_count.txt"
+        window_size = 0
+        num_terms_to_collect = 0
+        output_dir_stub = ''
+        use_checksum = sys.argv[2]
     else:
         print("ERROR: " + template_to_make + " is not a valid template.")
         exit(1)
@@ -65,21 +71,89 @@ def get_keywords_and_keywords_strs_to_avoid(text_file):
                 continue
             if "#" in line:
                 words_to_exclude = line.split('#')
-                list_of_words_for_dict = []
                 for i in range(len(words_to_exclude)):
                     words_to_exclude[i] = words_to_exclude[i].strip()
-                    if i > 0 and words_to_exclude[i] != '':
-                        list_of_words_for_dict.append(words_to_exclude[i])
+                    if i > 0:
+                        assert words_to_exclude[i].rfind('*') == -1, "No asterisks allowed in excluded words"
                 line = words_to_exclude[0]
-                try:
+                del words_to_exclude[0]
+            else:
+                words_to_exclude = []
+
+            assert line.rfind('***') == -1
+
+            accept_anything_before = False
+            accept_anything_after = False
+            words = []
+            word_pieces = line.split('**')
+            if len(word_pieces) == 2 and word_pieces[0] == '':
+                accept_anything_before = True
+                word_base = word_pieces[1]
+                words = [word_pieces[1]]
+            elif len(word_pieces) > 1:
+                word_base = word_pieces[-1]
+                words.append(word_base)
+                for word_prefix in word_pieces[:len(word_pieces) - 1]:
+                    words.append(word_prefix + word_base)
+            else:
+                word_base = word_pieces[0]
+                words = word_pieces
+            ending_pieces = word_base.split('*')
+
+            if len(ending_pieces) == 2 and ending_pieces[1] == '':
+                accept_anything_after = True
+                possible_endings = ['']
+                dont_modify_word_list = False
+            elif len(ending_pieces) > 1:
+                possible_endings = [''] + ending_pieces[1:]
+                dont_modify_word_list = False
+            else:
+                possible_endings = ['']
+                dont_modify_word_list = True
+            if not dont_modify_word_list:
+                prefix_list = words
+                words = []
+                for prefix in prefix_list:
+                    prefix = prefix[:prefix.index('*')]
+                    for ending in possible_endings:
+                        words.append(prefix + ending)
+
+            if accept_anything_before:
+                for i in range(len(words)):
+                    words[i] = '*' + words[i]
+            if accept_anything_after:
+                for i in range(len(words)):
+                    words[i] = words[i] + '*'
+
+            personalized_words_to_exclude = [[] for i in range(len(words))]
+            for i in range(len(words)):
+                word = words[i]
+                if accept_anything_before:
+                    word = word[1:]
+                if accept_anything_after:
+                    word = word[:-1]
+                for exc_word in words_to_exclude:
+                    if word in exc_word and (accept_anything_before or accept_anything_after):
+                        if accept_anything_before and accept_anything_after:
+                            personalized_words_to_exclude[i].append(exc_word)
+                        elif accept_anything_before:
+                            if exc_word.endswith(word):
+                                personalized_words_to_exclude[i].append(exc_word)
+                        elif accept_anything_after:
+                            if exc_word.startswith(word):
+                                personalized_words_to_exclude[i].append(exc_word)
+
+            for i in range(len(words)):
+                word = words[i]
+                if word not in str_keywords:
+                    str_keywords.append(word)
+                    strs_to_avoid_for_keyword[word] = personalized_words_to_exclude[i]
+                else:
                     # if this keyword is a duplicate, but still contributed new strings
                     # to avoid, add those into consideration
-                    previous_words_to_avoid = strs_to_avoid_for_keyword[line]
-                    strs_to_avoid_for_keyword[line] = list_of_words_for_dict + previous_words_to_avoid
-                except:
-                    strs_to_avoid_for_keyword[line] = list_of_words_for_dict
-            if line not in str_keywords:
-                str_keywords.append(line)
+                    previous_words_to_avoid = strs_to_avoid_for_keyword[word]
+                    strs_to_avoid_for_keyword[word] = personalized_words_to_exclude[i] + previous_words_to_avoid
+
     str_keywords = sorted(str_keywords, key=(lambda x: len(x)), reverse=True)
     return str_keywords, strs_to_avoid_for_keyword
 
@@ -115,12 +189,67 @@ def make_exact_match_regex(inner_keyword, previous_longer_keywords, strs_to_avoi
     # prepend the things we DON'T want to match to the regex.
     # Example: suppose our inner_keyword was "to", but we also had the keywords "tortoise" and "actor",
     # we would want to produce the regular expression
-    #                 (?!tortoise)((?<!tor)|(?!toise))((?<!ac)|(?!tor))(to)
+    #                 (?!tortoise)(?:(?<!tor)|(?!toise))(?:(?<!ac)|(?!tor))(?:to)
     try:
         other_strings_to_avoid = strs_to_avoid_for_keyword[inner_keyword]
     except:
         other_strings_to_avoid = []
-    previous_longer_keywords += other_strings_to_avoid
+    previous_longer_keywords = other_strings_to_avoid  # we're no longer filtering by other keywords
+    strings_not_to_match_before = []
+    if inner_keyword.startswith('*') and inner_keyword.endswith('*'):
+        inner_keyword = inner_keyword[1:-1]
+        return make_regex_allowing_extra_letters_on_either_side(inner_keyword, previous_longer_keywords)
+    elif inner_keyword.startswith('*'):
+        inner_keyword = inner_keyword[1:]
+        for i in range(len(other_strings_to_avoid) - 1, -1, -1):
+            if ((not other_strings_to_avoid[i].endswith(inner_keyword)) or
+                        len(other_strings_to_avoid[i]) <= len(inner_keyword)):
+                del other_strings_to_avoid[i]
+        prefixes_to_avoid = [word[:len(word) - len(inner_keyword)] for word in other_strings_to_avoid]
+        regex = "'"
+        for prefix in prefixes_to_avoid:
+            regex += "(?<!" + prefix + ")"
+        regex += "(?:"
+        for letter in inner_keyword:
+            if (letter == '[' or letter == '\\' or letter == '^' or letter == '$' or letter == '.'
+                    or letter == '|' or letter == '?' or letter == '*' or letter == '+' or letter == '('
+                    or letter == ')' or letter == "'"):
+                regex += '\\'
+            regex += letter
+        regex += ")(?![a-z])'"
+        return regex
+    elif inner_keyword.endswith('*'):
+        inner_keyword = inner_keyword[:-1]
+        for i in range(len(other_strings_to_avoid) - 1, -1, -1):
+            if ((not other_strings_to_avoid[i].startswith(inner_keyword)) or
+                        len(other_strings_to_avoid[i]) <= len(inner_keyword)):
+                del other_strings_to_avoid[i]
+        regex = "'(?<![a-z])(?:"
+        for letter in inner_keyword:
+            if (letter == '[' or letter == '\\' or letter == '^' or letter == '$' or letter == '.'
+                    or letter == '|' or letter == '?' or letter == '*' or letter == '+' or letter == '('
+                    or letter == ')' or letter == "'"):
+                regex += '\\'
+            regex += letter
+        regex += ")"
+        suffixes_to_avoid = [word[len(inner_keyword):] for word in other_strings_to_avoid]
+        for suffix in suffixes_to_avoid:
+            regex += "(?!" + suffix + ")"
+        regex += "'"
+        return regex
+    else:
+        regex = "'(?<![a-z])(?:"
+        for letter in inner_keyword:
+            if (letter == '[' or letter == '\\' or letter == '^' or letter == '$' or letter == '.'
+                    or letter == '|' or letter == '?' or letter == '*' or letter == '+' or letter == '('
+                    or letter == ')' or letter == "'"):
+                regex += '\\'
+            regex += letter
+        regex += ")(?![a-z])'"
+        return regex
+
+
+def make_regex_allowing_extra_letters_on_either_side(inner_keyword, previous_longer_keywords):
     strings_not_to_match_before = []
     for i in range(len(previous_longer_keywords)):
         longer_keyword = previous_longer_keywords[i]
@@ -188,6 +317,12 @@ def make_keyword_tuples(str_keywords, strs_to_avoid_for_keyword):
         keyword_tuples_of_3.append((make_plain_version_of_term(keyword),
                                     make_exact_match_regex(keyword, str_keywords[:i], strs_to_avoid_for_keyword),
                                     make_simplified_version_of_keyword(keyword)))
+    for i in range(len(str_keywords)):
+        for j in range(i + 1, len(str_keywords)):
+            assert keyword_tuples_of_3[i][2] != keyword_tuples_of_3[j][2], (keyword_tuples_of_3[i][0] + " and " +
+                                                                            keyword_tuples_of_3[j][0] +
+                                                                            " need to differ by more than just " +
+                                                                            "nonalphanumeric characters.")
     for i in range(len(str_keywords)):
         kt = keyword_tuples_of_3[i]
         keyword_tuples_of_3[i] = (kt[0], kt[1], kt[2], "'.*" + kt[1][1:-1] + ".*'")
@@ -319,7 +454,7 @@ def get_all_regexes(some_keyword_tuples):
         try:
             regex_with_quotes[2:].index('(')
             # there are multiple parentheses within regex, so we need another layer
-            all_regexes_inner += "(" + regex_with_quotes[1:-1] + ")|"
+            all_regexes_inner += "(?:" + regex_with_quotes[1:-1] + ")|"
         except:
             all_regexes_inner += regex_with_quotes[1:-1] + "|"
     regex_with_quotes = some_keyword_tuples[-1][1]

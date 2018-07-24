@@ -1,28 +1,17 @@
 # Keyword-Counting Search Words
 #
-# All search words must be single words with no whitespace.
+# All search words must contain no whitespace.
 #
 # Current list is union of chapp_relig.csv and liwc_relig.csv lists,
 # but the script will work if replaced with any list of at least two
 # words. Matches will be case-insensitive. Each phrase to search must
 # be contained in exactly one line.
 #
-# It's worth mentioning that text will be considered a match for one
-# of the provided search terms as long as the (case-insensitive) search
-# term is contained within the text; in other words, matches can be made
-# with the search term making up only a substring of the word/phrase it
-# was matched to.
-#
-# To get around some of the issues that might arise from either
-# double-counting matches (for example, since "amen" is a substring
-# of "fundamentalist", every match for "fundamentalist" would also be
-# considered a match for "amen") or flagging some words that are
-# completely unrelated as matches (for example, "amenity" as a match
-# for "amen"), a possible match occurring in text will only be made
-# to the longest search term provided here that is a valid candidate.
-# In addition, adding a string (such as one for amenity) after a # on
-# the same line as a search term will keep occurrences of that string
-# from being flagged as matches for the search term.
+# Unless *, **, or # are used to denote allowed variants of a word, or
+# exceptions to matches (see explanations below in reserved phrases),
+# matches will only be made to (case-insensitive) exact matches for the
+# phrase that have non-letter characters (or nothing at all) appearing
+# on the immediate right or left.
 #
 # Words removed from the original list:
 #     all repeated words (though the script would have filtered them out anyway)
@@ -30,410 +19,348 @@
 #     agonstic (changed to "agnostic" instead, seemed like typo)
 #
 # Reserved phrases (also case-insensitive):
-#     anything that includes `````````````` or starts/ends with `
+#     anything that includes ```````` or starts/ends with `
+#     anything containing whitespace
+#     anything containing *
+#        * signifies "here is a string that is allowed to come after"
+#        ** signifies "here is a string that is allowed to come before"
+#        example:   un**ironic*ally
+#        Can also allow wild card matches before or after word, or both before
+#        and after (example: **ironic*)
 #     anything containing # (since # is used to denote the start of a list
 #        of phrases, and subsequent separations between phrases, that *aren't*
 #        supposed to be captured as a match for the expression)
+#        (these exceptions may NOT use * to denote multiple possible exceptions;
+#         all exceptions must be spelled out exactly)
+#        example:   un**ironic*ally  # unironic
 
-adventists
-afterlife
+adventist*s
+afterlife*
 agape
-agnostic        # diagnostic
-alla            # dalla # walla # ualla # palla # halla
+agnostic*s
+alla
 allah
 almighty
-altar
-amen            # amend
-amish           # hamish
-angel
-angelic
-angels
-anglicans
-apostle
-apostles
+altar*s
+amen*s
+amish
+angel*s
+angelic*ally
+anglican*s
+apostle*s
 apostolic
-archabbey
-archabbot
-archbishop
-archdiocese
-ark             # arkans # park # bark # mark # stark # shark # arkark # lark # dark # clark
-atonement
-baptism
-baptist
+archabbey*s
+archabbot*s
+archbishop*s
+archdiocese*s
+ark*s
+atonement*s
+baptism*s
+baptist*s
+baptistry
 baptistries
-baptists
-baptize
-baptized
-basilica
-beatitude
-belief
-believer
-believers
+baptize*s*d
+basilica*s
+beatitude*s
+belief*s
+believer*s
 believeth
-bible
-bible's
-bibles
-biblic
-biblical
-bishop          # bishopville
-bless
-blessed
-buddha
-calvinists
-canonized
-cardinal
-cathedral
-catholic
+bible*s
+biblic*
+bishop*s
+bless*ing*es*ed*edly
+buddha*s
+calvinist*s
+canonize*d*s
+cardinal*s
+cathedral*s
+catholic*s
 catholicism
 catholicos
-catholics
 cbn
-chapel
-chaplain
-christ          # christina # christopher # christie
-christ's
-christen
-christened
-christening
-christian
-christian's
+chapel*s
+chaplain*s
+christ
+christen*s*ed*ing
+christian*s
 christianity
-christians
-christmas
-church
-churches
-churchgoer
+christmas*es
+church*es
+churchgoer*s
 churchgoing
-churchyard
+churchyard*s
 clergy
 clergyman
 clergymen
-commandment
-communion
-confess
-congregants
-congregation
-congregations
-convent         # convention
-convents
-conversions
-coreligionists
+commandment*s
+communion*s
+confess*es*ed*ing
+congregant*s
+congregation*s
+convent*s
+conversion*s
+coreligionist*s
 corinthians
-covenant
+covenant*s
 creator
-creator's
-creed
-crucifix
-crucifixion
-crucify
-crusade
-crusader
-deacon
-deity
-demon           # demonst
-demonic
-demons          # demonst
-denomination
-denominations
+creed*s
+crucifix*es
+crucifixion*s
+crucif*y*ies*ied*ying
+crusade*s
+crusader*s
+deacon*s
+deit*y*ies
+demon*s
+demonic*ally
+denomination*s
 deuteronomy
-devil
-devine
-devout
+devil*s
+devine*s*d
+devout*ly
 diocesan
-diocese
-dioceses
-dios
-disciples
-divine
-doom
-easter          # eastern
-easter's
-ecclesiastes
+diocese*s
+dios*es
+disciple*s
+divine*ly
+doom*s*ed
+easter*s
+ecclesiast*
 emmanual
 emmanuel
 ephesians
-episcopal
-epistle
-espiritual
-eternity
-evangelic
-evangelical
-evangelicals
-evangelism
-evangelist
-evil
-evildoer
-exaltation
-exalted
-exalteth
+episcopal*
+epistle*s
+espiritual*es
+eternit*y*ies
+evangeli*       # evangeline # evangelina
+evil*ly
+evildoer*s
+exaltation*s
+exalt*s*ed*eth
 exodus
 ezekiel
-faith
-faithfuls
+faith*s
+faithful*s
 fellowship
 flock
-forsak
-fundamentalist
-fundamentalists
+forsak*
+fundamentalis*
 gabriel
 galatians
 genesis
-gentile
-god             # egod
-god's
-goddess
+gentile*s
+god*s
+goddess*es
 godgiven
+god-given
 godless
 godly
-godsend
+godsend*s
 godspeed
-gospel
-grace           # graceperiod
-hallelujah
-halo
-hashanal
-heaven
+gospel*s
+grace*s
+hallelujah*s
+halo*es
+hashana*
+heaven*s
 heavenly
 hell
 hellish
-hells
 herod
-hindu
+hindu*s
 holier
 holiest
 holiness
 holy
-hymn
-imam
-immoral
+hymn*s
+imam*s
+immoral*ly
 immortal
-interreligious
-irreligious
+interreligio*
+irreligio*
 isaiah
-isaiah's
 ishmael
 islam
-israelites
-jesuit
+israelite*s
+jesuit*s
 jesus
-jew             # jewel
+jew*s
 jewish
-juda
-karma
+juda*
+karma*s
 kingdom
 kippur
-koran
+koran*s
 kosher
 lazarus
 lent
 lenten
-leviathan
+leviathan*s
 leviticus
 lord
-lord's
 lucifer
 lutheran
-magi            # magistrate
+magi*           # magistrate
 malachi
-martyrs
-mass            # massach # massage # massap
+martyr*s
+mass
 mecca
-meditate
-mennonite
-mercifull
+meditate*s*d
+mennonite*s
+merciful*ly
 mercy
 messiah
 messianic
-methodist
+methodist*s
 micah
-minister
-minister's
-ministered
-ministers
+minister*s*ed
 ministership
 ministries
 ministry
-mirac
+mirac*
 missionaries
 missionary
-mitzvah
+mitzvah*s
 mohammad
 monasteries
 monastery
 monastry
-monk            # monkey
-monks
-monotheism
-monotheistic
-monsignor
-monsignors
-moral
+monk*s
+monotheis*
+monsignor*
+moral*s
 morality
-morals
-mormon
+mormon*s
 moses
-mosque
+mosque*s
 muhammed
-mujahids
+mujahid*
 multisectarian
-muslim
-navidad
-nazarenes
+muslim*s
+navidad*es
+nazarene*s
 nehemiah
-nun
-nuns
+nun*s
 orthodox
-pagan
-pagans
+pagan*s
 papal
-paradise
-parish          # parishville
-parishioner
+paradise*s
+parish*es
+parishioner*s
 passover
-pastor
-pastor's
-pastorate
-pastors
-penance
-pentecost
-pentecostal
-pew             # pewam
-pews
-pharaoh
-pharoah
-piet            # pieter
-pieties
-pietists
-pilgrim
+pastor*s
+pastorate*s
+penance*s
+pentecost*
+pew*s
+pharaoh*s
+pharoah*s
+piet*y*ies
+pietist*s
+pilgrim*s
 pious
-pontiff
-pontifical
+pontiff*s
+pontifical*ly
 pontius
-pope
-pope's
-popes
-pray
-prayer
-prayerfully
-preach
-preached
-preacher
-preacher's
-preachers
-preaches
-preaching
+pope*s
+pray*s*ed*ing
+prayer*s
+prayerful*ly
+preach*es*ed*ing
+preacher*s
 presbyterian
-priest
-priesthood
-priests
-prophecies
-prophesied
-prophesized
-prophesizing
-prophesy
-prophet
-prophetess
-prophets
-proselyt
-protestant
-proverb
-psalm
-psalmist
-psalms
-pulpit
-pulpits
-purgatories
-puritan
-quaker
-quran
-rabbi           # rabbit
-rabbinica
+priest*s
+priesthood*s
+prophec*y*ies
+prophesi*es*ed
+prophesiz*ed*es*ing
+prophes*y*ies
+prophet*s
+prophetess*es
+proselyt*
+protestant*s
+proverb*s
+psalm*s
+psalmist*s
+pulpit*s
+purgator*y*ies
+puritan*
+quaker*s
+quran*s
+rabbi*s
+rabbin*
 ramadan
-redeemer
-redemption
+redeemer*s
+redemption*s
 relig
-religion
-repent
-revelation
-revelations
-reverend
-reverend's
-reverends
-rite
-rites
-ritual
-rosaries
-rosary
-sabbath
-sacred
+religio*
+repent*s*ed*ing
+revelation*s
+reverend*s
+rite*s
+ritual*ly
+rosar*y*ies
+sabbath*s
+sacred*ly
 sacredness
-sacrifice
+sacrifice*s
 sacrilegious
-saint
-saints
-salvation
-salvatior
-samaritan
-sanctif
-sanctity
-sanctuaries
+saint*s*ly
+salvatio*
+samaritan*s
+sanctif*
+sanctit*y*ies
+sanctuar*y*ies
 satan
 satanic
-savior
-savior's
-saviour
-scriptural
-scripture
-scriptures
-sect            # section # sector
+savior*s
+saviour*s
+scriptural*ly
+scripture*s
+sect*s
 sectarian
 sectarianism
-sects
 seminarian
-seminaries
-seminary
-sermon
-serpent
+seminar*y*ies
+sermon*s
+serpent*s
 shia
-shiite
-shrine
-sikh
-sin             # sing # msin # gsin
-sinful
-sinned
-sinner
-sins
-soul
-spirit
+shiite*s
+shrine*s
+sikh*s
+sin*s
+sinful*ly
+sinn*ed*ing
+sinner*s
+soul*s
+spirit*s
 spiritual
 spirituality
 spiritually
 spirituals
-steeple
-sunni
-tabernacle
-temple          # templeton
-testament
-testaments
-theocracy
-theocratic
-theologian
-theological
-theologically
-theology
+steeple*s
+sunni*s
+tabernacle*s
+temple*s
+testament*s
+theocrac*y*ies
+theocratic*ally
+theologian*s
+theological*ly
+theolog*y*ies
 torah
 ungodly
 unholy
 vatican
-veil
-vestments
-vicar
-vigil           # vigilant
-vigils
-worship
-worshiper
+veil*s
+vestment*s
+vicar*s
+vigil*s
+worship*
 wrath
 yiddish
 zaccheus
-zen             # zena # zenk # zenn # zense
-zion            # zionc # zions # ziont # zionn # zionl
+zen
+zion
+zioni*

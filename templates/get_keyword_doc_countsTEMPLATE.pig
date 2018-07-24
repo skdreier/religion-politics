@@ -23,12 +23,11 @@ REGISTER lib/webarchive-commons-1.1.7.jar;
 -- This is how you would call out a to a python script with a designated function if you wanted to.
 
 REGISTER 'emilys_python_udfs.py' USING jython AS emilysfuncs;
-REGISTER 'get_cooccurrence_words_udfs.py' USING jython AS cooccurrencefuncs;
+REGISTER 'get_keyword_doc_counts_udfs.py' USING jython AS keyworddocfuncs;
 
 DEFINE FROMJSON org.archive.porky.FromJSON();
 DEFINE SequenceFileLoader org.archive.porky.SequenceFileLoader();
-DEFINE converttochararray cooccurrencefuncs.converttochararray();
-DEFINE append_placeholder cooccurrencefuncs.append_placeholder();
+DEFINE converttochararray keyworddocfuncs.converttochararray();
 
 -- This flips the URL back to front so the important parts are at the beginning e.g. gov.whitehouse.frontpage......
 -- I haven't really figured out why this is helpful, but it does help with using existing scripts because the
@@ -62,7 +61,7 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
 
               REPLACE(m#'code', '[^\\p{Graph}]', ' ')                               AS code:chararray,
               REPLACE(m#'title', '[^\\p{Graph}]', ' ')                              AS title:chararray,
-              append_placeholder(REPLACE(m#'description', '[^\\p{Graph}]', ' '))    AS description:chararray,
+              REPLACE(m#'description', '[^\\p{Graph}]', ' ')                        AS description:chararray,
               converttochararray(REPLACE(m#'content', '[^\\p{Alnum}\']', ' '))      AS document:chararray,
 
               -- This selects the first eight characters of the date string (year, month, day) -- I did this because
@@ -71,11 +70,29 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
 
               REPLACE(SUBSTRING(m#'date', 0, 8), '[^\\p{Graph}]', ' ')              AS date:chararray;
 
--- don't bother looking through tokenized text for pages containing no matches
-instance = FILTER instance BY NOT(document MATCHES '') AND (
-                     STARTLINEREPEATATMOST25
-                     document MATCHES INSERTPIGREGEXHERE
-                     ENDLINEREPEATATMOST25
-                     );
+instance = FILTER instance BY NOT(document MATCHES '');
 
-STORE instance INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-fulltext/' USING PigStorage('\u0001');
+-- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
+
+Checksum = LOAD '$I_CHECKSUM_DATA' USING PigStorage() AS (surt:chararray, date:chararray, checksum:chararray);
+
+-- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
+
+all_matches = JOIN instance BY (surt, checksum), Checksum BY (surt, checksum);
+
+-- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
+
+instance = FOREACH all_matches GENERATE
+                                  instance::document AS document:chararray,
+                                  Checksum::date AS date:chararray;
+
+STARTLINEREPEAT
+filtered = FILTER instance BY document MATCHES INSERTPIGREGEXHERE;
+
+filtered_grouped = GROUP filtered ALL;
+
+found_count = FOREACH filtered_grouped GENERATE COUNT(filtered) AS doc_count;
+
+STORE found_count INTO '$O_DATA_DIR-INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES/';
+
+ENDLINEREPEAT

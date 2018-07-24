@@ -1,0 +1,32 @@
+# Keywords for which to count up the number of documents they occur in
+#
+# Matches will be case-insensitive. Each phrase to search must
+# be contained in exactly one line.
+#
+# Unless *, **, or # are used to denote allowed variants of a word, or
+# exceptions to matches (see explanations below in reserved phrases),
+# matches will only be made to (case-insensitive) exact matches for the
+# phrase that have non-letter characters (or nothing at all) appearing
+# on the immediate right or left.
+#
+# Words removed from the original list:
+#     all repeated words (though the script would have filtered them out anyway)
+#     angle (I think it might have been a typo of angel?)
+#     agonstic (changed to "agnostic" instead, seemed like typo)
+#
+# Reserved phrases (also case-insensitive):
+#     _insertnonletterdigitchar_
+#     anything that includes ```````` or starts/ends with `
+#     anything containing *
+#        * signifies "here is a string that is allowed to come after"
+#        ** signifies "here is a string that is allowed to come before"
+#        example:   un**ironic*ally
+#        Can also allow wild card matches before or after word, or both before
+#        and after (example: **ironic*)
+#     anything containing # (since # is used to denote the start of a list
+#        of phrases, and subsequent separations between phrases, that *aren't*
+#        supposed to be captured as a match for the expression)
+#        (these exceptions may NOT use * to denote multiple possible exceptions;
+#         all exceptions must be spelled out exactly)
+#        example:   un**ironic*ally  # unironic
+#     anything containing ,

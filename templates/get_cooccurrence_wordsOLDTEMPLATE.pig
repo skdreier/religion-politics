@@ -92,6 +92,8 @@ instance = FILTER instance BY NOT(document MATCHES '') AND (
                      ENDLINEREPEATATMOST25
                      );
 
+STORE instance INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-fulltext/' USING PigStorage('\u0001');
+
 prechecksum_instance_prelim = FOREACH instance GENERATE URLs AS URLs:chararray,
                                                  src AS src:chararray,
                                                  surt AS surt:chararray,
