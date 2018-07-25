@@ -4,7 +4,14 @@ import re
 from make_pig_script_from_template import get_keywords_and_keywords_strs_to_avoid
 from make_pig_script_from_template import make_keyword_tuples
 
-keywords, strings_to_avoid_for_keyword = \
+results_dir = 'script_output/'
+if not os.path.isdir(results_dir):
+    os.makedirs(results_dir)
+output_filename = results_dir + sys.argv[1] + ".csv"
+total_num_files = str(sys.argv[2])
+filename_containing_word = sys.argv[3]
+
+"""keywords, strings_to_avoid_for_keyword = \
             get_keywords_and_keywords_strs_to_avoid("get_keyword_counts_keywords_to_count.txt")
 keyword_tuples = make_keyword_tuples(keywords, strings_to_avoid_for_keyword)
 keyword_tuples = [(kt[0][1:-1].replace('\\\\', '\\').replace('\\\'', '\''),
@@ -13,29 +20,33 @@ keyword_tuples = [(kt[0][1:-1].replace('\\\\', '\\').replace('\\\'', '\''),
                    .replace('\\?', '?').replace('\\*', '*').replace('\\+', '+').replace('\\(', '(')
                    .replace('\\)', ')'), kt)
                   for kt in keyword_tuples]
+"""
 
-results_dir = 'script_output/'
-if not os.path.isdir(results_dir):
-    os.makedirs(results_dir)
-output_filename = results_dir + sys.argv[1] + ".csv"
-total_num_files = str(sys.argv[2])
-filename_containing_word = sys.argv[3]
-
-already_loaded_in_previous_file = False
-something_changed_in_file = False
-
-for line in sys.stdin:  # line is just foundwordcount, possibly with some parentheses
+word_count_list = []
+for line in sys.stdin:  # line is formatted as foundword    foundwordcount, possibly with some parentheses
     line = line.strip()
     if line == '':
         continue
-    count = line
-    break
-
-actual_count = ''
-for char in count:
-    if char.isdigit():
-        actual_count += char
-count = actual_count
+    line = line.split()
+    word = None
+    count = None
+    for block in line:
+        if block != '':
+            if word is None:
+                word = block
+                continue
+            elif count is None:
+                count = block
+                continue
+            else:
+                print("ERROR: too many values in output row")
+                exit(1)
+    actual_count = ''
+    for char in count:
+        if char.isdigit():
+            actual_count += char
+    count = actual_count
+    word_count_list.append((word, count))
 
 num_lines_so_far = 0
 if os.path.isfile(output_filename):
@@ -48,7 +59,7 @@ else:
 
 print("Collecting information from nonempty file " + str(num_lines_so_far + 1) + " / " + total_num_files)
 
-word = filename_containing_word[:filename_containing_word.rfind('/')]
+"""word = filename_containing_word[:filename_containing_word.rfind('/')]
 word = word[word.rfind('-') + 1:]
 if '_insertnonletterdigitchar_' in word:
     match_for_word = None
@@ -61,6 +72,10 @@ if '_insertnonletterdigitchar_' in word:
                 assert match_for_word is None
                 match_for_word = potential_keyword
     assert match_for_word is not None
-    word = match_for_word
+    word = match_for_word"""
+
 with open(output_filename, "a") as f:
-    f.write(word + "," + count + "\n")
+    for word_count in word_count_list:
+        word = word_count[0]
+        count = word_count[1]
+        f.write(word + "," + count + "\n")

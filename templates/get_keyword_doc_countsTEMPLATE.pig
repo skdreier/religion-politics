@@ -91,8 +91,15 @@ filtered = FILTER instance BY document MATCHES INSERTPIGREGEXHERE;
 
 filtered_grouped = GROUP filtered ALL;
 
-found_count = FOREACH filtered_grouped GENERATE COUNT(filtered) AS doc_count;
-
-STORE found_count INTO '$O_DATA_DIR-INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES/';
+found_count_INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES = FOREACH filtered_grouped GENERATE
+                                                            INSERTTERMHERE AS foundterm:chararray,
+                                                            COUNT(filtered) AS doc_count;
 
 ENDLINEREPEAT
+
+found_counts = UNION
+STARTLINEREPEAT
+                     found_count_INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES
+ENDLINEREPEAT
+
+STORE found_counts INTO '$O_DATA_DIR/';
