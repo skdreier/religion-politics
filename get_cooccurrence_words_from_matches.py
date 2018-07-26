@@ -16,7 +16,7 @@ output_filename = output_name + ".txt"
 
 
 keywords, strings_to_avoid_for_keyword = \
-            get_keywords_and_keywords_strs_to_avoid("get_keyword_counts_keywords_to_count.txt")
+            get_keywords_and_keywords_strs_to_avoid("get_cooccurrence_words_words_to_search.txt")
 keyword_tuples = make_keyword_tuples(keywords, strings_to_avoid_for_keyword)
 keyword_tuples = [(kt[0][1:-1].replace('\\\\', '\\').replace('\\\'', '\''),
                    kt[1][1:-1].replace('\\\\', '\\').replace('\\\'', '\'').replace('\\[', '[')
@@ -35,10 +35,15 @@ def get_full_file_contents():
 
 
 def get_list_of_document_matches(full_file_str):
-    documents = full_file_str.split('\u0001')
+    documents = full_file_str.split('````````')
+    documents = documents[1:]
     for i in range(len(documents)):
         document = documents[i]
-        document = document[document.rfind('````````') + 8:-8]  # the date is always the last 8 characters of a match
+        if document.rfind('\n') == -1:
+            end_index = len(document) - 9
+        else:
+            end_index = document.rfind('\n') - 9
+        document = document[1: end_index]
         documents[i] = document
     return documents
 
@@ -146,7 +151,7 @@ def remove_all_subsummary_files(total_num_docs):
 
 
 def main():
-    print("Starting to count up cooccurrence words for documents in nonempty file " + str(which_file_am_i + 1) +
+    print("Starting to count up cooccurrence words for documents in nonempty file " + str(int(which_file_am_i) + 1) +
           " / " + str(total_num_files))
     documents = get_list_of_document_matches(get_full_file_contents())
     searchword_matchcount_dict = {}

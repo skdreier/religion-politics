@@ -16,7 +16,6 @@ def aggregate_all_files(total_num_processed_files):
     searchword_foundword_dict = {}
     searchword_matchcount_dict = {}
     for i in range(total_num_processed_files):
-        already_added_searchwordcount = False
         with open(temp_results_dir + "temp" + str(i) + ".txt", "r") as smallf:
             for line in smallf:
                 four_pieces = line.strip().split('\t')
@@ -32,12 +31,7 @@ def aggregate_all_files(total_num_processed_files):
                         foundword_count_dict[foundword] = count
                 except:
                     searchword_foundword_dict[searchword] = {foundword: count}
-                if not already_added_searchwordcount:
-                    try:
-                        searchword_matchcount_dict[searchword] += searchwordcount
-                    except:
-                        searchword_matchcount_dict[searchword] = searchwordcount
-                    already_added_searchwordcount = True
+                searchword_matchcount_dict[searchword] = searchwordcount
     for searchword in searchword_foundword_dict.keys():
         foundword_count_dict = searchword_foundword_dict[searchword]
         for foundword in foundword_count_dict.keys():
@@ -47,7 +41,7 @@ def aggregate_all_files(total_num_processed_files):
             f.write(searchword + "," + foundword + "," + str(count) + "," +
                     str(searchword_matchcount_dict[searchword]) + "\n")
     f.close()
-    with open("get_keyword_doc_counts_keywords_to_counts.txt", "w") as f:
+    with open("get_keyword_doc_counts_keywords_to_count.txt", "w") as f:
         for foundword in all_foundwords:
             if '*' in foundword or '#' in foundword:
                 continue

@@ -162,7 +162,7 @@ if __name__ == '__main__':
     keywords, strings_to_avoid_for_keyword = get_keywords_and_keywords_strs_to_avoid(corresponding_text_file)
 
     assert len(keywords) > 0, ("At least one keyword must be provided in " + corresponding_text_file +
-                               "in order for pig scripts to be generated successfully.")
+                               " in order for pig scripts to be generated successfully.")
 
 ###########################################################
 ##  Make required variations on keywords for pig script  ##
@@ -172,6 +172,7 @@ if __name__ == '__main__':
 def make_simplified_version_of_keyword(inner_keyword):
     # this is NOT supposed to have single quotes around the string
     simplified_version = ''
+    simplified_version += 'insertfakechar_'
     for letter in inner_keyword:
         ind = ord(letter)
         if 48 <= ind <= 57 or 65 <= ind <= 90 or 97 <= ind <= 122:
@@ -340,7 +341,8 @@ if __name__ == '__main__':
 ###########################################################
 
 
-def fill_in_repeated_line_section(lines_to_repeat_inner, script_inner, needs_closure):
+def fill_in_repeated_line_section(lines_to_repeat_inner, script_inner, needs_closure, is_pig,
+                                  needs_continuation_char):
     for keyword_ind in range(len(keyword_tuples)):
         keyword_tuple = keyword_tuples[keyword_ind]
         term_itself = keyword_tuple[0]
@@ -356,29 +358,37 @@ def fill_in_repeated_line_section(lines_to_repeat_inner, script_inner, needs_clo
             line_inner = line_inner.replace("INSERTREGEXHERE", regex_term)
             line_inner = line_inner.replace("INSERTPIGREGEXHERE", pig_regex_term)
             line_inner = line_inner.replace("INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES", simplified_term)
+            line_inner = line_inner.replace("INSERTTERMINDEXHERE", str(keyword_ind))
             if line_inner_ind == len(lines_to_repeat_inner) - 1 and line_inner.strip() != '':
                 # decide whether to add a comma or nothing after it
                 line_inner = line_inner.rstrip()
-                if ' MATCHES ' in line_inner:
+                if is_pig:
                     if keyword_ind == len(keyword_tuples) - 1:
                         if needs_closure:
-                            line_inner += ';\n'
+                            line_inner += ';'
                         else:
-                            line_inner += '\n'
+                            line_inner += ''
+                    elif ' MATCHES ' in line_inner:
+                        line_inner += ' OR'
                     else:
-                        line_inner += ' OR\n'
+                        line_inner += ','
                 else:
                     if keyword_ind == len(keyword_tuples) - 1:
                         if needs_closure:
-                            line_inner += '\n'
+                            line_inner += ''
                         else:
-                            line_inner += '\n'
+                            line_inner += ''
                     else:
-                        line_inner += ',\n'
+                        line_inner += ','
+                if keyword_ind != len(keyword_tuples) - 1:
+                    if needs_continuation_char:
+                        line_inner += ' \\'
+                line_inner += '\n'
             script_inner.write(line_inner)
 
 
-def fill_in_repeated_line_section_limited(lines_to_repeat_inner, script_inner, limit, needs_closure):
+def fill_in_repeated_line_section_limited(lines_to_repeat_inner, script_inner, limit, needs_closure, is_pig,
+                                          needs_continuation_char):
     adjusted_keyword_groupings = [[] for i in range(limit)]
     # sort keyword tuples by their regex's approximate complexity, measured by number of ( in regex
     resorted_keyword_tuples = sorted(keyword_tuples, key=(lambda x: [char for char in x[1]].count('(')), reverse=True)
@@ -425,25 +435,32 @@ def fill_in_repeated_line_section_limited(lines_to_repeat_inner, script_inner, l
             line_inner = line_inner.replace("INSERTREGEXHERE", regex_term)
             line_inner = line_inner.replace("INSERTPIGREGEXHERE", pig_regex_term)
             line_inner = line_inner.replace("INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES", simplified_term)
+            line_inner = line_inner.replace("INSERTTERMINDEXHERE", str(keyword_ind))
             if line_inner_ind == len(lines_to_repeat_inner) - 1 and line_inner.strip() != '':
                 # decide whether to add a comma or nothing after it
                 line_inner = line_inner.rstrip()
-                if ' MATCHES ' in line_inner:
+                if is_pig:
                     if keyword_ind == len(adjusted_keyword_tuples) - 1:
                         if needs_closure:
-                            line_inner += ';\n'
+                            line_inner += ';'
                         else:
-                            line_inner += '\n'
+                            line_inner += ''
+                    elif ' MATCHES ' in line_inner:
+                        line_inner += ' OR'
                     else:
-                        line_inner += ' OR\n'
+                        line_inner += ','
                 else:
                     if keyword_ind == len(adjusted_keyword_tuples) - 1:
                         if needs_closure:
-                            line_inner += '\n'
+                            line_inner += ''
                         else:
-                            line_inner += '\n'
+                            line_inner += ''
                     else:
-                        line_inner += ',\n'
+                        line_inner += ','
+                if keyword_ind != len(adjusted_keyword_tuples) - 1:
+                    if needs_continuation_char:
+                        line_inner += ' \\'
+                line_inner += '\n'
             script_inner.write(line_inner)
 
 
@@ -479,6 +496,7 @@ if __name__ == '__main__':
     comment_out_next_operative_line = False
     applying_checksum_changes = False
     next_checksum_change_to_apply = -1
+    needs_continuation_char = False
     with open("templates/get_" + template_to_make + "TEMPLATE.pig", "r") as f:
         for line in f:
             if line.startswith("-- Get Cooccurrence Words TEMPLATE Pig Script: Template for a"):
@@ -503,31 +521,43 @@ if __name__ == '__main__':
                 prev_line = line
                 continue
             elif not in_repeat_section and line.strip().startswith("STARTLINEREPEAT"):
+                if ' MATCHES ' in prev_line or ' FOREACH ' in prev_line or ' GENERATE ' in prev_line:
+                    is_pig = True
+                else:
+                    is_pig = False
                 in_repeat_section = True
                 if "ATMOST" in line and len(keyword_tuples) > int(line.strip()[line.strip().index("ATMOST") + 6:]):
                     limited_repeat_section = True
                     limit_on_repeat_section = int(line.strip()[line.strip().index("ATMOST") + 6:])
                 else:
                     limited_repeat_section = False
-                if prev_line.rfind('(') > prev_line.rfind(')'):
+                if prev_line.strip().endswith('\\'):
+                    needs_continuation_char = True
+                else:
+                    needs_continuation_char = False
+                if prev_line.rfind('(') > prev_line.rfind(')') or \
+                                prev_line.rfind('[') > prev_line.rfind(']') or \
+                                prev_line.rfind('{') > prev_line.rfind('}'):
                     repeat_section_needs_closure = False
                 else:
                     repeat_section_needs_closure = True
                 lines_to_repeat = []
-                prev_line = line
                 continue
             elif in_repeat_section and not line.strip().startswith("ENDLINEREPEAT"):
+                if ' MATCHES ' in line or ' FOREACH ' in line or ' GENERATE ' in line:
+                    is_pig = True
                 lines_to_repeat.append(line)
                 prev_line = line
                 continue
             elif line.strip().startswith("ENDLINEREPEAT"):
                 if limited_repeat_section:
                     fill_in_repeated_line_section_limited(lines_to_repeat, pig_script, limit_on_repeat_section,
-                                                          repeat_section_needs_closure)
+                                                          repeat_section_needs_closure, is_pig,
+                                                          needs_continuation_char)
                 else:
-                    fill_in_repeated_line_section(lines_to_repeat, pig_script, repeat_section_needs_closure)
+                    fill_in_repeated_line_section(lines_to_repeat, pig_script, repeat_section_needs_closure, is_pig,
+                                                  needs_continuation_char)
                 in_repeat_section = False
-                prev_line = line
                 continue
             elif not use_checksum and collecting_checksum_changes:
                 if line.strip() != '':
@@ -604,27 +634,43 @@ if __name__ == '__main__':
     with open("templates/get_" + template_to_make + "_udfsTEMPLATE.py", "r") as f:
         for line in f:
             if not in_repeat_section and line.strip().startswith("STARTLINEREPEAT"):
+                if ' MATCHES ' in prev_line or ' FOREACH ' in prev_line or ' GENERATE ' in prev_line:
+                    is_pig = True
+                else:
+                    is_pig = False
                 in_repeat_section = True
                 if "ATMOST" in line and len(keyword_tuples) > int(line.strip()[line.strip().index("ATMOST") + 6:]):
                     limited_repeat_section = True
                     limit_on_repeat_section = int(line.strip()[line.strip().index("ATMOST") + 6:])
                 else:
                     limited_repeat_section = False
-                if prev_line.rfind('(') > prev_line.rfind(')'):
+                if prev_line.strip().endswith('\\'):
+                    needs_continuation_char = True
+                else:
+                    needs_continuation_char = False
+                if prev_line.rfind('(') > prev_line.rfind(')') or \
+                                prev_line.rfind('[') > prev_line.rfind(']') or \
+                                prev_line.rfind('{') > prev_line.rfind('}'):
                     repeat_section_needs_closure = False
                 else:
                     repeat_section_needs_closure = True
                 lines_to_repeat = []
-                prev_line = line
                 continue
             elif in_repeat_section and not line.strip().startswith("ENDLINEREPEAT"):
                 lines_to_repeat.append(line)
+                if ' MATCHES ' in line or ' FOREACH ' in line or ' GENERATE ' in line:
+                    is_pig = True
                 prev_line = line
                 continue
             elif line.strip().startswith("ENDLINEREPEAT"):
-                fill_in_repeated_line_section(lines_to_repeat, udfs, repeat_section_needs_closure)
+                if limited_repeat_section:
+                    fill_in_repeated_line_section_limited(lines_to_repeat, udfs, limit_on_repeat_section,
+                                                          repeat_section_needs_closure, is_pig,
+                                                          needs_continuation_char)
+                else:
+                    fill_in_repeated_line_section(lines_to_repeat, udfs, repeat_section_needs_closure, is_pig,
+                                                  needs_continuation_char)
                 in_repeat_section = False
-                prev_line = line
                 continue
             else:
                 line = line.replace("INSERTWINDOWSIZEHERE", str(window_size))

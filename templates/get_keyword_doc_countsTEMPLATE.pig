@@ -28,6 +28,7 @@ REGISTER 'get_keyword_doc_counts_udfs.py' USING jython AS keyworddocfuncs;
 DEFINE FROMJSON org.archive.porky.FromJSON();
 DEFINE SequenceFileLoader org.archive.porky.SequenceFileLoader();
 DEFINE converttochararray keyworddocfuncs.converttochararray();
+DEFINE getindicatorvars keyworddocfuncs.getindicatorvars();
 
 -- This flips the URL back to front so the important parts are at the beginning e.g. gov.whitehouse.frontpage......
 -- I haven't really figured out why this is helpful, but it does help with using existing scripts because the
@@ -62,7 +63,7 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
               REPLACE(m#'code', '[^\\p{Graph}]', ' ')                               AS code:chararray,
               REPLACE(m#'title', '[^\\p{Graph}]', ' ')                              AS title:chararray,
               REPLACE(m#'description', '[^\\p{Graph}]', ' ')                        AS description:chararray,
-              converttochararray(REPLACE(m#'content', '[^\\p{Alnum}\']', ' '))      AS document:chararray,
+              converttochararray(REPLACE(m#'content', '[^\\p{Graph}]', ' '))      AS document:chararray,
 
               -- This selects the first eight characters of the date string (year, month, day) -- I did this because
               -- the (year, month, day, hour, second) format is confusing for a lot of time formats down the line -
@@ -86,20 +87,18 @@ instance = FOREACH all_matches GENERATE
                                   instance::document AS document:chararray,
                                   Checksum::date AS date:chararray;
 
-STARTLINEREPEAT
-filtered = FILTER instance BY document MATCHES INSERTPIGREGEXHERE;
+doc_indicator_vars = FOREACH instance GENERATE FLATTEN(getindicatorvars(document));
 
-filtered_grouped = GROUP filtered ALL;
+DESCRIBE doc_indicator_vars;
 
-found_count_INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES = FOREACH filtered_grouped GENERATE
-                                                            INSERTTERMHERE AS foundterm:chararray,
-                                                            COUNT(filtered) AS doc_count;
+DUMP doc_indicator_vars;
 
-ENDLINEREPEAT
+doc_indicator_vars_all = GROUP doc_indicator_vars ALL;
 
-found_counts = UNION
-STARTLINEREPEAT
-                     found_count_INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES
-ENDLINEREPEAT
+doc_counts = FOREACH doc_indicator_vars_all GENERATE
+                               STARTLINEREPEAT
+                                           INSERTTERMHERE,
+                                           SUM(doc_indicator_vars.allwords::INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES) AS INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES:long
+                               ENDLINEREPEAT
 
-STORE found_counts INTO '$O_DATA_DIR/';
+STORE doc_counts INTO '$O_DATA_DIR/';

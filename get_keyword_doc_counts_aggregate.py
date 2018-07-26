@@ -28,25 +28,20 @@ for line in sys.stdin:  # line is formatted as foundword    foundwordcount, poss
     if line == '':
         continue
     line = line.split()
-    word = None
-    count = None
+    getting_word = True
     for block in line:
         if block != '':
-            if word is None:
+            if getting_word:
                 word = block
-                continue
-            elif count is None:
-                count = block
-                continue
             else:
-                print("ERROR: too many values in output row")
-                exit(1)
-    actual_count = ''
-    for char in count:
-        if char.isdigit():
-            actual_count += char
-    count = actual_count
-    word_count_list.append((word, count))
+                count = block
+                actual_count = ''
+                for char in count:
+                    if char.isdigit():
+                        actual_count += char
+                count = actual_count
+                word_count_list.append((word, count))
+            getting_word = not getting_word
 
 num_lines_so_far = 0
 if os.path.isfile(output_filename):

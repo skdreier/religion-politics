@@ -16,9 +16,10 @@ python make_pig_script_from_template.py cooccurrence_words $windowsize $numresul
 
 pig -p I_PARSED_DATA=$4 -p I_CHECKSUM_DATA=$5 get_cooccurrence_words.pig
 
-nonempty_filenames=($(hdfs dfs -ls hdfs://nn-ia.s3s.altiscale.com:8020/user/$(whoami)/${outputdirprefix}/ | grep -v ' 0 ' | awk '{print $NF}' | grep ^hdfs | tr '\n' ' '))
+nonempty_filenames=($(hdfs dfs -ls hdfs://nn-ia.s3s.altiscale.com:8020/user/$(whoami)/${outputdirprefix}-fulltext/ | grep -v ' 0 ' | awk '{print $NF}' | grep ^hdfs | tr '\n' ' '))
 num_filenames=${#nonempty_filenames[@]}
 
+fulltext_ending=-fulltext
 for i in "${!nonempty_filenames[@]}"; do
   hdfs dfs -cat ${nonempty_filenames[$i]} | python get_cooccurrence_words_from_matches.py $outputdirprefix $num_filenames $windowsize $i
 done

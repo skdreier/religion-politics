@@ -23,5 +23,3 @@ for filename in "${nonempty_filenames[@]}"
 do
     hdfs dfs -cat $filename | python get_keyword_doc_counts_aggregate.py $outputdir $num_filenames $filename;
 done
-
-hdfs dfs -rm -r hdfs://nn-ia.s3s.altiscale.com:8020/user/$(whoami)/${outputdir}*
