@@ -89,10 +89,6 @@ instance = FOREACH all_matches GENERATE
 
 doc_indicator_vars = FOREACH instance GENERATE FLATTEN(getindicatorvars(document));
 
-DESCRIBE doc_indicator_vars;
-
-DUMP doc_indicator_vars;
-
 doc_indicator_vars_all = GROUP doc_indicator_vars ALL;
 
 doc_counts = FOREACH doc_indicator_vars_all GENERATE
