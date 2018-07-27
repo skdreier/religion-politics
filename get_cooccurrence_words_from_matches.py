@@ -5,26 +5,27 @@ from make_pig_script_from_template import get_keywords_and_keywords_strs_to_avoi
 from make_pig_script_from_template import make_keyword_tuples
 
 
-output_name = sys.argv[1]
-temp_results_dir = output_name + "-temp/"
-if not os.path.isdir(temp_results_dir):
-    os.makedirs(temp_results_dir)
-total_num_files = str(sys.argv[2])
-window_size = int(sys.argv[3])
-which_file_am_i = sys.argv[4]
-output_filename = output_name + ".txt"
+if __name__ == '__main__':
+    output_name = sys.argv[1]
+    temp_results_dir = output_name + "-temp/"
+    if not os.path.isdir(temp_results_dir):
+        os.makedirs(temp_results_dir)
+    total_num_files = str(sys.argv[2])
+    window_size = int(sys.argv[3])
+    which_file_am_i = sys.argv[4]
+    output_filename = output_name + ".txt"
 
 
-keywords, strings_to_avoid_for_keyword = \
-            get_keywords_and_keywords_strs_to_avoid("get_cooccurrence_words_words_to_search.txt")
-keyword_tuples = make_keyword_tuples(keywords, strings_to_avoid_for_keyword)
-keyword_tuples = [(kt[0][1:-1].replace('\\\\', '\\').replace('\\\'', '\''),
-                   kt[1][1:-1].replace('\\\\', '\\').replace('\\\'', '\'').replace('\\[', '[')
-                   .replace('\\^', '^').replace('\\$', '$').replace('\\.', '.').replace('\\|', '|')
-                   .replace('\\?', '?').replace('\\*', '*').replace('\\+', '+').replace('\\(', '(')
-                   .replace('\\)', ')'), kt)
-                  for kt in keyword_tuples]
-regexes_to_search_for = [re.compile(kt[1]) for kt in keyword_tuples]
+    keywords, strings_to_avoid_for_keyword = \
+                get_keywords_and_keywords_strs_to_avoid("get_cooccurrence_words_words_to_search.txt")
+    keyword_tuples = make_keyword_tuples(keywords, strings_to_avoid_for_keyword)
+    keyword_tuples = [(kt[0][1:-1].replace('\\\\', '\\').replace('\\\'', '\''),
+                       kt[1][1:-1].replace('\\\\', '\\').replace('\\\'', '\'').replace('\\[', '[')
+                       .replace('\\^', '^').replace('\\$', '$').replace('\\.', '.').replace('\\|', '|')
+                       .replace('\\?', '?').replace('\\*', '*').replace('\\+', '+').replace('\\(', '(')
+                       .replace('\\)', ')'), kt)
+                      for kt in keyword_tuples]
+    regexes_to_search_for = [re.compile(kt[1]) for kt in keyword_tuples]
 
 
 def get_full_file_contents():

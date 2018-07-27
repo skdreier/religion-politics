@@ -6,7 +6,10 @@ Author: Sofia Serrano
 import re
 
 
-complete_regex = re.compile(INSERTALLREGEXESHERE)
+STARTLINEREPEATREGEXESPERLINE5000
+regex_INSERTREPEATINDEXHERE = re.compile(INSERTREGEXHERE)
+
+ENDLINEREPEATREGEXESPERLINE5000
 
 simplified_words = [
     STARTLINEREPEAT
@@ -14,18 +17,21 @@ simplified_words = [
     ENDLINEREPEAT
 ]
 
-output_schema = "allwords:tuple("
+schema = "allwords:tuple("
 for i in range(len(simplified_words) - 1):
     word = simplified_words[i]
-    output_schema += word + ":int,"
-output_schema += simplified_words[-1] + ":int)"
+    schema += word + ":int,"
+schema += simplified_words[-1] + ":int)"
 
-@outputSchema(output_schema)
+
+@outputSchema(schema)
 def getindicatorvars(text):
     found_words = {}
-    words_found = complete_regex.findall(text)
+    STARTLINEREPEATREGEXESPERLINE5000
+    words_found = regex_INSERTREPEATINDEXHERE.findall(text)
     for word in words_found:
         found_words[word] = 1
+    ENDLINEREPEATREGEXESPERLINE5000
     return \
         STARTLINEREPEAT
         found_words.get(INSERTTERMHERE, 0)

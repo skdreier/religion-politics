@@ -25,14 +25,19 @@ for i in "${!nonempty_filenames[@]}"; do
 done
 
 # will produce a file called $outputdirprefex-cooccurrencecounts.csv
-# will also populate get_keyword_doc_counts_keywords_to_counts.txt
+# will also populate get_keyword_doc_counts_keywords_to_counts.txt in a preliminary way
 python get_cooccurrence_words_aggregate_summaries.py $num_filenames $outputdirprefix
 
-append_count=-foundwordcorpuscount
-# this will produce a text file called $outputdirprefix-foundwordcorpuscount.csv containing the count of the number
-# documents that each word in get_keyword_doc_counts_keywords_to_counts.txt appears in
-bash get_keyword_doc_counts.sh $outputdirprefix$append_count $4 $5
+# will now estimate idf for each foundword based on ~5000 or so randomly sampled documents from the given
+# data source, and will store those in $outputdirprefix-foundwordcorpuscount.csv
+nonempty_filenames=($(hdfs dfs -ls hdfs://nn-ia.s3s.altiscale.com:8020/user/$(whoami)/${outputdirprefix}-sampledocfrequencies/ | grep -v ' 0 ' | awk '{print $NF}' | grep ^hdfs | tr '\n' ' '))
+num_filenames=${#nonempty_filenames[@]}
+fulltext_ending=-fulltext
+for i in "${!nonempty_filenames[@]}"; do
+  hdfs dfs -cat ${nonempty_filenames[$i]} | python get_cooccurrence_words_estimate_foundword_doc_frequency.py $i $num_filenames $outputdirprefix $numresultstocollect
+done
 
+append_count=-foundwordestimatedcorpuscount
 csv_ending=.csv
 cooccurrence_ending=-cooccurrencecounts.csv
 python get_cooccurrence_words_calculate_from_tfidf_files.py $outputdirprefix$append_count$csv_ending $outputdirprefix$cooccurrence_ending $outputdirprefix $numresultstocollect

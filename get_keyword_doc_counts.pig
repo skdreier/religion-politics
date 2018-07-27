@@ -1,10 +1,9 @@
 -- Author: Sofia Serrano
--- Get Keyword Counts TEMPLATE Pig Script: Template for automatically produced pig script which will count
+-- Get Keyword Counts Pig Script: Automatically produced pig script which will count
 -- the number of times each keyword provided in get_keyword_counts_keywords_to_count.txt occurs, as well as
 -- reporting the words (that aren't already marked as non-matches) that that keyword appears in.
 -- For questions contact sofias6@cs.washington.edu
--- This template script itself should never be run.
--- The automatically generated script can be run with only I_PARSED_DATA, O_DATA_DIR, and (if path to checksum
+-- This automatically generated script can be run with only I_PARSED_DATA, O_DATA_DIR, and (if path to checksum
 -- was originally provided as something other than None when script was automatically generated) I_CHECKSUM_DATA
 -- arguments, assuming the output directory stub stub provided to the bash script that generated the script describes
 -- directories that don't exist yet.
@@ -23,11 +22,12 @@ REGISTER lib/webarchive-commons-1.1.7.jar;
 -- This is how you would call out a to a python script with a designated function if you wanted to.
 
 REGISTER 'emilys_python_udfs.py' USING jython AS emilysfuncs;
-REGISTER 'get_keyword_counts_udfs.py' USING jython AS keywordfuncs;
+REGISTER 'get_keyword_doc_counts_udfs.py' USING jython AS keyworddocfuncs;
 
 DEFINE FROMJSON org.archive.porky.FromJSON();
 DEFINE SequenceFileLoader org.archive.porky.SequenceFileLoader();
-DEFINE converttochararray keywordfuncs.converttochararray();
+DEFINE converttochararray keyworddocfuncs.converttochararray();
+DEFINE getindicatorvars keyworddocfuncs.getindicatorvars();
 
 -- This flips the URL back to front so the important parts are at the beginning e.g. gov.whitehouse.frontpage......
 -- I haven't really figured out why this is helpful, but it does help with using existing scripts because the
@@ -62,7 +62,7 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
               REPLACE(m#'code', '[^\\p{Graph}]', ' ')                               AS code:chararray,
               REPLACE(m#'title', '[^\\p{Graph}]', ' ')                              AS title:chararray,
               REPLACE(m#'description', '[^\\p{Graph}]', ' ')                        AS description:chararray,
-              converttochararray(REPLACE(m#'content', '[^\\p{Graph}]', ' '))        AS document:chararray,
+              converttochararray(REPLACE(m#'content', '[^\\p{Alnum}\']', ' '))      AS document:chararray,
 
               -- This selects the first eight characters of the date string (year, month, day) -- I did this because
               -- the (year, month, day, hour, second) format is confusing for a lot of time formats down the line -
@@ -70,46 +70,49 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
 
               REPLACE(SUBSTRING(m#'date', 0, 8), '[^\\p{Graph}]', ' ')              AS date:chararray;
 
--- don't bother looking through tokenized text for pages containing no matches
-instance = FILTER instance BY NOT(document MATCHES '') AND (
-                     STARTLINEREPEATATMOST25
-                     document MATCHES INSERTPIGREGEXHERE
-                     ENDLINEREPEATATMOST25
-                     );
+instance = FILTER instance BY NOT(document MATCHES '');
 
-prechecksum_instance_prelim = FOREACH instance GENERATE surt AS surt:chararray,
-                                                 checksum AS checksum:chararray,
-                                                 FLATTEN(TOKENIZE(document)) AS word:chararray,
-                                                 date AS date:chararray;
 
-all_matches = FILTER prechecksum_instance_prelim BY
-                     STARTLINEREPEATATMOST25
-                     word MATCHES INSERTPIGREGEXHERE
-                     ENDLINEREPEATATMOST25
+-- Checksum = LOAD '$I_CHECKSUM_DATA' USING PigStorage() AS (surt:chararray, date:chararray, checksum:chararray);
 
--- to get TOTAL number of counts, rather than simply unique observations, merge with checksum data.
--- (A unique capture will only have been taken if something changed on the page, but if one page changed
--- many times over a period of time and another stayed the same during that time, taking only the unique
--- captures into account will cause data from pages with consistent text to be underrepresented in our
--- analysis. The checksum data stores instances when a page *would* have been captured, but nothing had
--- changed; merging with the checksum data fixes the consistent page underrepresentation problem.)
 
--- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
+-- all_matches = JOIN instance BY (surt, checksum), Checksum BY (surt, checksum);
 
-Checksum = LOAD '$I_CHECKSUM_DATA' USING PigStorage() AS (surt:chararray, date:chararray, checksum:chararray);
 
--- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
+-- instance = FOREACH all_matches GENERATE
+--                                   instance::document AS document:chararray,
+--                                   Checksum::date AS date:chararray;
 
-all_matches = JOIN all_matches BY (surt, checksum), Checksum BY (surt, checksum);
+doc_indicator_vars = FOREACH instance GENERATE FLATTEN(getindicatorvars(document));
 
--- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
+doc_indicator_vars_all = GROUP doc_indicator_vars ALL;
 
-all_matches = FOREACH all_matches GENERATE
-                                      all_matches::word AS word:chararray,
-                                      Checksum::date AS date:chararray;
+doc_counts = FOREACH doc_indicator_vars_all GENERATE
+                                           '06',
+                                           SUM(doc_indicator_vars.allwords::insertfakechar_06) AS insertfakechar_06:long,
+                                           '30',
+                                           SUM(doc_indicator_vars.allwords::insertfakechar_30) AS insertfakechar_30:long,
+                                           '8',
+                                           SUM(doc_indicator_vars.allwords::insertfakechar_8) AS insertfakechar_8:long,
+                                           'affairs',
+                                           SUM(doc_indicator_vars.allwords::insertfakechar_affairs) AS insertfakechar_affairs:long,
+                                           'briefing',
+                                           SUM(doc_indicator_vars.allwords::insertfakechar_briefing) AS insertfakechar_briefing:long,
+                                           'bureau',
+                                           SUM(doc_indicator_vars.allwords::insertfakechar_bureau) AS insertfakechar_bureau:long,
+                                           'daily',
+                                           SUM(doc_indicator_vars.allwords::insertfakechar_daily) AS insertfakechar_daily:long,
+                                           'department',
+                                           SUM(doc_indicator_vars.allwords::insertfakechar_department) AS insertfakechar_department:long,
+                                           'dial',
+                                           SUM(doc_indicator_vars.allwords::insertfakechar_dial) AS insertfakechar_dial:long,
+                                           'modem',
+                                           SUM(doc_indicator_vars.allwords::insertfakechar_modem) AS insertfakechar_modem:long,
+                                           'press',
+                                           SUM(doc_indicator_vars.allwords::insertfakechar_press) AS insertfakechar_press:long,
+                                           'public',
+                                           SUM(doc_indicator_vars.allwords::insertfakechar_public) AS insertfakechar_public:long,
+                                           'state',
+                                           SUM(doc_indicator_vars.allwords::insertfakechar_state) AS insertfakechar_state:long;
 
-searchterm_foundterm_count = FOREACH (GROUP all_matches BY word) GENERATE
-                                FLATTEN(group) AS word,
-                                COUNT(all_matches) AS matchestoparticularword;
-
-STORE searchterm_foundterm_count INTO '$O_DATA_DIR/';
+STORE doc_counts INTO '$O_DATA_DIR/';

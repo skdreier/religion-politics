@@ -335,6 +335,7 @@ def make_keyword_tuples(str_keywords, strs_to_avoid_for_keyword):
 
 if __name__ == '__main__':
     keyword_tuples = make_keyword_tuples(keywords, strings_to_avoid_for_keyword)
+    print("There are " + str(len(keyword_tuples)) + " distinct keywords.")
 
 ###########################################################
 ##                  Now make pig script                  ##
@@ -359,6 +360,7 @@ def fill_in_repeated_line_section(lines_to_repeat_inner, script_inner, needs_clo
             line_inner = line_inner.replace("INSERTPIGREGEXHERE", pig_regex_term)
             line_inner = line_inner.replace("INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES", simplified_term)
             line_inner = line_inner.replace("INSERTTERMINDEXHERE", str(keyword_ind))
+            line_inner = line_inner.replace("INSERTREPEATINDEXHERE", str(keyword_ind))
             if line_inner_ind == len(lines_to_repeat_inner) - 1 and line_inner.strip() != '':
                 # decide whether to add a comma or nothing after it
                 line_inner = line_inner.rstrip()
@@ -388,7 +390,13 @@ def fill_in_repeated_line_section(lines_to_repeat_inner, script_inner, needs_clo
 
 
 def fill_in_repeated_line_section_limited(lines_to_repeat_inner, script_inner, limit, needs_closure, is_pig,
-                                          needs_continuation_char):
+                                          needs_continuation_char, constraint_on_regexes_per_line):
+    if constraint_on_regexes_per_line:
+        limit = len(keyword_tuples) / limit
+        if limit == int(limit):
+            limit = int(limit)
+        else:
+            limit = int(limit) + 1
     adjusted_keyword_groupings = [[] for i in range(limit)]
     # sort keyword tuples by their regex's approximate complexity, measured by number of ( in regex
     resorted_keyword_tuples = sorted(keyword_tuples, key=(lambda x: [char for char in x[1]].count('(')), reverse=True)
@@ -436,6 +444,7 @@ def fill_in_repeated_line_section_limited(lines_to_repeat_inner, script_inner, l
             line_inner = line_inner.replace("INSERTPIGREGEXHERE", pig_regex_term)
             line_inner = line_inner.replace("INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES", simplified_term)
             line_inner = line_inner.replace("INSERTTERMINDEXHERE", str(keyword_ind))
+            line_inner = line_inner.replace("INSERTREPEATINDEXHERE", str(keyword_ind))
             if line_inner_ind == len(lines_to_repeat_inner) - 1 and line_inner.strip() != '':
                 # decide whether to add a comma or nothing after it
                 line_inner = line_inner.rstrip()
@@ -468,19 +477,41 @@ def get_all_regexes(some_keyword_tuples):
     all_regexes_inner = "'"
     for i in range(len(some_keyword_tuples) - 1):
         regex_with_quotes = some_keyword_tuples[i][1]
+        first_paren_ind = regex_with_quotes.index('(')
         try:
-            regex_with_quotes[2:].index('(')
+            regex_with_quotes[first_paren_ind + 1:].index('(')
             # there are multiple parentheses within regex, so we need another layer
-            all_regexes_inner += "(?:" + regex_with_quotes[1:-1] + ")|"
+            if first_paren_ind == 1:
+                all_regexes_inner += "(?:" + regex_with_quotes[1:-1] + ")|"
+            elif first_paren_ind == 0:
+                all_regexes_inner += "(?:" + regex_with_quotes + ")|"
+            else:
+                print("ERROR: regex " + str(regex_with_quotes) + " was not formatted as expected.")
         except:
-            all_regexes_inner += regex_with_quotes[1:-1] + "|"
+            if first_paren_ind == 1:
+                all_regexes_inner += regex_with_quotes[1:-1] + "|"
+            elif first_paren_ind == 0:
+                all_regexes_inner += regex_with_quotes + "|"
+            else:
+                print("ERROR: regex " + str(regex_with_quotes) + " was not formatted as expected.")
     regex_with_quotes = some_keyword_tuples[-1][1]
+    first_paren_ind = regex_with_quotes.index('(')
     try:
-        regex_with_quotes[2:].index('(')
+        regex_with_quotes[first_paren_ind + 1:].index('(')
         # there are multiple parentheses within regex, so we need another layer
-        all_regexes_inner += "(?:" + regex_with_quotes[1:-1] + ")"
+        if first_paren_ind == 1:
+            all_regexes_inner += "(?:" + regex_with_quotes[1:-1] + ")"
+        elif first_paren_ind == 0:
+            all_regexes_inner += "(?:" + regex_with_quotes + ")"
+        else:
+            print("ERROR: regex " + str(regex_with_quotes) + " was not formatted as expected.")
     except:
-        all_regexes_inner += regex_with_quotes[1:-1]
+        if first_paren_ind == 1:
+            all_regexes_inner += regex_with_quotes[1:-1]
+        elif first_paren_ind == 0:
+            all_regexes_inner += regex_with_quotes
+        else:
+            print("ERROR: regex " + str(regex_with_quotes) + " was not formatted as expected.")
     all_regexes_inner += "'"
     return all_regexes_inner
 
@@ -497,6 +528,8 @@ if __name__ == '__main__':
     applying_checksum_changes = False
     next_checksum_change_to_apply = -1
     needs_continuation_char = False
+    limit_by_regexes_per_line = False
+    replace_references_to_single_regex_with_more = False
     with open("templates/get_" + template_to_make + "TEMPLATE.pig", "r") as f:
         for line in f:
             if line.startswith("-- Get Cooccurrence Words TEMPLATE Pig Script: Template for a"):
@@ -529,6 +562,14 @@ if __name__ == '__main__':
                 if "ATMOST" in line and len(keyword_tuples) > int(line.strip()[line.strip().index("ATMOST") + 6:]):
                     limited_repeat_section = True
                     limit_on_repeat_section = int(line.strip()[line.strip().index("ATMOST") + 6:])
+                    limit_by_regexes_per_line = False
+                elif "REGEXESPERLINE" in line and \
+                        len(keyword_tuples) > int(line.strip()[line.strip().index("REGEXESPERLINE") + 14:]):
+                    limited_repeat_section = True
+                    limit_on_repeat_section = int(line.strip()[line.strip().index("REGEXESPERLINE") + 14:])
+                    limit_by_regexes_per_line = True
+                elif "REGEXESPERLINE" in line:
+                    replace_references_to_single_regex_with_more = True
                 else:
                     limited_repeat_section = False
                 if prev_line.strip().endswith('\\'):
@@ -546,14 +587,34 @@ if __name__ == '__main__':
             elif in_repeat_section and not line.strip().startswith("ENDLINEREPEAT"):
                 if ' MATCHES ' in line or ' FOREACH ' in line or ' GENERATE ' in line:
                     is_pig = True
+                if replace_references_to_single_regex_with_more:
+                    line = line.replace("INSERTREGEXHERE", "INSERTALLREGEXESHERE")
+                    line = line.replace("INSERTPIGREGEXHERE", "INSERTALLREGEXESHERESTARTWITHDOT")
+                    line = line.replace("INSERTREPEATINDEXHERE", "0")
                 lines_to_repeat.append(line)
                 prev_line = line
+                if replace_references_to_single_regex_with_more:
+                    line = line.replace("INSERTWINDOWSIZEHERE", str(window_size))
+                    line = line.replace("INSERTNUMTERMSTOCOLLECT", str(num_terms_to_collect))
+                    line = line.replace("INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES", output_dir_stub)
+                    if "INSERTALLREGEXESHERE" in line:
+                        all_regexes = get_all_regexes(keyword_tuples)
+                        if "INSERTALLREGEXESHERESTARTWITHDOT" in line:
+                            line = line.replace("INSERTALLREGEXESHERESTARTWITHDOT",
+                                                "'.*(?:" + all_regexes[1:-1] + ").*'")
+                        else:
+                            line = line.replace("INSERTALLREGEXESHERE", all_regexes)
+                    pig_script.write(line)
                 continue
             elif line.strip().startswith("ENDLINEREPEAT"):
+                if replace_references_to_single_regex_with_more:
+                    replace_references_to_single_regex_with_more = False
+                    in_repeat_section = False
+                    continue
                 if limited_repeat_section:
                     fill_in_repeated_line_section_limited(lines_to_repeat, pig_script, limit_on_repeat_section,
                                                           repeat_section_needs_closure, is_pig,
-                                                          needs_continuation_char)
+                                                          needs_continuation_char, limit_by_regexes_per_line)
                 else:
                     fill_in_repeated_line_section(lines_to_repeat, pig_script, repeat_section_needs_closure, is_pig,
                                                   needs_continuation_char)
@@ -642,6 +703,14 @@ if __name__ == '__main__':
                 if "ATMOST" in line and len(keyword_tuples) > int(line.strip()[line.strip().index("ATMOST") + 6:]):
                     limited_repeat_section = True
                     limit_on_repeat_section = int(line.strip()[line.strip().index("ATMOST") + 6:])
+                    limit_by_regexes_per_line = False
+                elif ("REGEXESPERLINE" in line) and \
+                        (len(keyword_tuples) > int(line.strip()[line.strip().index("REGEXESPERLINE") + 14:])):
+                    limited_repeat_section = True
+                    limit_on_repeat_section = int(line.strip()[line.strip().index("REGEXESPERLINE") + 14:])
+                    limit_by_regexes_per_line = True
+                elif "REGEXESPERLINE" in line:
+                    replace_references_to_single_regex_with_more = True
                 else:
                     limited_repeat_section = False
                 if prev_line.strip().endswith('\\'):
@@ -657,32 +726,40 @@ if __name__ == '__main__':
                 lines_to_repeat = []
                 continue
             elif in_repeat_section and not line.strip().startswith("ENDLINEREPEAT"):
-                lines_to_repeat.append(line)
                 if ' MATCHES ' in line or ' FOREACH ' in line or ' GENERATE ' in line:
                     is_pig = True
+                if replace_references_to_single_regex_with_more:
+                    line = line.replace("INSERTREGEXHERE", "INSERTALLREGEXESHERE")
+                    line = line.replace("INSERTPIGREGEXHERE", "INSERTALLREGEXESHERESTARTWITHDOT")
+                    line = line.replace("INSERTREPEATINDEXHERE", "0")
+                lines_to_repeat.append(line)
                 prev_line = line
-                continue
+                if not replace_references_to_single_regex_with_more:
+                    continue
             elif line.strip().startswith("ENDLINEREPEAT"):
+                if replace_references_to_single_regex_with_more:
+                    replace_references_to_single_regex_with_more = False
+                    in_repeat_section = False
+                    continue
                 if limited_repeat_section:
                     fill_in_repeated_line_section_limited(lines_to_repeat, udfs, limit_on_repeat_section,
                                                           repeat_section_needs_closure, is_pig,
-                                                          needs_continuation_char)
+                                                          needs_continuation_char, limit_by_regexes_per_line)
                 else:
                     fill_in_repeated_line_section(lines_to_repeat, udfs, repeat_section_needs_closure, is_pig,
                                                   needs_continuation_char)
                 in_repeat_section = False
                 continue
-            else:
-                line = line.replace("INSERTWINDOWSIZEHERE", str(window_size))
-                line = line.replace("INSERTNUMTERMSTOCOLLECT", str(num_terms_to_collect))
-                line = line.replace("INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES", output_dir_stub)
-                if "INSERTALLREGEXESHERE" in line:
-                    all_regexes = get_all_regexes(keyword_tuples)
-                    if "INSERTALLREGEXESHERESTARTWITHDOT" in line:
-                        line = line.replace("INSERTALLREGEXESHERESTARTWITHDOT", "'.*(?:" + all_regexes[1:-1] + ").*'")
-                    else:
-                        line = line.replace("INSERTALLREGEXESHERE", all_regexes)
-                udfs.write(line)
+            line = line.replace("INSERTWINDOWSIZEHERE", str(window_size))
+            line = line.replace("INSERTNUMTERMSTOCOLLECT", str(num_terms_to_collect))
+            line = line.replace("INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES", output_dir_stub)
+            if "INSERTALLREGEXESHERE" in line:
+                all_regexes = get_all_regexes(keyword_tuples)
+                if "INSERTALLREGEXESHERESTARTWITHDOT" in line:
+                    line = line.replace("INSERTALLREGEXESHERESTARTWITHDOT", "'.*(?:" + all_regexes[1:-1] + ").*'")
+                else:
+                    line = line.replace("INSERTALLREGEXESHERE", all_regexes)
+            udfs.write(line)
             if line.strip() != '':
                 prev_line = line
     udfs.close()

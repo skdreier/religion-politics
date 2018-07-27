@@ -9,8 +9,19 @@ if not os.path.isdir(results_dir):
     os.makedirs(results_dir)
 
 
+def get_stop_words_dict():
+    stop_words_dict = {}
+    with open("stop_words.txt", "r") as f:
+        for line in f:
+            line = line.strip()
+            if line != '':
+                stop_words_dict[line] = True
+    return stop_words_dict
+
+
 def aggregate_all_files(total_num_processed_files):
     all_foundwords = []
+    stop_words_dict = get_stop_words_dict()
     f = open(results_dir + output_name + "-cooccurrencecounts.csv", "w")
     f.write("searchword,foundword,foundwordcount,numwordsinsearchwordsnippets\n")
     searchword_foundword_dict = {}
@@ -21,6 +32,8 @@ def aggregate_all_files(total_num_processed_files):
                 four_pieces = line.strip().split('\t')
                 searchword = four_pieces[0]
                 foundword = four_pieces[1]
+                if stop_words_dict.get(foundword, False):
+                    continue
                 count = int(four_pieces[2])
                 searchwordcount = int(four_pieces[3])
                 try:

@@ -63,7 +63,7 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
               REPLACE(m#'code', '[^\\p{Graph}]', ' ')                               AS code:chararray,
               REPLACE(m#'title', '[^\\p{Graph}]', ' ')                              AS title:chararray,
               append_placeholder(REPLACE(m#'description', '[^\\p{Graph}]', ' '))    AS description:chararray,
-              converttochararray(REPLACE(m#'content', '[^\\p{Graph}]', ' '))      AS document:chararray,
+              converttochararray(REPLACE(m#'content', '[^\\p{Graph}]', ' '))        AS document:chararray,
 
               -- This selects the first eight characters of the date string (year, month, day) -- I did this because
               -- the (year, month, day, hour, second) format is confusing for a lot of time formats down the line -
@@ -72,10 +72,33 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
               REPLACE(SUBSTRING(m#'date', 0, 8), '[^\\p{Graph}]', ' ')              AS date:chararray;
 
 -- don't bother looking through tokenized text for pages containing no matches
-instance = FILTER instance BY NOT(document MATCHES '') AND (
+instance = FILTER instance BY NOT(document MATCHES '');
+
+-- pull out a random sample of ~5000 documents from the data to help estimate idf for found words
+grouped_instances = GROUP instance ALL;
+counted_rows = FOREACH grouped_instances GENERATE COUNT_STAR(instance) AS num_rows;
+sampled_documents = SAMPLE instance (double) 5000/counted_rows.num_rows;
+
+words_dates = FOREACH sampled_documents GENERATE TOKENIZE(document) AS words_in_a_doc,
+                                                 date AS date;
+
+-- remove duplicate appearances of a word in a document
+words_dates = FOREACH words_dates GENERATE SUBTRACT(words_in_a_doc, {}) AS words_in_a_doc,
+                                           date AS date;
+
+-- flatten so that each row is now for a single word
+words_dates = FOREACH words_dates GENERATE FLATTEN(words_in_a_doc) AS word:chararray,
+                                           date AS date;
+
+doc_counts = FOREACH (GROUP words_dates BY word) GENERATE
+                                               FLATTEN(group) AS word:chararray,
+                                               COUNT(words_dates) AS count:long;
+
+STORE doc_counts INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-sampledocfrequencies/' USING PigStorage('\u0001');
+
+instance = FILTER instance BY
                      STARTLINEREPEATATMOST25
                      document MATCHES INSERTPIGREGEXHERE
                      ENDLINEREPEATATMOST25
-                     );
 
 STORE instance INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-fulltext/' USING PigStorage('\u0001');

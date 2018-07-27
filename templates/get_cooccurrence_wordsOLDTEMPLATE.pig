@@ -77,7 +77,7 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
               REPLACE(m#'code', '[^\\p{Graph}]', ' ')                               AS code:chararray,
               REPLACE(m#'title', '[^\\p{Graph}]', ' ')                              AS title:chararray,
               REPLACE(m#'description', '[^\\p{Graph}]', ' ')                        AS description:chararray,
-              REPLACE(m#'content', '[^\\p{Alnum}\']', ' ')                          AS document:chararray,
+              REPLACE(m#'content', '[^\\p{Graph}]', ' ')                            AS document:chararray,
 
               -- This selects the first eight characters of the date string (year, month, day) -- I did this because
               -- the (year, month, day, hour, second) format is confusing for a lot of time formats down the line -
