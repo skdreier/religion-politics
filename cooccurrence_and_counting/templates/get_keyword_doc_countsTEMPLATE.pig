@@ -1,6 +1,6 @@
 -- Author: Sofia Serrano
--- Get Keyword Counts TEMPLATE Pig Script: Template for automatically produced pig script which will count
--- the number of times each keyword provided in get_keyword_counts_keywords_to_count.txt occurs, as well as
+-- Get Keyword Doc Counts TEMPLATE Pig Script: Template for automatically produced pig script which will count
+-- the number of documents each keyword provided in get_keyword_counts_keywords_to_count.txt occurs, as well as
 -- reporting the words (that aren't already marked as non-matches) that that keyword appears in.
 -- For questions contact sofias6@cs.washington.edu
 -- This template script itself should never be run.
@@ -10,19 +10,19 @@
 -- directories that don't exist yet.
 -- Example usage:
 --     pig -p I_PARSED_DATA=/dataset-derived/gov/parsed/arcs/bucket-2/ -p O_DATA_DIR=bucket2output \
---         -p I_CHECKSUM_DATA=/dataset/gov/url-ts-checksum/ get_cooccurrence_words.pig
+--         -p I_CHECKSUM_DATA=/dataset/gov/url-ts-checksum/ get_keyword_doc_counts.pig
 -- These first four lines are defaults and also help with memory (if you don't have them, sometimes the cluster kicks you out)
 
 SET default_parallel 100;
 SET mapreduce.map.memory.mb 8192;
 SET mapreduce.reduce.memory.mb 8192;
 SET mapred.max.map.failures.percent 10;
-REGISTER lib/porky-abbreviated.jar;
-REGISTER lib/webarchive-commons-1.1.7.jar;
+REGISTER ../lib/porky-abbreviated.jar;
+REGISTER ../lib/webarchive-commons-1.1.7.jar;
 
 -- This is how you would call out a to a python script with a designated function if you wanted to.
 
-REGISTER 'emilys_python_udfs.py' USING jython AS emilysfuncs;
+REGISTER '../emilys_python_udfs.py' USING jython AS emilysfuncs;
 REGISTER 'get_keyword_doc_counts_udfs.py' USING jython AS keyworddocfuncs;
 
 DEFINE FROMJSON org.archive.porky.FromJSON();

@@ -20,10 +20,7 @@ if __name__ == '__main__':
                 get_keywords_and_keywords_strs_to_avoid("get_cooccurrence_words_words_to_search.txt")
     keyword_tuples = make_keyword_tuples(keywords, strings_to_avoid_for_keyword)
     keyword_tuples = [(kt[0][1:-1].replace('\\\\', '\\').replace('\\\'', '\''),
-                       kt[1][1:-1].replace('\\\\', '\\').replace('\\\'', '\'').replace('\\[', '[')
-                       .replace('\\^', '^').replace('\\$', '$').replace('\\.', '.').replace('\\|', '|')
-                       .replace('\\?', '?').replace('\\*', '*').replace('\\+', '+').replace('\\(', '(')
-                       .replace('\\)', ')'), kt)
+                       kt[1][1:-1], kt)
                       for kt in keyword_tuples]
     regexes_to_search_for = [re.compile(kt[1]) for kt in keyword_tuples]
 
@@ -88,11 +85,19 @@ def make_document_summary_file(text, document_num, searchword_matchcount_dict):
             tokenized_text[i] = tokenized_text[i].replace(placeholder_str,
                                                           string_matches[num_matches_found_so_far], 1)
             num_matches_found_so_far += 1
-        tokenized_text[i] = tokenized_text[i].strip('!,.?\'"`/()#*')
+        tokenized_text[i] = tokenized_text[i].strip().strip('!,.?\'"`/()[]{}#*~|\\<>@$^&')
     for i in range(len(tokenized_text) - 1, -1, -1):
         foundword = tokenized_text[i]
         if foundword == '' or ',' in foundword or '*' in foundword or '#' in foundword:
-            del foundword[i]
+            del tokenized_text[i]
+        elif '/' in foundword:
+            del tokenized_text[i]
+            foundwords = foundword.split('/')
+            for j in range(len(foundwords) - 1, -1, -1):
+                foundword = foundwords[j].strip().strip('!,.?\'"`/()[]{}#*~|\\<>@$^&')
+                if foundword != '':
+                    tokenized_text.insert(i, foundwords[j])
+
 
     for i in range(len(match_inds)):
         match_ind = match_inds[i]

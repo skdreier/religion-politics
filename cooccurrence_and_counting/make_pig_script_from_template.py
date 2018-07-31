@@ -154,7 +154,19 @@ def get_keywords_and_keywords_strs_to_avoid(text_file):
                     previous_words_to_avoid = strs_to_avoid_for_keyword[word]
                     strs_to_avoid_for_keyword[word] = personalized_words_to_exclude[i] + previous_words_to_avoid
 
-    str_keywords = sorted(str_keywords, key=(lambda x: len(x)), reverse=True)
+    words_with_nonalpha = []
+    only_alpha_words = []
+    for word in str_keywords:
+        only_alpha = True
+        for letter in word:
+            if not letter.isalpha():
+                only_alpha = False
+        if only_alpha:
+            only_alpha_words.append(word)
+        else:
+            words_with_nonalpha.append(word)
+    str_keywords = sorted(words_with_nonalpha, key=(lambda x: len(x)), reverse=True) + \
+                   sorted(only_alpha_words, key=(lambda x: len(x)), reverse=False)
     return str_keywords, strs_to_avoid_for_keyword
 
 
@@ -311,25 +323,24 @@ def make_plain_version_of_term(inner_keyword):
     return plain
 
 
-def make_keyword_tuples(str_keywords, strs_to_avoid_for_keyword):
+def make_keyword_tuples(str_keywords, strs_to_avoid_for_keyword, check_for_nonalphanumeric=True):
     keyword_tuples_of_3 = []
     for i in range(len(str_keywords)):
         keyword = str_keywords[i]
         keyword_tuples_of_3.append((make_plain_version_of_term(keyword),
                                     make_exact_match_regex(keyword, str_keywords[:i], strs_to_avoid_for_keyword),
                                     make_simplified_version_of_keyword(keyword)))
-    for i in range(len(str_keywords)):
-        for j in range(i + 1, len(str_keywords)):
-            assert keyword_tuples_of_3[i][2] != keyword_tuples_of_3[j][2], (keyword_tuples_of_3[i][0] + " and " +
-                                                                            keyword_tuples_of_3[j][0] +
-                                                                            " need to differ by more than just " +
-                                                                            "nonalphanumeric characters.")
+    if check_for_nonalphanumeric:
+        for i in range(len(str_keywords)):
+            for j in range(i + 1, len(str_keywords)):
+                assert keyword_tuples_of_3[i][2] != keyword_tuples_of_3[j][2], (keyword_tuples_of_3[i][0] + " and " +
+                                                                                keyword_tuples_of_3[j][0] +
+                                                                                " need to differ by more than just " +
+                                                                                "nonalphanumeric characters.")
     for i in range(len(str_keywords)):
         kt = keyword_tuples_of_3[i]
         keyword_tuples_of_3[i] = (kt[0], kt[1], kt[2], "'.*" + kt[1][1:-1] + ".*'")
 
-    # NOW resort so that keywords are alphabetical
-    keyword_tuples_of_3 = sorted(keyword_tuples_of_3, key=(lambda x: x[0]), reverse=False)
     return keyword_tuples_of_3
 
 
@@ -399,7 +410,10 @@ def fill_in_repeated_line_section_limited(lines_to_repeat_inner, script_inner, l
             limit = int(limit) + 1
     adjusted_keyword_groupings = [[] for i in range(limit)]
     # sort keyword tuples by their regex's approximate complexity, measured by number of ( in regex
-    resorted_keyword_tuples = sorted(keyword_tuples, key=(lambda x: [char for char in x[1]].count('(')), reverse=True)
+    # we USED to do this when we'd commonly have really complex regexes with lots of exceptions, but now that we
+    # have fewer exceptions in the regexes, we've changed this
+    # resorted_keyword_tuples = sorted(keyword_tuples, key=(lambda x: [char for char in x[1]].count('(')), reverse=True)
+    resorted_keyword_tuples = sorted(keyword_tuples, key=(lambda x: len(x)), reverse=True)
 
     # for some reason grouping regexes as unevenly as possible seems to run much faster, so that's what we do
     num_each_one_gets = int(len(keyword_tuples) * 1.0 / limit)
@@ -541,6 +555,12 @@ if __name__ == '__main__':
             elif line.startswith("-- Get Keyword Counts TEMPLATE Pig Script: Template for a"):
                 line = line.replace("-- Get Keyword Counts TEMPLATE Pig Script: Template for a",
                                     "-- Get Keyword Counts Pig Script: A")
+                pig_script.write(line)
+                prev_line = line
+                continue
+            elif line.startswith("-- Get Keyword Doc Counts TEMPLATE Pig Script: Template for a"):
+                line = line.replace("-- Get Keyword Doc Counts TEMPLATE Pig Script: Template for a",
+                                    "-- Get Keyword Doc Counts Pig Script: A")
                 pig_script.write(line)
                 prev_line = line
                 continue

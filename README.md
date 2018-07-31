@@ -1,7 +1,9 @@
 # Religion and Politics
 ## Lucy Lin, Sofia Serrano, Emily Kalah Gade, Sarah Dreier
 
-## Running scripts
+## Running non-template pig scripts (i.e., ExtractCounts_keywords.pig)
+
+For a script extracting counts for a custom list of keywords from the corpus, see the cooccurrence_and_counting directory readme instead. Otherwise:
 
 1. Copy the repository up to your personal workbench
 
@@ -14,8 +16,6 @@
    ```
 
    (this will add the jar files in the lib directory to your classpath and pig_classpath)
-   
-### Running non-template pig script (i.e., ExtractCounts)
 
 4. From the top-level directory of the repository, run some variation on the command
 
@@ -32,30 +32,6 @@
    ``` 
    
    from any directory. Other unix commands can be run on files located there by changing `-ls` to a different command.)
-   
-### Running pig scripts from a template (i.e., get_cooccurrence_words)
-
-4. From the top-level directory of the repository, run some variation on the command
-
-   ```
-   bash get_cooccurrence_words.sh 30 1000 cooccuroutput /dataset-derived/gov/parsed/arcs/bucket-0/ /dataset/gov/url-ts-checksum/
-   ```
-
-   For get_cooccurrence_words.sh, these are the five arguments in the order they're provided:
-   
-   * half window size: the number of words to take both before and after an appearance of a search term as "cooccurring" with that term
-   * number of top results to output: for each search term (as well as the two aggregated result types, anysearchword and allsearchwords), the number of top-scoring cooccurring words to report
-   * output directory name stub: the string to prepend to the directories of all the results files. Make sure that the directories starting with this string and ending in the provided search terms don't already exist in the hadoop file system, or hadoop will throw an error. Do not end this with /
-   * I_PARSED_DATA: the full path on the hadoop file system to the input parsed data
-   * CHECKSUM_DATA: the full path on the hadoop file system to the checksum data. (If not using checksum data, replace this argument with the string None)
-   
-   For get_keyword_counts.sh, these are the three arguments in the order they're provided:
-   
-   * output directory name (doubles as base of name of text file that will store aggregated results). Do not end this with /
-   * I_PARSED_DATA: the full path on the hadoop file system to the input parsed data
-   * CHECKSUM_DATA: the full path on the hadoop file system to the checksum data. (If not using checksum data, replace this argument with the string None)
-   
-   The bash script will first run a separate script to generate a pig script from the template in the repository with the provided search terms in the corresponding .txt file hard-coded in (for get_cooccurrence_words.sh, those are read from get_cooccurrence_words_words_to_search.txt). Then, the script will run that automatically generated script.
    
 ## Troubleshooting Issues
 

@@ -10,25 +10,24 @@
 -- directories that don't exist yet.
 -- Example usage:
 --     pig -p I_PARSED_DATA=/dataset-derived/gov/parsed/arcs/bucket-2/ -p O_DATA_DIR=bucket2output \
---         -p I_CHECKSUM_DATA=/dataset/gov/url-ts-checksum/ get_cooccurrence_words.pig
+--         -p I_CHECKSUM_DATA=/dataset/gov/url-ts-checksum/ get_keyword_counts.pig
 -- These first four lines are defaults and also help with memory (if you don't have them, sometimes the cluster kicks you out)
 
 SET default_parallel 100;
 SET mapreduce.map.memory.mb 8192;
 SET mapreduce.reduce.memory.mb 8192;
 SET mapred.max.map.failures.percent 10;
-REGISTER lib/porky-abbreviated.jar;
-REGISTER lib/webarchive-commons-1.1.7.jar;
+REGISTER ../lib/porky-abbreviated.jar;
+REGISTER ../lib/webarchive-commons-1.1.7.jar;
 
 -- This is how you would call out a to a python script with a designated function if you wanted to.
 
-REGISTER 'emilys_python_udfs.py' USING jython AS emilysfuncs;
-REGISTER 'get_cooccurrence_words_udfs.py' USING jython AS cooccurrencefuncs;
+REGISTER '../emilys_python_udfs.py' USING jython AS emilysfuncs;
+REGISTER 'get_keyword_counts_udfs.py' USING jython AS keywordfuncs;
 
 DEFINE FROMJSON org.archive.porky.FromJSON();
 DEFINE SequenceFileLoader org.archive.porky.SequenceFileLoader();
-DEFINE converttochararray cooccurrencefuncs.converttochararray();
-DEFINE append_placeholder cooccurrencefuncs.append_placeholder();
+DEFINE converttochararray keywordfuncs.converttochararray();
 
 -- This flips the URL back to front so the important parts are at the beginning e.g. gov.whitehouse.frontpage......
 -- I haven't really figured out why this is helpful, but it does help with using existing scripts because the
@@ -62,7 +61,7 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
 
               REPLACE(m#'code', '[^\\p{Graph}]', ' ')                               AS code:chararray,
               REPLACE(m#'title', '[^\\p{Graph}]', ' ')                              AS title:chararray,
-              append_placeholder(REPLACE(m#'description', '[^\\p{Graph}]', ' '))    AS description:chararray,
+              REPLACE(m#'description', '[^\\p{Graph}]', ' ')                        AS description:chararray,
               converttochararray(REPLACE(m#'content', '[^\\p{Graph}]', ' '))        AS document:chararray,
 
               -- This selects the first eight characters of the date string (year, month, day) -- I did this because
@@ -72,33 +71,45 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
               REPLACE(SUBSTRING(m#'date', 0, 8), '[^\\p{Graph}]', ' ')              AS date:chararray;
 
 -- don't bother looking through tokenized text for pages containing no matches
-instance = FILTER instance BY NOT(document MATCHES '');
-
--- pull out a random sample of ~5000 documents from the data to help estimate idf for found words
-grouped_instances = GROUP instance ALL;
-counted_rows = FOREACH grouped_instances GENERATE COUNT_STAR(instance) AS num_rows;
-sampled_documents = SAMPLE instance (double) 5000/counted_rows.num_rows;
-
-words_dates = FOREACH sampled_documents GENERATE TOKENIZE(document) AS words_in_a_doc,
-                                                 date AS date;
-
--- remove duplicate appearances of a word in a document
-words_dates = FOREACH words_dates GENERATE SUBTRACT(words_in_a_doc, {}) AS words_in_a_doc,
-                                           date AS date;
-
--- flatten so that each row is now for a single word
-words_dates = FOREACH words_dates GENERATE FLATTEN(words_in_a_doc) AS word:chararray,
-                                           date AS date;
-
-doc_counts = FOREACH (GROUP words_dates BY word) GENERATE
-                                               FLATTEN(group) AS word:chararray,
-                                               COUNT(words_dates) AS count:long;
-
-STORE doc_counts INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-sampledocfrequencies/' USING PigStorage('\u0001');
-
-instance = FILTER instance BY
+instance = FILTER instance BY NOT(document MATCHES '') AND (
                      STARTLINEREPEATATMOST25
                      document MATCHES INSERTPIGREGEXHERE
                      ENDLINEREPEATATMOST25
+                     );
 
-STORE instance INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-fulltext/' USING PigStorage('\u0001');
+prechecksum_instance_prelim = FOREACH instance GENERATE surt AS surt:chararray,
+                                                 checksum AS checksum:chararray,
+                                                 FLATTEN(TOKENIZE(document)) AS word:chararray,
+                                                 date AS date:chararray;
+
+all_matches = FILTER prechecksum_instance_prelim BY
+                     STARTLINEREPEATATMOST25
+                     word MATCHES INSERTPIGREGEXHERE
+                     ENDLINEREPEATATMOST25
+
+-- to get TOTAL number of counts, rather than simply unique observations, merge with checksum data.
+-- (A unique capture will only have been taken if something changed on the page, but if one page changed
+-- many times over a period of time and another stayed the same during that time, taking only the unique
+-- captures into account will cause data from pages with consistent text to be underrepresented in our
+-- analysis. The checksum data stores instances when a page *would* have been captured, but nothing had
+-- changed; merging with the checksum data fixes the consistent page underrepresentation problem.)
+
+-- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
+
+Checksum = LOAD '$I_CHECKSUM_DATA' USING PigStorage() AS (surt:chararray, date:chararray, checksum:chararray);
+
+-- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
+
+all_matches = JOIN all_matches BY (surt, checksum), Checksum BY (surt, checksum);
+
+-- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
+
+all_matches = FOREACH all_matches GENERATE
+                                      all_matches::word AS word:chararray,
+                                      Checksum::date AS date:chararray;
+
+searchterm_foundterm_count = FOREACH (GROUP all_matches BY word) GENERATE
+                                FLATTEN(group) AS word,
+                                COUNT(all_matches) AS matchestoparticularword;
+
+STORE searchterm_foundterm_count INTO '$O_DATA_DIR/';

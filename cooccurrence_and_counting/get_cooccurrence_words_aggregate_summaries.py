@@ -55,9 +55,25 @@ def aggregate_all_files(total_num_processed_files):
                     str(searchword_matchcount_dict[searchword]) + "\n")
     f.close()
     with open("get_keyword_doc_counts_keywords_to_count.txt", "w") as f:
+        words_with_nonalpha = []
+        only_alpha_words = []
         for foundword in all_foundwords:
             if '*' in foundword or '#' in foundword:
                 continue
+            whole_foundword_is_letters = True
+            for letter in foundword:
+                if not letter.isalpha():
+                    whole_foundword_is_letters = False
+            if whole_foundword_is_letters:
+                only_alpha_words.append(foundword)
+            else:
+                words_with_nonalpha.append(foundword)
+        words_with_nonalpha = sorted(words_with_nonalpha, key=(lambda x: len(x)), reverse=True)
+        only_alpha_words = sorted(only_alpha_words, key=(lambda x: len(x)), reverse=False)
+        for foundword in words_with_nonalpha:
+            f.write(foundword)
+            f.write("\n")
+        for foundword in only_alpha_words:
             f.write(foundword)
             f.write("\n")
 

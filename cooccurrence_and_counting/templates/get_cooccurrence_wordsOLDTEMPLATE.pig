@@ -33,11 +33,11 @@ SET default_parallel 100;
 SET mapreduce.map.memory.mb 8192;
 SET mapreduce.reduce.memory.mb 8192;
 SET mapred.max.map.failures.percent 10;
-REGISTER lib/porky-abbreviated.jar;
-REGISTER lib/webarchive-commons-1.1.7.jar;
+REGISTER ../lib/porky-abbreviated.jar;
+REGISTER ../lib/webarchive-commons-1.1.7.jar;
 
-REGISTER 'emilys_python_udfs.py' USING jython AS emilysfuncs;
-REGISTER 'get_cooccurrence_words_udfs.py' USING jython AS cooccurrencefuncs;
+REGISTER '../emilys_python_udfs.py' USING jython AS emilysfuncs;
+REGISTER '../get_cooccurrence_words_udfs.py' USING jython AS cooccurrencefuncs;
 
 DEFINE FROMJSON org.archive.porky.FromJSON();
 DEFINE SequenceFileLoader org.archive.porky.SequenceFileLoader();

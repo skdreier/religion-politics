@@ -23,3 +23,5 @@ for filename in "${nonempty_filenames[@]}"
 do
     hdfs dfs -cat $filename | python get_keyword_counts_aggregate.py $outputdir $num_filenames;
 done
+
+echo "Script complete."

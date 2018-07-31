@@ -17,17 +17,18 @@ SET default_parallel 100;
 SET mapreduce.map.memory.mb 8192;
 SET mapreduce.reduce.memory.mb 8192;
 SET mapred.max.map.failures.percent 10;
-REGISTER lib/porky-abbreviated.jar;
-REGISTER lib/webarchive-commons-1.1.7.jar;
+REGISTER ../lib/porky-abbreviated.jar;
+REGISTER ../lib/webarchive-commons-1.1.7.jar;
 
 -- This is how you would call out a to a python script with a designated function if you wanted to.
 
-REGISTER 'emilys_python_udfs.py' USING jython AS emilysfuncs;
-REGISTER 'get_keyword_counts_udfs.py' USING jython AS keywordfuncs;
+REGISTER '../emilys_python_udfs.py' USING jython AS emilysfuncs;
+REGISTER 'get_cooccurrence_words_udfs.py' USING jython AS cooccurrencefuncs;
 
 DEFINE FROMJSON org.archive.porky.FromJSON();
 DEFINE SequenceFileLoader org.archive.porky.SequenceFileLoader();
-DEFINE converttochararray keywordfuncs.converttochararray();
+DEFINE converttochararray cooccurrencefuncs.converttochararray();
+DEFINE append_placeholder cooccurrencefuncs.append_placeholder();
 
 -- This flips the URL back to front so the important parts are at the beginning e.g. gov.whitehouse.frontpage......
 -- I haven't really figured out why this is helpful, but it does help with using existing scripts because the
@@ -61,7 +62,7 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
 
               REPLACE(m#'code', '[^\\p{Graph}]', ' ')                               AS code:chararray,
               REPLACE(m#'title', '[^\\p{Graph}]', ' ')                              AS title:chararray,
-              REPLACE(m#'description', '[^\\p{Graph}]', ' ')                        AS description:chararray,
+              append_placeholder(REPLACE(m#'description', '[^\\p{Graph}]', ' '))    AS description:chararray,
               converttochararray(REPLACE(m#'content', '[^\\p{Graph}]', ' '))        AS document:chararray,
 
               -- This selects the first eight characters of the date string (year, month, day) -- I did this because
@@ -71,28 +72,13 @@ instance = FOREACH Archive GENERATE emilysfuncs.pickURLs(m#'url'),              
               REPLACE(SUBSTRING(m#'date', 0, 8), '[^\\p{Graph}]', ' ')              AS date:chararray;
 
 -- don't bother looking through tokenized text for pages containing no matches
-instance = FILTER instance BY NOT(document MATCHES '') AND (
-                     STARTLINEREPEATATMOST25
-                     document MATCHES INSERTPIGREGEXHERE
-                     ENDLINEREPEATATMOST25
-                     );
+instance = FILTER instance BY NOT(document MATCHES '');
 
-prechecksum_instance_prelim = FOREACH instance GENERATE surt AS surt:chararray,
-                                                 checksum AS checksum:chararray,
-                                                 FLATTEN(TOKENIZE(document)) AS word:chararray,
-                                                 date AS date:chararray;
-
-all_matches = FILTER prechecksum_instance_prelim BY
-                     STARTLINEREPEATATMOST25
-                     word MATCHES INSERTPIGREGEXHERE
-                     ENDLINEREPEATATMOST25
-
--- to get TOTAL number of counts, rather than simply unique observations, merge with checksum data.
--- (A unique capture will only have been taken if something changed on the page, but if one page changed
--- many times over a period of time and another stayed the same during that time, taking only the unique
--- captures into account will cause data from pages with consistent text to be underrepresented in our
--- analysis. The checksum data stores instances when a page *would* have been captured, but nothing had
--- changed; merging with the checksum data fixes the consistent page underrepresentation problem.)
+-- split the document into tokens, remove duplicate tokens from each document via the set difference
+-- operator, and then flatten that bag into all its component tokens
+words_dates = FOREACH instance GENERATE FLATTEN(SUBTRACT(TOKENIZE(document), {})) AS word:chararray,
+                                                 surt AS surt,
+                                                 checksum AS checksum;
 
 -- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
 
@@ -100,16 +86,40 @@ Checksum = LOAD '$I_CHECKSUM_DATA' USING PigStorage() AS (surt:chararray, date:c
 
 -- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
 
-all_matches = JOIN all_matches BY (surt, checksum), Checksum BY (surt, checksum);
+all_matches = JOIN words_dates BY (surt, checksum), Checksum BY (surt, checksum);
 
 -- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
 
-all_matches = FOREACH all_matches GENERATE
-                                      all_matches::word AS word:chararray,
-                                      Checksum::date AS date:chararray;
+words_dates = FOREACH all_matches GENERATE words_dates::word AS word,
+                                           Checksum::date AS date;
 
-searchterm_foundterm_count = FOREACH (GROUP all_matches BY word) GENERATE
-                                FLATTEN(group) AS word,
-                                COUNT(all_matches) AS matchestoparticularword;
+doc_counts = FOREACH (GROUP words_dates BY word) GENERATE
+                                               FLATTEN(group) AS word:chararray,
+                                               COUNT(words_dates) - 1 AS count:long;
 
-STORE searchterm_foundterm_count INTO '$O_DATA_DIR/';
+doc_counts = FILTER doc_counts BY count > 0;
+
+STORE doc_counts INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-sampledocfrequencies/' USING PigStorage('\u0001');
+
+instance = FILTER instance BY
+                     STARTLINEREPEATATMOST25
+                     document MATCHES INSERTPIGREGEXHERE
+                     ENDLINEREPEATATMOST25
+
+-- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
+
+all_matches = JOIN instance BY (surt, checksum), Checksum BY (surt, checksum);
+
+-- IF NOT BOTHERING WITH CHECKSUM: comment the next line out
+
+instance = FOREACH all_matches GENERATE instance::URLs AS URLs,
+                                        instance::src AS src,
+                                        instance::surt AS surt,
+                                        instance::checksum AS checksum,
+                                        instance::code AS code,
+                                        instance::title AS title,
+                                        instance::description AS description,
+                                        instance::document AS document,
+                                        Checksum::date AS date;
+
+STORE instance INTO 'INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES-fulltext/' USING PigStorage('\u0001');
