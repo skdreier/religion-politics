@@ -14,6 +14,12 @@ if __name__ == '__main__':
     window_size = int(sys.argv[3])
     which_file_am_i = sys.argv[4]
     output_filename = output_name + ".txt"
+    counter_filename = temp_results_dir + "match_counter.txt"
+    if os.path.isfile(counter_filename):
+        with open(counter_filename, "r") as f:
+            match_file_counter = int(f.readline().strip())
+    else:
+        match_file_counter = 0
 
 
     keywords, strings_to_avoid_for_keyword = \
@@ -33,6 +39,12 @@ def get_full_file_contents():
 
 
 def get_list_of_document_matches(full_file_str):
+    is_house_or_senate = full_file_str.split('\n')
+    if is_house_or_senate[-1].strip() == '':
+        is_house_or_senate = is_house_or_senate[:-1]
+    is_house_or_senate = [doc[:doc.index("````````")] for doc in is_house_or_senate]
+    is_house_or_senate = [".senate.gov" in tag or ".house.gov" in tag for tag in is_house_or_senate]
+
     documents = full_file_str.split('````````')
     documents = documents[1:]
     for i in range(len(documents)):
@@ -42,8 +54,19 @@ def get_list_of_document_matches(full_file_str):
         else:
             end_index = document.rfind('\n') - 9
         document = document[1: end_index]
+        if document.startswith(chr(1)):
+            document = document[1:]
+        if chr(1) in document:
+            document = document[:document.index(chr(1))]
         documents[i] = document
-    return documents
+
+    assert len(documents) == len(is_house_or_senate)
+
+    documents_to_keep = []
+    for i in range(len(is_house_or_senate)):
+        if is_house_or_senate[i]:
+            documents_to_keep.append(documents[i])
+    return documents_to_keep
 
 
 def make_document_summary_file(text, document_num, searchword_matchcount_dict):
@@ -85,19 +108,14 @@ def make_document_summary_file(text, document_num, searchword_matchcount_dict):
             tokenized_text[i] = tokenized_text[i].replace(placeholder_str,
                                                           string_matches[num_matches_found_so_far], 1)
             num_matches_found_so_far += 1
-        tokenized_text[i] = tokenized_text[i].strip().strip('!,.?\'"`/()[]{}#*~|\\<>@$^&')
+        tokenized_text[i] = tokenized_text[i].strip().strip('!,.?\'"`/()[]{}#*~|\\<>@$^&:;-_=+')
     for i in range(len(tokenized_text) - 1, -1, -1):
         foundword = tokenized_text[i]
-        if foundword == '' or ',' in foundword or '*' in foundword or '#' in foundword:
-            del tokenized_text[i]
-        elif '/' in foundword:
-            del tokenized_text[i]
+        if '/' in foundword:
             foundwords = foundword.split('/')
             for j in range(len(foundwords) - 1, -1, -1):
-                foundword = foundwords[j].strip().strip('!,.?\'"`/()[]{}#*~|\\<>@$^&')
-                if foundword != '':
-                    tokenized_text.insert(i, foundwords[j])
-
+                foundwords[j] = foundwords[j].strip().strip('!,.?\'"`/()[]{}#*~|\\<>@$^&:;-_=+')
+            tokenized_text[i] = " ".join(foundwords)
 
     for i in range(len(match_inds)):
         match_ind = match_inds[i]
@@ -108,12 +126,17 @@ def make_document_summary_file(text, document_num, searchword_matchcount_dict):
         match_words = tokenized_text[start_start_ind:start_end_ind] + tokenized_text[end_start_ind:end_end_ind]
         search_word = string_matches[i]
         word_to_count = {}
+        words_added = {}
         for word in match_words:
-            try:
-                word_to_count[word] += 1
-            except:
-                word_to_count[word] = 1
-        for word in word_to_count.keys():
+            words = word.split(" ")
+            for word2 in words:
+                if word2 != '':
+                    try:
+                        word_to_count[word2] += 1
+                    except:
+                        word_to_count[word2] = 1
+                    words_added[word2] = 1
+        for word in words_added.keys():
             f.write(search_word + "\t" + word + "\t" + str(word_to_count[word]) + "\n")
         try:
             searchword_matchcount_dict[search_word] += len(match_words)
@@ -131,16 +154,18 @@ def aggregate_all_docs_in_file(total_num_docs, searchword_matchcount_dict):
             for line in smallf:
                 three_pieces = line.strip().split('\t')
                 searchword = three_pieces[0]
-                foundword = three_pieces[1]
+                foundword = three_pieces[1].strip().strip('!,.?\'"`/()[]{}#*~|\\<>@$^&:;-_=+')
                 count = int(three_pieces[2])
-                try:
-                    foundword_count_dict = searchword_foundword_dict[searchword]
+                foundword = foundword.strip().strip('!,.?\'"`/()[]{}#*~|\\<>@$^&:;-_=+')
+                if foundword.strip() != '':
                     try:
-                        foundword_count_dict[foundword] += count
+                        foundword_count_dict = searchword_foundword_dict[searchword]
+                        try:
+                            foundword_count_dict[foundword] += count
+                        except:
+                            foundword_count_dict[foundword] = count
                     except:
-                        foundword_count_dict[foundword] = count
-                except:
-                    searchword_foundword_dict[searchword] = {foundword: count}
+                        searchword_foundword_dict[searchword] = {foundword: count}
     for searchword in searchword_foundword_dict.keys():
         foundword_count_dict = searchword_foundword_dict[searchword]
         for foundword in foundword_count_dict.keys():
@@ -160,11 +185,17 @@ def main():
     print("Starting to count up cooccurrence words for documents in nonempty file " + str(int(which_file_am_i) + 1) +
           " / " + str(total_num_files))
     documents = get_list_of_document_matches(get_full_file_contents())
+    global match_file_counter
+    match_file_counter += len(documents)
+    with open(counter_filename, "w") as f:
+        f.write(str(match_file_counter))
     searchword_matchcount_dict = {}
     for i in range(len(documents)):
         searchword_matchcount_dict = make_document_summary_file(documents[i], i, searchword_matchcount_dict)
     aggregate_all_docs_in_file(len(documents), searchword_matchcount_dict)
     remove_all_subsummary_files(len(documents))
+    if int(which_file_am_i) == int(total_num_files) - 1:
+        print("Found " + str(match_file_counter) + " matching documents in total.")
 
 
 if __name__ == '__main__':

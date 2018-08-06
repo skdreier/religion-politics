@@ -46,8 +46,12 @@ def aggregate_all_files(total_num_processed_files):
                     searchword_foundword_dict[searchword] = {foundword: count}
                 searchword_matchcount_dict[searchword] = searchwordcount
     for searchword in searchword_foundword_dict.keys():
+        if "," in searchword:
+            continue
         foundword_count_dict = searchword_foundword_dict[searchword]
         for foundword in foundword_count_dict.keys():
+            if "," in foundword:
+                continue
             count = foundword_count_dict[foundword]
             if foundword not in all_foundwords:
                 all_foundwords.append(foundword)

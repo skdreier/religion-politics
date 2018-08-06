@@ -1,12 +1,9 @@
 import sys
 import os
-import re
 import pickle
 import multiprocessing
 from get_cooccurrence_words_from_matches import get_full_file_contents
 from make_pig_script_from_template import get_keywords_and_keywords_strs_to_avoid
-from make_pig_script_from_template import make_keyword_tuples
-from make_pig_script_from_template import get_all_regexes
 
 which_file_am_i = sys.argv[1]
 total_num_files = sys.argv[2]
@@ -27,10 +24,10 @@ if not os.path.isdir(pickle_dict_filename):
 
 pickle_dict_filename += tag_for_job + "-idfestimationdict.pkl"
 idf_estimate_filename = "script_output/" + tag_for_job + "-foundwordestimatedcorpuscount.csv"
-fake_doc_frequency_count_to_add = 5
+fake_doc_frequency_count_to_add = 100
 
 
-filename_with_words = "get_keyword_doc_counts_keywords_to_count.txt"
+filename_with_words = "get_keyword_doc_counts_keywords_to_count_2.txt"
 
 
 def get_dict_of_words_to_combine(file_text):
@@ -45,7 +42,7 @@ def get_dict_of_words_to_combine(file_text):
         count = int(line[1])
         word_doccount_dict[word] = count
         list_of_words.append(word)
-    return word_doccount_dict, chr(1) + chr(1).join(list_of_words) + chr(1)
+    return word_doccount_dict
 
 
 def get_full_file_contents_from_filename(filename):
@@ -74,6 +71,8 @@ def make_idf_estimate_file(pickle_dict):
     with open(idf_estimate_filename, "w") as f:
         f.write("foundword,numsampleddocsfoundwordappearsin\n")
         for foundword in pickle_dict.keys():
+            if "," in foundword:
+                continue
             f.write(foundword + "," + str(pickle_dict[foundword]) + "\n")
 
 
@@ -113,75 +112,60 @@ def process_single_file_into_pickle_dict(filename_index):
     print("Starting to calculate foundword document frequencies from nonempty file " +
           str(int(which_file_am_i) + filename_index + 1) + " / " + str(total_num_files))
     filename = text_filenames[filename_index]
-    words_to_consider_combining, all_words_string = get_dict_of_words_to_combine(
-        get_full_file_contents_from_filename(filename))
+    words_to_consider_combining= get_dict_of_words_to_combine(get_full_file_contents_from_filename(filename))
     pickle_dict = {}
-    add_matches_to_pickle_dict(all_words_string, words_to_consider_combining, pickle_dict)
-    return pickle_dict
+    words_found = add_matches_to_pickle_dict(words_to_consider_combining, pickle_dict)
+    return (pickle_dict, words_found)
 
 
-def add_matches_to_pickle_dict(all_words_string, words_to_consider_combining, pickle_dict):
-    matches = [(m.start(0), m.end(0)) for m in all_foundword_regex_expression.finditer(all_words_string)]
-    for match_inds in matches:
-        match_start = match_inds[0]
-        match_end_plus_1 = match_inds[1]
-        word_start = match_start - 1
-        while all_words_string[word_start] != chr(1):
-            word_start -= 1
-        word_end_plus_1 = match_end_plus_1
-        while all_words_string[word_end_plus_1] != chr(1):
-            word_end_plus_1 += 1
-        raw_word = all_words_string[word_start + 1:word_end_plus_1]
-        corresponding_doc_count = words_to_consider_combining[raw_word]
-        match_word = all_words_string[match_start:match_end_plus_1]
-        if '/' in raw_word:
-            raw_words = raw_word.split('/')
-            found_a_match = False
-            for i in range(len(raw_words) - 1, -1, -1):
-                word = raw_words[i].strip().strip('!,.?\'"`/()[]{}#*~|\\<>@$^&')
-                if match_word == word:
-                    found_a_match = True
-            if not found_a_match:
-                continue
-        elif match_word != raw_word.strip().strip('!,.?\'"`/()[]{}#*~|\\<>@$^&'):
-            # this shouldn't actually be a match
-            continue
-        try:
-            pickle_dict[match_word] += corresponding_doc_count
-        except:
-            pickle_dict[match_word] = corresponding_doc_count
+def add_matches_to_pickle_dict(words_to_consider_combining, pickle_dict):
+    words_found = []
+    for keyword in all_keywords:
+        if keyword in words_to_consider_combining:
+            words_found.append(keyword)
+            pickle_dict[keyword] = words_to_consider_combining[keyword]
+    return words_found
+
+
+def rewrite_words_file(keyword_list):
+    with open(filename_with_words, "w") as f:
+        for word in keyword_list:
+            f.write(word + "\n")
 
 
 def main():
     pickle_dict = load_pickle_dict()
 
-    keywords, strings_to_avoid_for_keyword = \
+    global all_keywords
+    all_keywords, strings_to_avoid_for_keyword = \
         get_keywords_and_keywords_strs_to_avoid(filename_with_words)
-    keyword_tuples = make_keyword_tuples(keywords, strings_to_avoid_for_keyword, check_for_nonalphanumeric=False)
-    keyword_tuples = [(kt[0][1:-1].replace('\\\\', '\\').replace('\\\'', '\''),
-                       kt[1][1:-1], kt)
-                      for kt in keyword_tuples]
-    global all_foundword_regex_expression
-    all_foundword_regex_expression = re.compile(get_all_regexes(keyword_tuples)[1:-1].replace("\\'", "'"))
 
-    if num_text_files_to_read_results_from == 0:
+    if len(all_keywords) > 0 and num_text_files_to_read_results_from == 0:
         print("Starting to calculate foundword document frequencies from nonempty file " +
               str(int(which_file_am_i) + 1) + " / " + str(total_num_files))
-        words_to_consider_combining, all_words_string = get_dict_of_words_to_combine(get_full_file_contents())
-        add_matches_to_pickle_dict(all_words_string, words_to_consider_combining, pickle_dict)
-    else:
+        words_to_consider_combining = get_dict_of_words_to_combine(get_full_file_contents())
+        words_matched = add_matches_to_pickle_dict(words_to_consider_combining, pickle_dict)
+        for word in words_matched:
+            all_keywords.remove(word)
+    elif len(all_keywords) > 0:
         pool = multiprocessing.Pool(processes=num_text_files_to_read_results_from)
-        list_of_pickle_dicts = pool.map(process_single_file_into_pickle_dict,
-                                        range(num_text_files_to_read_results_from))
-        for new_pickle_dict in list_of_pickle_dicts:
+        list_of_wordsfound_and_pickle_dicts = pool.map(process_single_file_into_pickle_dict,
+                                                       range(num_text_files_to_read_results_from))
+        pool.close()
+        for wordsfound_pickle_dict in list_of_wordsfound_and_pickle_dicts:
+            words_matched = wordsfound_pickle_dict[1]
+            new_pickle_dict = wordsfound_pickle_dict[0]
             for match_word in new_pickle_dict.keys():
                 corresponding_doc_count = new_pickle_dict[match_word]
                 try:
                     pickle_dict[match_word] += corresponding_doc_count
                 except:
                     pickle_dict[match_word] = corresponding_doc_count
+            for word in words_matched:
+                all_keywords.remove(word)
 
     save_pickle_dict(pickle_dict)
+    rewrite_words_file(all_keywords)
     on_last_batch = (num_text_files_to_read_results_from > 0) and \
                     (int(which_file_am_i) + num_text_files_to_read_results_from >= int(total_num_files))
     if (int(which_file_am_i) == int(total_num_files) - 1) or on_last_batch:

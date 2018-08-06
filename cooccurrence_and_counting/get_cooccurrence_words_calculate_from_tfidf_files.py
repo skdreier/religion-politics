@@ -9,7 +9,7 @@ tf_filename = results_dir + sys.argv[2]
 output_filename = results_dir + sys.argv[3] + "-cooccurrencescores.csv"
 num_words_to_take = int(sys.argv[4])
 
-num_to_add_to_doc_frequency_for_each_foundword = 5
+num_to_add_to_doc_frequency_for_each_foundword = 100
 
 # fields in tf doc:
 # searchword, foundword, foundwordcount, numwordsinsearchwordsnippets
@@ -18,9 +18,9 @@ num_to_add_to_doc_frequency_for_each_foundword = 5
 # foundword, numcorpusdocsfoundwordappearsin
 
 with open(output_filename, "w") as f:
-    f.write("SearchWord,FoundWord,Score,NumFoundWordOccurrencesInSearchWordSnippets," +
+    f.write("FoundWord,Score,NumFoundWordOccurrencesInAllSearchWordSnippets," +
             "TotalNumWordsInSearchWordSnippets,NumActualDocsFoundWordOccursIn," +
-            "NumArtificalSearchWordDocsFoundWordOccursIn\n")
+            "SpecificSearchWordSnippetOccurrences\n")
 
 
 foundword_searchwordnumoccurrences_dict = {}
@@ -77,7 +77,7 @@ for searchword in searchword_foundwords_dict.keys():
         tf = float(foundword_searchwordnumoccurrences_dict[foundword][1][searchword_ind] /
                              searchword_totalnumsnippetwords_dict[searchword])
         idf_denominator = float(foundword_numactualdocs_dict.get(foundword,
-                                                                 num_to_add_to_doc_frequency_for_each_foundword) + 1
+                                                                 num_to_add_to_doc_frequency_for_each_foundword + 1)
                                 + len(foundword_searchwordnumoccurrences_dict[foundword][0]))
         score = tf / idf_denominator
         try:
@@ -89,7 +89,7 @@ for searchword in searchword_foundwords_dict.keys():
 foundword_score_list = []
 for foundword in foundword_searchwordnumoccurrences_dict.keys():
     idf_denominator = float(foundword_numactualdocs_dict.get(foundword,
-                                                             num_to_add_to_doc_frequency_for_each_foundword) + 1 + 1)
+                                                             num_to_add_to_doc_frequency_for_each_foundword + 1) + 1)
     tf_numerator = float(sum(foundword_searchwordnumoccurrences_dict[foundword][1]))
     score = tf_numerator / idf_denominator
     foundword_score_list.append((foundword, score))
@@ -117,19 +117,17 @@ for searchword in searchword_totalnumsnippetwords_dict:
 with open(output_filename, "a") as f:
     for fw_score in foundword_score_list:
         foundword = fw_score[0]
-        f.write("AggregatedSearchWords," + foundword + "," + str(fw_score[1]) + "," +
+        searchwords_snippet_counts = foundword_searchwordnumoccurrences_dict[foundword]
+        searchwords = searchwords_snippet_counts[0]
+        snippet_counts = searchwords_snippet_counts[1]
+        searchword_str = ''
+        for i in range(len(searchwords)):
+            searchword_str += " " + searchwords[i].replace(",", "_comma_")
+            searchword_str += " " + str(snippet_counts[i])
+        if len(searchword_str) > 0:
+            searchword_str = searchword_str[1:]
+        f.write(foundword + "," + str(fw_score[1]) + "," +
                 str(foundword_totalsnippetoccurrences_dict[foundword]) + "," +
                 str(total_num_words_in_all_search_word_snippets) + "," +
-                str(foundword_numactualdocs_dict.get(foundword, num_to_add_to_doc_frequency_for_each_foundword) -
-                    num_to_add_to_doc_frequency_for_each_foundword + 1) + ",1\n")
-    for sw_fw_score in searchword_foundword_score_list:
-        searchword = sw_fw_score[0]
-        foundword = sw_fw_score[1]
-        score = sw_fw_score[2]
-        searchword_ind = foundword_searchwordnumoccurrences_dict[foundword][0].index(searchword)
-        num_fw_occurrences = foundword_searchwordnumoccurrences_dict[foundword][1][searchword_ind]
-        f.write(searchword + "," + foundword + "," + str(score) + "," + str(num_fw_occurrences) + "," +
-                str(searchword_totalnumsnippetwords_dict[searchword]) + "," +
-                str(foundword_numactualdocs_dict.get(foundword, num_to_add_to_doc_frequency_for_each_foundword) -
-                    num_to_add_to_doc_frequency_for_each_foundword + 1) + "," +
-                str(len(foundword_searchwordnumoccurrences_dict[foundword][0])) + "\n")
+                str(foundword_numactualdocs_dict.get(foundword, num_to_add_to_doc_frequency_for_each_foundword + 1) -
+                    num_to_add_to_doc_frequency_for_each_foundword) + "," + searchword_str + "\n")

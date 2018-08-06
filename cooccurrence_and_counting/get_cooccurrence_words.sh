@@ -46,6 +46,8 @@ fi
 # will also populate get_keyword_doc_counts_keywords_to_counts.txt in a preliminary way
 python get_cooccurrence_words_aggregate_summaries.py $num_filenames $outputdirprefix
 
+scp get_keyword_doc_counts_keywords_to_count.txt get_keyword_doc_counts_keywords_to_count_2.txt
+
 # will now calculate idf for each foundword, and will store those
 # in $outputdirprefix-foundwordestimatedcorpuscount.csv
 if [[ $skip_pig == True ]] ;
@@ -74,18 +76,51 @@ then
             filename_index=$(($filename_index + 1))
           fi
         done
-        python get_cooccurrence_words_calculate_foundword_doc_frequency.py $(($j * $nonpig_idf_multiprocessing_level)) $num_filenames $outputdirprefix $numresultstocollect $extra_filenames
+        python get_cooccurrence_words_aggregate_idf.py $(($j * $nonpig_idf_multiprocessing_level)) $num_filenames $outputdirprefix $numresultstocollect $extra_filenames
       done
+
+      nonempty_filenames=($(ls -d -1 ${input_data}-aggregateddocfrequencies/*.* | awk '{print $NF}' | tr '\n' ' '))
+      num_filenames=${#nonempty_filenames[@]}
     else
-      for i in "${!nonempty_filenames[@]}"; do
-        cat ${nonempty_filenames[$i]} | python get_cooccurrence_words_calculate_foundword_doc_frequency.py $i $num_filenames $outputdirprefix $numresultstocollect
-      done
+      agg_doc_freq=-aggregateddocfrequencies/
+      DIRECTORY=$input_data$agg_doc_freq
+      if [ ! -d "$DIRECTORY" ]; then
+        for i in "${!nonempty_filenames[@]}"; do
+          cat ${nonempty_filenames[$i]} | python get_cooccurrence_words_aggregate_idf.py $i $num_filenames $outputdirprefix $numresultstocollect
+        done
+      fi
+      nonempty_filenames=($(ls -d -1 ${outputdirprefix}-aggregateddocfrequencies/*.* | awk '{print $NF}' | tr '\n' ' '))
+      num_filenames=${#nonempty_filenames[@]}
     fi
 else
-    for i in "${!nonempty_filenames[@]}"; do
-      hdfs dfs -cat ${nonempty_filenames[$i]} | python get_cooccurrence_words_calculate_foundword_doc_frequency.py $i $num_filenames $outputdirprefix $numresultstocollect
-    done
+    agg_doc_freq=-aggregateddocfrequencies/
+    DIRECTORY=$outputdirprefix$agg_doc_freq
+    if [ ! -d "$DIRECTORY" ]; then
+      for i in "${!nonempty_filenames[@]}"; do
+        hdfs dfs -cat ${nonempty_filenames[$i]} | python get_cooccurrence_words_aggregate_idf.py $i $num_filenames $outputdirprefix $numresultstocollect
+      done
+    fi
+    nonempty_filenames=($(ls -d -1 ${outputdirprefix}-aggregateddocfrequencies/*.* | awk '{print $NF}' | tr '\n' ' '))
+    num_filenames=${#nonempty_filenames[@]}
 fi
+
+filename_index=0
+num_batches=$(( $num_filenames / $nonpig_idf_multiprocessing_level ))
+if [[ $(($num_batches * $nonpig_idf_multiprocessing_level)) != $((num_filenames)) ]] ;
+then
+  num_batches=$(($num_batches + 1))
+fi
+for j in `seq 0 $((${num_batches} - 1))`; do
+  extra_filenames=''
+  space=" "
+  for i in `seq 0 $((${nonpig_idf_multiprocessing_level} - 1))`; do
+    if [[ $filename_index != $num_filenames ]] ; then
+      extra_filenames=$extra_filenames${nonempty_filenames[$filename_index]}$space
+      filename_index=$(($filename_index + 1))
+    fi
+  done
+  python get_cooccurrence_words_calculate_foundword_doc_frequency.py $(($j * $nonpig_idf_multiprocessing_level)) $num_filenames $outputdirprefix $numresultstocollect $extra_filenames
+done
 
 append_count=-foundwordestimatedcorpuscount
 csv_ending=.csv
