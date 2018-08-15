@@ -43,11 +43,15 @@ non_religious_instance = FILTER instance BY NOT(
                                      ENDLINEREPEATATMOST25
                                      );
 
-non_religious_instance = ORDER non_religious_instance BY date;
+grouped = GROUP non_religious_instance ALL;
 
-STORE non_religious_instance INTO 'rejected_religious_captures_for_qa_purposes/' USING PigStorage('\t');
+num_non_religious_captures = FOREACH grouped GENERATE COUNT_STAR(non_religious_instance) AS num_rows;
 
-religious_instance_no_text = FOREACH religious_instance GENERATE URLs AS URL,
+sampled_docs = SAMPLE non_religious_instance (double)2000/num_non_religious_captures.num_rows;
+
+STORE sampled_docs INTO 'sample_rejected_religious_captures_for_qa_purposes/' USING PigStorage('\t');
+
+religious_instance_no_text = FOREACH religious_instance GENERATE URL AS URL,
                                                                  surt AS surt,
                                                                  checksum AS checksum,
                                                                  date AS date;
