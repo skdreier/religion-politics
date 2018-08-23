@@ -11,19 +11,18 @@
         (note: fix the hard-coded path in `documents/spacy_model.py`),
         or compile one via `convert_wv_format.py`
 
-2. preprocess raw-ish dotgov data (from the cluster), e.g.:
+2. preprocess raw-ish dotgov data (from the cluster) per bucket, e.g.:
     ```
     python preprocess_dotgov.py \
         /m-pinotHD/lucylin/dotgov/arcs/bucket-0 \
-        /m-pinotHD/nobackup/lucylin/arcs-bucket-0
+        /m-pinotHD/nobackup/lucylin/arcs/bucket-0
     ```
 
-3. get similarity for a set of queries (where `queries.txt` is a
-    newline-separated list of query sentences, and output is written to
+3. get similarity for a set of queries, across all buckets (output written to
     `output/matches.json` and `output/matches.xlsx`):
     ```
     python find_matches.py \
-        /m-pinotHD/nobackup/lucylin/arcs-bucket-0 \
-        ./queries.txt \
+        /m-pinotHD/nobackup/lucylin/arcs \
+        ./queries \
         ./output
     ```
