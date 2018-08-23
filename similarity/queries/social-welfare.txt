@@ -1,0 +1,20 @@
+# social welfare queries
+
+SW_00, Welfare builds a healthy America.
+SW_00_a, America deserves a better health care policy.
+# probably too long, but here goes:
+SW_00_b, The Democratic budget reflects what is important to America's families - a safe America with good jobs, better access to health care, the best possible education for our children, and a clean and healthy environment.
+SW_00_c, Helping minority and underprivileged families navigate the health system is a priority for America.
+SW_00_d, America faces a health care crisis.
+
+SW_01, Government should provide economic benefits to American communities.
+SW_01_a, Federal government should provide health care and economic support to help our communities thrive.
+
+# SW_02, Government should protect American families over corporate interests.
+
+SW_03, Welfare helps American families thrive.
+SW_03_a, Temporary assistance helps needy American families thrive.
+SW_03_b, Child welfare programs help needy American families thrive.
+
+SW_04, Poor Americans need a domestic hunger safety net.
+SW_04_a, Low-income Americans [need / deserve] a strong safety net.

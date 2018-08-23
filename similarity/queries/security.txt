@@ -1,0 +1,24 @@
+# security queries
+
+SEC_00, Government should end legal loopholes and secure our borders.
+
+# SEC_01, Government should manage national cybersecurity risks.
+# SEC_02, Government should target suspicious, malicious, or nefarious actors.
+
+SEC_03, Government should safeguard the American people, our homeland, and our values.
+
+SEC_04, Terrorists threaten the U.S. borders and security.
+
+SEC_05, Terrorists attack the American people, our country, and our way of life.
+SEC_05_a, Terrorists attack our way of life.
+SEC_05_b, Terrorists hate our American values.
+
+SEC_06, Government should identify potential terrorists and prevent attacks.
+
+SEC_07, Government should enforce immigration laws and secure U.S. borders.
+
+# SEC_08, Government should keep the American people safe.
+
+SEC_09, Government should disrupt cartels, smugglers, nefarious actors, illegal border crossers.
+
+SEC_10, Government should rebuild our military.

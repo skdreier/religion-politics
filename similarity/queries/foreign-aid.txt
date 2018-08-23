@@ -1,0 +1,28 @@
+# foreign aid queries
+
+# FA_00, Public-private partnerships advance development.
+
+FA_01, Disaster relief and lifesaving assistance amidst complex crises.
+FA_01_a, United States should provide humanitarian relief and international assistance to global communities in need.
+
+FA_02, Foreign aid supports global stability.
+FA_02_a, Foreign aid reduces global poverty and supports sustainable development and security.
+
+FA_03, Foreign aid promotes global health.
+FA_03_a, Foreign aid helps fight HIV/AIDS and malaria abroad.
+
+FA_04, Foreign aid empowers women and girls.
+FA_04_a, Foreign aid empowers women and girls in developing nations.
+
+FA_05, Foreign aid promotes economic prosperity and resilience.
+FA_05_a, Foreign aid boosts the economy of developing nations and alleviates poverty.
+
+# FA_06, Foreign aid protects vulnerable populations.
+
+FA_07, Foreign aid advances human dignity.
+FA_07_a, Human rights norms are the cornerstone of U.S. foreign policy.
+FA_07_b, Promoting human rights abroad serves our national interests.
+FA_07_c, Poverty, aid and human rights are closely linked.
+FA_07_d, We stand for human rights and democratic values abroad.
+
+# FA_08, Foreign aid lifts lives and build communities.
