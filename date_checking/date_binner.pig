@@ -17,7 +17,7 @@ DEFINE SURTURL org.archive.porky.SurtUrlKey();
 -- when you load data, you have to use the same "name" for the data that you do in the command line command -
 -- so this is the name of the directory or file that you want to run this script on
 
-all_records = LOAD '/user/sofias6/all_dates/' USING PigStorage('\t') AS (date:chararray,
+all_records = LOAD '/user/sofias6/all_dates_religious_only/' USING PigStorage('\t') AS (date:chararray,
                                                                          URL:chararray,
                                                                          surt:chararray,
                                                                          checksum:chararray);
@@ -41,7 +41,7 @@ bin_count = FOREACH (GROUP all_records BY bin_id) GENERATE FLATTEN(group) AS bin
 
 bin_count = ORDER bin_count BY bin_id;
 
-STORE bin_count INTO '$BINSPLIT-bins/' USING PigStorage('\t');
+STORE bin_count INTO '$BINSPLIT-religious-bins/' USING PigStorage('\t');
 
 all_records_distinct_urls = DISTINCT all_records;
 
@@ -50,4 +50,4 @@ bin_count = FOREACH (GROUP all_records_distinct_urls BY bin_id) GENERATE FLATTEN
 
 bin_count = ORDER bin_count BY bin_id;
 
-STORE bin_count INTO '$BINSPLIT-distincturlbins/' USING PigStorage('\t');
+STORE bin_count INTO '$BINSPLIT-religious-distincturlbins/' USING PigStorage('\t');
