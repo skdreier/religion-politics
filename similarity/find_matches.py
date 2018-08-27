@@ -40,7 +40,17 @@ def load_queries(query_dir):
 
 
 def search(query_vecs, corpus_dir, output_dir, n_best):
-    h5_paths = sorted(glob.glob(os.path.join(corpus_dir, '*.h5')))
+    # temporary, while preprocessing code is still running
+    # h5_paths = sorted(glob.glob(os.path.join(corpus_dir, '*.h5')))
+    h5_paths = [
+        '/m-pinotHD/nobackup/lucylin/dotgov-arcs/arcs-0.h5',
+        '/m-pinotHD/nobackup/lucylin/dotgov-arcs/arcs-1.h5',
+        '/m-pinotHD/nobackup/lucylin/dotgov-arcs/arcs-2.h5',
+        '/m-pinotHD/nobackup/lucylin/dotgov-arcs/arcs-4.h5',
+        '/m-pinotHD/nobackup/lucylin/dotgov-arcs/arcs-5.h5',
+        '/m-pinotHD/nobackup/lucylin/dotgov-warcs/warcs-2.h5',
+    ]
+
     n_queries = query_vecs.shape[0]
     matches = [[] for _ in range(n_queries)]
     sort_kwargs = {'key': itemgetter('score'), 'reverse': True}

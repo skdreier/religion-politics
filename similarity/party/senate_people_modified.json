@@ -1,0 +1,2188 @@
+{
+  "adams": [
+    {
+      "first_name": "brockman",
+      "start_year": 1987,
+      "end_year": 1992,
+      "party": "dem"
+    }
+  ],
+  "akaka": [
+    {
+      "first_name": "daniel",
+      "start_year": 1989,
+      "end_year": 2012,
+      "party": "dem"
+    }
+  ],
+  "baldwin": [
+    {
+      "first_name": "tammy",
+      "start_year": 2013,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "baucus": [
+    {
+      "first_name": "max",
+      "start_year": 1977,
+      "end_year": 2014,
+      "party": "dem"
+    }
+  ],
+  "bayh": [
+    {
+      "first_name": "evan",
+      "start_year": 1999,
+      "end_year": 2010,
+      "party": "dem"
+    }
+  ],
+  "begich": [
+    {
+      "first_name": "mark",
+      "start_year": 2009,
+      "end_year": 2014,
+      "party": "dem"
+    }
+  ],
+  "bennet": [
+    {
+      "first_name": "michael",
+      "start_year": 2009,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "bentsen": [
+    {
+      "first_name": "lloyd",
+      "start_year": 1971,
+      "end_year": 1994,
+      "party": "dem"
+    }
+  ],
+  "biden": [
+    {
+      "first_name": "joseph",
+      "start_year": 1973,
+      "end_year": 2010,
+      "party": "dem"
+    }
+  ],
+  "bingaman": [
+    {
+      "first_name": "jesse",
+      "start_year": 1983,
+      "end_year": 2012,
+      "party": "dem"
+    }
+  ],
+  "blumenthal": [
+    {
+      "first_name": "richard",
+      "start_year": 2011,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "booker": [
+    {
+      "first_name": "cory",
+      "start_year": 2013,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "boren": [
+    {
+      "first_name": "david",
+      "start_year": 1979,
+      "end_year": 1994,
+      "party": "dem"
+    }
+  ],
+  "boxer": [
+    {
+      "first_name": "barbara",
+      "start_year": 1993,
+      "end_year": 2016,
+      "party": "dem"
+    }
+  ],
+  "bradley": [
+    {
+      "first_name": "william",
+      "start_year": 1979,
+      "end_year": 1996,
+      "party": "dem"
+    }
+  ],
+  "breaux": [
+    {
+      "first_name": "john",
+      "start_year": 1987,
+      "end_year": 2004,
+      "party": "dem"
+    }
+  ],
+  "brown": [
+    {
+      "first_name": "sherrod",
+      "start_year": 2007,
+      "end_year": 2018,
+      "party": "dem"
+    },
+    {
+      "first_name": "george",
+      "start_year": 1991,
+      "end_year": 1996,
+      "party": "rep"
+    },
+    {
+      "first_name": "scott",
+      "start_year": 2009,
+      "end_year": 2012,
+      "party": "rep"
+    }
+  ],
+  "bryan": [
+    {
+      "first_name": "richard",
+      "start_year": 1989,
+      "end_year": 2000,
+      "party": "dem"
+    }
+  ],
+  "bumpers": [
+    {
+      "first_name": "dale",
+      "start_year": 1975,
+      "end_year": 1998,
+      "party": "dem"
+    }
+  ],
+  "burdick": [
+    {
+      "first_name": "jocelyn",
+      "start_year": 1991,
+      "end_year": 1992,
+      "party": "dem"
+    },
+    {
+      "first_name": "quentin",
+      "start_year": 1959,
+      "end_year": 1992,
+      "party": "dem"
+    }
+  ],
+  "burris": [
+    {
+      "first_name": "roland",
+      "start_year": 2009,
+      "end_year": 2010,
+      "party": "dem"
+    }
+  ],
+  "byrd": [
+    {
+      "first_name": "robert",
+      "start_year": 1959,
+      "end_year": 2010,
+      "party": "dem"
+    }
+  ],
+  "campbell": [
+    {
+      "first_name": "ben",
+      "start_year": 1993,
+      "end_year": 1994,
+      "party": "dem"
+    },
+    {
+      "first_name": "ben",
+      "start_year": 1995,
+      "end_year": 2004,
+      "party": "rep"
+    }
+  ],
+  "cantwell": [
+    {
+      "first_name": "maria",
+      "start_year": 2001,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "cardin": [
+    {
+      "first_name": "benjamin",
+      "start_year": 2007,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "carnahan": [
+    {
+      "first_name": "jean",
+      "start_year": 2001,
+      "end_year": 2002,
+      "party": "dem"
+    }
+  ],
+  "carper": [
+    {
+      "first_name": "thomas",
+      "start_year": 2001,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "casey": [
+    {
+      "first_name": "robert",
+      "start_year": 2007,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "cleland": [
+    {
+      "first_name": "joseph",
+      "start_year": 1997,
+      "end_year": 2002,
+      "party": "dem"
+    }
+  ],
+  "clinton": [
+    {
+      "first_name": "hillary",
+      "start_year": 2001,
+      "end_year": 2010,
+      "party": "dem"
+    }
+  ],
+  "conrad": [
+    {
+      "first_name": "kent",
+      "start_year": 1987,
+      "end_year": 2012,
+      "party": "dem"
+    }
+  ],
+  "coons": [
+    {
+      "first_name": "christopher",
+      "start_year": 2009,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "cortez masto": [
+    {
+      "first_name": "masto,",
+      "start_year": 2017,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "corzine": [
+    {
+      "first_name": "jon",
+      "start_year": 2001,
+      "end_year": 2006,
+      "party": "dem"
+    }
+  ],
+  "cowan": [
+    {
+      "first_name": "william",
+      "start_year": 2013,
+      "end_year": 2014,
+      "party": "dem"
+    }
+  ],
+  "cranston": [
+    {
+      "first_name": "alan",
+      "start_year": 1969,
+      "end_year": 1992,
+      "party": "dem"
+    }
+  ],
+  "daschle": [
+    {
+      "first_name": "thomas",
+      "start_year": 1987,
+      "end_year": 2004,
+      "party": "dem"
+    }
+  ],
+  "dayton": [
+    {
+      "first_name": "mark",
+      "start_year": 2001,
+      "end_year": 2006,
+      "party": "dem"
+    }
+  ],
+  "deconcini": [
+    {
+      "first_name": "dennis",
+      "start_year": 1977,
+      "end_year": 1994,
+      "party": "dem"
+    }
+  ],
+  "dixon": [
+    {
+      "first_name": "alan",
+      "start_year": 1981,
+      "end_year": 1992,
+      "party": "dem"
+    }
+  ],
+  "dodd": [
+    {
+      "first_name": "christopher",
+      "start_year": 1981,
+      "end_year": 2010,
+      "party": "dem"
+    }
+  ],
+  "donnelly": [
+    {
+      "first_name": "joe",
+      "start_year": 2013,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "dorgan": [
+    {
+      "first_name": "byron",
+      "start_year": 1991,
+      "end_year": 2010,
+      "party": "dem"
+    }
+  ],
+  "duckworth": [
+    {
+      "first_name": "tammy",
+      "start_year": 2017,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "durbin": [
+    {
+      "first_name": "richard",
+      "start_year": 1997,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "edwards": [
+    {
+      "first_name": "john",
+      "start_year": 1999,
+      "end_year": 2004,
+      "party": "dem"
+    }
+  ],
+  "exon": [
+    {
+      "first_name": "j.",
+      "start_year": 1979,
+      "end_year": 1996,
+      "party": "dem"
+    }
+  ],
+  "feingold": [
+    {
+      "first_name": "russell",
+      "start_year": 1993,
+      "end_year": 2010,
+      "party": "dem"
+    }
+  ],
+  "feinstein": [
+    {
+      "first_name": "dianne",
+      "start_year": 1991,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "ford": [
+    {
+      "first_name": "wendell",
+      "start_year": 1973,
+      "end_year": 1998,
+      "party": "dem"
+    }
+  ],
+  "fowler": [
+    {
+      "first_name": "wyche,",
+      "start_year": 1987,
+      "end_year": 1992,
+      "party": "dem"
+    }
+  ],
+  "franken": [
+    {
+      "first_name": "al",
+      "start_year": 2009,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "gillibrand": [
+    {
+      "first_name": "kirsten",
+      "start_year": 2009,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "glenn": [
+    {
+      "first_name": "john",
+      "start_year": 1973,
+      "end_year": 1998,
+      "party": "dem"
+    }
+  ],
+  "goodwin": [
+    {
+      "first_name": "carte",
+      "start_year": 2009,
+      "end_year": 2010,
+      "party": "dem"
+    }
+  ],
+  "gore": [
+    {
+      "first_name": "albert",
+      "start_year": 1985,
+      "end_year": 1992,
+      "party": "dem"
+    }
+  ],
+  "graham": [
+    {
+      "first_name": "daniel",
+      "start_year": 1987,
+      "end_year": 2004,
+      "party": "dem"
+    },
+    {
+      "first_name": "lindsey",
+      "start_year": 2003,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "hagan": [
+    {
+      "first_name": "kay",
+      "start_year": 2009,
+      "end_year": 2014,
+      "party": "dem"
+    }
+  ],
+  "harkin": [
+    {
+      "first_name": "thomas",
+      "start_year": 1985,
+      "end_year": 2014,
+      "party": "dem"
+    }
+  ],
+  "harris": [
+    {
+      "first_name": "kamala",
+      "start_year": 2017,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "hassan": [
+    {
+      "first_name": "margaret",
+      "start_year": 2017,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "heflin": [
+    {
+      "first_name": "howell",
+      "start_year": 1979,
+      "end_year": 1996,
+      "party": "dem"
+    }
+  ],
+  "heinrich": [
+    {
+      "first_name": "martin",
+      "start_year": 2013,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "heitkamp": [
+    {
+      "first_name": "mary",
+      "start_year": 2013,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "hirono": [
+    {
+      "first_name": "mazie",
+      "start_year": 2013,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "hollings": [
+    {
+      "first_name": "ernest",
+      "start_year": 1965,
+      "end_year": 2004,
+      "party": "dem"
+    }
+  ],
+  "inouye": [
+    {
+      "first_name": "daniel",
+      "start_year": 1963,
+      "end_year": 2012,
+      "party": "dem"
+    }
+  ],
+  "johnson": [
+    {
+      "first_name": "timothy",
+      "start_year": 1997,
+      "end_year": 2014,
+      "party": "dem"
+    },
+    {
+      "first_name": "ron",
+      "start_year": 2011,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "johnston": [
+    {
+      "first_name": "john",
+      "start_year": 1971,
+      "end_year": 1996,
+      "party": "dem"
+    }
+  ],
+  "jones": [
+    {
+      "first_name": "gordon",
+      "start_year": 2017,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "kaine": [
+    {
+      "first_name": "timothy",
+      "start_year": 2013,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "kaufman": [
+    {
+      "first_name": "edward",
+      "start_year": 2009,
+      "end_year": 2010,
+      "party": "dem"
+    }
+  ],
+  "kennedy": [
+    {
+      "first_name": "edward",
+      "start_year": 1961,
+      "end_year": 2010,
+      "party": "dem"
+    },
+    {
+      "first_name": "john",
+      "start_year": 2017,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "kerrey": [
+    {
+      "first_name": "j.",
+      "start_year": 1989,
+      "end_year": 2000,
+      "party": "dem"
+    }
+  ],
+  "kerry": [
+    {
+      "first_name": "john",
+      "start_year": 1985,
+      "end_year": 2014,
+      "party": "dem"
+    }
+  ],
+  "kirk": [
+    {
+      "first_name": "paul",
+      "start_year": 2009,
+      "end_year": 2010,
+      "party": "dem"
+    },
+    {
+      "first_name": "mark",
+      "start_year": 2009,
+      "end_year": 2016,
+      "party": "rep"
+    }
+  ],
+  "klobuchar": [
+    {
+      "first_name": "amy",
+      "start_year": 2007,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "kohl": [
+    {
+      "first_name": "herbert",
+      "start_year": 1989,
+      "end_year": 2012,
+      "party": "dem"
+    }
+  ],
+  "krueger": [
+    {
+      "first_name": "robert",
+      "start_year": 1993,
+      "end_year": 1994,
+      "party": "dem"
+    }
+  ],
+  "landrieu": [
+    {
+      "first_name": "mary",
+      "start_year": 1997,
+      "end_year": 2014,
+      "party": "dem"
+    }
+  ],
+  "lautenberg": [
+    {
+      "first_name": "frank",
+      "start_year": 1981,
+      "end_year": 2014,
+      "party": "dem"
+    }
+  ],
+  "leahy": [
+    {
+      "first_name": "patrick",
+      "start_year": 1975,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "levin": [
+    {
+      "first_name": "carl",
+      "start_year": 1979,
+      "end_year": 2014,
+      "party": "dem"
+    }
+  ],
+  "lieberman": [
+    {
+      "first_name": "joseph",
+      "start_year": 1989,
+      "end_year": 2006,
+      "party": "dem"
+    }
+  ],
+  "lincoln": [
+    {
+      "first_name": "blanche",
+      "start_year": 1999,
+      "end_year": 2010,
+      "party": "dem"
+    }
+  ],
+  "manchin": [
+    {
+      "first_name": "joe,",
+      "start_year": 2011,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "markey": [
+    {
+      "first_name": "edward",
+      "start_year": 2013,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "mathews": [
+    {
+      "first_name": "harlan",
+      "start_year": 1993,
+      "end_year": 1994,
+      "party": "dem"
+    }
+  ],
+  "mccaskill": [
+    {
+      "first_name": "claire",
+      "start_year": 2007,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "menendez": [
+    {
+      "first_name": "robert",
+      "start_year": 2005,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "merkley": [
+    {
+      "first_name": "jeff",
+      "start_year": 2009,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "metzenbaum": [
+    {
+      "first_name": "howard",
+      "start_year": 1973,
+      "end_year": 1994,
+      "party": "dem"
+    }
+  ],
+  "mikulski": [
+    {
+      "first_name": "barbara",
+      "start_year": 1987,
+      "end_year": 2016,
+      "party": "dem"
+    }
+  ],
+  "miller": [
+    {
+      "first_name": "zell",
+      "start_year": 1999,
+      "end_year": 2004,
+      "party": "dem"
+    }
+  ],
+  "mitchell": [
+    {
+      "first_name": "george",
+      "start_year": 1979,
+      "end_year": 1994,
+      "party": "dem"
+    }
+  ],
+  "moseley braun": [
+    {
+      "first_name": "braun,",
+      "start_year": 1993,
+      "end_year": 1998,
+      "party": "dem"
+    }
+  ],
+  "moynihan": [
+    {
+      "first_name": "daniel",
+      "start_year": 1977,
+      "end_year": 2000,
+      "party": "dem"
+    }
+  ],
+  "murphy": [
+    {
+      "first_name": "christopher",
+      "start_year": 2013,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "murray": [
+    {
+      "first_name": "patty",
+      "start_year": 1993,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "billnelson": [
+    {
+      "first_name": "clarence",
+      "start_year": 2001,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "nelson": [
+    {
+      "first_name": "clarence",
+      "start_year": 2001,
+      "end_year": 2018,
+      "party": "dem"
+    },
+    {
+      "first_name": "earl",
+      "start_year": 2001,
+      "end_year": 2012,
+      "party": "dem"
+    }
+  ],
+  "nunn": [
+    {
+      "first_name": "samuel",
+      "start_year": 1971,
+      "end_year": 1996,
+      "party": "dem"
+    }
+  ],
+  "obama": [
+    {
+      "first_name": "barack",
+      "start_year": 2005,
+      "end_year": 2008,
+      "party": "dem"
+    }
+  ],
+  "pell": [
+    {
+      "first_name": "claiborne",
+      "start_year": 1961,
+      "end_year": 1996,
+      "party": "dem"
+    }
+  ],
+  "peters": [
+    {
+      "first_name": "gary",
+      "start_year": 2015,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "pryor": [
+    {
+      "first_name": "david",
+      "start_year": 1979,
+      "end_year": 1996,
+      "party": "dem"
+    },
+    {
+      "first_name": "mark",
+      "start_year": 2003,
+      "end_year": 2014,
+      "party": "dem"
+    }
+  ],
+  "reed": [
+    {
+      "first_name": "john",
+      "start_year": 1997,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "reid": [
+    {
+      "first_name": "harry",
+      "start_year": 1987,
+      "end_year": 2016,
+      "party": "dem"
+    }
+  ],
+  "riegle": [
+    {
+      "first_name": "donald",
+      "start_year": 1975,
+      "end_year": 1994,
+      "party": "dem"
+    }
+  ],
+  "robb": [
+    {
+      "first_name": "charles",
+      "start_year": 1989,
+      "end_year": 2000,
+      "party": "dem"
+    }
+  ],
+  "rockefeller": [
+    {
+      "first_name": "john",
+      "start_year": 1985,
+      "end_year": 2014,
+      "party": "dem"
+    }
+  ],
+  "salazar": [
+    {
+      "first_name": "kenneth",
+      "start_year": 2005,
+      "end_year": 2010,
+      "party": "dem"
+    }
+  ],
+  "sanford": [
+    {
+      "first_name": "(james)",
+      "start_year": 1985,
+      "end_year": 1992,
+      "party": "dem"
+    }
+  ],
+  "sarbanes": [
+    {
+      "first_name": "paul",
+      "start_year": 1977,
+      "end_year": 2006,
+      "party": "dem"
+    }
+  ],
+  "sasser": [
+    {
+      "first_name": "james",
+      "start_year": 1977,
+      "end_year": 1994,
+      "party": "dem"
+    }
+  ],
+  "schatz": [
+    {
+      "first_name": "brian",
+      "start_year": 2011,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "schumer": [
+    {
+      "first_name": "charles",
+      "start_year": 1999,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "shaheen": [
+    {
+      "first_name": "jeanne",
+      "start_year": 2009,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "shelby": [
+    {
+      "first_name": "richard",
+      "start_year": 1987,
+      "end_year": 1992,
+      "party": "dem"
+    },
+    {
+      "first_name": "richard",
+      "start_year": 1993,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "simon": [
+    {
+      "first_name": "paul",
+      "start_year": 1985,
+      "end_year": 1996,
+      "party": "dem"
+    }
+  ],
+  "smith": [
+    {
+      "first_name": "tina",
+      "start_year": 2017,
+      "end_year": 2018,
+      "party": "dem"
+    },
+    {
+      "first_name": "gordon",
+      "start_year": 1997,
+      "end_year": 2008,
+      "party": "rep"
+    },
+    {
+      "first_name": "robert",
+      "start_year": 1989,
+      "end_year": 2002,
+      "party": "rep"
+    }
+  ],
+  "specter": [
+    {
+      "first_name": "arlen",
+      "start_year": 2009,
+      "end_year": 2010,
+      "party": "dem"
+    },
+    {
+      "first_name": "arlen",
+      "start_year": 1981,
+      "end_year": 2008,
+      "party": "rep"
+    }
+  ],
+  "stabenow": [
+    {
+      "first_name": "deborah",
+      "start_year": 2001,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "tester": [
+    {
+      "first_name": "jon",
+      "start_year": 2007,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "torricelli": [
+    {
+      "first_name": "robert",
+      "start_year": 1997,
+      "end_year": 2002,
+      "party": "dem"
+    }
+  ],
+  "udall": [
+    {
+      "first_name": "mark",
+      "start_year": 2009,
+      "end_year": 2014,
+      "party": "dem"
+    },
+    {
+      "first_name": "thomas",
+      "start_year": 2009,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "van hollen": [
+    {
+      "first_name": "hollen,",
+      "start_year": 2017,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "walsh": [
+    {
+      "first_name": "john",
+      "start_year": 2013,
+      "end_year": 2014,
+      "party": "dem"
+    }
+  ],
+  "warner": [
+    {
+      "first_name": "mark",
+      "start_year": 2009,
+      "end_year": 2018,
+      "party": "dem"
+    },
+    {
+      "first_name": "john",
+      "start_year": 1977,
+      "end_year": 2008,
+      "party": "rep"
+    }
+  ],
+  "warren": [
+    {
+      "first_name": "elizabeth",
+      "start_year": 2013,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "webb": [
+    {
+      "first_name": "james",
+      "start_year": 2007,
+      "end_year": 2012,
+      "party": "dem"
+    }
+  ],
+  "wellstone": [
+    {
+      "first_name": "paul",
+      "start_year": 1991,
+      "end_year": 2002,
+      "party": "dem"
+    }
+  ],
+  "whitehouse": [
+    {
+      "first_name": "sheldon",
+      "start_year": 2007,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "wirth": [
+    {
+      "first_name": "timothy",
+      "start_year": 1987,
+      "end_year": 1992,
+      "party": "dem"
+    }
+  ],
+  "wofford": [
+    {
+      "first_name": "harris",
+      "start_year": 1991,
+      "end_year": 1994,
+      "party": "dem"
+    }
+  ],
+  "wyden": [
+    {
+      "first_name": "ronald",
+      "start_year": 1995,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "abraham": [
+    {
+      "first_name": "spencer",
+      "start_year": 1995,
+      "end_year": 2000,
+      "party": "rep"
+    }
+  ],
+  "alexander": [
+    {
+      "first_name": "lamar",
+      "start_year": 2003,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "allard": [
+    {
+      "first_name": "a.",
+      "start_year": 1997,
+      "end_year": 2008,
+      "party": "rep"
+    }
+  ],
+  "allen": [
+    {
+      "first_name": "george",
+      "start_year": 2001,
+      "end_year": 2006,
+      "party": "rep"
+    }
+  ],
+  "ashcroft": [
+    {
+      "first_name": "john",
+      "start_year": 1995,
+      "end_year": 2000,
+      "party": "rep"
+    }
+  ],
+  "ayotte": [
+    {
+      "first_name": "kelly",
+      "start_year": 2011,
+      "end_year": 2016,
+      "party": "rep"
+    }
+  ],
+  "barrasso": [
+    {
+      "first_name": "john",
+      "start_year": 2007,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "bennett": [
+    {
+      "first_name": "robert",
+      "start_year": 1993,
+      "end_year": 2010,
+      "party": "rep"
+    }
+  ],
+  "blunt": [
+    {
+      "first_name": "roy",
+      "start_year": 2011,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "bond": [
+    {
+      "first_name": "christopher",
+      "start_year": 1987,
+      "end_year": 2010,
+      "party": "rep"
+    }
+  ],
+  "boozman": [
+    {
+      "first_name": "john",
+      "start_year": 2011,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "brownback": [
+    {
+      "first_name": "sam",
+      "start_year": 1995,
+      "end_year": 2010,
+      "party": "rep"
+    }
+  ],
+  "bunning": [
+    {
+      "first_name": "james",
+      "start_year": 1999,
+      "end_year": 2010,
+      "party": "rep"
+    }
+  ],
+  "burns": [
+    {
+      "first_name": "conrad",
+      "start_year": 1989,
+      "end_year": 2006,
+      "party": "rep"
+    }
+  ],
+  "burr": [
+    {
+      "first_name": "richard",
+      "start_year": 2005,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "capito": [
+    {
+      "first_name": "shelley",
+      "start_year": 2015,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "cassidy": [
+    {
+      "first_name": "bill",
+      "start_year": 2015,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "chafee": [
+    {
+      "first_name": "john",
+      "start_year": 1975,
+      "end_year": 2000,
+      "party": "rep"
+    },
+    {
+      "first_name": "lincoln",
+      "start_year": 1999,
+      "end_year": 2006,
+      "party": "rep"
+    }
+  ],
+  "chambliss": [
+    {
+      "first_name": "saxby",
+      "start_year": 2003,
+      "end_year": 2014,
+      "party": "rep"
+    }
+  ],
+  "chiesa": [
+    {
+      "first_name": "jeffrey",
+      "start_year": 2013,
+      "end_year": 2014,
+      "party": "rep"
+    }
+  ],
+  "coats": [
+    {
+      "first_name": "daniel",
+      "start_year": 1989,
+      "end_year": 2016,
+      "party": "rep"
+    }
+  ],
+  "coburn": [
+    {
+      "first_name": "thomas",
+      "start_year": 2005,
+      "end_year": 2014,
+      "party": "rep"
+    }
+  ],
+  "cochran": [
+    {
+      "first_name": "william",
+      "start_year": 1977,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "cohen": [
+    {
+      "first_name": "william",
+      "start_year": 1979,
+      "end_year": 1996,
+      "party": "rep"
+    }
+  ],
+  "coleman": [
+    {
+      "first_name": "norm",
+      "start_year": 2003,
+      "end_year": 2008,
+      "party": "rep"
+    }
+  ],
+  "collins": [
+    {
+      "first_name": "susan",
+      "start_year": 1997,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "corker": [
+    {
+      "first_name": "robert",
+      "start_year": 2007,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "cornyn": [
+    {
+      "first_name": "john",
+      "start_year": 2001,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "cotton": [
+    {
+      "first_name": "tom",
+      "start_year": 2015,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "coverdell": [
+    {
+      "first_name": "paul",
+      "start_year": 1993,
+      "end_year": 2000,
+      "party": "rep"
+    }
+  ],
+  "craig": [
+    {
+      "first_name": "larry",
+      "start_year": 1991,
+      "end_year": 2008,
+      "party": "rep"
+    }
+  ],
+  "crapo": [
+    {
+      "first_name": "michael",
+      "start_year": 1999,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "cruz": [
+    {
+      "first_name": "rafael",
+      "start_year": 2013,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "d'amato": [
+    {
+      "first_name": "alfonse",
+      "start_year": 1981,
+      "end_year": 1998,
+      "party": "rep"
+    }
+  ],
+  "daines": [
+    {
+      "first_name": "steve",
+      "start_year": 2015,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "danforth": [
+    {
+      "first_name": "john",
+      "start_year": 1975,
+      "end_year": 1994,
+      "party": "rep"
+    }
+  ],
+  "demint": [
+    {
+      "first_name": "james",
+      "start_year": 2005,
+      "end_year": 2012,
+      "party": "rep"
+    }
+  ],
+  "dewine": [
+    {
+      "first_name": "michael",
+      "start_year": 1995,
+      "end_year": 2006,
+      "party": "rep"
+    }
+  ],
+  "dole": [
+    {
+      "first_name": "elizabeth",
+      "start_year": 2003,
+      "end_year": 2008,
+      "party": "rep"
+    },
+    {
+      "first_name": "robert",
+      "start_year": 1969,
+      "end_year": 1996,
+      "party": "rep"
+    }
+  ],
+  "domenici": [
+    {
+      "first_name": "pete",
+      "start_year": 1973,
+      "end_year": 2008,
+      "party": "rep"
+    }
+  ],
+  "durenberger": [
+    {
+      "first_name": "david",
+      "start_year": 1977,
+      "end_year": 1994,
+      "party": "rep"
+    }
+  ],
+  "ensign": [
+    {
+      "first_name": "john",
+      "start_year": 2001,
+      "end_year": 2012,
+      "party": "rep"
+    }
+  ],
+  "enzi": [
+    {
+      "first_name": "michael",
+      "start_year": 1997,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "ernst": [
+    {
+      "first_name": "joni",
+      "start_year": 2015,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "faircloth": [
+    {
+      "first_name": "duncan",
+      "start_year": 1993,
+      "end_year": 1998,
+      "party": "rep"
+    }
+  ],
+  "fischer": [
+    {
+      "first_name": "debra",
+      "start_year": 2013,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "fitzgerald": [
+    {
+      "first_name": "peter",
+      "start_year": 1999,
+      "end_year": 2004,
+      "party": "rep"
+    }
+  ],
+  "flake": [
+    {
+      "first_name": "jeff",
+      "start_year": 2013,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "frahm": [
+    {
+      "first_name": "sheila",
+      "start_year": 1995,
+      "end_year": 1996,
+      "party": "rep"
+    }
+  ],
+  "frist": [
+    {
+      "first_name": "william",
+      "start_year": 1995,
+      "end_year": 2006,
+      "party": "rep"
+    }
+  ],
+  "gardner": [
+    {
+      "first_name": "cory",
+      "start_year": 2015,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "garn": [
+    {
+      "first_name": "edwin",
+      "start_year": 1973,
+      "end_year": 1992,
+      "party": "rep"
+    }
+  ],
+  "gorton": [
+    {
+      "first_name": "thomas",
+      "start_year": 1981,
+      "end_year": 2000,
+      "party": "rep"
+    }
+  ],
+  "gramm": [
+    {
+      "first_name": "william",
+      "start_year": 1985,
+      "end_year": 2002,
+      "party": "rep"
+    }
+  ],
+  "grams": [
+    {
+      "first_name": "rod",
+      "start_year": 1995,
+      "end_year": 2000,
+      "party": "rep"
+    }
+  ],
+  "grassley": [
+    {
+      "first_name": "charles",
+      "start_year": 1981,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "gregg": [
+    {
+      "first_name": "judd",
+      "start_year": 1993,
+      "end_year": 2010,
+      "party": "rep"
+    }
+  ],
+  "hagel": [
+    {
+      "first_name": "charles",
+      "start_year": 1997,
+      "end_year": 2008,
+      "party": "rep"
+    }
+  ],
+  "hatch": [
+    {
+      "first_name": "orrin",
+      "start_year": 1977,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "hatfield": [
+    {
+      "first_name": "mark",
+      "start_year": 1967,
+      "end_year": 1996,
+      "party": "rep"
+    }
+  ],
+  "heinz": [
+    {
+      "first_name": "henry",
+      "start_year": 1977,
+      "end_year": 1992,
+      "party": "rep"
+    }
+  ],
+  "heller": [
+    {
+      "first_name": "dean",
+      "start_year": 2011,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "helms": [
+    {
+      "first_name": "jesse",
+      "start_year": 1973,
+      "end_year": 2002,
+      "party": "rep"
+    }
+  ],
+  "hoeven": [
+    {
+      "first_name": "john",
+      "start_year": 2011,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "hutchinson": [
+    {
+      "first_name": "timothy",
+      "start_year": 1997,
+      "end_year": 2002,
+      "party": "rep"
+    }
+  ],
+  "hutchison": [
+    {
+      "first_name": "kathryn",
+      "start_year": 1993,
+      "end_year": 2012,
+      "party": "rep"
+    }
+  ],
+  "hyde-smith": [
+    {
+      "first_name": "cindy",
+      "start_year": 2017,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "inhofe": [
+    {
+      "first_name": "james",
+      "start_year": 1993,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "isakson": [
+    {
+      "first_name": "johnny",
+      "start_year": 2005,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "jeffords": [
+    {
+      "first_name": "james",
+      "start_year": 1989,
+      "end_year": 2000,
+      "party": "rep"
+    }
+  ],
+  "johanns": [
+    {
+      "first_name": "mike",
+      "start_year": 2009,
+      "end_year": 2014,
+      "party": "rep"
+    }
+  ],
+  "kassebaum": [
+    {
+      "first_name": "nancy",
+      "start_year": 1977,
+      "end_year": 1996,
+      "party": "rep"
+    }
+  ],
+  "kasten": [
+    {
+      "first_name": "robert",
+      "start_year": 1981,
+      "end_year": 1992,
+      "party": "rep"
+    }
+  ],
+  "kempthorne": [
+    {
+      "first_name": "dirk",
+      "start_year": 1993,
+      "end_year": 1998,
+      "party": "rep"
+    }
+  ],
+  "kyl": [
+    {
+      "first_name": "jon",
+      "start_year": 1995,
+      "end_year": 2012,
+      "party": "rep"
+    }
+  ],
+  "lankford": [
+    {
+      "first_name": "james",
+      "start_year": 2015,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "lee": [
+    {
+      "first_name": "mike",
+      "start_year": 2011,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "lemieux": [
+    {
+      "first_name": "george",
+      "start_year": 2009,
+      "end_year": 2010,
+      "party": "rep"
+    }
+  ],
+  "lott": [
+    {
+      "first_name": "chester",
+      "start_year": 1989,
+      "end_year": 2008,
+      "party": "rep"
+    }
+  ],
+  "lugar": [
+    {
+      "first_name": "richard",
+      "start_year": 1977,
+      "end_year": 2012,
+      "party": "rep"
+    }
+  ],
+  "mack": [
+    {
+      "first_name": "connie,",
+      "start_year": 1989,
+      "end_year": 2000,
+      "party": "rep"
+    }
+  ],
+  "martinez": [
+    {
+      "first_name": "melquiades",
+      "start_year": 2005,
+      "end_year": 2010,
+      "party": "rep"
+    }
+  ],
+  "mccain": [
+    {
+      "first_name": "john",
+      "start_year": 1987,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "mcconnell": [
+    {
+      "first_name": "addison",
+      "start_year": 1985,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "moran": [
+    {
+      "first_name": "jerry",
+      "start_year": 2011,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "murkowski": [
+    {
+      "first_name": "frank",
+      "start_year": 1981,
+      "end_year": 2002,
+      "party": "rep"
+    },
+    {
+      "first_name": "lisa",
+      "start_year": 2001,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "nickles": [
+    {
+      "first_name": "donald",
+      "start_year": 1981,
+      "end_year": 2004,
+      "party": "rep"
+    }
+  ],
+  "packwood": [
+    {
+      "first_name": "robert",
+      "start_year": 1969,
+      "end_year": 1996,
+      "party": "rep"
+    }
+  ],
+  "paul": [
+    {
+      "first_name": "rand",
+      "start_year": 2011,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "perdue": [
+    {
+      "first_name": "david",
+      "start_year": 2015,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "portman": [
+    {
+      "first_name": "robert",
+      "start_year": 2011,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "pressler": [
+    {
+      "first_name": "larry",
+      "start_year": 1979,
+      "end_year": 1996,
+      "party": "rep"
+    }
+  ],
+  "risch": [
+    {
+      "first_name": "james",
+      "start_year": 2009,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "roberts": [
+    {
+      "first_name": "charles",
+      "start_year": 1997,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "roth": [
+    {
+      "first_name": "william",
+      "start_year": 1969,
+      "end_year": 2000,
+      "party": "rep"
+    }
+  ],
+  "rounds": [
+    {
+      "first_name": "marion",
+      "start_year": 2015,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "rubio": [
+    {
+      "first_name": "marco",
+      "start_year": 2011,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "rudman": [
+    {
+      "first_name": "warren",
+      "start_year": 1979,
+      "end_year": 1992,
+      "party": "rep"
+    }
+  ],
+  "santorum": [
+    {
+      "first_name": "richard",
+      "start_year": 1995,
+      "end_year": 2006,
+      "party": "rep"
+    }
+  ],
+  "sasse": [
+    {
+      "first_name": "benjamin",
+      "start_year": 2017,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "scott": [
+    {
+      "first_name": "tim",
+      "start_year": 2013,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "sessions": [
+    {
+      "first_name": "jefferson",
+      "start_year": 1997,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "seymour": [
+    {
+      "first_name": "john",
+      "start_year": 1991,
+      "end_year": 1992,
+      "party": "rep"
+    }
+  ],
+  "simpson": [
+    {
+      "first_name": "alan",
+      "start_year": 1977,
+      "end_year": 1996,
+      "party": "rep"
+    }
+  ],
+  "snowe": [
+    {
+      "first_name": "olympia",
+      "start_year": 1995,
+      "end_year": 2012,
+      "party": "rep"
+    }
+  ],
+  "stevens": [
+    {
+      "first_name": "theodore",
+      "start_year": 1967,
+      "end_year": 2008,
+      "party": "rep"
+    }
+  ],
+  "strange": [
+    {
+      "first_name": "luther",
+      "start_year": 2017,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "sullivan": [
+    {
+      "first_name": "daniel",
+      "start_year": 2015,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "sununu": [
+    {
+      "first_name": "john",
+      "start_year": 2003,
+      "end_year": 2008,
+      "party": "rep"
+    }
+  ],
+  "symms": [
+    {
+      "first_name": "steven",
+      "start_year": 1981,
+      "end_year": 1992,
+      "party": "rep"
+    }
+  ],
+  "talent": [
+    {
+      "first_name": "james",
+      "start_year": 2001,
+      "end_year": 2006,
+      "party": "rep"
+    }
+  ],
+  "thomas": [
+    {
+      "first_name": "craig",
+      "start_year": 1995,
+      "end_year": 2008,
+      "party": "rep"
+    }
+  ],
+  "thompson": [
+    {
+      "first_name": "fred",
+      "start_year": 1993,
+      "end_year": 2002,
+      "party": "rep"
+    }
+  ],
+  "thune": [
+    {
+      "first_name": "john",
+      "start_year": 2005,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "thurmond": [
+    {
+      "first_name": "james",
+      "start_year": 1963,
+      "end_year": 2002,
+      "party": "rep"
+    }
+  ],
+  "tillis": [
+    {
+      "first_name": "thomas",
+      "start_year": 2015,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "toomey": [
+    {
+      "first_name": "patrick",
+      "start_year": 2011,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "vitter": [
+    {
+      "first_name": "david",
+      "start_year": 2005,
+      "end_year": 2016,
+      "party": "rep"
+    }
+  ],
+  "voinovich": [
+    {
+      "first_name": "george",
+      "start_year": 1999,
+      "end_year": 2010,
+      "party": "rep"
+    }
+  ],
+  "wallop": [
+    {
+      "first_name": "malcolm",
+      "start_year": 1977,
+      "end_year": 1994,
+      "party": "rep"
+    }
+  ],
+  "wicker": [
+    {
+      "first_name": "roger",
+      "start_year": 2007,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "wilson": [
+    {
+      "first_name": "pete",
+      "start_year": 1983,
+      "end_year": 1992,
+      "party": "rep"
+    }
+  ],
+  "young": [
+    {
+      "first_name": "todd",
+      "start_year": 2017,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ]
+}

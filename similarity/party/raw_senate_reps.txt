@@ -1,0 +1,7692 @@
+Member Name Birth-Death Position    Party   State   Congress
+(Year)
+ABBOTT, Joseph Carter   1825-1881   Senator Republican  NC  40
+(1867-1868)
+Senator Republican  NC  41
+(1869-1870)
+ABDNOR, James   1923-2012   Senator Republican  SD  97
+(1981-1982)
+Senator Republican  SD  98
+(1983-1984)
+Senator Republican  SD  99
+(1985-1986)
+ABEL, Hazel Hempel  1888-1966   Senator Republican  NE  83
+(1953-1954)
+ABRAHAM, Spencer    1952-   Senator Republican  MI  104
+(1995-1996)
+Senator Republican  MI  105
+(1997-1998)
+Senator Republican  MI  106
+(1999-2000)
+AIKEN, George David 1892-1984   Senator Republican  VT  77
+(1941-1942)
+Senator Republican  VT  78
+(1943-1944)
+Senator Republican  VT  79
+(1945-1946)
+Senator Republican  VT  80
+(1947-1948)
+Senator Republican  VT  81
+(1949-1950)
+Senator Republican  VT  82
+(1951-1952)
+Senator Republican  VT  83
+(1953-1954)
+Senator Republican  VT  84
+(1955-1956)
+Senator Republican  VT  85
+(1957-1958)
+Senator Republican  VT  86
+(1959-1960)
+Senator Republican  VT  87
+(1961-1962)
+Senator Republican  VT  88
+(1963-1964)
+Senator Republican  VT  89
+(1965-1966)
+Senator Republican  VT  90
+(1967-1968)
+Senator Republican  VT  91
+(1969-1970)
+Senator Republican  VT  92
+(1971-1972)
+Senator Republican  VT  93
+(1973-1974)
+ALCORN, James Lusk  1816-1894   Senator Republican  MS  42
+(1871-1872)
+Senator Republican  MS  43
+(1873-1874)
+Senator Republican  MS  44
+(1875-1876)
+ALDRICH, Nelson Wilmarth    1841-1915   Senator Republican  RI  47
+(1881-1882)
+Senator Republican  RI  48
+(1883-1884)
+Senator Republican  RI  49
+(1885-1886)
+Senator Republican  RI  50
+(1887-1888)
+Senator Republican  RI  51
+(1889-1890)
+Senator Republican  RI  52
+(1891-1892)
+Senator Republican  RI  53
+(1893-1894)
+Senator Republican  RI  54
+(1895-1896)
+Senator Republican  RI  55
+(1897-1898)
+Senator Republican  RI  56
+(1899-1900)
+Senator Republican  RI  57
+(1901-1902)
+Senator Republican  RI  58
+(1903-1904)
+Senator Republican  RI  59
+(1905-1906)
+Senator Republican  RI  60
+(1907-1908)
+Senator Republican  RI  61
+(1909-1910)
+ALEXANDER, Lamar    1940-   Senator Republican  TN  108
+(2003-2004)
+Senator Republican  TN  109
+(2005-2006)
+Senator Republican  TN  110
+(2007-2008)
+Senator Republican  TN  111
+(2009-2010)
+Senator Republican  TN  112
+(2011-2012)
+Senator Republican  TN  113
+(2013-2014)
+Senator Republican  TN  114
+(2015-2016)
+Senator Republican  TN  115
+(2017-2018)
+ALGER, Russell Alexander    1836-1907   Senator Republican  MI  57
+(1901-1902)
+Senator Republican  MI  58
+(1903-1904)
+Senator Republican  MI  59
+(1905-1906)
+ALLARD, A. Wayne    1943-   Senator Republican  CO  105
+(1997-1998)
+Senator Republican  CO  106
+(1999-2000)
+Senator Republican  CO  107
+(2001-2002)
+Senator Republican  CO  108
+(2003-2004)
+Senator Republican  CO  109
+(2005-2006)
+Senator Republican  CO  110
+(2007-2008)
+ALLEE, James Frank  1857-1938   Senator Republican  DE  57
+(1901-1902)
+Senator Republican  DE  58
+(1903-1904)
+Senator Republican  DE  59
+(1905-1906)
+ALLEN, George   1952-   Senator Republican  VA  107
+(2001-2002)
+Senator Republican  VA  108
+(2003-2004)
+Senator Republican  VA  109
+(2005-2006)
+ALLEN, Henry Justin 1868-1950   Senator Republican  KS  71
+(1929-1930)
+ALLEN, John Beard   1845-1903   Senator Republican  WA  51
+(1889-1890)
+Senator Republican  WA  52
+(1891-1892)
+ALLISON, William Boyd   1829-1908   Senator Republican  IA  43
+(1873-1874)
+Senator Republican  IA  44
+(1875-1876)
+Senator Republican  IA  45
+(1877-1878)
+Senator Republican  IA  46
+(1879-1880)
+Senator Republican  IA  47
+(1881-1882)
+Senator Republican  IA  48
+(1883-1884)
+Senator Republican  IA  49
+(1885-1886)
+Senator Republican  IA  50
+(1887-1888)
+Senator Republican  IA  51
+(1889-1890)
+Senator Republican  IA  52
+(1891-1892)
+Senator Republican  IA  53
+(1893-1894)
+Senator Republican  IA  54
+(1895-1896)
+Senator Republican  IA  55
+(1897-1898)
+Senator Republican  IA  56
+(1899-1900)
+Senator Republican  IA  57
+(1901-1902)
+Senator Republican  IA  58
+(1903-1904)
+Senator Republican  IA  59
+(1905-1906)
+Senator Republican  IA  60
+(1907-1908)
+ALLOTT, Gordon Llewellyn    1907-1989   Senator Republican  CO  84
+(1955-1956)
+Senator Republican  CO  85
+(1957-1958)
+Senator Republican  CO  86
+(1959-1960)
+Senator Republican  CO  87
+(1961-1962)
+Senator Republican  CO  88
+(1963-1964)
+Senator Republican  CO  89
+(1965-1966)
+Senator Republican  CO  90
+(1967-1968)
+Senator Republican  CO  91
+(1969-1970)
+Senator Republican  CO  92
+(1971-1972)
+AMES, Adelbert  1835-1933   Senator Republican  MS  41
+(1869-1870)
+Senator Republican  MS  42
+(1871-1872)
+Senator Republican  MS  43
+(1873-1874)
+ANDREWS, Mark   1926-   Senator Republican  ND  97
+(1981-1982)
+Senator Republican  ND  98
+(1983-1984)
+Senator Republican  ND  99
+(1985-1986)
+ANKENY, Levi    1844-1921   Senator Republican  WA  58
+(1903-1904)
+Senator Republican  WA  59
+(1905-1906)
+Senator Republican  WA  60
+(1907-1908)
+ANTHONY, Henry Bowen    1815-1884   Senator Republican  RI  36
+(1859-1860)
+Senator Republican  RI  37
+(1861-1862)
+Senator Republican  RI  38
+(1863-1864)
+Senator Republican  RI  39
+(1865-1866)
+Senator Republican  RI  40
+(1867-1868)
+Senator Republican  RI  41
+(1869-1870)
+Senator Republican  RI  42
+(1871-1872)
+Senator Republican  RI  43
+(1873-1874)
+Senator Republican  RI  44
+(1875-1876)
+Senator Republican  RI  45
+(1877-1878)
+Senator Republican  RI  46
+(1879-1880)
+Senator Republican  RI  47
+(1881-1882)
+Senator Republican  RI  48
+(1883-1884)
+ARMSTRONG, William Lester   1937-2016   Senator Republican  CO  96
+(1979-1980)
+Senator Republican  CO  97
+(1981-1982)
+Senator Republican  CO  98
+(1983-1984)
+Senator Republican  CO  99
+(1985-1986)
+Senator Republican  CO  100
+(1987-1988)
+Senator Republican  CO  101
+(1989-1990)
+ARNOLD, Samuel Greene   1821-1880   Senator Republican  RI  37
+(1861-1862)
+ASHCROFT, John David    1942-   Senator Republican  MO  104
+(1995-1996)
+Senator Republican  MO  105
+(1997-1998)
+Senator Republican  MO  106
+(1999-2000)
+AUSTIN, Warren Robinson 1877-1962   Senator Republican  VT  72
+(1931-1932)
+Senator Republican  VT  73
+(1933-1934)
+Senator Republican  VT  74
+(1935-1936)
+Senator Republican  VT  75
+(1937-1938)
+Senator Republican  VT  76
+(1939-1940)
+Senator Republican  VT  77
+(1941-1942)
+Senator Republican  VT  78
+(1943-1944)
+Senator Republican  VT  79
+(1945-1946)
+AYOTTE, Kelly   1968-   Senator Republican  NH  112
+(2011-2012)
+Senator Republican  NH  113
+(2013-2014)
+Senator Republican  NH  114
+(2015-2016)
+BAILEY, Theodorus   1758-1828   Senator Republican  NY  8
+(1803-1804)
+BAIRD, David    1839-1927   Senator Republican  NJ  65
+(1917-1918)
+BAIRD, David, Jr.   1881-1955   Senator Republican  NJ  71
+(1929-1930)
+BAKER, Edward Dickinson 1811-1861   Senator Republican  OR  36
+(1859-1860)
+Senator Republican  OR  37
+(1861-1862)
+BAKER, Howard Henry, Jr.    1925-2014   Senator Republican  TN  90
+(1967-1968)
+Senator Republican  TN  91
+(1969-1970)
+Senator Republican  TN  92
+(1971-1972)
+Senator Republican  TN  93
+(1973-1974)
+Senator Republican  TN  94
+(1975-1976)
+Senator Republican  TN  95
+(1977-1978)
+Senator Republican  TN  96
+(1979-1980)
+Senator Republican  TN  97
+(1981-1982)
+Senator Republican  TN  98
+(1983-1984)
+BAKER, Lucien   1846-1907   Senator Republican  KS  54
+(1895-1896)
+Senator Republican  KS  55
+(1897-1898)
+Senator Republican  KS  56
+(1899-1900)
+BALDWIN, Henry Porter   1814-1892   Senator Republican  MI  46
+(1879-1880)
+BALDWIN, Raymond Earl   1893-1986   Senator Republican  CT  79
+(1945-1946)
+Senator Republican  CT  80
+(1947-1948)
+Senator Republican  CT  81
+(1949-1950)
+BALL, Joseph Hurst  1905-1993   Senator Republican  MN  76
+(1939-1940)
+Senator Republican  MN  77
+(1941-1942)
+Senator Republican  MN  78
+(1943-1944)
+Senator Republican  MN  79
+(1945-1946)
+Senator Republican  MN  80
+(1947-1948)
+BALL, Lewis Heisler 1861-1932   Senator Republican  DE  58
+(1903-1904)
+Senator Republican  DE  66
+(1919-1920)
+Senator Republican  DE  67
+(1921-1922)
+Senator Republican  DE  68
+(1923-1924)
+BARBOUR, William Warren 1888-1943   Senator Republican  NJ  72
+(1931-1932)
+Senator Republican  NJ  73
+(1933-1934)
+Senator Republican  NJ  74
+(1935-1936)
+Senator Republican  NJ  75
+(1937-1938)
+Senator Republican  NJ  76
+(1939-1940)
+Senator Republican  NJ  77
+(1941-1942)
+Senator Republican  NJ  78
+(1943-1944)
+BARD, Thomas Robert 1841-1915   Senator Republican  CA  56
+(1899-1900)
+Senator Republican  CA  57
+(1901-1902)
+Senator Republican  CA  58
+(1903-1904)
+BARRASSO, John A.   1952-   Senator Republican  WY  110
+(2007-2008)
+Senator Republican  WY  111
+(2009-2010)
+Senator Republican  WY  112
+(2011-2012)
+Senator Republican  WY  113
+(2013-2014)
+Senator Republican  WY  114
+(2015-2016)
+Senator Republican  WY  115
+(2017-2018)
+BARRETT, Frank Aloysius 1892-1962   Senator Republican  WY  83
+(1953-1954)
+Senator Republican  WY  84
+(1955-1956)
+Senator Republican  WY  85
+(1957-1958)
+BARRY, Alexander Grant  1892-1952   Senator Republican  OR  75
+(1937-1938)
+BARTLETT, Dewey Follett 1919-1979   Senator Republican  OK  93
+(1973-1974)
+Senator Republican  OK  94
+(1975-1976)
+Senator Republican  OK  95
+(1977-1978)
+BEALL, James Glenn  1894-1971   Senator Republican  MD  83
+(1953-1954)
+Senator Republican  MD  84
+(1955-1956)
+Senator Republican  MD  85
+(1957-1958)
+Senator Republican  MD  86
+(1959-1960)
+Senator Republican  MD  87
+(1961-1962)
+Senator Republican  MD  88
+(1963-1964)
+BEALL, John Glenn, Jr.  1927-2006   Senator Republican  MD  92
+(1971-1972)
+Senator Republican  MD  93
+(1973-1974)
+Senator Republican  MD  94
+(1975-1976)
+BELL, Charles Henry 1823-1893   Senator Republican  NH  46
+(1879-1880)
+BELLMON, Henry Louis    1921-2009   Senator Republican  OK  91
+(1969-1970)
+Senator Republican  OK  92
+(1971-1972)
+Senator Republican  OK  93
+(1973-1974)
+Senator Republican  OK  94
+(1975-1976)
+Senator Republican  OK  95
+(1977-1978)
+Senator Republican  OK  96
+(1979-1980)
+BENDER, George Harrison 1896-1961   Senator Republican  OH  83
+(1953-1954)
+Senator Republican  OH  84
+(1955-1956)
+BENNETT, Robert 1933-2016   Senator Republican  UT  103
+(1993-1994)
+Senator Republican  UT  104
+(1995-1996)
+Senator Republican  UT  105
+(1997-1998)
+Senator Republican  UT  106
+(1999-2000)
+Senator Republican  UT  107
+(2001-2002)
+Senator Republican  UT  108
+(2003-2004)
+Senator Republican  UT  109
+(2005-2006)
+Senator Republican  UT  110
+(2007-2008)
+Senator Republican  UT  111
+(2009-2010)
+BENNETT, Wallace Foster 1898-1993   Senator Republican  UT  82
+(1951-1952)
+Senator Republican  UT  83
+(1953-1954)
+Senator Republican  UT  84
+(1955-1956)
+Senator Republican  UT  85
+(1957-1958)
+Senator Republican  UT  86
+(1959-1960)
+Senator Republican  UT  87
+(1961-1962)
+Senator Republican  UT  88
+(1963-1964)
+Senator Republican  UT  89
+(1965-1966)
+Senator Republican  UT  90
+(1967-1968)
+Senator Republican  UT  91
+(1969-1970)
+Senator Republican  UT  92
+(1971-1972)
+Senator Republican  UT  93
+(1973-1974)
+BENSON, Alfred Washburn 1843-1916   Senator Republican  KS  59
+(1905-1906)
+BEVERIDGE, Albert Jeremiah  1862-1927   Senator Republican  IN  56
+(1899-1900)
+Senator Republican  IN  57
+(1901-1902)
+Senator Republican  IN  58
+(1903-1904)
+Senator Republican  IN  59
+(1905-1906)
+Senator Republican  IN  60
+(1907-1908)
+Senator Republican  IN  61
+(1909-1910)
+BIBB, George Mortimer   1776-1859   Senator Republican  KY  23
+(1833-1834)
+BINGHAM, Hiram  1875-1956   Senator Republican  CT  69
+(1925-1926)
+Senator Republican  CT  70
+(1927-1928)
+Senator Republican  CT  71
+(1929-1930)
+Senator Republican  CT  72
+(1931-1932)
+BINGHAM, Kinsley Scott  1808-1861   Senator Republican  MI  36
+(1859-1860)
+Senator Republican  MI  37
+(1861-1862)
+BLAINE, James Gillespie 1830-1893   Senator Republican  ME  44
+(1875-1876)
+Senator Republican  ME  45
+(1877-1878)
+Senator Republican  ME  46
+(1879-1880)
+Senator Republican  ME  47
+(1881-1882)
+BLAINE, John James  1875-1934   Senator Republican  WI  70
+(1927-1928)
+Senator Republican  WI  71
+(1929-1930)
+Senator Republican  WI  72
+(1931-1932)
+BLAIR, Henry William    1834-1920   Senator Republican  NH  46
+(1879-1880)
+Senator Republican  NH  47
+(1881-1882)
+Senator Republican  NH  48
+(1883-1884)
+Senator Republican  NH  49
+(1885-1886)
+Senator Republican  NH  50
+(1887-1888)
+Senator Republican  NH  51
+(1889-1890)
+BLUNT, Roy  1950-   Senator Republican  MO  112
+(2011-2012)
+Senator Republican  MO  113
+(2013-2014)
+Senator Republican  MO  114
+(2015-2016)
+Senator Republican  MO  115
+(2017-2018)
+BOGGS, James Caleb  1909-1993   Senator Republican  DE  87
+(1961-1962)
+Senator Republican  DE  88
+(1963-1964)
+Senator Republican  DE  89
+(1965-1966)
+Senator Republican  DE  90
+(1967-1968)
+Senator Republican  DE  91
+(1969-1970)
+Senator Republican  DE  92
+(1971-1972)
+BOND, Christopher Samuel (Kit)  1939-   Senator Republican  MO  100
+(1987-1988)
+Senator Republican  MO  101
+(1989-1990)
+Senator Republican  MO  102
+(1991-1992)
+Senator Republican  MO  103
+(1993-1994)
+Senator Republican  MO  104
+(1995-1996)
+Senator Republican  MO  105
+(1997-1998)
+Senator Republican  MO  106
+(1999-2000)
+Senator Republican  MO  107
+(2001-2002)
+Senator Republican  MO  108
+(2003-2004)
+Senator Republican  MO  109
+(2005-2006)
+Senator Republican  MO  110
+(2007-2008)
+Senator Republican  MO  111
+(2009-2010)
+BOOZMAN, John   1950-   Senator Republican  AR  112
+(2011-2012)
+Senator Republican  AR  113
+(2013-2014)
+Senator Republican  AR  114
+(2015-2016)
+Senator Republican  AR  115
+(2017-2018)
+BORAH, William Edgar    1865-1940   Senator Republican  ID  60
+(1907-1908)
+Senator Republican  ID  61
+(1909-1910)
+Senator Republican  ID  62
+(1911-1912)
+Senator Republican  ID  63
+(1913-1914)
+Senator Republican  ID  64
+(1915-1916)
+Senator Republican  ID  65
+(1917-1918)
+Senator Republican  ID  66
+(1919-1920)
+Senator Republican  ID  67
+(1921-1922)
+Senator Republican  ID  68
+(1923-1924)
+Senator Republican  ID  69
+(1925-1926)
+Senator Republican  ID  70
+(1927-1928)
+Senator Republican  ID  71
+(1929-1930)
+Senator Republican  ID  72
+(1931-1932)
+Senator Republican  ID  73
+(1933-1934)
+Senator Republican  ID  74
+(1935-1936)
+Senator Republican  ID  75
+(1937-1938)
+Senator Republican  ID  76
+(1939-1940)
+BOREMAN, Arthur Inghram 1823-1896   Senator Republican  WV  41
+(1869-1870)
+Senator Republican  WV  42
+(1871-1872)
+Senator Republican  WV  43
+(1873-1874)
+BOSCHWITZ, Rudolph Eli (Rudy)   1930-   Senator Republican  MN  95
+(1977-1978)
+Senator Republican  MN  96
+(1979-1980)
+Senator Republican  MN  97
+(1981-1982)
+Senator Republican  MN  98
+(1983-1984)
+Senator Republican  MN  99
+(1985-1986)
+Senator Republican  MN  100
+(1987-1988)
+Senator Republican  MN  101
+(1989-1990)
+BOTTUM, Joseph H.   1903-1984   Senator Republican  SD  87
+(1961-1962)
+BOURNE, Jonathan, Jr.   1855-1940   Senator Republican  OR  60
+(1907-1908)
+Senator Republican  OR  61
+(1909-1910)
+Senator Republican  OR  62
+(1911-1912)
+BOUTWELL, George Sewel  1818-1905   Senator Republican  MA  43
+(1873-1874)
+Senator Republican  MA  44
+(1875-1876)
+BOWEN, Thomas Mead  1835-1906   Senator Republican  CO  48
+(1883-1884)
+Senator Republican  CO  49
+(1885-1886)
+Senator Republican  CO  50
+(1887-1888)
+BOWRING, Eva Kelly  1892-1985   Senator Republican  NE  83
+(1953-1954)
+BRADLEY, William O'Connell  1847-1914   Senator Republican  KY  61
+(1909-1910)
+Senator Republican  KY  62
+(1911-1912)
+Senator Republican  KY  63
+(1913-1914)
+BRADY, James Henry  1862-1918   Senator Republican  ID  62
+(1911-1912)
+Senator Republican  ID  63
+(1913-1914)
+Senator Republican  ID  64
+(1915-1916)
+Senator Republican  ID  65
+(1917-1918)
+BRADY, Nicholas Frederick   1930-   Senator Republican  NJ  97
+(1981-1982)
+BRANDEGEE, Frank Bosworth   1864-1924   Senator Republican  CT  59
+(1905-1906)
+Senator Republican  CT  60
+(1907-1908)
+Senator Republican  CT  61
+(1909-1910)
+Senator Republican  CT  62
+(1911-1912)
+Senator Republican  CT  63
+(1913-1914)
+Senator Republican  CT  64
+(1915-1916)
+Senator Republican  CT  65
+(1917-1918)
+Senator Republican  CT  66
+(1919-1920)
+Senator Republican  CT  67
+(1921-1922)
+Senator Republican  CT  68
+(1923-1924)
+BREWSTER, Ralph Owen    1888-1961   Senator Republican  ME  77
+(1941-1942)
+Senator Republican  ME  78
+(1943-1944)
+Senator Republican  ME  79
+(1945-1946)
+Senator Republican  ME  80
+(1947-1948)
+Senator Republican  ME  81
+(1949-1950)
+Senator Republican  ME  82
+(1951-1952)
+BRICKER, John William   1893-1986   Senator Republican  OH  80
+(1947-1948)
+Senator Republican  OH  81
+(1949-1950)
+Senator Republican  OH  82
+(1951-1952)
+Senator Republican  OH  83
+(1953-1954)
+Senator Republican  OH  84
+(1955-1956)
+Senator Republican  OH  85
+(1957-1958)
+BRIDGES, Henry Styles (Styles)  1898-1961   Senator Republican  NH  75
+(1937-1938)
+Senator Republican  NH  76
+(1939-1940)
+Senator Republican  NH  77
+(1941-1942)
+Senator Republican  NH  78
+(1943-1944)
+Senator Republican  NH  79
+(1945-1946)
+Senator Republican  NH  80
+(1947-1948)
+Senator Republican  NH  81
+(1949-1950)
+Senator Republican  NH  82
+(1951-1952)
+Senator Republican  NH  83
+(1953-1954)
+Senator Republican  NH  84
+(1955-1956)
+Senator Republican  NH  85
+(1957-1958)
+Senator Republican  NH  86
+(1959-1960)
+Senator Republican  NH  87
+(1961-1962)
+BRIGGS, Frank Obadiah   1851-1913   Senator Republican  NJ  60
+(1907-1908)
+Senator Republican  NJ  61
+(1909-1910)
+Senator Republican  NJ  62
+(1911-1912)
+BRISTOW, Joseph Little  1861-1944   Senator Republican  KS  61
+(1909-1910)
+Senator Republican  KS  62
+(1911-1912)
+Senator Republican  KS  63
+(1913-1914)
+BROCK, William Emerson, III 1930-   Senator Republican  TN  92
+(1971-1972)
+Senator Republican  TN  93
+(1973-1974)
+Senator Republican  TN  94
+(1975-1976)
+BROOKE, Edward William, III 1919-2015   Senator Republican  MA  90
+(1967-1968)
+Senator Republican  MA  91
+(1969-1970)
+Senator Republican  MA  92
+(1971-1972)
+Senator Republican  MA  93
+(1973-1974)
+Senator Republican  MA  94
+(1975-1976)
+Senator Republican  MA  95
+(1977-1978)
+BROOKHART, Smith Wildman    1869-1944   Senator Republican  IA  67
+(1921-1922)
+Senator Republican  IA  68
+(1923-1924)
+Senator Republican  IA  69
+(1925-1926)
+Senator Republican  IA  70
+(1927-1928)
+Senator Republican  IA  71
+(1929-1930)
+Senator Republican  IA  72
+(1931-1932)
+BROOKS, Charles Wayland 1897-1957   Senator Republican  IL  76
+(1939-1940)
+Senator Republican  IL  77
+(1941-1942)
+Senator Republican  IL  78
+(1943-1944)
+Senator Republican  IL  79
+(1945-1946)
+Senator Republican  IL  80
+(1947-1948)
+BROWN, Arthur   1843-1906   Senator Republican  UT  54
+(1895-1896)
+BROWN, Ernest S.    1903-1965   Senator Republican  NV  83
+(1953-1954)
+BROWN, George Hanks (Hank)  1940-   Senator Republican  CO  102
+(1991-1992)
+Senator Republican  CO  103
+(1993-1994)
+Senator Republican  CO  104
+(1995-1996)
+BROWN, John 1757-1837   Senator Republican  KY  4
+(1795-1796)
+Senator Republican  KY  5
+(1797-1798)
+Senator Republican  KY  6
+(1799-1800)
+Senator Republican  KY  7
+(1801-1802)
+Senator Republican  KY  8
+(1803-1804)
+BROWN, Norris   1863-1960   Senator Republican  NE  60
+(1907-1908)
+Senator Republican  NE  61
+(1909-1910)
+Senator Republican  NE  62
+(1911-1912)
+BROWN, Scott P. 1959-   Senator Republican  MA  111
+(2009-2010)
+Senator Republican  MA  112
+(2011-2012)
+BROWNBACK, Sam Dale 1956-   Senator Republican  KS  104
+(1995-1996)
+Senator Republican  KS  105
+(1997-1998)
+Senator Republican  KS  106
+(1999-2000)
+Senator Republican  KS  107
+(2001-2002)
+Senator Republican  KS  108
+(2003-2004)
+Senator Republican  KS  109
+(2005-2006)
+Senator Republican  KS  110
+(2007-2008)
+Senator Republican  KS  111
+(2009-2010)
+BROWNING, Orville Hickman   1806-1881   Senator Republican  IL  37
+(1861-1862)
+BROWNLOW, William Gannaway  1805-1877   Senator Republican  TN  41
+(1869-1870)
+Senator Republican  TN  42
+(1871-1872)
+Senator Republican  TN  43
+(1873-1874)
+BROYHILL, James Thomas  1927-   Senator Republican  NC  99
+(1985-1986)
+BRUCE, Blanche Kelso    1841-1898   Senator Republican  MS  44
+(1875-1876)
+Senator Republican  MS  45
+(1877-1878)
+Senator Republican  MS  46
+(1879-1880)
+BRUNSDALE, Clarence Norman  1891-1978   Senator Republican  ND  86
+(1959-1960)
+BUCK, Clayton Douglass  1890-1965   Senator Republican  DE  78
+(1943-1944)
+Senator Republican  DE  79
+(1945-1946)
+Senator Republican  DE  80
+(1947-1948)
+BUCKINGHAM, William Alfred  1804-1875   Senator Republican  CT  41
+(1869-1870)
+Senator Republican  CT  42
+(1871-1872)
+Senator Republican  CT  43
+(1873-1874)
+BULKELEY, Morgan Gardner    1837-1922   Senator Republican  CT  59
+(1905-1906)
+Senator Republican  CT  60
+(1907-1908)
+Senator Republican  CT  61
+(1909-1910)
+BUNNING, James Paul David   1931-2017   Senator Republican  KY  106
+(1999-2000)
+Senator Republican  KY  107
+(2001-2002)
+Senator Republican  KY  108
+(2003-2004)
+Senator Republican  KY  109
+(2005-2006)
+Senator Republican  KY  110
+(2007-2008)
+Senator Republican  KY  111
+(2009-2010)
+BURKETT, Elmer Jacob    1867-1935   Senator Republican  NE  59
+(1905-1906)
+Senator Republican  NE  60
+(1907-1908)
+Senator Republican  NE  61
+(1909-1910)
+BURLEIGH, Edwin Chick   1843-1916   Senator Republican  ME  63
+(1913-1914)
+Senator Republican  ME  64
+(1915-1916)
+BURNHAM, Henry Eben 1844-1917   Senator Republican  NH  57
+(1901-1902)
+Senator Republican  NH  58
+(1903-1904)
+Senator Republican  NH  59
+(1905-1906)
+Senator Republican  NH  60
+(1907-1908)
+Senator Republican  NH  61
+(1909-1910)
+Senator Republican  NH  62
+(1911-1912)
+BURNS, Conrad   1935-2016   Senator Republican  MT  101
+(1989-1990)
+Senator Republican  MT  102
+(1991-1992)
+Senator Republican  MT  103
+(1993-1994)
+Senator Republican  MT  104
+(1995-1996)
+Senator Republican  MT  105
+(1997-1998)
+Senator Republican  MT  106
+(1999-2000)
+Senator Republican  MT  107
+(2001-2002)
+Senator Republican  MT  108
+(2003-2004)
+Senator Republican  MT  109
+(2005-2006)
+BURNSIDE, Ambrose Everett   1824-1881   Senator Republican  RI  44
+(1875-1876)
+Senator Republican  RI  45
+(1877-1878)
+Senator Republican  RI  46
+(1879-1880)
+Senator Republican  RI  47
+(1881-1882)
+BURR, Richard M.    1955-   Senator Republican  NC  109
+(2005-2006)
+Senator Republican  NC  110
+(2007-2008)
+Senator Republican  NC  111
+(2009-2010)
+Senator Republican  NC  112
+(2011-2012)
+Senator Republican  NC  113
+(2013-2014)
+Senator Republican  NC  114
+(2015-2016)
+Senator Republican  NC  115
+(2017-2018)
+BURROWS, Julius Caesar  1837-1915   Senator Republican  MI  53
+(1893-1894)
+Senator Republican  MI  54
+(1895-1896)
+Senator Republican  MI  55
+(1897-1898)
+Senator Republican  MI  56
+(1899-1900)
+Senator Republican  MI  57
+(1901-1902)
+Senator Republican  MI  58
+(1903-1904)
+Senator Republican  MI  59
+(1905-1906)
+Senator Republican  MI  60
+(1907-1908)
+Senator Republican  MI  61
+(1909-1910)
+BURSUM, Holm Olaf   1867-1953   Senator Republican  NM  67
+(1921-1922)
+Senator Republican  NM  68
+(1923-1924)
+BURTON, Harold Hitz 1888-1964   Senator Republican  OH  77
+(1941-1942)
+Senator Republican  OH  78
+(1943-1944)
+Senator Republican  OH  79
+(1945-1946)
+BURTON, Joseph Ralph    1852-1923   Senator Republican  KS  57
+(1901-1902)
+Senator Republican  KS  58
+(1903-1904)
+Senator Republican  KS  59
+(1905-1906)
+BURTON, Theodore Elijah 1851-1929   Senator Republican  OH  61
+(1909-1910)
+Senator Republican  OH  62
+(1911-1912)
+Senator Republican  OH  63
+(1913-1914)
+Senator Republican  OH  70
+(1927-1928)
+Senator Republican  OH  71
+(1929-1930)
+BUSH, Prescott Sheldon  1895-1972   Senator Republican  CT  82
+(1951-1952)
+Senator Republican  CT  83
+(1953-1954)
+Senator Republican  CT  84
+(1955-1956)
+Senator Republican  CT  85
+(1957-1958)
+Senator Republican  CT  86
+(1959-1960)
+Senator Republican  CT  87
+(1961-1962)
+BUSHFIELD, Harlan John  1882-1948   Senator Republican  SD  78
+(1943-1944)
+Senator Republican  SD  79
+(1945-1946)
+Senator Republican  SD  80
+(1947-1948)
+BUSHFIELD, Vera Cahalan 1889-1976   Senator Republican  SD  80
+(1947-1948)
+BUTLER, Hugh Alfred 1878-1954   Senator Republican  NE  77
+(1941-1942)
+Senator Republican  NE  78
+(1943-1944)
+Senator Republican  NE  79
+(1945-1946)
+Senator Republican  NE  80
+(1947-1948)
+Senator Republican  NE  81
+(1949-1950)
+Senator Republican  NE  82
+(1951-1952)
+Senator Republican  NE  83
+(1953-1954)
+BUTLER, John Marshall   1897-1978   Senator Republican  MD  82
+(1951-1952)
+Senator Republican  MD  83
+(1953-1954)
+Senator Republican  MD  84
+(1955-1956)
+Senator Republican  MD  85
+(1957-1958)
+Senator Republican  MD  86
+(1959-1960)
+Senator Republican  MD  87
+(1961-1962)
+BUTLER, William Morgan  1861-1937   Senator Republican  MA  68
+(1923-1924)
+Senator Republican  MA  69
+(1925-1926)
+CAIN, Harry Pulliam 1906-1979   Senator Republican  WA  79
+(1945-1946)
+Senator Republican  WA  80
+(1947-1948)
+Senator Republican  WA  81
+(1949-1950)
+Senator Republican  WA  82
+(1951-1952)
+CALDER, William Musgrave    1869-1945   Senator Republican  NY  65
+(1917-1918)
+Senator Republican  NY  66
+(1919-1920)
+Senator Republican  NY  67
+(1921-1922)
+CALDWELL, Alexander 1830-1917   Senator Republican  KS  42
+(1871-1872)
+Senator Republican  KS  43
+(1873-1874)
+CAMERON, Angus  1826-1897   Senator Republican  WI  44
+(1875-1876)
+Senator Republican  WI  45
+(1877-1878)
+Senator Republican  WI  46
+(1879-1880)
+Senator Republican  WI  47
+(1881-1882)
+Senator Republican  WI  48
+(1883-1884)
+CAMERON, James Donald   1833-1918   Senator Republican  PA  45
+(1877-1878)
+Senator Republican  PA  46
+(1879-1880)
+Senator Republican  PA  47
+(1881-1882)
+Senator Republican  PA  48
+(1883-1884)
+Senator Republican  PA  49
+(1885-1886)
+Senator Republican  PA  50
+(1887-1888)
+Senator Republican  PA  51
+(1889-1890)
+Senator Republican  PA  52
+(1891-1892)
+Senator Republican  PA  53
+(1893-1894)
+Senator Republican  PA  54
+(1895-1896)
+CAMERON, Ralph Henry    1863-1953   Senator Republican  AZ  67
+(1921-1922)
+Senator Republican  AZ  68
+(1923-1924)
+Senator Republican  AZ  69
+(1925-1926)
+CAMERON, Simon  1799-1889   Senator Republican  PA  35
+(1857-1858)
+Senator Republican  PA  36
+(1859-1860)
+Senator Republican  PA  37
+(1861-1862)
+Senator Republican  PA  40
+(1867-1868)
+Senator Republican  PA  41
+(1869-1870)
+Senator Republican  PA  42
+(1871-1872)
+Senator Republican  PA  43
+(1873-1874)
+Senator Republican  PA  44
+(1875-1876)
+Senator Republican  PA  45
+(1877-1878)
+CAMPBELL, Ben Nighthorse    1933-   Senator Republican  CO  104
+(1995-1996)
+Senator Republican  CO  105
+(1997-1998)
+Senator Republican  CO  106
+(1999-2000)
+Senator Republican  CO  107
+(2001-2002)
+Senator Republican  CO  108
+(2003-2004)
+CANNON, Frank Jenne 1859-1933   Senator Republican  UT  54
+(1895-1896)
+Senator Republican  UT  55
+(1897-1898)
+CAPEHART, Homer Earl    1897-1979   Senator Republican  IN  79
+(1945-1946)
+Senator Republican  IN  80
+(1947-1948)
+Senator Republican  IN  81
+(1949-1950)
+Senator Republican  IN  82
+(1951-1952)
+Senator Republican  IN  83
+(1953-1954)
+Senator Republican  IN  84
+(1955-1956)
+Senator Republican  IN  85
+(1957-1958)
+Senator Republican  IN  86
+(1959-1960)
+Senator Republican  IN  87
+(1961-1962)
+CAPITO, Shelley Moore   1953-   Senator Republican  WV  114
+(2015-2016)
+Senator Republican  WV  115
+(2017-2018)
+CAPPER, Arthur  1865-1951   Senator Republican  KS  66
+(1919-1920)
+Senator Republican  KS  67
+(1921-1922)
+Senator Republican  KS  68
+(1923-1924)
+Senator Republican  KS  69
+(1925-1926)
+Senator Republican  KS  70
+(1927-1928)
+Senator Republican  KS  71
+(1929-1930)
+Senator Republican  KS  72
+(1931-1932)
+Senator Republican  KS  73
+(1933-1934)
+Senator Republican  KS  74
+(1935-1936)
+Senator Republican  KS  75
+(1937-1938)
+Senator Republican  KS  76
+(1939-1940)
+Senator Republican  KS  77
+(1941-1942)
+Senator Republican  KS  78
+(1943-1944)
+Senator Republican  KS  79
+(1945-1946)
+Senator Republican  KS  80
+(1947-1948)
+CAREY, Joseph Maull 1845-1924   Senator Republican  WY  51
+(1889-1890)
+Senator Republican  WY  52
+(1891-1892)
+Senator Republican  WY  53
+(1893-1894)
+CAREY, Robert Davis 1878-1937   Senator Republican  WY  71
+(1929-1930)
+Senator Republican  WY  72
+(1931-1932)
+Senator Republican  WY  73
+(1933-1934)
+Senator Republican  WY  74
+(1935-1936)
+CARLSON, Frank  1893-1987   Senator Republican  KS  81
+(1949-1950)
+Senator Republican  KS  82
+(1951-1952)
+Senator Republican  KS  83
+(1953-1954)
+Senator Republican  KS  84
+(1955-1956)
+Senator Republican  KS  85
+(1957-1958)
+Senator Republican  KS  86
+(1959-1960)
+Senator Republican  KS  87
+(1961-1962)
+Senator Republican  KS  88
+(1963-1964)
+Senator Republican  KS  89
+(1965-1966)
+Senator Republican  KS  90
+(1967-1968)
+CARPENTER, Matthew Hale 1824-1881   Senator Republican  WI  41
+(1869-1870)
+Senator Republican  WI  42
+(1871-1872)
+Senator Republican  WI  43
+(1873-1874)
+Senator Republican  WI  46
+(1879-1880)
+CARTER, Thomas Henry    1854-1911   Senator Republican  MT  54
+(1895-1896)
+Senator Republican  MT  55
+(1897-1898)
+Senator Republican  MT  56
+(1899-1900)
+Senator Republican  MT  59
+(1905-1906)
+Senator Republican  MT  60
+(1907-1908)
+Senator Republican  MT  61
+(1909-1910)
+CASE, Clifford Philip   1904-1982   Senator Republican  NJ  84
+(1955-1956)
+Senator Republican  NJ  85
+(1957-1958)
+Senator Republican  NJ  86
+(1959-1960)
+Senator Republican  NJ  87
+(1961-1962)
+Senator Republican  NJ  88
+(1963-1964)
+Senator Republican  NJ  89
+(1965-1966)
+Senator Republican  NJ  90
+(1967-1968)
+Senator Republican  NJ  91
+(1969-1970)
+Senator Republican  NJ  92
+(1971-1972)
+Senator Republican  NJ  93
+(1973-1974)
+Senator Republican  NJ  94
+(1975-1976)
+Senator Republican  NJ  95
+(1977-1978)
+CASE, Francis Higbee    1896-1962   Senator Republican  SD  82
+(1951-1952)
+Senator Republican  SD  83
+(1953-1954)
+Senator Republican  SD  84
+(1955-1956)
+Senator Republican  SD  85
+(1957-1958)
+Senator Republican  SD  86
+(1959-1960)
+Senator Republican  SD  87
+(1961-1962)
+CASEY, Lyman Rufus  1837-1914   Senator Republican  ND  51
+(1889-1890)
+Senator Republican  ND  52
+(1891-1892)
+CASSIDY, Bill   1957-   Senator Republican  LA  114
+(2015-2016)
+Senator Republican  LA  115
+(2017-2018)
+CATRON, Thomas Benton   1840-1921   Senator Republican  NM  62
+(1911-1912)
+Senator Republican  NM  63
+(1913-1914)
+Senator Republican  NM  64
+(1915-1916)
+CATTELL, Alexander Gilmore  1816-1894   Senator Republican  NJ  39
+(1865-1866)
+Senator Republican  NJ  40
+(1867-1868)
+Senator Republican  NJ  41
+(1869-1870)
+CHACE, Jonathan 1829-1917   Senator Republican  RI  48
+(1883-1884)
+Senator Republican  RI  49
+(1885-1886)
+Senator Republican  RI  50
+(1887-1888)
+Senator Republican  RI  51
+(1889-1890)
+CHAFEE, John Hubbard    1922-1999   Senator Republican  RI  94
+(1975-1976)
+Senator Republican  RI  95
+(1977-1978)
+Senator Republican  RI  96
+(1979-1980)
+Senator Republican  RI  97
+(1981-1982)
+Senator Republican  RI  98
+(1983-1984)
+Senator Republican  RI  99
+(1985-1986)
+Senator Republican  RI  100
+(1987-1988)
+Senator Republican  RI  101
+(1989-1990)
+Senator Republican  RI  102
+(1991-1992)
+Senator Republican  RI  103
+(1993-1994)
+Senator Republican  RI  104
+(1995-1996)
+Senator Republican  RI  105
+(1997-1998)
+Senator Republican  RI  106
+(1999-2000)
+CHAFEE, Lincoln Davenport   1953-   Senator Republican  RI  106
+(1999-2000)
+Senator Republican  RI  107
+(2001-2002)
+Senator Republican  RI  108
+(2003-2004)
+Senator Republican  RI  109
+(2005-2006)
+CHAFFEE, Jerome Bunty   1825-1886   Senator Republican  CO  44
+(1875-1876)
+Senator Republican  CO  45
+(1877-1878)
+CHAMBLISS, Saxby    1943-   Senator Republican  GA  108
+(2003-2004)
+Senator Republican  GA  109
+(2005-2006)
+Senator Republican  GA  110
+(2007-2008)
+Senator Republican  GA  111
+(2009-2010)
+Senator Republican  GA  112
+(2011-2012)
+Senator Republican  GA  113
+(2013-2014)
+CHANDLER, William Eaton 1835-1917   Senator Republican  NH  50
+(1887-1888)
+Senator Republican  NH  51
+(1889-1890)
+Senator Republican  NH  52
+(1891-1892)
+Senator Republican  NH  53
+(1893-1894)
+Senator Republican  NH  54
+(1895-1896)
+Senator Republican  NH  55
+(1897-1898)
+Senator Republican  NH  56
+(1899-1900)
+CHANDLER, Zachariah 1813-1879   Senator Republican  MI  35
+(1857-1858)
+Senator Republican  MI  36
+(1859-1860)
+Senator Republican  MI  37
+(1861-1862)
+Senator Republican  MI  38
+(1863-1864)
+Senator Republican  MI  39
+(1865-1866)
+Senator Republican  MI  40
+(1867-1868)
+Senator Republican  MI  41
+(1869-1870)
+Senator Republican  MI  42
+(1871-1872)
+Senator Republican  MI  43
+(1873-1874)
+Senator Republican  MI  45
+(1877-1878)
+Senator Republican  MI  46
+(1879-1880)
+CHASE, Salmon Portland  1808-1873   Senator Republican  OH  37
+(1861-1862)
+CHENEY, Person Colby    1828-1901   Senator Republican  NH  49
+(1885-1886)
+Senator Republican  NH  50
+(1887-1888)
+CHIESA, Jeffrey Scott   1965-   Senator Republican  NJ  113
+(2013-2014)
+CHILCOTT, George Miles  1828-1891   Senator Republican  CO  47
+(1881-1882)
+CHRISTIANCY, Isaac Peckham  1812-1890   Senator Republican  MI  44
+(1875-1876)
+Senator Republican  MI  45
+(1877-1878)
+CLAPP, Moses Edwin  1851-1929   Senator Republican  MN  56
+(1899-1900)
+Senator Republican  MN  57
+(1901-1902)
+Senator Republican  MN  58
+(1903-1904)
+Senator Republican  MN  59
+(1905-1906)
+Senator Republican  MN  60
+(1907-1908)
+Senator Republican  MN  61
+(1909-1910)
+Senator Republican  MN  62
+(1911-1912)
+Senator Republican  MN  63
+(1913-1914)
+Senator Republican  MN  64
+(1915-1916)
+CLARK, Clarence Don 1851-1930   Senator Republican  WY  53
+(1893-1894)
+Senator Republican  WY  54
+(1895-1896)
+Senator Republican  WY  55
+(1897-1898)
+Senator Republican  WY  56
+(1899-1900)
+Senator Republican  WY  57
+(1901-1902)
+Senator Republican  WY  58
+(1903-1904)
+Senator Republican  WY  59
+(1905-1906)
+Senator Republican  WY  60
+(1907-1908)
+Senator Republican  WY  61
+(1909-1910)
+Senator Republican  WY  62
+(1911-1912)
+Senator Republican  WY  63
+(1913-1914)
+Senator Republican  WY  64
+(1915-1916)
+CLARK, Daniel   1809-1891   Senator Republican  NH  35
+(1857-1858)
+Senator Republican  NH  36
+(1859-1860)
+Senator Republican  NH  37
+(1861-1862)
+Senator Republican  NH  38
+(1863-1864)
+Senator Republican  NH  39
+(1865-1866)
+CLAYTON, Powell 1833-1914   Senator Republican  AR  42
+(1871-1872)
+Senator Republican  AR  43
+(1873-1874)
+Senator Republican  AR  44
+(1875-1876)
+COATS, Daniel Ray   1943-   Senator Republican  IN  101
+(1989-1990)
+Senator Republican  IN  102
+(1991-1992)
+Senator Republican  IN  103
+(1993-1994)
+Senator Republican  IN  104
+(1995-1996)
+Senator Republican  IN  105
+(1997-1998)
+Senator Republican  IN  112
+(2011-2012)
+Senator Republican  IN  113
+(2013-2014)
+Senator Republican  IN  114
+(2015-2016)
+COBURN, Thomas Allen    1948-   Senator Republican  OK  109
+(2005-2006)
+Senator Republican  OK  110
+(2007-2008)
+Senator Republican  OK  111
+(2009-2010)
+Senator Republican  OK  112
+(2011-2012)
+Senator Republican  OK  113
+(2013-2014)
+COCHRAN, William Thad   1937-   Senator Republican  MS  95
+(1977-1978)
+Senator Republican  MS  96
+(1979-1980)
+Senator Republican  MS  97
+(1981-1982)
+Senator Republican  MS  98
+(1983-1984)
+Senator Republican  MS  99
+(1985-1986)
+Senator Republican  MS  100
+(1987-1988)
+Senator Republican  MS  101
+(1989-1990)
+Senator Republican  MS  102
+(1991-1992)
+Senator Republican  MS  103
+(1993-1994)
+Senator Republican  MS  104
+(1995-1996)
+Senator Republican  MS  105
+(1997-1998)
+Senator Republican  MS  106
+(1999-2000)
+Senator Republican  MS  107
+(2001-2002)
+Senator Republican  MS  108
+(2003-2004)
+Senator Republican  MS  109
+(2005-2006)
+Senator Republican  MS  110
+(2007-2008)
+Senator Republican  MS  111
+(2009-2010)
+Senator Republican  MS  112
+(2011-2012)
+Senator Republican  MS  113
+(2013-2014)
+Senator Republican  MS  114
+(2015-2016)
+Senator Republican  MS  115
+(2017-2018)
+COHEN, William Sebastian    1940-   Senator Republican  ME  96
+(1979-1980)
+Senator Republican  ME  97
+(1981-1982)
+Senator Republican  ME  98
+(1983-1984)
+Senator Republican  ME  99
+(1985-1986)
+Senator Republican  ME  100
+(1987-1988)
+Senator Republican  ME  101
+(1989-1990)
+Senator Republican  ME  102
+(1991-1992)
+Senator Republican  ME  103
+(1993-1994)
+Senator Republican  ME  104
+(1995-1996)
+COLE, Cornelius 1822-1924   Senator Republican  CA  40
+(1867-1868)
+Senator Republican  CA  41
+(1869-1870)
+Senator Republican  CA  42
+(1871-1872)
+COLEMAN, Norm   1949-   Senator Republican  MN  108
+(2003-2004)
+Senator Republican  MN  109
+(2005-2006)
+Senator Republican  MN  110
+(2007-2008)
+COLLINS, Susan Margaret 1952-   Senator Republican  ME  105
+(1997-1998)
+Senator Republican  ME  106
+(1999-2000)
+Senator Republican  ME  107
+(2001-2002)
+Senator Republican  ME  108
+(2003-2004)
+Senator Republican  ME  109
+(2005-2006)
+Senator Republican  ME  110
+(2007-2008)
+Senator Republican  ME  111
+(2009-2010)
+Senator Republican  ME  112
+(2011-2012)
+Senator Republican  ME  113
+(2013-2014)
+Senator Republican  ME  114
+(2015-2016)
+Senator Republican  ME  115
+(2017-2018)
+COLT, LeBaron Bradford  1846-1924   Senator Republican  RI  63
+(1913-1914)
+Senator Republican  RI  64
+(1915-1916)
+Senator Republican  RI  65
+(1917-1918)
+Senator Republican  RI  66
+(1919-1920)
+Senator Republican  RI  67
+(1921-1922)
+Senator Republican  RI  68
+(1923-1924)
+CONGER, Omar Dwight 1818-1898   Senator Republican  MI  47
+(1881-1882)
+Senator Republican  MI  48
+(1883-1884)
+Senator Republican  MI  49
+(1885-1886)
+CONKLING, Roscoe    1829-1888   Senator Republican  NY  40
+(1867-1868)
+Senator Republican  NY  41
+(1869-1870)
+Senator Republican  NY  42
+(1871-1872)
+Senator Republican  NY  43
+(1873-1874)
+Senator Republican  NY  44
+(1875-1876)
+Senator Republican  NY  45
+(1877-1878)
+Senator Republican  NY  46
+(1879-1880)
+Senator Republican  NY  47
+(1881-1882)
+CONNESS, John   1821-1909   Senator Republican  CA  38
+(1863-1864)
+Senator Republican  CA  39
+(1865-1866)
+Senator Republican  CA  40
+(1867-1868)
+CONOVER, Simon Barclay  1840-1908   Senator Republican  FL  43
+(1873-1874)
+Senator Republican  FL  44
+(1875-1876)
+Senator Republican  FL  45
+(1877-1878)
+COOK, Marlow Webster    1926-2016   Senator Republican  KY  90
+(1967-1968)
+Senator Republican  KY  91
+(1969-1970)
+Senator Republican  KY  92
+(1971-1972)
+Senator Republican  KY  93
+(1973-1974)
+COOPER, John Sherman    1901-1991   Senator Republican  KY  79
+(1945-1946)
+Senator Republican  KY  80
+(1947-1948)
+Senator Republican  KY  82
+(1951-1952)
+Senator Republican  KY  83
+(1953-1954)
+Senator Republican  KY  84
+(1955-1956)
+Senator Republican  KY  85
+(1957-1958)
+Senator Republican  KY  86
+(1959-1960)
+Senator Republican  KY  87
+(1961-1962)
+Senator Republican  KY  88
+(1963-1964)
+Senator Republican  KY  89
+(1965-1966)
+Senator Republican  KY  90
+(1967-1968)
+Senator Republican  KY  91
+(1969-1970)
+Senator Republican  KY  92
+(1971-1972)
+CORBETT, Henry Winslow  1827-1903   Senator Republican  OR  40
+(1867-1868)
+Senator Republican  OR  41
+(1869-1870)
+Senator Republican  OR  42
+(1871-1872)
+CORDON, Guy 1890-1969   Senator Republican  OR  78
+(1943-1944)
+Senator Republican  OR  79
+(1945-1946)
+Senator Republican  OR  80
+(1947-1948)
+Senator Republican  OR  81
+(1949-1950)
+Senator Republican  OR  82
+(1951-1952)
+Senator Republican  OR  83
+(1953-1954)
+CORKER, Robert (Bob)    1952-   Senator Republican  TN  110
+(2007-2008)
+Senator Republican  TN  111
+(2009-2010)
+Senator Republican  TN  112
+(2011-2012)
+Senator Republican  TN  113
+(2013-2014)
+Senator Republican  TN  114
+(2015-2016)
+Senator Republican  TN  115
+(2017-2018)
+CORNYN, John    1952-   Senator Republican  TX  107
+(2001-2002)
+Senator Republican  TX  108
+(2003-2004)
+Senator Republican  TX  109
+(2005-2006)
+Senator Republican  TX  110
+(2007-2008)
+Senator Republican  TX  111
+(2009-2010)
+Senator Republican  TX  112
+(2011-2012)
+Senator Republican  TX  113
+(2013-2014)
+Senator Republican  TX  114
+(2015-2016)
+Senator Republican  TX  115
+(2017-2018)
+COTTON, Norris H.   1900-1989   Senator Republican  NH  83
+(1953-1954)
+Senator Republican  NH  84
+(1955-1956)
+Senator Republican  NH  85
+(1957-1958)
+Senator Republican  NH  86
+(1959-1960)
+Senator Republican  NH  87
+(1961-1962)
+Senator Republican  NH  88
+(1963-1964)
+Senator Republican  NH  89
+(1965-1966)
+Senator Republican  NH  90
+(1967-1968)
+Senator Republican  NH  91
+(1969-1970)
+Senator Republican  NH  92
+(1971-1972)
+Senator Republican  NH  93
+(1973-1974)
+Senator Republican  NH  94
+(1975-1976)
+COTTON, Tom 1977-   Senator Republican  AR  114
+(2015-2016)
+Senator Republican  AR  115
+(2017-2018)
+COUZENS, James  1872-1936   Senator Republican  MI  67
+(1921-1922)
+Senator Republican  MI  68
+(1923-1924)
+Senator Republican  MI  69
+(1925-1926)
+Senator Republican  MI  70
+(1927-1928)
+Senator Republican  MI  71
+(1929-1930)
+Senator Republican  MI  72
+(1931-1932)
+Senator Republican  MI  73
+(1933-1934)
+Senator Republican  MI  74
+(1935-1936)
+COVERDELL, Paul 1939-2000   Senator Republican  GA  103
+(1993-1994)
+Senator Republican  GA  104
+(1995-1996)
+Senator Republican  GA  105
+(1997-1998)
+Senator Republican  GA  106
+(1999-2000)
+COWAN, Edgar    1815-1885   Senator Republican  PA  37
+(1861-1862)
+Senator Republican  PA  38
+(1863-1864)
+Senator Republican  PA  39
+(1865-1866)
+CRAGIN, Aaron Harrison  1821-1898   Senator Republican  NH  39
+(1865-1866)
+Senator Republican  NH  40
+(1867-1868)
+Senator Republican  NH  41
+(1869-1870)
+Senator Republican  NH  42
+(1871-1872)
+Senator Republican  NH  43
+(1873-1874)
+Senator Republican  NH  44
+(1875-1876)
+CRAIG, Larry Edwin  1945-   Senator Republican  ID  102
+(1991-1992)
+Senator Republican  ID  103
+(1993-1994)
+Senator Republican  ID  104
+(1995-1996)
+Senator Republican  ID  105
+(1997-1998)
+Senator Republican  ID  106
+(1999-2000)
+Senator Republican  ID  107
+(2001-2002)
+Senator Republican  ID  108
+(2003-2004)
+Senator Republican  ID  109
+(2005-2006)
+Senator Republican  ID  110
+(2007-2008)
+CRANE, Winthrop Murray  1853-1920   Senator Republican  MA  58
+(1903-1904)
+Senator Republican  MA  59
+(1905-1906)
+Senator Republican  MA  60
+(1907-1908)
+Senator Republican  MA  61
+(1909-1910)
+Senator Republican  MA  62
+(1911-1912)
+CRAPO, Michael Dean 1951-   Senator Republican  ID  106
+(1999-2000)
+Senator Republican  ID  107
+(2001-2002)
+Senator Republican  ID  108
+(2003-2004)
+Senator Republican  ID  109
+(2005-2006)
+Senator Republican  ID  110
+(2007-2008)
+Senator Republican  ID  111
+(2009-2010)
+Senator Republican  ID  112
+(2011-2012)
+Senator Republican  ID  113
+(2013-2014)
+Senator Republican  ID  114
+(2015-2016)
+Senator Republican  ID  115
+(2017-2018)
+CRAWFORD, Coe Isaac 1858-1944   Senator Republican  SD  61
+(1909-1910)
+Senator Republican  SD  62
+(1911-1912)
+Senator Republican  SD  63
+(1913-1914)
+CRIPPA, Edward David    1899-1960   Senator Republican  WY  83
+(1953-1954)
+CROW, William Evans 1870-1922   Senator Republican  PA  67
+(1921-1922)
+CROZIER, Robert 1827-1895   Senator Republican  KS  43
+(1873-1874)
+CRUZ, Rafael Edward (Ted)   1970-   Senator Republican  TX  113
+(2013-2014)
+Senator Republican  TX  114
+(2015-2016)
+Senator Republican  TX  115
+(2017-2018)
+CULLOM, Shelby Moore    1829-1914   Senator Republican  IL  48
+(1883-1884)
+Senator Republican  IL  49
+(1885-1886)
+Senator Republican  IL  50
+(1887-1888)
+Senator Republican  IL  51
+(1889-1890)
+Senator Republican  IL  52
+(1891-1892)
+Senator Republican  IL  53
+(1893-1894)
+Senator Republican  IL  54
+(1895-1896)
+Senator Republican  IL  55
+(1897-1898)
+Senator Republican  IL  56
+(1899-1900)
+Senator Republican  IL  57
+(1901-1902)
+Senator Republican  IL  58
+(1903-1904)
+Senator Republican  IL  59
+(1905-1906)
+Senator Republican  IL  60
+(1907-1908)
+Senator Republican  IL  61
+(1909-1910)
+Senator Republican  IL  62
+(1911-1912)
+CUMMINS, Albert Baird   1850-1926   Senator Republican  IA  60
+(1907-1908)
+Senator Republican  IA  61
+(1909-1910)
+Senator Republican  IA  62
+(1911-1912)
+Senator Republican  IA  63
+(1913-1914)
+Senator Republican  IA  64
+(1915-1916)
+Senator Republican  IA  65
+(1917-1918)
+Senator Republican  IA  66
+(1919-1920)
+Senator Republican  IA  67
+(1921-1922)
+Senator Republican  IA  68
+(1923-1924)
+Senator Republican  IA  69
+(1925-1926)
+CURTIS, Carl Thomas 1905-2000   Senator Republican  NE  83
+(1953-1954)
+Senator Republican  NE  84
+(1955-1956)
+Senator Republican  NE  85
+(1957-1958)
+Senator Republican  NE  86
+(1959-1960)
+Senator Republican  NE  87
+(1961-1962)
+Senator Republican  NE  88
+(1963-1964)
+Senator Republican  NE  89
+(1965-1966)
+Senator Republican  NE  90
+(1967-1968)
+Senator Republican  NE  91
+(1969-1970)
+Senator Republican  NE  92
+(1971-1972)
+Senator Republican  NE  93
+(1973-1974)
+Senator Republican  NE  94
+(1975-1976)
+Senator Republican  NE  95
+(1977-1978)
+CURTIS, Charles 1860-1936   Senator Republican  KS  60
+(1907-1908)
+Senator Republican  KS  61
+(1909-1910)
+Senator Republican  KS  62
+(1911-1912)
+Senator Republican  KS  64
+(1915-1916)
+Senator Republican  KS  65
+(1917-1918)
+Senator Republican  KS  66
+(1919-1920)
+Senator Republican  KS  67
+(1921-1922)
+Senator Republican  KS  68
+(1923-1924)
+Senator Republican  KS  69
+(1925-1926)
+Senator Republican  KS  70
+(1927-1928)
+CUTTING, Bronson Murray 1888-1935   Senator Republican  NM  70
+(1927-1928)
+Senator Republican  NM  71
+(1929-1930)
+Senator Republican  NM  72
+(1931-1932)
+Senator Republican  NM  73
+(1933-1934)
+Senator Republican  NM  74
+(1935-1936)
+D'AMATO, Alfonse Marcello   1937-   Senator Republican  NY  97
+(1981-1982)
+Senator Republican  NY  98
+(1983-1984)
+Senator Republican  NY  99
+(1985-1986)
+Senator Republican  NY  100
+(1987-1988)
+Senator Republican  NY  101
+(1989-1990)
+Senator Republican  NY  102
+(1991-1992)
+Senator Republican  NY  103
+(1993-1994)
+Senator Republican  NY  104
+(1995-1996)
+Senator Republican  NY  105
+(1997-1998)
+DAINES, Steve   1962-   Senator Republican  MT  114
+(2015-2016)
+Senator Republican  MT  115
+(2017-2018)
+DALE, Porter Hinman 1867-1933   Senator Republican  VT  68
+(1923-1924)
+Senator Republican  VT  69
+(1925-1926)
+Senator Republican  VT  70
+(1927-1928)
+Senator Republican  VT  71
+(1929-1930)
+Senator Republican  VT  72
+(1931-1932)
+Senator Republican  VT  73
+(1933-1934)
+DANAHER, John Anthony   1899-1990   Senator Republican  CT  76
+(1939-1940)
+Senator Republican  CT  77
+(1941-1942)
+Senator Republican  CT  78
+(1943-1944)
+DANFORTH, John Claggett 1936-   Senator Republican  MO  94
+(1975-1976)
+Senator Republican  MO  95
+(1977-1978)
+Senator Republican  MO  96
+(1979-1980)
+Senator Republican  MO  97
+(1981-1982)
+Senator Republican  MO  98
+(1983-1984)
+Senator Republican  MO  99
+(1985-1986)
+Senator Republican  MO  100
+(1987-1988)
+Senator Republican  MO  101
+(1989-1990)
+Senator Republican  MO  102
+(1991-1992)
+Senator Republican  MO  103
+(1993-1994)
+DARBY, Harry    1895-1987   Senator Republican  KS  81
+(1949-1950)
+DAVIS, Cushman Kellogg  1838-1900   Senator Republican  MN  50
+(1887-1888)
+Senator Republican  MN  51
+(1889-1890)
+Senator Republican  MN  52
+(1891-1892)
+Senator Republican  MN  53
+(1893-1894)
+Senator Republican  MN  54
+(1895-1896)
+Senator Republican  MN  55
+(1897-1898)
+Senator Republican  MN  56
+(1899-1900)
+DAVIS, James John   1873-1947   Senator Republican  PA  71
+(1929-1930)
+Senator Republican  PA  72
+(1931-1932)
+Senator Republican  PA  73
+(1933-1934)
+Senator Republican  PA  74
+(1935-1936)
+Senator Republican  PA  75
+(1937-1938)
+Senator Republican  PA  76
+(1939-1940)
+Senator Republican  PA  77
+(1941-1942)
+Senator Republican  PA  78
+(1943-1944)
+DAWES, Henry Laurens    1816-1903   Senator Republican  MA  44
+(1875-1876)
+Senator Republican  MA  45
+(1877-1878)
+Senator Republican  MA  46
+(1879-1880)
+Senator Republican  MA  47
+(1881-1882)
+Senator Republican  MA  48
+(1883-1884)
+Senator Republican  MA  49
+(1885-1886)
+Senator Republican  MA  50
+(1887-1888)
+Senator Republican  MA  51
+(1889-1890)
+Senator Republican  MA  52
+(1891-1892)
+DEBOE, William Joseph   1849-1927   Senator Republican  KY  55
+(1897-1898)
+Senator Republican  KY  56
+(1899-1900)
+Senator Republican  KY  57
+(1901-1902)
+DeMINT, James W.    1951-   Senator Republican  SC  109
+(2005-2006)
+Senator Republican  SC  110
+(2007-2008)
+Senator Republican  SC  111
+(2009-2010)
+Senator Republican  SC  112
+(2011-2012)
+DENEEN, Charles Samuel  1863-1940   Senator Republican  IL  68
+(1923-1924)
+Senator Republican  IL  69
+(1925-1926)
+Senator Republican  IL  70
+(1927-1928)
+Senator Republican  IL  71
+(1929-1930)
+DENTON, Jeremiah Andrew, Jr.    1924-2014   Senator Republican  AL  96
+(1979-1980)
+Senator Republican  AL  97
+(1981-1982)
+Senator Republican  AL  98
+(1983-1984)
+Senator Republican  AL  99
+(1985-1986)
+DEPEW, Chauncey Mitchell    1834-1928   Senator Republican  NY  56
+(1899-1900)
+Senator Republican  NY  57
+(1901-1902)
+Senator Republican  NY  58
+(1903-1904)
+Senator Republican  NY  59
+(1905-1906)
+Senator Republican  NY  60
+(1907-1908)
+Senator Republican  NY  61
+(1909-1910)
+DeWINE, Michael 1947-   Senator Republican  OH  104
+(1995-1996)
+Senator Republican  OH  105
+(1997-1998)
+Senator Republican  OH  106
+(1999-2000)
+Senator Republican  OH  107
+(2001-2002)
+Senator Republican  OH  108
+(2003-2004)
+Senator Republican  OH  109
+(2005-2006)
+DICK, Charles William Frederick 1858-1945   Senator Republican  OH  58
+(1903-1904)
+Senator Republican  OH  59
+(1905-1906)
+Senator Republican  OH  60
+(1907-1908)
+Senator Republican  OH  61
+(1909-1910)
+DICKINSON, Lester Jesse 1873-1968   Senator Republican  IA  72
+(1931-1932)
+Senator Republican  IA  73
+(1933-1934)
+Senator Republican  IA  74
+(1935-1936)
+DIETRICH, Charles Henry 1853-1924   Senator Republican  NE  57
+(1901-1902)
+Senator Republican  NE  58
+(1903-1904)
+DILLINGHAM, William Paul    1843-1923   Senator Republican  VT  56
+(1899-1900)
+Senator Republican  VT  57
+(1901-1902)
+Senator Republican  VT  58
+(1903-1904)
+Senator Republican  VT  59
+(1905-1906)
+Senator Republican  VT  60
+(1907-1908)
+Senator Republican  VT  61
+(1909-1910)
+Senator Republican  VT  62
+(1911-1912)
+Senator Republican  VT  63
+(1913-1914)
+Senator Republican  VT  64
+(1915-1916)
+Senator Republican  VT  65
+(1917-1918)
+Senator Republican  VT  66
+(1919-1920)
+Senator Republican  VT  67
+(1921-1922)
+Senator Republican  VT  68
+(1923-1924)
+DIRKSEN, Everett McKinley   1896-1969   Senator Republican  IL  82
+(1951-1952)
+Senator Republican  IL  83
+(1953-1954)
+Senator Republican  IL  84
+(1955-1956)
+Senator Republican  IL  85
+(1957-1958)
+Senator Republican  IL  86
+(1959-1960)
+Senator Republican  IL  87
+(1961-1962)
+Senator Republican  IL  88
+(1963-1964)
+Senator Republican  IL  89
+(1965-1966)
+Senator Republican  IL  90
+(1967-1968)
+Senator Republican  IL  91
+(1969-1970)
+DIXON, James    1814-1873   Senator Republican  CT  35
+(1857-1858)
+Senator Republican  CT  36
+(1859-1860)
+Senator Republican  CT  37
+(1861-1862)
+Senator Republican  CT  38
+(1863-1864)
+Senator Republican  CT  39
+(1865-1866)
+Senator Republican  CT  40
+(1867-1868)
+DIXON, Joseph Moore 1867-1934   Senator Republican  MT  60
+(1907-1908)
+Senator Republican  MT  61
+(1909-1910)
+Senator Republican  MT  62
+(1911-1912)
+DIXON, Nathan Fellows   1847-1897   Senator Republican  RI  51
+(1889-1890)
+Senator Republican  RI  52
+(1891-1892)
+Senator Republican  RI  53
+(1893-1894)
+DOLE, Elizabeth Hanford 1936-   Senator Republican  NC  108
+(2003-2004)
+Senator Republican  NC  109
+(2005-2006)
+Senator Republican  NC  110
+(2007-2008)
+DOLE, Robert Joseph 1923-   Senator Republican  KS  91
+(1969-1970)
+Senator Republican  KS  92
+(1971-1972)
+Senator Republican  KS  93
+(1973-1974)
+Senator Republican  KS  94
+(1975-1976)
+Senator Republican  KS  95
+(1977-1978)
+Senator Republican  KS  96
+(1979-1980)
+Senator Republican  KS  97
+(1981-1982)
+Senator Republican  KS  98
+(1983-1984)
+Senator Republican  KS  99
+(1985-1986)
+Senator Republican  KS  100
+(1987-1988)
+Senator Republican  KS  101
+(1989-1990)
+Senator Republican  KS  102
+(1991-1992)
+Senator Republican  KS  103
+(1993-1994)
+Senator Republican  KS  104
+(1995-1996)
+DOLLIVER, Jonathan Prentiss 1858-1910   Senator Republican  IA  56
+(1899-1900)
+Senator Republican  IA  57
+(1901-1902)
+Senator Republican  IA  58
+(1903-1904)
+Senator Republican  IA  59
+(1905-1906)
+Senator Republican  IA  60
+(1907-1908)
+Senator Republican  IA  61
+(1909-1910)
+DOLPH, Joseph Norton    1835-1897   Senator Republican  OR  48
+(1883-1884)
+Senator Republican  OR  49
+(1885-1886)
+Senator Republican  OR  50
+(1887-1888)
+Senator Republican  OR  51
+(1889-1890)
+Senator Republican  OR  52
+(1891-1892)
+Senator Republican  OR  53
+(1893-1894)
+DOMENICI, Pete Vichi    1932-2017   Senator Republican  NM  93
+(1973-1974)
+Senator Republican  NM  94
+(1975-1976)
+Senator Republican  NM  95
+(1977-1978)
+Senator Republican  NM  96
+(1979-1980)
+Senator Republican  NM  97
+(1981-1982)
+Senator Republican  NM  98
+(1983-1984)
+Senator Republican  NM  99
+(1985-1986)
+Senator Republican  NM  100
+(1987-1988)
+Senator Republican  NM  101
+(1989-1990)
+Senator Republican  NM  102
+(1991-1992)
+Senator Republican  NM  103
+(1993-1994)
+Senator Republican  NM  104
+(1995-1996)
+Senator Republican  NM  105
+(1997-1998)
+Senator Republican  NM  106
+(1999-2000)
+Senator Republican  NM  107
+(2001-2002)
+Senator Republican  NM  108
+(2003-2004)
+Senator Republican  NM  109
+(2005-2006)
+Senator Republican  NM  110
+(2007-2008)
+DOMINICK, Peter Hoyt    1915-1981   Senator Republican  CO  88
+(1963-1964)
+Senator Republican  CO  89
+(1965-1966)
+Senator Republican  CO  90
+(1967-1968)
+Senator Republican  CO  91
+(1969-1970)
+Senator Republican  CO  92
+(1971-1972)
+Senator Republican  CO  93
+(1973-1974)
+DONNELL, Forrest C. 1884-1980   Senator Republican  MO  79
+(1945-1946)
+Senator Republican  MO  80
+(1947-1948)
+Senator Republican  MO  81
+(1949-1950)
+DOOLITTLE, James Rood   1815-1897   Senator Republican  WI  35
+(1857-1858)
+Senator Republican  WI  36
+(1859-1860)
+Senator Republican  WI  37
+(1861-1862)
+Senator Republican  WI  38
+(1863-1864)
+Senator Republican  WI  39
+(1865-1866)
+Senator Republican  WI  40
+(1867-1868)
+DORSEY, Stephen Wallace 1842-1916   Senator Republican  AR  43
+(1873-1874)
+Senator Republican  AR  44
+(1875-1876)
+Senator Republican  AR  45
+(1877-1878)
+DRAKE, Charles Daniel   1811-1892   Senator Republican  MO  40
+(1867-1868)
+Senator Republican  MO  41
+(1869-1870)
+DREW, Irving Webster    1845-1922   Senator Republican  NH  65
+(1917-1918)
+DRYDEN, John Fairfield  1839-1911   Senator Republican  NJ  57
+(1901-1902)
+Senator Republican  NJ  58
+(1903-1904)
+Senator Republican  NJ  59
+(1905-1906)
+du PONT, Henry Algernon 1838-1926   Senator Republican  DE  59
+(1905-1906)
+Senator Republican  DE  60
+(1907-1908)
+Senator Republican  DE  61
+(1909-1910)
+Senator Republican  DE  62
+(1911-1912)
+Senator Republican  DE  63
+(1913-1914)
+Senator Republican  DE  64
+(1915-1916)
+du PONT, Thomas Coleman 1863-1930   Senator Republican  DE  67
+(1921-1922)
+Senator Republican  DE  69
+(1925-1926)
+Senator Republican  DE  70
+(1927-1928)
+DUBOIS, Fred Thomas 1851-1930   Senator Republican  ID  52
+(1891-1892)
+Senator Republican  ID  53
+(1893-1894)
+Senator Republican  ID  54
+(1895-1896)
+Senator Republican  ID  57
+(1901-1902)
+Senator Republican  ID  58
+(1903-1904)
+Senator Republican  ID  59
+(1905-1906)
+DUFF, James Henderson   1883-1969   Senator Republican  PA  82
+(1951-1952)
+Senator Republican  PA  83
+(1953-1954)
+Senator Republican  PA  84
+(1955-1956)
+DULLES, John Foster 1888-1959   Senator Republican  NY  81
+(1949-1950)
+DURENBERGER, David Ferdinand    1934-   Senator Republican  MN  95
+(1977-1978)
+Senator Republican  MN  96
+(1979-1980)
+Senator Republican  MN  97
+(1981-1982)
+Senator Republican  MN  98
+(1983-1984)
+Senator Republican  MN  99
+(1985-1986)
+Senator Republican  MN  100
+(1987-1988)
+Senator Republican  MN  101
+(1989-1990)
+Senator Republican  MN  102
+(1991-1992)
+Senator Republican  MN  103
+(1993-1994)
+DWORSHAK, Henry Clarence    1894-1962   Senator Republican  ID  79
+(1945-1946)
+Senator Republican  ID  80
+(1947-1948)
+Senator Republican  ID  81
+(1949-1950)
+Senator Republican  ID  82
+(1951-1952)
+Senator Republican  ID  83
+(1953-1954)
+Senator Republican  ID  84
+(1955-1956)
+Senator Republican  ID  85
+(1957-1958)
+Senator Republican  ID  86
+(1959-1960)
+Senator Republican  ID  87
+(1961-1962)
+EAST, John Porter   1931-1986   Senator Republican  NC  97
+(1981-1982)
+Senator Republican  NC  98
+(1983-1984)
+Senator Republican  NC  99
+(1985-1986)
+ECTON, Zales Nelson 1898-1961   Senator Republican  MT  80
+(1947-1948)
+Senator Republican  MT  81
+(1949-1950)
+Senator Republican  MT  82
+(1951-1952)
+EDGE, Walter Evans  1873-1956   Senator Republican  NJ  66
+(1919-1920)
+Senator Republican  NJ  67
+(1921-1922)
+Senator Republican  NJ  68
+(1923-1924)
+Senator Republican  NJ  69
+(1925-1926)
+Senator Republican  NJ  70
+(1927-1928)
+Senator Republican  NJ  71
+(1929-1930)
+EDGERTON, Alonzo Jay    1827-1896   Senator Republican  MN  47
+(1881-1882)
+EDMUNDS, George Franklin    1828-1919   Senator Republican  VT  39
+(1865-1866)
+Senator Republican  VT  40
+(1867-1868)
+Senator Republican  VT  41
+(1869-1870)
+Senator Republican  VT  42
+(1871-1872)
+Senator Republican  VT  43
+(1873-1874)
+Senator Republican  VT  44
+(1875-1876)
+Senator Republican  VT  45
+(1877-1878)
+Senator Republican  VT  46
+(1879-1880)
+Senator Republican  VT  47
+(1881-1882)
+Senator Republican  VT  48
+(1883-1884)
+Senator Republican  VT  49
+(1885-1886)
+Senator Republican  VT  50
+(1887-1888)
+Senator Republican  VT  51
+(1889-1890)
+Senator Republican  VT  52
+(1891-1892)
+ELKINS, Davis   1876-1959   Senator Republican  WV  61
+(1909-1910)
+Senator Republican  WV  66
+(1919-1920)
+Senator Republican  WV  67
+(1921-1922)
+Senator Republican  WV  68
+(1923-1924)
+ELKINS, Stephen Benton  1841-1911   Senator Republican  WV  54
+(1895-1896)
+Senator Republican  WV  55
+(1897-1898)
+Senator Republican  WV  56
+(1899-1900)
+Senator Republican  WV  57
+(1901-1902)
+Senator Republican  WV  58
+(1903-1904)
+Senator Republican  WV  59
+(1905-1906)
+Senator Republican  WV  60
+(1907-1908)
+Senator Republican  WV  61
+(1909-1910)
+ENSIGN, John Eric   1958-   Senator Republican  NV  107
+(2001-2002)
+Senator Republican  NV  108
+(2003-2004)
+Senator Republican  NV  109
+(2005-2006)
+Senator Republican  NV  110
+(2007-2008)
+Senator Republican  NV  111
+(2009-2010)
+Senator Republican  NV  112
+(2011-2012)
+ENZI, Michael B.    1944-   Senator Republican  WY  105
+(1997-1998)
+Senator Republican  WY  106
+(1999-2000)
+Senator Republican  WY  107
+(2001-2002)
+Senator Republican  WY  108
+(2003-2004)
+Senator Republican  WY  109
+(2005-2006)
+Senator Republican  WY  110
+(2007-2008)
+Senator Republican  WY  111
+(2009-2010)
+Senator Republican  WY  112
+(2011-2012)
+Senator Republican  WY  113
+(2013-2014)
+Senator Republican  WY  114
+(2015-2016)
+Senator Republican  WY  115
+(2017-2018)
+ERNST, Joni 1970-   Senator Republican  IA  114
+(2015-2016)
+Senator Republican  IA  115
+(2017-2018)
+ERNST, Richard Pretlow  1858-1934   Senator Republican  KY  67
+(1921-1922)
+Senator Republican  KY  68
+(1923-1924)
+Senator Republican  KY  69
+(1925-1926)
+EVANS, Daniel Jackson   1925-   Senator Republican  WA  98
+(1983-1984)
+Senator Republican  WA  99
+(1985-1986)
+Senator Republican  WA  100
+(1987-1988)
+EVARTS, William Maxwell 1818-1901   Senator Republican  NY  49
+(1885-1886)
+Senator Republican  NY  50
+(1887-1888)
+Senator Republican  NY  51
+(1889-1890)
+FAIRBANKS, Charles Warren   1852-1918   Senator Republican  IN  55
+(1897-1898)
+Senator Republican  IN  56
+(1899-1900)
+Senator Republican  IN  57
+(1901-1902)
+Senator Republican  IN  58
+(1903-1904)
+FAIRCLOTH, Duncan McLauchlin (Lauch)    1928-   Senator Republican  NC  103
+(1993-1994)
+Senator Republican  NC  104
+(1995-1996)
+Senator Republican  NC  105
+(1997-1998)
+FALL, Albert Bacon  1861-1944   Senator Republican  NM  62
+(1911-1912)
+Senator Republican  NM  63
+(1913-1914)
+Senator Republican  NM  64
+(1915-1916)
+Senator Republican  NM  65
+(1917-1918)
+Senator Republican  NM  66
+(1919-1920)
+Senator Republican  NM  67
+(1921-1922)
+FANNIN, Paul Jones  1907-2002   Senator Republican  AZ  89
+(1965-1966)
+Senator Republican  AZ  90
+(1967-1968)
+Senator Republican  AZ  91
+(1969-1970)
+Senator Republican  AZ  92
+(1971-1972)
+Senator Republican  AZ  93
+(1973-1974)
+Senator Republican  AZ  94
+(1975-1976)
+FARWELL, Charles Benjamin   1823-1903   Senator Republican  IL  49
+(1885-1886)
+Senator Republican  IL  50
+(1887-1888)
+Senator Republican  IL  51
+(1889-1890)
+FARWELL, Nathan Allen   1812-1893   Senator Republican  ME  38
+(1863-1864)
+FELTON, Charles Norton  1832-1914   Senator Republican  CA  52
+(1891-1892)
+FENTON, Reuben Eaton    1819-1885   Senator Republican  NY  41
+(1869-1870)
+Senator Republican  NY  42
+(1871-1872)
+Senator Republican  NY  43
+(1873-1874)
+FERGUSON, Homer Samuel  1889-1982   Senator Republican  MI  78
+(1943-1944)
+Senator Republican  MI  79
+(1945-1946)
+Senator Republican  MI  80
+(1947-1948)
+Senator Republican  MI  81
+(1949-1950)
+Senator Republican  MI  82
+(1951-1952)
+Senator Republican  MI  83
+(1953-1954)
+FERNALD, Bert Manfred   1858-1926   Senator Republican  ME  64
+(1915-1916)
+Senator Republican  ME  65
+(1917-1918)
+Senator Republican  ME  66
+(1919-1920)
+Senator Republican  ME  67
+(1921-1922)
+Senator Republican  ME  68
+(1923-1924)
+Senator Republican  ME  69
+(1925-1926)
+FERRY, Orris Sanford    1823-1875   Senator Republican  CT  40
+(1867-1868)
+Senator Republican  CT  41
+(1869-1870)
+Senator Republican  CT  42
+(1871-1872)
+Senator Republican  CT  44
+(1875-1876)
+FERRY, Thomas White 1827-1896   Senator Republican  MI  42
+(1871-1872)
+Senator Republican  MI  43
+(1873-1874)
+Senator Republican  MI  44
+(1875-1876)
+Senator Republican  MI  45
+(1877-1878)
+Senator Republican  MI  46
+(1879-1880)
+Senator Republican  MI  47
+(1881-1882)
+FESS, Simeon Davison    1861-1936   Senator Republican  OH  68
+(1923-1924)
+Senator Republican  OH  69
+(1925-1926)
+Senator Republican  OH  70
+(1927-1928)
+Senator Republican  OH  71
+(1929-1930)
+Senator Republican  OH  72
+(1931-1932)
+Senator Republican  OH  73
+(1933-1934)
+FESSENDEN, William Pitt 1806-1869   Senator Republican  ME  35
+(1857-1858)
+Senator Republican  ME  36
+(1859-1860)
+Senator Republican  ME  37
+(1861-1862)
+Senator Republican  ME  38
+(1863-1864)
+Senator Republican  ME  39
+(1865-1866)
+Senator Republican  ME  40
+(1867-1868)
+Senator Republican  ME  41
+(1869-1870)
+FIELD, Richard Stockton 1803-1870   Senator Republican  NJ  37
+(1861-1862)
+FISCHER, Debra (Deb)    1951-   Senator Republican  NE  113
+(2013-2014)
+Senator Republican  NE  114
+(2015-2016)
+Senator Republican  NE  115
+(2017-2018)
+FITZGERALD, Peter G.    1960-   Senator Republican  IL  106
+(1999-2000)
+Senator Republican  IL  107
+(2001-2002)
+Senator Republican  IL  108
+(2003-2004)
+FLAKE, Jeff 1962-   Senator Republican  AZ  113
+(2013-2014)
+Senator Republican  AZ  114
+(2015-2016)
+Senator Republican  AZ  115
+(2017-2018)
+FLANAGAN, James Winright    1805-1887   Senator Republican  TX  41
+(1869-1870)
+Senator Republican  TX  42
+(1871-1872)
+Senator Republican  TX  43
+(1873-1874)
+FLANDERS, Ralph Edward  1880-1970   Senator Republican  VT  79
+(1945-1946)
+Senator Republican  VT  80
+(1947-1948)
+Senator Republican  VT  81
+(1949-1950)
+Senator Republican  VT  82
+(1951-1952)
+Senator Republican  VT  83
+(1953-1954)
+Senator Republican  VT  84
+(1955-1956)
+Senator Republican  VT  85
+(1957-1958)
+FLINT, Frank Putnam 1862-1929   Senator Republican  CA  59
+(1905-1906)
+Senator Republican  CA  60
+(1907-1908)
+Senator Republican  CA  61
+(1909-1910)
+FOGG, George Gilman 1813-1881   Senator Republican  NH  39
+(1865-1866)
+FONG, Hiram Leong   1906-2004   Senator Republican  HI  86
+(1959-1960)
+Senator Republican  HI  87
+(1961-1962)
+Senator Republican  HI  88
+(1963-1964)
+Senator Republican  HI  89
+(1965-1966)
+Senator Republican  HI  90
+(1967-1968)
+Senator Republican  HI  91
+(1969-1970)
+Senator Republican  HI  92
+(1971-1972)
+Senator Republican  HI  93
+(1973-1974)
+Senator Republican  HI  94
+(1975-1976)
+FOOT, Solomon   1802-1866   Senator Republican  VT  35
+(1857-1858)
+Senator Republican  VT  36
+(1859-1860)
+Senator Republican  VT  37
+(1861-1862)
+Senator Republican  VT  38
+(1863-1864)
+Senator Republican  VT  39
+(1865-1866)
+FORAKER, Joseph Benson  1846-1917   Senator Republican  OH  55
+(1897-1898)
+Senator Republican  OH  56
+(1899-1900)
+Senator Republican  OH  57
+(1901-1902)
+Senator Republican  OH  58
+(1903-1904)
+Senator Republican  OH  59
+(1905-1906)
+Senator Republican  OH  60
+(1907-1908)
+FOSTER, Addison Gardner 1837-1917   Senator Republican  WA  56
+(1899-1900)
+Senator Republican  WA  57
+(1901-1902)
+Senator Republican  WA  58
+(1903-1904)
+FOWLER, Joseph Smith    1820-1902   Senator Republican  TN  40
+(1867-1868)
+Senator Republican  TN  41
+(1869-1870)
+FRAHM, Sheila   1945-   Senator Republican  KS  104
+(1995-1996)
+FRANCE, Joseph Irwin    1873-1939   Senator Republican  MD  65
+(1917-1918)
+Senator Republican  MD  66
+(1919-1920)
+Senator Republican  MD  67
+(1921-1922)
+FRAZIER, Lynn Joseph    1874-1947   Senator Republican  ND  68
+(1923-1924)
+Senator Republican  ND  69
+(1925-1926)
+Senator Republican  ND  70
+(1927-1928)
+Senator Republican  ND  71
+(1929-1930)
+Senator Republican  ND  72
+(1931-1932)
+Senator Republican  ND  73
+(1933-1934)
+Senator Republican  ND  74
+(1935-1936)
+Senator Republican  ND  75
+(1937-1938)
+Senator Republican  ND  76
+(1939-1940)
+FRELINGHUYSEN, Frederick Theodore   1817-1885   Senator Republican  NJ  39
+(1865-1866)
+Senator Republican  NJ  40
+(1867-1868)
+Senator Republican  NJ  42
+(1871-1872)
+Senator Republican  NJ  43
+(1873-1874)
+Senator Republican  NJ  44
+(1875-1876)
+FRELINGHUYSEN, Joseph Sherman   1869-1948   Senator Republican  NJ  65
+(1917-1918)
+Senator Republican  NJ  66
+(1919-1920)
+Senator Republican  NJ  67
+(1921-1922)
+FRIST, William H.   1952-   Senator Republican  TN  104
+(1995-1996)
+Senator Republican  TN  105
+(1997-1998)
+Senator Republican  TN  106
+(1999-2000)
+Senator Republican  TN  107
+(2001-2002)
+Senator Republican  TN  108
+(2003-2004)
+Senator Republican  TN  109
+(2005-2006)
+FRYE, William Pierce    1830-1911   Senator Republican  ME  47
+(1881-1882)
+Senator Republican  ME  48
+(1883-1884)
+Senator Republican  ME  49
+(1885-1886)
+Senator Republican  ME  50
+(1887-1888)
+Senator Republican  ME  51
+(1889-1890)
+Senator Republican  ME  52
+(1891-1892)
+Senator Republican  ME  53
+(1893-1894)
+Senator Republican  ME  54
+(1895-1896)
+Senator Republican  ME  55
+(1897-1898)
+Senator Republican  ME  56
+(1899-1900)
+Senator Republican  ME  57
+(1901-1902)
+Senator Republican  ME  58
+(1903-1904)
+Senator Republican  ME  59
+(1905-1906)
+Senator Republican  ME  60
+(1907-1908)
+Senator Republican  ME  61
+(1909-1910)
+Senator Republican  ME  62
+(1911-1912)
+FULTON, Charles William 1853-1918   Senator Republican  OR  58
+(1903-1904)
+Senator Republican  OR  59
+(1905-1906)
+Senator Republican  OR  60
+(1907-1908)
+GALLINGER, Jacob Harold 1837-1918   Senator Republican  NH  52
+(1891-1892)
+Senator Republican  NH  53
+(1893-1894)
+Senator Republican  NH  54
+(1895-1896)
+Senator Republican  NH  55
+(1897-1898)
+Senator Republican  NH  56
+(1899-1900)
+Senator Republican  NH  57
+(1901-1902)
+Senator Republican  NH  58
+(1903-1904)
+Senator Republican  NH  59
+(1905-1906)
+Senator Republican  NH  60
+(1907-1908)
+Senator Republican  NH  61
+(1909-1910)
+Senator Republican  NH  62
+(1911-1912)
+Senator Republican  NH  63
+(1913-1914)
+Senator Republican  NH  64
+(1915-1916)
+Senator Republican  NH  65
+(1917-1918)
+GAMBLE, Robert Jackson  1851-1924   Senator Republican  SD  57
+(1901-1902)
+Senator Republican  SD  58
+(1903-1904)
+Senator Republican  SD  59
+(1905-1906)
+Senator Republican  SD  60
+(1907-1908)
+Senator Republican  SD  61
+(1909-1910)
+Senator Republican  SD  62
+(1911-1912)
+GARDNER, Cory   1974-   Senator Republican  CO  114
+(2015-2016)
+Senator Republican  CO  115
+(2017-2018)
+GARN, Edwin Jacob (Jake)    1932-   Senator Republican  UT  93
+(1973-1974)
+Senator Republican  UT  94
+(1975-1976)
+Senator Republican  UT  95
+(1977-1978)
+Senator Republican  UT  96
+(1979-1980)
+Senator Republican  UT  97
+(1981-1982)
+Senator Republican  UT  98
+(1983-1984)
+Senator Republican  UT  99
+(1985-1986)
+Senator Republican  UT  100
+(1987-1988)
+Senator Republican  UT  101
+(1989-1990)
+Senator Republican  UT  102
+(1991-1992)
+GEAR, John Henry    1825-1900   Senator Republican  IA  54
+(1895-1896)
+Senator Republican  IA  55
+(1897-1898)
+Senator Republican  IA  56
+(1899-1900)
+GIBSON, Ernest Willard  1872-1940   Senator Republican  VT  73
+(1933-1934)
+Senator Republican  VT  74
+(1935-1936)
+Senator Republican  VT  75
+(1937-1938)
+Senator Republican  VT  76
+(1939-1940)
+GIBSON, Ernest William, Jr. 1901-1969   Senator Republican  VT  76
+(1939-1940)
+GILBERT, Abijah 1806-1881   Senator Republican  FL  41
+(1869-1870)
+Senator Republican  FL  42
+(1871-1872)
+Senator Republican  FL  43
+(1873-1874)
+GILLETT, Frederick Huntington   1851-1935   Senator Republican  MA  69
+(1925-1926)
+Senator Republican  MA  70
+(1927-1928)
+Senator Republican  MA  71
+(1929-1930)
+GLENN, Otis Ferguson    1879-1959   Senator Republican  IL  70
+(1927-1928)
+Senator Republican  IL  71
+(1929-1930)
+Senator Republican  IL  72
+(1931-1932)
+GOFF, Guy Despard   1866-1933   Senator Republican  WV  69
+(1925-1926)
+Senator Republican  WV  70
+(1927-1928)
+Senator Republican  WV  71
+(1929-1930)
+GOFF, Nathan    1843-1920   Senator Republican  WV  63
+(1913-1914)
+Senator Republican  WV  64
+(1915-1916)
+Senator Republican  WV  65
+(1917-1918)
+GOLDSBOROUGH, Phillips Lee  1865-1946   Senator Republican  MD  71
+(1929-1930)
+Senator Republican  MD  72
+(1931-1932)
+Senator Republican  MD  73
+(1933-1934)
+GOLDWATER, Barry Morris 1909-1998   Senator Republican  AZ  83
+(1953-1954)
+Senator Republican  AZ  84
+(1955-1956)
+Senator Republican  AZ  85
+(1957-1958)
+Senator Republican  AZ  86
+(1959-1960)
+Senator Republican  AZ  87
+(1961-1962)
+Senator Republican  AZ  88
+(1963-1964)
+Senator Republican  AZ  91
+(1969-1970)
+Senator Republican  AZ  92
+(1971-1972)
+Senator Republican  AZ  93
+(1973-1974)
+Senator Republican  AZ  94
+(1975-1976)
+Senator Republican  AZ  95
+(1977-1978)
+Senator Republican  AZ  96
+(1979-1980)
+Senator Republican  AZ  97
+(1981-1982)
+Senator Republican  AZ  98
+(1983-1984)
+Senator Republican  AZ  99
+(1985-1986)
+GOODELL, Charles Ellsworth  1926-1987   Senator Republican  NY  90
+(1967-1968)
+Senator Republican  NY  91
+(1969-1970)
+GOODING, Frank Robert   1859-1928   Senator Republican  ID  66
+(1919-1920)
+Senator Republican  ID  67
+(1921-1922)
+Senator Republican  ID  68
+(1923-1924)
+Senator Republican  ID  69
+(1925-1926)
+Senator Republican  ID  70
+(1927-1928)
+GORTON, Thomas Slade, III (Slade)   1928-   Senator Republican  WA  97
+(1981-1982)
+Senator Republican  WA  98
+(1983-1984)
+Senator Republican  WA  99
+(1985-1986)
+Senator Republican  WA  101
+(1989-1990)
+Senator Republican  WA  102
+(1991-1992)
+Senator Republican  WA  103
+(1993-1994)
+Senator Republican  WA  104
+(1995-1996)
+Senator Republican  WA  105
+(1997-1998)
+Senator Republican  WA  106
+(1999-2000)
+GOULD, Arthur Robinson  1857-1946   Senator Republican  ME  69
+(1925-1926)
+Senator Republican  ME  70
+(1927-1928)
+Senator Republican  ME  71
+(1929-1930)
+GRAHAM, Lindsey O.  1955-   Senator Republican  SC  108
+(2003-2004)
+Senator Republican  SC  109
+(2005-2006)
+Senator Republican  SC  110
+(2007-2008)
+Senator Republican  SC  111
+(2009-2010)
+Senator Republican  SC  112
+(2011-2012)
+Senator Republican  SC  113
+(2013-2014)
+Senator Republican  SC  114
+(2015-2016)
+Senator Republican  SC  115
+(2017-2018)
+GRAMM, William Philip (Phil)    1942-   Senator Republican  TX  99
+(1985-1986)
+Senator Republican  TX  100
+(1987-1988)
+Senator Republican  TX  101
+(1989-1990)
+Senator Republican  TX  102
+(1991-1992)
+Senator Republican  TX  103
+(1993-1994)
+Senator Republican  TX  104
+(1995-1996)
+Senator Republican  TX  105
+(1997-1998)
+Senator Republican  TX  106
+(1999-2000)
+Senator Republican  TX  107
+(2001-2002)
+GRAMMER, Elijah Sherman 1868-1936   Senator Republican  WA  72
+(1931-1932)
+GRAMS, Rod  1948-2013   Senator Republican  MN  104
+(1995-1996)
+Senator Republican  MN  105
+(1997-1998)
+Senator Republican  MN  106
+(1999-2000)
+GRASSLEY, Charles Ernest    1933-   Senator Republican  IA  97
+(1981-1982)
+Senator Republican  IA  98
+(1983-1984)
+Senator Republican  IA  99
+(1985-1986)
+Senator Republican  IA  100
+(1987-1988)
+Senator Republican  IA  101
+(1989-1990)
+Senator Republican  IA  102
+(1991-1992)
+Senator Republican  IA  103
+(1993-1994)
+Senator Republican  IA  104
+(1995-1996)
+Senator Republican  IA  105
+(1997-1998)
+Senator Republican  IA  106
+(1999-2000)
+Senator Republican  IA  107
+(2001-2002)
+Senator Republican  IA  108
+(2003-2004)
+Senator Republican  IA  109
+(2005-2006)
+Senator Republican  IA  110
+(2007-2008)
+Senator Republican  IA  111
+(2009-2010)
+Senator Republican  IA  112
+(2011-2012)
+Senator Republican  IA  113
+(2013-2014)
+Senator Republican  IA  114
+(2015-2016)
+Senator Republican  IA  115
+(2017-2018)
+GREENE, Frank Lester    1870-1930   Senator Republican  VT  68
+(1923-1924)
+Senator Republican  VT  69
+(1925-1926)
+Senator Republican  VT  70
+(1927-1928)
+Senator Republican  VT  71
+(1929-1930)
+GREGG, Judd Alan    1947-   Senator Republican  NH  103
+(1993-1994)
+Senator Republican  NH  104
+(1995-1996)
+Senator Republican  NH  105
+(1997-1998)
+Senator Republican  NH  106
+(1999-2000)
+Senator Republican  NH  107
+(2001-2002)
+Senator Republican  NH  108
+(2003-2004)
+Senator Republican  NH  109
+(2005-2006)
+Senator Republican  NH  110
+(2007-2008)
+Senator Republican  NH  111
+(2009-2010)
+GRIFFIN, Robert Paul    1923-2015   Senator Republican  MI  89
+(1965-1966)
+Senator Republican  MI  90
+(1967-1968)
+Senator Republican  MI  91
+(1969-1970)
+Senator Republican  MI  92
+(1971-1972)
+Senator Republican  MI  93
+(1973-1974)
+Senator Republican  MI  94
+(1975-1976)
+Senator Republican  MI  95
+(1977-1978)
+GRIMES, James Wilson    1816-1872   Senator Republican  IA  36
+(1859-1860)
+Senator Republican  IA  37
+(1861-1862)
+Senator Republican  IA  38
+(1863-1864)
+Senator Republican  IA  39
+(1865-1866)
+Senator Republican  IA  40
+(1867-1868)
+Senator Republican  IA  41
+(1869-1870)
+GRISWOLD, Dwight Palmer 1893-1954   Senator Republican  NE  82
+(1951-1952)
+Senator Republican  NE  83
+(1953-1954)
+GRONNA, Asle Jorgenson  1858-1922   Senator Republican  ND  61
+(1909-1910)
+Senator Republican  ND  62
+(1911-1912)
+Senator Republican  ND  63
+(1913-1914)
+Senator Republican  ND  64
+(1915-1916)
+Senator Republican  ND  65
+(1917-1918)
+Senator Republican  ND  66
+(1919-1920)
+GRUNDY, Joseph Ridgway  1863-1961   Senator Republican  PA  71
+(1929-1930)
+GUGGENHEIM, Simon   1867-1941   Senator Republican  CO  60
+(1907-1908)
+Senator Republican  CO  61
+(1909-1910)
+Senator Republican  CO  62
+(1911-1912)
+GURNEY, Edward John 1914-1996   Senator Republican  FL  91
+(1969-1970)
+Senator Republican  FL  92
+(1971-1972)
+Senator Republican  FL  93
+(1973-1974)
+GURNEY, John Chandler (Chan)    1896-1985   Senator Republican  SD  76
+(1939-1940)
+Senator Republican  SD  77
+(1941-1942)
+Senator Republican  SD  78
+(1943-1944)
+Senator Republican  SD  79
+(1945-1946)
+Senator Republican  SD  80
+(1947-1948)
+Senator Republican  SD  81
+(1949-1950)
+HAGEL, Charles Timothy (Chuck)  1946-   Senator Republican  NE  105
+(1997-1998)
+Senator Republican  NE  106
+(1999-2000)
+Senator Republican  NE  107
+(2001-2002)
+Senator Republican  NE  108
+(2003-2004)
+Senator Republican  NE  109
+(2005-2006)
+Senator Republican  NE  110
+(2007-2008)
+HALE, Eugene    1836-1918   Senator Republican  ME  47
+(1881-1882)
+Senator Republican  ME  48
+(1883-1884)
+Senator Republican  ME  49
+(1885-1886)
+Senator Republican  ME  50
+(1887-1888)
+Senator Republican  ME  51
+(1889-1890)
+Senator Republican  ME  52
+(1891-1892)
+Senator Republican  ME  53
+(1893-1894)
+Senator Republican  ME  54
+(1895-1896)
+Senator Republican  ME  55
+(1897-1898)
+Senator Republican  ME  56
+(1899-1900)
+Senator Republican  ME  57
+(1901-1902)
+Senator Republican  ME  58
+(1903-1904)
+Senator Republican  ME  59
+(1905-1906)
+Senator Republican  ME  60
+(1907-1908)
+Senator Republican  ME  61
+(1909-1910)
+HALE, Frederick 1874-1963   Senator Republican  ME  65
+(1917-1918)
+Senator Republican  ME  66
+(1919-1920)
+Senator Republican  ME  67
+(1921-1922)
+Senator Republican  ME  68
+(1923-1924)
+Senator Republican  ME  69
+(1925-1926)
+Senator Republican  ME  70
+(1927-1928)
+Senator Republican  ME  71
+(1929-1930)
+Senator Republican  ME  72
+(1931-1932)
+Senator Republican  ME  73
+(1933-1934)
+Senator Republican  ME  74
+(1935-1936)
+Senator Republican  ME  75
+(1937-1938)
+Senator Republican  ME  76
+(1939-1940)
+HALE, John Parker   1806-1873   Senator Republican  NH  35
+(1857-1858)
+Senator Republican  NH  36
+(1859-1860)
+Senator Republican  NH  37
+(1861-1862)
+Senator Republican  NH  38
+(1863-1864)
+HAMILTON, Morgan Calvin 1809-1893   Senator Republican  TX  41
+(1869-1870)
+Senator Republican  TX  42
+(1871-1872)
+Senator Republican  TX  44
+(1875-1876)
+HAMLIN, Hannibal    1809-1891   Senator Republican  ME  35
+(1857-1858)
+Senator Republican  ME  36
+(1859-1860)
+Senator Republican  ME  41
+(1869-1870)
+Senator Republican  ME  42
+(1871-1872)
+Senator Republican  ME  43
+(1873-1874)
+Senator Republican  ME  44
+(1875-1876)
+Senator Republican  ME  45
+(1877-1878)
+Senator Republican  ME  46
+(1879-1880)
+HANNA, Marcus Alonzo (Mark) 1837-1904   Senator Republican  OH  55
+(1897-1898)
+Senator Republican  OH  56
+(1899-1900)
+Senator Republican  OH  57
+(1901-1902)
+Senator Republican  OH  58
+(1903-1904)
+HANSBROUGH, Henry Clay  1848-1933   Senator Republican  ND  52
+(1891-1892)
+Senator Republican  ND  53
+(1893-1894)
+Senator Republican  ND  54
+(1895-1896)
+Senator Republican  ND  55
+(1897-1898)
+Senator Republican  ND  56
+(1899-1900)
+Senator Republican  ND  57
+(1901-1902)
+Senator Republican  ND  58
+(1903-1904)
+Senator Republican  ND  59
+(1905-1906)
+Senator Republican  ND  60
+(1907-1908)
+HANSEN, Clifford Peter  1912-2009   Senator Republican  WY  90
+(1967-1968)
+Senator Republican  WY  91
+(1969-1970)
+Senator Republican  WY  92
+(1971-1972)
+Senator Republican  WY  93
+(1973-1974)
+Senator Republican  WY  94
+(1975-1976)
+Senator Republican  WY  95
+(1977-1978)
+HARDING, Warren Gamaliel    1865-1923   Senator Republican  OH  64
+(1915-1916)
+Senator Republican  OH  65
+(1917-1918)
+Senator Republican  OH  66
+(1919-1920)
+HARLAN, James   1820-1899   Senator Republican  IA  35
+(1857-1858)
+Senator Republican  IA  36
+(1859-1860)
+Senator Republican  IA  37
+(1861-1862)
+Senator Republican  IA  38
+(1863-1864)
+Senator Republican  IA  39
+(1865-1866)
+Senator Republican  IA  40
+(1867-1868)
+Senator Republican  IA  41
+(1869-1870)
+Senator Republican  IA  42
+(1871-1872)
+HARRELD, John William   1872-1950   Senator Republican  OK  67
+(1921-1922)
+Senator Republican  OK  68
+(1923-1924)
+Senator Republican  OK  69
+(1925-1926)
+HARRIS, Ira 1802-1875   Senator Republican  NY  37
+(1861-1862)
+Senator Republican  NY  38
+(1863-1864)
+Senator Republican  NY  39
+(1865-1866)
+HARRIS, John Spafford   1825-1906   Senator Republican  LA  40
+(1867-1868)
+Senator Republican  LA  41
+(1869-1870)
+HARRISON, Benjamin  1833-1901   Senator Republican  IN  47
+(1881-1882)
+Senator Republican  IN  48
+(1883-1884)
+Senator Republican  IN  49
+(1885-1886)
+HART, Thomas Charles    1877-1971   Senator Republican  CT  79
+(1945-1946)
+HARVEY, James Madison   1833-1894   Senator Republican  KS  43
+(1873-1874)
+Senator Republican  KS  44
+(1875-1876)
+HASTINGS, Daniel Oren   1874-1966   Senator Republican  DE  70
+(1927-1928)
+Senator Republican  DE  71
+(1929-1930)
+Senator Republican  DE  72
+(1931-1932)
+Senator Republican  DE  73
+(1933-1934)
+Senator Republican  DE  74
+(1935-1936)
+HATCH, Orrin Grant  1934-   Senator Republican  UT  95
+(1977-1978)
+Senator Republican  UT  96
+(1979-1980)
+Senator Republican  UT  97
+(1981-1982)
+Senator Republican  UT  98
+(1983-1984)
+Senator Republican  UT  99
+(1985-1986)
+Senator Republican  UT  100
+(1987-1988)
+Senator Republican  UT  101
+(1989-1990)
+Senator Republican  UT  102
+(1991-1992)
+Senator Republican  UT  103
+(1993-1994)
+Senator Republican  UT  104
+(1995-1996)
+Senator Republican  UT  105
+(1997-1998)
+Senator Republican  UT  106
+(1999-2000)
+Senator Republican  UT  107
+(2001-2002)
+Senator Republican  UT  108
+(2003-2004)
+Senator Republican  UT  109
+(2005-2006)
+Senator Republican  UT  110
+(2007-2008)
+Senator Republican  UT  111
+(2009-2010)
+Senator Republican  UT  112
+(2011-2012)
+Senator Republican  UT  113
+(2013-2014)
+Senator Republican  UT  114
+(2015-2016)
+Senator Republican  UT  115
+(2017-2018)
+HATFIELD, Henry Drury   1875-1962   Senator Republican  WV  71
+(1929-1930)
+Senator Republican  WV  72
+(1931-1932)
+Senator Republican  WV  73
+(1933-1934)
+HATFIELD, Mark Odom 1922-2011   Senator Republican  OR  90
+(1967-1968)
+Senator Republican  OR  91
+(1969-1970)
+Senator Republican  OR  92
+(1971-1972)
+Senator Republican  OR  93
+(1973-1974)
+Senator Republican  OR  94
+(1975-1976)
+Senator Republican  OR  95
+(1977-1978)
+Senator Republican  OR  96
+(1979-1980)
+Senator Republican  OR  97
+(1981-1982)
+Senator Republican  OR  98
+(1983-1984)
+Senator Republican  OR  99
+(1985-1986)
+Senator Republican  OR  100
+(1987-1988)
+Senator Republican  OR  101
+(1989-1990)
+Senator Republican  OR  102
+(1991-1992)
+Senator Republican  OR  103
+(1993-1994)
+Senator Republican  OR  104
+(1995-1996)
+HAWKES, Albert Wahl 1878-1971   Senator Republican  NJ  78
+(1943-1944)
+Senator Republican  NJ  79
+(1945-1946)
+Senator Republican  NJ  80
+(1947-1948)
+HAWKINS, Paula  1927-2009   Senator Republican  FL  96
+(1979-1980)
+Senator Republican  FL  97
+(1981-1982)
+Senator Republican  FL  98
+(1983-1984)
+Senator Republican  FL  99
+(1985-1986)
+HAWLEY, Joseph Roswell  1826-1905   Senator Republican  CT  47
+(1881-1882)
+Senator Republican  CT  48
+(1883-1884)
+Senator Republican  CT  49
+(1885-1886)
+Senator Republican  CT  50
+(1887-1888)
+Senator Republican  CT  51
+(1889-1890)
+Senator Republican  CT  52
+(1891-1892)
+Senator Republican  CT  53
+(1893-1894)
+Senator Republican  CT  54
+(1895-1896)
+Senator Republican  CT  55
+(1897-1898)
+Senator Republican  CT  56
+(1899-1900)
+Senator Republican  CT  57
+(1901-1902)
+Senator Republican  CT  58
+(1903-1904)
+HAYAKAWA, Samuel Ichiye 1906-1992   Senator Republican  CA  94
+(1975-1976)
+Senator Republican  CA  95
+(1977-1978)
+Senator Republican  CA  96
+(1979-1980)
+Senator Republican  CA  97
+(1981-1982)
+HAYWARD, Monroe Leland  1840-1899   Senator Republican  NE  56
+(1899-1900)
+HÉBERT, Felix   1874-1969   Senator Republican  RI  71
+(1929-1930)
+Senator Republican  RI  72
+(1931-1932)
+Senator Republican  RI  73
+(1933-1934)
+HECHT, Jacob Chic   1928-2006   Senator Republican  NV  98
+(1983-1984)
+Senator Republican  NV  99
+(1985-1986)
+Senator Republican  NV  100
+(1987-1988)
+HEINZ, Henry John, III  1938-1991   Senator Republican  PA  95
+(1977-1978)
+Senator Republican  PA  96
+(1979-1980)
+Senator Republican  PA  97
+(1981-1982)
+Senator Republican  PA  98
+(1983-1984)
+Senator Republican  PA  99
+(1985-1986)
+Senator Republican  PA  100
+(1987-1988)
+Senator Republican  PA  101
+(1989-1990)
+Senator Republican  PA  102
+(1991-1992)
+HELLER, Dean    1960-   Senator Republican  NV  112
+(2011-2012)
+Senator Republican  NV  113
+(2013-2014)
+Senator Republican  NV  114
+(2015-2016)
+Senator Republican  NV  115
+(2017-2018)
+HELMS, Jesse    1921-2008   Senator Republican  NC  93
+(1973-1974)
+Senator Republican  NC  94
+(1975-1976)
+Senator Republican  NC  95
+(1977-1978)
+Senator Republican  NC  96
+(1979-1980)
+Senator Republican  NC  97
+(1981-1982)
+Senator Republican  NC  98
+(1983-1984)
+Senator Republican  NC  99
+(1985-1986)
+Senator Republican  NC  100
+(1987-1988)
+Senator Republican  NC  101
+(1989-1990)
+Senator Republican  NC  102
+(1991-1992)
+Senator Republican  NC  103
+(1993-1994)
+Senator Republican  NC  104
+(1995-1996)
+Senator Republican  NC  105
+(1997-1998)
+Senator Republican  NC  106
+(1999-2000)
+Senator Republican  NC  107
+(2001-2002)
+HEMENWAY, James Alexander   1860-1923   Senator Republican  IN  59
+(1905-1906)
+Senator Republican  IN  60
+(1907-1908)
+HENDERSON, John Brooks  1826-1913   Senator Republican  MO  39
+(1865-1866)
+Senator Republican  MO  40
+(1867-1868)
+HENDRICKSON, Robert Clymer  1898-1964   Senator Republican  NJ  81
+(1949-1950)
+Senator Republican  NJ  82
+(1951-1952)
+Senator Republican  NJ  83
+(1953-1954)
+HEYBURN, Weldon Brinton 1852-1912   Senator Republican  ID  58
+(1903-1904)
+Senator Republican  ID  59
+(1905-1906)
+Senator Republican  ID  60
+(1907-1908)
+Senator Republican  ID  61
+(1909-1910)
+Senator Republican  ID  62
+(1911-1912)
+HICKENLOOPER, Bourke Blakemore  1896-1971   Senator Republican  IA  79
+(1945-1946)
+Senator Republican  IA  80
+(1947-1948)
+Senator Republican  IA  81
+(1949-1950)
+Senator Republican  IA  82
+(1951-1952)
+Senator Republican  IA  83
+(1953-1954)
+Senator Republican  IA  84
+(1955-1956)
+Senator Republican  IA  85
+(1957-1958)
+Senator Republican  IA  86
+(1959-1960)
+Senator Republican  IA  87
+(1961-1962)
+Senator Republican  IA  88
+(1963-1964)
+Senator Republican  IA  89
+(1965-1966)
+Senator Republican  IA  90
+(1967-1968)
+HIGGINS, Anthony    1840-1912   Senator Republican  DE  51
+(1889-1890)
+Senator Republican  DE  52
+(1891-1892)
+Senator Republican  DE  53
+(1893-1894)
+HILL, Joshua    1812-1891   Senator Republican  GA  41
+(1869-1870)
+Senator Republican  GA  42
+(1871-1872)
+HILL, Nathaniel Peter   1832-1900   Senator Republican  CO  46
+(1879-1880)
+Senator Republican  CO  47
+(1881-1882)
+Senator Republican  CO  48
+(1883-1884)
+HISCOCK, Frank  1834-1914   Senator Republican  NY  50
+(1887-1888)
+Senator Republican  NY  51
+(1889-1890)
+Senator Republican  NY  52
+(1891-1892)
+HITCHCOCK, Phineas Warren   1831-1881   Senator Republican  NE  42
+(1871-1872)
+Senator Republican  NE  43
+(1873-1874)
+Senator Republican  NE  44
+(1875-1876)
+HOAR, George Frisbie    1826-1904   Senator Republican  MA  45
+(1877-1878)
+Senator Republican  MA  46
+(1879-1880)
+Senator Republican  MA  47
+(1881-1882)
+Senator Republican  MA  48
+(1883-1884)
+Senator Republican  MA  49
+(1885-1886)
+Senator Republican  MA  50
+(1887-1888)
+Senator Republican  MA  51
+(1889-1890)
+Senator Republican  MA  52
+(1891-1892)
+Senator Republican  MA  53
+(1893-1894)
+Senator Republican  MA  54
+(1895-1896)
+Senator Republican  MA  55
+(1897-1898)
+Senator Republican  MA  56
+(1899-1900)
+Senator Republican  MA  57
+(1901-1902)
+Senator Republican  MA  58
+(1903-1904)
+HOBLITZELL, John Dempsey, Jr.   1912-1962   Senator Republican  WV  85
+(1957-1958)
+HOEVEN, John    1957-   Senator Republican  ND  112
+(2011-2012)
+Senator Republican  ND  113
+(2013-2014)
+Senator Republican  ND  114
+(2015-2016)
+Senator Republican  ND  115
+(2017-2018)
+HOLMAN, Rufus Cecil 1877-1959   Senator Republican  OR  76
+(1939-1940)
+Senator Republican  OR  77
+(1941-1942)
+Senator Republican  OR  78
+(1943-1944)
+HOPKINS, Albert Jarvis  1846-1922   Senator Republican  IL  58
+(1903-1904)
+Senator Republican  IL  59
+(1905-1906)
+Senator Republican  IL  60
+(1907-1908)
+HOWARD, Guy Victor  1879-1954   Senator Republican  MN  74
+(1935-1936)
+HOWARD, Jacob Merritt   1805-1871   Senator Republican  MI  37
+(1861-1862)
+Senator Republican  MI  38
+(1863-1864)
+Senator Republican  MI  39
+(1865-1866)
+Senator Republican  MI  40
+(1867-1868)
+Senator Republican  MI  41
+(1869-1870)
+HOWE, Timothy Otis  1816-1883   Senator Republican  WI  37
+(1861-1862)
+Senator Republican  WI  38
+(1863-1864)
+Senator Republican  WI  39
+(1865-1866)
+Senator Republican  WI  40
+(1867-1868)
+Senator Republican  WI  41
+(1869-1870)
+Senator Republican  WI  42
+(1871-1872)
+Senator Republican  WI  43
+(1873-1874)
+Senator Republican  WI  44
+(1875-1876)
+Senator Republican  WI  45
+(1877-1878)
+HOWELL, James Bruen 1816-1880   Senator Republican  IA  41
+(1869-1870)
+HOWELL, Robert Beecher  1864-1933   Senator Republican  NE  68
+(1923-1924)
+Senator Republican  NE  69
+(1925-1926)
+Senator Republican  NE  70
+(1927-1928)
+Senator Republican  NE  71
+(1929-1930)
+Senator Republican  NE  72
+(1931-1932)
+Senator Republican  NE  73
+(1933-1934)
+HRUSKA, Roman Lee   1904-1999   Senator Republican  NE  83
+(1953-1954)
+Senator Republican  NE  84
+(1955-1956)
+Senator Republican  NE  85
+(1957-1958)
+Senator Republican  NE  86
+(1959-1960)
+Senator Republican  NE  87
+(1961-1962)
+Senator Republican  NE  88
+(1963-1964)
+Senator Republican  NE  89
+(1965-1966)
+Senator Republican  NE  90
+(1967-1968)
+Senator Republican  NE  91
+(1969-1970)
+Senator Republican  NE  92
+(1971-1972)
+Senator Republican  NE  93
+(1973-1974)
+Senator Republican  NE  94
+(1975-1976)
+HUMPHREY, Gordon John   1940-   Senator Republican  NH  96
+(1979-1980)
+Senator Republican  NH  97
+(1981-1982)
+Senator Republican  NH  98
+(1983-1984)
+Senator Republican  NH  99
+(1985-1986)
+Senator Republican  NH  100
+(1987-1988)
+Senator Republican  NH  101
+(1989-1990)
+HUTCHINSON, Timothy 1949-   Senator Republican  AR  105
+(1997-1998)
+Senator Republican  AR  106
+(1999-2000)
+Senator Republican  AR  107
+(2001-2002)
+HUTCHISON, Kathryn Ann Bailey (Kay) 1943-   Senator Republican  TX  103
+(1993-1994)
+Senator Republican  TX  104
+(1995-1996)
+Senator Republican  TX  105
+(1997-1998)
+Senator Republican  TX  106
+(1999-2000)
+Senator Republican  TX  107
+(2001-2002)
+Senator Republican  TX  108
+(2003-2004)
+Senator Republican  TX  109
+(2005-2006)
+Senator Republican  TX  110
+(2007-2008)
+Senator Republican  TX  111
+(2009-2010)
+Senator Republican  TX  112
+(2011-2012)
+HYDE-SMITH, Cindy   1959-   Senator Republican  MS  115
+(2017-2018)
+INGALLS, John James 1833-1900   Senator Republican  KS  43
+(1873-1874)
+Senator Republican  KS  44
+(1875-1876)
+Senator Republican  KS  45
+(1877-1878)
+Senator Republican  KS  46
+(1879-1880)
+Senator Republican  KS  47
+(1881-1882)
+Senator Republican  KS  48
+(1883-1884)
+Senator Republican  KS  49
+(1885-1886)
+Senator Republican  KS  50
+(1887-1888)
+Senator Republican  KS  51
+(1889-1890)
+INHOFE, James Mountain  1934-   Senator Republican  OK  103
+(1993-1994)
+Senator Republican  OK  104
+(1995-1996)
+Senator Republican  OK  105
+(1997-1998)
+Senator Republican  OK  106
+(1999-2000)
+Senator Republican  OK  107
+(2001-2002)
+Senator Republican  OK  108
+(2003-2004)
+Senator Republican  OK  109
+(2005-2006)
+Senator Republican  OK  110
+(2007-2008)
+Senator Republican  OK  111
+(2009-2010)
+Senator Republican  OK  112
+(2011-2012)
+Senator Republican  OK  113
+(2013-2014)
+Senator Republican  OK  114
+(2015-2016)
+Senator Republican  OK  115
+(2017-2018)
+ISAKSON, Johnny 1944-   Senator Republican  GA  109
+(2005-2006)
+Senator Republican  GA  110
+(2007-2008)
+Senator Republican  GA  111
+(2009-2010)
+Senator Republican  GA  112
+(2011-2012)
+Senator Republican  GA  113
+(2013-2014)
+Senator Republican  GA  114
+(2015-2016)
+Senator Republican  GA  115
+(2017-2018)
+IVES, Irving McNeil 1896-1962   Senator Republican  NY  80
+(1947-1948)
+Senator Republican  NY  81
+(1949-1950)
+Senator Republican  NY  82
+(1951-1952)
+Senator Republican  NY  83
+(1953-1954)
+Senator Republican  NY  84
+(1955-1956)
+Senator Republican  NY  85
+(1957-1958)
+JACKSON, William Purnell    1868-1939   Senator Republican  MD  62
+(1911-1912)
+Senator Republican  MD  63
+(1913-1914)
+JAVITS, Jacob Koppel    1904-1986   Senator Republican  NY  85
+(1957-1958)
+Senator Republican  NY  86
+(1959-1960)
+Senator Republican  NY  87
+(1961-1962)
+Senator Republican  NY  88
+(1963-1964)
+Senator Republican  NY  89
+(1965-1966)
+Senator Republican  NY  90
+(1967-1968)
+Senator Republican  NY  91
+(1969-1970)
+Senator Republican  NY  92
+(1971-1972)
+Senator Republican  NY  93
+(1973-1974)
+Senator Republican  NY  94
+(1975-1976)
+Senator Republican  NY  95
+(1977-1978)
+Senator Republican  NY  96
+(1979-1980)
+JEFFORDS, James Merrill 1934-2014   Senator Republican  VT  101
+(1989-1990)
+Senator Republican  VT  102
+(1991-1992)
+Senator Republican  VT  103
+(1993-1994)
+Senator Republican  VT  104
+(1995-1996)
+Senator Republican  VT  105
+(1997-1998)
+Senator Republican  VT  106
+(1999-2000)
+JENNER, William Ezra    1908-1985   Senator Republican  IN  78
+(1943-1944)
+Senator Republican  IN  80
+(1947-1948)
+Senator Republican  IN  81
+(1949-1950)
+Senator Republican  IN  82
+(1951-1952)
+Senator Republican  IN  83
+(1953-1954)
+Senator Republican  IN  84
+(1955-1956)
+Senator Republican  IN  85
+(1957-1958)
+JEPSEN, Roger William   1928-   Senator Republican  IA  96
+(1979-1980)
+Senator Republican  IA  97
+(1981-1982)
+Senator Republican  IA  98
+(1983-1984)
+JEWETT, Daniel Tarbox   1807-1906   Senator Republican  MO  41
+(1869-1870)
+JOHANNS, Mike   1950-   Senator Republican  NE  111
+(2009-2010)
+Senator Republican  NE  112
+(2011-2012)
+Senator Republican  NE  113
+(2013-2014)
+JOHNSON, Hiram Warren   1866-1945   Senator Republican  CA  65
+(1917-1918)
+Senator Republican  CA  66
+(1919-1920)
+Senator Republican  CA  67
+(1921-1922)
+Senator Republican  CA  68
+(1923-1924)
+Senator Republican  CA  69
+(1925-1926)
+Senator Republican  CA  70
+(1927-1928)
+Senator Republican  CA  71
+(1929-1930)
+Senator Republican  CA  72
+(1931-1932)
+Senator Republican  CA  73
+(1933-1934)
+Senator Republican  CA  74
+(1935-1936)
+Senator Republican  CA  75
+(1937-1938)
+Senator Republican  CA  76
+(1939-1940)
+Senator Republican  CA  77
+(1941-1942)
+Senator Republican  CA  78
+(1943-1944)
+Senator Republican  CA  79
+(1945-1946)
+JOHNSON, Martin Nelson  1850-1909   Senator Republican  ND  61
+(1909-1910)
+JOHNSON, Ron    1955-   Senator Republican  WI  112
+(2011-2012)
+Senator Republican  WI  113
+(2013-2014)
+Senator Republican  WI  114
+(2015-2016)
+Senator Republican  WI  115
+(2017-2018)
+JONES, John Percival    1829-1912   Senator Republican  NV  43
+(1873-1874)
+Senator Republican  NV  44
+(1875-1876)
+Senator Republican  NV  45
+(1877-1878)
+Senator Republican  NV  46
+(1879-1880)
+Senator Republican  NV  47
+(1881-1882)
+Senator Republican  NV  48
+(1883-1884)
+Senator Republican  NV  49
+(1885-1886)
+Senator Republican  NV  50
+(1887-1888)
+Senator Republican  NV  51
+(1889-1890)
+Senator Republican  NV  52
+(1891-1892)
+Senator Republican  NV  53
+(1893-1894)
+Senator Republican  NV  57
+(1901-1902)
+JONES, Wesley Livsey    1863-1932   Senator Republican  WA  61
+(1909-1910)
+Senator Republican  WA  62
+(1911-1912)
+Senator Republican  WA  63
+(1913-1914)
+Senator Republican  WA  64
+(1915-1916)
+Senator Republican  WA  65
+(1917-1918)
+Senator Republican  WA  66
+(1919-1920)
+Senator Republican  WA  67
+(1921-1922)
+Senator Republican  WA  68
+(1923-1924)
+Senator Republican  WA  69
+(1925-1926)
+Senator Republican  WA  70
+(1927-1928)
+Senator Republican  WA  71
+(1929-1930)
+Senator Republican  WA  72
+(1931-1932)
+JORDAN, Leonard Beck (Len)  1899-1983   Senator Republican  ID  87
+(1961-1962)
+Senator Republican  ID  88
+(1963-1964)
+Senator Republican  ID  89
+(1965-1966)
+Senator Republican  ID  90
+(1967-1968)
+Senator Republican  ID  91
+(1969-1970)
+Senator Republican  ID  92
+(1971-1972)
+KARNES, David Kemp  1948-   Senator Republican  NE  100
+(1987-1988)
+KASSEBAUM, Nancy Landon 1932-   Senator Republican  KS  95
+(1977-1978)
+Senator Republican  KS  96
+(1979-1980)
+Senator Republican  KS  97
+(1981-1982)
+Senator Republican  KS  98
+(1983-1984)
+Senator Republican  KS  99
+(1985-1986)
+Senator Republican  KS  100
+(1987-1988)
+Senator Republican  KS  101
+(1989-1990)
+Senator Republican  KS  102
+(1991-1992)
+Senator Republican  KS  103
+(1993-1994)
+Senator Republican  KS  104
+(1995-1996)
+KASTEN, Robert Walter, Jr.  1942-   Senator Republican  WI  97
+(1981-1982)
+Senator Republican  WI  98
+(1983-1984)
+Senator Republican  WI  99
+(1985-1986)
+Senator Republican  WI  100
+(1987-1988)
+Senator Republican  WI  101
+(1989-1990)
+Senator Republican  WI  102
+(1991-1992)
+KEAN, Hamilton Fish 1862-1941   Senator Republican  NJ  71
+(1929-1930)
+Senator Republican  NJ  72
+(1931-1932)
+Senator Republican  NJ  73
+(1933-1934)
+KEAN, John  1852-1914   Senator Republican  NJ  56
+(1899-1900)
+Senator Republican  NJ  57
+(1901-1902)
+Senator Republican  NJ  58
+(1903-1904)
+Senator Republican  NJ  59
+(1905-1906)
+Senator Republican  NJ  60
+(1907-1908)
+Senator Republican  NJ  61
+(1909-1910)
+KEARNS, Thomas  1862-1918   Senator Republican  UT  56
+(1899-1900)
+Senator Republican  UT  57
+(1901-1902)
+Senator Republican  UT  58
+(1903-1904)
+KEATING, Kenneth Barnard    1900-1975   Senator Republican  NY  86
+(1959-1960)
+Senator Republican  NY  87
+(1961-1962)
+Senator Republican  NY  88
+(1963-1964)
+KELLOGG, Frank Billings 1856-1937   Senator Republican  MN  65
+(1917-1918)
+Senator Republican  MN  66
+(1919-1920)
+Senator Republican  MN  67
+(1921-1922)
+KELLOGG, William Pitt   1830-1918   Senator Republican  LA  40
+(1867-1868)
+Senator Republican  LA  41
+(1869-1870)
+Senator Republican  LA  42
+(1871-1872)
+Senator Republican  LA  45
+(1877-1878)
+Senator Republican  LA  46
+(1879-1880)
+Senator Republican  LA  47
+(1881-1882)
+KEM, James Preston  1890-1965   Senator Republican  MO  80
+(1947-1948)
+Senator Republican  MO  81
+(1949-1950)
+Senator Republican  MO  82
+(1951-1952)
+KEMPTHORNE, Dirk    1951-   Senator Republican  ID  103
+(1993-1994)
+Senator Republican  ID  104
+(1995-1996)
+Senator Republican  ID  105
+(1997-1998)
+KENNEDY, John Neely 1951-   Senator Republican  LA  115
+(2017-2018)
+KENYON, William Squire  1869-1933   Senator Republican  IA  62
+(1911-1912)
+Senator Republican  IA  63
+(1913-1914)
+Senator Republican  IA  64
+(1915-1916)
+Senator Republican  IA  65
+(1917-1918)
+Senator Republican  IA  66
+(1919-1920)
+Senator Republican  IA  67
+(1921-1922)
+KEYES, Henry Wilder 1863-1938   Senator Republican  NH  66
+(1919-1920)
+Senator Republican  NH  67
+(1921-1922)
+Senator Republican  NH  68
+(1923-1924)
+Senator Republican  NH  69
+(1925-1926)
+Senator Republican  NH  70
+(1927-1928)
+Senator Republican  NH  71
+(1929-1930)
+Senator Republican  NH  72
+(1931-1932)
+Senator Republican  NH  73
+(1933-1934)
+Senator Republican  NH  74
+(1935-1936)
+KING, Preston   1806-1865   Senator Republican  NY  35
+(1857-1858)
+Senator Republican  NY  36
+(1859-1860)
+Senator Republican  NY  37
+(1861-1862)
+KIRK, Mark Steven   1959-   Senator Republican  IL  111
+(2009-2010)
+Senator Republican  IL  112
+(2011-2012)
+Senator Republican  IL  113
+(2013-2014)
+Senator Republican  IL  114
+(2015-2016)
+KIRKWOOD, Samuel Jordan 1813-1894   Senator Republican  IA  39
+(1865-1866)
+Senator Republican  IA  45
+(1877-1878)
+Senator Republican  IA  46
+(1879-1880)
+Senator Republican  IA  47
+(1881-1882)
+KITTREDGE, Alfred Beard 1861-1911   Senator Republican  SD  57
+(1901-1902)
+Senator Republican  SD  58
+(1903-1904)
+Senator Republican  SD  59
+(1905-1906)
+Senator Republican  SD  60
+(1907-1908)
+KNOWLAND, William Fife  1908-1974   Senator Republican  CA  79
+(1945-1946)
+Senator Republican  CA  80
+(1947-1948)
+Senator Republican  CA  81
+(1949-1950)
+Senator Republican  CA  82
+(1951-1952)
+Senator Republican  CA  83
+(1953-1954)
+Senator Republican  CA  84
+(1955-1956)
+Senator Republican  CA  85
+(1957-1958)
+KNOX, Philander Chase   1853-1921   Senator Republican  PA  58
+(1903-1904)
+Senator Republican  PA  59
+(1905-1906)
+Senator Republican  PA  60
+(1907-1908)
+Senator Republican  PA  65
+(1917-1918)
+Senator Republican  PA  66
+(1919-1920)
+KUCHEL, Thomas Henry    1910-1994   Senator Republican  CA  82
+(1951-1952)
+Senator Republican  CA  83
+(1953-1954)
+Senator Republican  CA  84
+(1955-1956)
+Senator Republican  CA  85
+(1957-1958)
+Senator Republican  CA  86
+(1959-1960)
+Senator Republican  CA  87
+(1961-1962)
+Senator Republican  CA  88
+(1963-1964)
+Senator Republican  CA  89
+(1965-1966)
+Senator Republican  CA  90
+(1967-1968)
+KYL, Jon Llewellyn  1942-   Senator Republican  AZ  104
+(1995-1996)
+Senator Republican  AZ  105
+(1997-1998)
+Senator Republican  AZ  106
+(1999-2000)
+Senator Republican  AZ  107
+(2001-2002)
+Senator Republican  AZ  108
+(2003-2004)
+Senator Republican  AZ  109
+(2005-2006)
+Senator Republican  AZ  110
+(2007-2008)
+Senator Republican  AZ  111
+(2009-2010)
+Senator Republican  AZ  112
+(2011-2012)
+LA FOLLETTE, Robert Marion  1855-1925   Senator Republican  WI  59
+(1905-1906)
+Senator Republican  WI  60
+(1907-1908)
+Senator Republican  WI  61
+(1909-1910)
+Senator Republican  WI  62
+(1911-1912)
+Senator Republican  WI  63
+(1913-1914)
+Senator Republican  WI  64
+(1915-1916)
+Senator Republican  WI  65
+(1917-1918)
+Senator Republican  WI  66
+(1919-1920)
+Senator Republican  WI  67
+(1921-1922)
+Senator Republican  WI  68
+(1923-1924)
+Senator Republican  WI  69
+(1925-1926)
+LA FOLLETTE, Robert Marion, Jr. 1895-1953   Senator Republican  WI  69
+(1925-1926)
+Senator Republican  WI  70
+(1927-1928)
+Senator Republican  WI  71
+(1929-1930)
+Senator Republican  WI  72
+(1931-1932)
+Senator Republican  WI  73
+(1933-1934)
+Senator Republican  WI  74
+(1935-1936)
+Senator Republican  WI  75
+(1937-1938)
+Senator Republican  WI  76
+(1939-1940)
+Senator Republican  WI  77
+(1941-1942)
+Senator Republican  WI  78
+(1943-1944)
+Senator Republican  WI  79
+(1945-1946)
+LADD, Edwin Fremont 1859-1925   Senator Republican  ND  67
+(1921-1922)
+Senator Republican  ND  68
+(1923-1924)
+Senator Republican  ND  69
+(1925-1926)
+LANE, Henry Smith   1811-1881   Senator Republican  IN  37
+(1861-1862)
+Senator Republican  IN  38
+(1863-1864)
+Senator Republican  IN  39
+(1865-1866)
+LANE, James Henry   1814-1866   Senator Republican  KS  37
+(1861-1862)
+Senator Republican  KS  38
+(1863-1864)
+Senator Republican  KS  39
+(1865-1866)
+LANGER, William 1886-1959   Senator Republican  ND  77
+(1941-1942)
+Senator Republican  ND  78
+(1943-1944)
+Senator Republican  ND  79
+(1945-1946)
+Senator Republican  ND  80
+(1947-1948)
+Senator Republican  ND  81
+(1949-1950)
+Senator Republican  ND  82
+(1951-1952)
+Senator Republican  ND  83
+(1953-1954)
+Senator Republican  ND  84
+(1955-1956)
+Senator Republican  ND  85
+(1957-1958)
+Senator Republican  ND  86
+(1959-1960)
+LANKFORD, James 1968-   Senator Republican  OK  114
+(2015-2016)
+Senator Republican  OK  115
+(2017-2018)
+LAPHAM, Elbridge Gerry  1814-1890   Senator Republican  NY  47
+(1881-1882)
+Senator Republican  NY  48
+(1883-1884)
+LARRAZOLO, Octaviano Ambrosio   1859-1930   Senator Republican  NM  70
+(1927-1928)
+LAXALT, Paul Dominque   1922-2018   Senator Republican  NV  93
+(1973-1974)
+Senator Republican  NV  94
+(1975-1976)
+Senator Republican  NV  95
+(1977-1978)
+Senator Republican  NV  96
+(1979-1980)
+Senator Republican  NV  97
+(1981-1982)
+Senator Republican  NV  98
+(1983-1984)
+Senator Republican  NV  99
+(1985-1986)
+LEE, Mike   1971-   Senator Republican  UT  112
+(2011-2012)
+Senator Republican  UT  113
+(2013-2014)
+Senator Republican  UT  114
+(2015-2016)
+Senator Republican  UT  115
+(2017-2018)
+LEMIEUX, George S.  1969-   Senator Republican  FL  111
+(2009-2010)
+LENROOT, Irvine Luther  1869-1949   Senator Republican  WI  65
+(1917-1918)
+Senator Republican  WI  66
+(1919-1920)
+Senator Republican  WI  67
+(1921-1922)
+Senator Republican  WI  68
+(1923-1924)
+Senator Republican  WI  69
+(1925-1926)
+LEWIS, John Francis 1818-1895   Senator Republican  VA  41
+(1869-1870)
+Senator Republican  VA  42
+(1871-1872)
+Senator Republican  VA  43
+(1873-1874)
+LIPPITT, Henry Frederick    1856-1933   Senator Republican  RI  62
+(1911-1912)
+Senator Republican  RI  63
+(1913-1914)
+Senator Republican  RI  64
+(1915-1916)
+LODGE, Henry Cabot  1850-1924   Senator Republican  MA  53
+(1893-1894)
+Senator Republican  MA  54
+(1895-1896)
+Senator Republican  MA  55
+(1897-1898)
+Senator Republican  MA  56
+(1899-1900)
+Senator Republican  MA  57
+(1901-1902)
+Senator Republican  MA  58
+(1903-1904)
+Senator Republican  MA  59
+(1905-1906)
+Senator Republican  MA  60
+(1907-1908)
+Senator Republican  MA  61
+(1909-1910)
+Senator Republican  MA  62
+(1911-1912)
+Senator Republican  MA  63
+(1913-1914)
+Senator Republican  MA  64
+(1915-1916)
+Senator Republican  MA  65
+(1917-1918)
+Senator Republican  MA  66
+(1919-1920)
+Senator Republican  MA  67
+(1921-1922)
+Senator Republican  MA  68
+(1923-1924)
+LODGE, Henry Cabot, Jr. 1902-1985   Senator Republican  MA  75
+(1937-1938)
+Senator Republican  MA  76
+(1939-1940)
+Senator Republican  MA  77
+(1941-1942)
+Senator Republican  MA  78
+(1943-1944)
+Senator Republican  MA  80
+(1947-1948)
+Senator Republican  MA  81
+(1949-1950)
+Senator Republican  MA  82
+(1951-1952)
+LOGAN, John Alexander   1826-1886   Senator Republican  IL  42
+(1871-1872)
+Senator Republican  IL  43
+(1873-1874)
+Senator Republican  IL  44
+(1875-1876)
+Senator Republican  IL  46
+(1879-1880)
+Senator Republican  IL  47
+(1881-1882)
+Senator Republican  IL  48
+(1883-1884)
+Senator Republican  IL  49
+(1885-1886)
+LONG, Chester Isaiah    1860-1934   Senator Republican  KS  58
+(1903-1904)
+Senator Republican  KS  59
+(1905-1906)
+Senator Republican  KS  60
+(1907-1908)
+LORIMER, William    1861-1934   Senator Republican  IL  61
+(1909-1910)
+Senator Republican  IL  62
+(1911-1912)
+LOTT, Chester Trent 1941-   Senator Republican  MS  101
+(1989-1990)
+Senator Republican  MS  102
+(1991-1992)
+Senator Republican  MS  103
+(1993-1994)
+Senator Republican  MS  104
+(1995-1996)
+Senator Republican  MS  105
+(1997-1998)
+Senator Republican  MS  106
+(1999-2000)
+Senator Republican  MS  107
+(2001-2002)
+Senator Republican  MS  108
+(2003-2004)
+Senator Republican  MS  109
+(2005-2006)
+Senator Republican  MS  110
+(2007-2008)
+LUGAR, Richard Green    1932-   Senator Republican  IN  95
+(1977-1978)
+Senator Republican  IN  96
+(1979-1980)
+Senator Republican  IN  97
+(1981-1982)
+Senator Republican  IN  98
+(1983-1984)
+Senator Republican  IN  99
+(1985-1986)
+Senator Republican  IN  100
+(1987-1988)
+Senator Republican  IN  101
+(1989-1990)
+Senator Republican  IN  102
+(1991-1992)
+Senator Republican  IN  103
+(1993-1994)
+Senator Republican  IN  104
+(1995-1996)
+Senator Republican  IN  105
+(1997-1998)
+Senator Republican  IN  106
+(1999-2000)
+Senator Republican  IN  107
+(2001-2002)
+Senator Republican  IN  108
+(2003-2004)
+Senator Republican  IN  109
+(2005-2006)
+Senator Republican  IN  110
+(2007-2008)
+Senator Republican  IN  111
+(2009-2010)
+Senator Republican  IN  112
+(2011-2012)
+MACK, Connie, III   1940-   Senator Republican  FL  101
+(1989-1990)
+Senator Republican  FL  102
+(1991-1992)
+Senator Republican  FL  103
+(1993-1994)
+Senator Republican  FL  104
+(1995-1996)
+Senator Republican  FL  105
+(1997-1998)
+Senator Republican  FL  106
+(1999-2000)
+MALONE, George Wilson   1890-1961   Senator Republican  NV  80
+(1947-1948)
+Senator Republican  NV  81
+(1949-1950)
+Senator Republican  NV  82
+(1951-1952)
+Senator Republican  NV  83
+(1953-1954)
+Senator Republican  NV  84
+(1955-1956)
+Senator Republican  NV  85
+(1957-1958)
+MANDERSON, Charles Frederick    1837-1911   Senator Republican  NE  48
+(1883-1884)
+Senator Republican  NE  49
+(1885-1886)
+Senator Republican  NE  50
+(1887-1888)
+Senator Republican  NE  51
+(1889-1890)
+Senator Republican  NE  52
+(1891-1892)
+Senator Republican  NE  53
+(1893-1894)
+MANTLE, Lee 1851-1934   Senator Republican  MT  53
+(1893-1894)
+Senator Republican  MT  54
+(1895-1896)
+Senator Republican  MT  55
+(1897-1898)
+MARSTON, Gilman 1811-1890   Senator Republican  NH  51
+(1889-1890)
+MARTIN, Edward  1879-1967   Senator Republican  PA  80
+(1947-1948)
+Senator Republican  PA  81
+(1949-1950)
+Senator Republican  PA  82
+(1951-1952)
+Senator Republican  PA  83
+(1953-1954)
+Senator Republican  PA  84
+(1955-1956)
+Senator Republican  PA  85
+(1957-1958)
+MARTIN, Thomas Ellsworth    1893-1971   Senator Republican  IA  84
+(1955-1956)
+Senator Republican  IA  85
+(1957-1958)
+Senator Republican  IA  86
+(1959-1960)
+MARTINEZ, Melquiades R. (Mel)   1946-   Senator Republican  FL  109
+(2005-2006)
+Senator Republican  FL  110
+(2007-2008)
+Senator Republican  FL  111
+(2009-2010)
+MASON, William Ernest   1850-1921   Senator Republican  IL  55
+(1897-1898)
+Senator Republican  IL  56
+(1899-1900)
+Senator Republican  IL  57
+(1901-1902)
+MASSEY, William Alexander   1856-1914   Senator Republican  NV  62
+(1911-1912)
+MATHIAS, Charles McCurdy, Jr.   1922-2010   Senator Republican  MD  91
+(1969-1970)
+Senator Republican  MD  92
+(1971-1972)
+Senator Republican  MD  93
+(1973-1974)
+Senator Republican  MD  94
+(1975-1976)
+Senator Republican  MD  95
+(1977-1978)
+Senator Republican  MD  96
+(1979-1980)
+Senator Republican  MD  97
+(1981-1982)
+Senator Republican  MD  98
+(1983-1984)
+Senator Republican  MD  99
+(1985-1986)
+MATTHEWS, Stanley   1824-1889   Senator Republican  OH  45
+(1877-1878)
+MATTINGLY, Mack Francis 1931-   Senator Republican  GA  97
+(1981-1982)
+Senator Republican  GA  98
+(1983-1984)
+Senator Republican  GA  99
+(1985-1986)
+McBRIDE, George Wycliffe    1854-1911   Senator Republican  OR  54
+(1895-1896)
+Senator Republican  OR  55
+(1897-1898)
+Senator Republican  OR  56
+(1899-1900)
+McCAIN, John Sidney, III    1936-   Senator Republican  AZ  100
+(1987-1988)
+Senator Republican  AZ  101
+(1989-1990)
+Senator Republican  AZ  102
+(1991-1992)
+Senator Republican  AZ  103
+(1993-1994)
+Senator Republican  AZ  104
+(1995-1996)
+Senator Republican  AZ  105
+(1997-1998)
+Senator Republican  AZ  106
+(1999-2000)
+Senator Republican  AZ  107
+(2001-2002)
+Senator Republican  AZ  108
+(2003-2004)
+Senator Republican  AZ  109
+(2005-2006)
+Senator Republican  AZ  110
+(2007-2008)
+Senator Republican  AZ  111
+(2009-2010)
+Senator Republican  AZ  112
+(2011-2012)
+Senator Republican  AZ  113
+(2013-2014)
+Senator Republican  AZ  114
+(2015-2016)
+Senator Republican  AZ  115
+(2017-2018)
+McCARTHY, Joseph Raymond    1908-1957   Senator Republican  WI  80
+(1947-1948)
+Senator Republican  WI  81
+(1949-1950)
+Senator Republican  WI  82
+(1951-1952)
+Senator Republican  WI  83
+(1953-1954)
+Senator Republican  WI  84
+(1955-1956)
+Senator Republican  WI  85
+(1957-1958)
+McCLURE, James Albertus 1924-2011   Senator Republican  ID  93
+(1973-1974)
+Senator Republican  ID  94
+(1975-1976)
+Senator Republican  ID  95
+(1977-1978)
+Senator Republican  ID  96
+(1979-1980)
+Senator Republican  ID  97
+(1981-1982)
+Senator Republican  ID  98
+(1983-1984)
+Senator Republican  ID  99
+(1985-1986)
+Senator Republican  ID  100
+(1987-1988)
+Senator Republican  ID  101
+(1989-1990)
+McCOMAS, Louis Emory    1846-1907   Senator Republican  MD  56
+(1899-1900)
+Senator Republican  MD  57
+(1901-1902)
+Senator Republican  MD  58
+(1903-1904)
+McCONNELL, Addison Mitchell (Mitch) 1942-   Senator Republican  KY  99
+(1985-1986)
+Senator Republican  KY  100
+(1987-1988)
+Senator Republican  KY  101
+(1989-1990)
+Senator Republican  KY  102
+(1991-1992)
+Senator Republican  KY  103
+(1993-1994)
+Senator Republican  KY  104
+(1995-1996)
+Senator Republican  KY  105
+(1997-1998)
+Senator Republican  KY  106
+(1999-2000)
+Senator Republican  KY  107
+(2001-2002)
+Senator Republican  KY  108
+(2003-2004)
+Senator Republican  KY  109
+(2005-2006)
+Senator Republican  KY  110
+(2007-2008)
+Senator Republican  KY  111
+(2009-2010)
+Senator Republican  KY  112
+(2011-2012)
+Senator Republican  KY  113
+(2013-2014)
+Senator Republican  KY  114
+(2015-2016)
+Senator Republican  KY  115
+(2017-2018)
+McCONNELL, William John 1839-1925   Senator Republican  ID  51
+(1889-1890)
+McCORMICK, Joseph Medill    1877-1925   Senator Republican  IL  66
+(1919-1920)
+Senator Republican  IL  67
+(1921-1922)
+Senator Republican  IL  68
+(1923-1924)
+McCULLOCH, Roscoe Conkling  1880-1958   Senator Republican  OH  71
+(1929-1930)
+McCUMBER, Porter James  1858-1933   Senator Republican  ND  56
+(1899-1900)
+Senator Republican  ND  57
+(1901-1902)
+Senator Republican  ND  58
+(1903-1904)
+Senator Republican  ND  59
+(1905-1906)
+Senator Republican  ND  60
+(1907-1908)
+Senator Republican  ND  61
+(1909-1910)
+Senator Republican  ND  62
+(1911-1912)
+Senator Republican  ND  63
+(1913-1914)
+Senator Republican  ND  64
+(1915-1916)
+Senator Republican  ND  65
+(1917-1918)
+Senator Republican  ND  66
+(1919-1920)
+Senator Republican  ND  67
+(1921-1922)
+McDILL, James Wilson    1834-1894   Senator Republican  IA  47
+(1881-1882)
+McDONALD, Alexander 1832-1903   Senator Republican  AR  40
+(1867-1868)
+Senator Republican  AR  41
+(1869-1870)
+McKINLEY, William Brown 1856-1926   Senator Republican  IL  67
+(1921-1922)
+Senator Republican  IL  68
+(1923-1924)
+Senator Republican  IL  69
+(1925-1926)
+McLEAN, George Payne    1857-1932   Senator Republican  CT  62
+(1911-1912)
+Senator Republican  CT  63
+(1913-1914)
+Senator Republican  CT  64
+(1915-1916)
+Senator Republican  CT  65
+(1917-1918)
+Senator Republican  CT  66
+(1919-1920)
+Senator Republican  CT  67
+(1921-1922)
+Senator Republican  CT  68
+(1923-1924)
+Senator Republican  CT  69
+(1925-1926)
+Senator Republican  CT  70
+(1927-1928)
+McMASTER, William Henry 1877-1968   Senator Republican  SD  69
+(1925-1926)
+Senator Republican  SD  70
+(1927-1928)
+Senator Republican  SD  71
+(1929-1930)
+McMILLAN, James 1838-1902   Senator Republican  MI  51
+(1889-1890)
+Senator Republican  MI  52
+(1891-1892)
+Senator Republican  MI  53
+(1893-1894)
+Senator Republican  MI  54
+(1895-1896)
+Senator Republican  MI  55
+(1897-1898)
+Senator Republican  MI  56
+(1899-1900)
+Senator Republican  MI  57
+(1901-1902)
+McMILLAN, Samuel James Renwick  1826-1897   Senator Republican  MN  44
+(1875-1876)
+Senator Republican  MN  45
+(1877-1878)
+Senator Republican  MN  46
+(1879-1880)
+Senator Republican  MN  47
+(1881-1882)
+Senator Republican  MN  48
+(1883-1884)
+Senator Republican  MN  49
+(1885-1886)
+McNARY, Charles Linza   1874-1944   Senator Republican  OR  65
+(1917-1918)
+Senator Republican  OR  65
+(1917-1918)
+Senator Republican  OR  66
+(1919-1920)
+Senator Republican  OR  67
+(1921-1922)
+Senator Republican  OR  68
+(1923-1924)
+Senator Republican  OR  69
+(1925-1926)
+Senator Republican  OR  70
+(1927-1928)
+Senator Republican  OR  71
+(1929-1930)
+Senator Republican  OR  72
+(1931-1932)
+Senator Republican  OR  73
+(1933-1934)
+Senator Republican  OR  74
+(1935-1936)
+Senator Republican  OR  75
+(1937-1938)
+Senator Republican  OR  76
+(1939-1940)
+Senator Republican  OR  77
+(1941-1942)
+Senator Republican  OR  78
+(1943-1944)
+MEANS, Rice William 1877-1949   Senator Republican  CO  68
+(1923-1924)
+Senator Republican  CO  69
+(1925-1926)
+MECHEM, Edwin Leard 1912-2002   Senator Republican  NM  87
+(1961-1962)
+Senator Republican  NM  88
+(1963-1964)
+METCALF, Jesse Houghton 1860-1942   Senator Republican  RI  68
+(1923-1924)
+Senator Republican  RI  69
+(1925-1926)
+Senator Republican  RI  70
+(1927-1928)
+Senator Republican  RI  71
+(1929-1930)
+Senator Republican  RI  72
+(1931-1932)
+Senator Republican  RI  73
+(1933-1934)
+Senator Republican  RI  74
+(1935-1936)
+MILLARD, Joseph Hopkins 1836-1922   Senator Republican  NE  57
+(1901-1902)
+Senator Republican  NE  58
+(1903-1904)
+Senator Republican  NE  59
+(1905-1906)
+MILLER, Jack Richard    1916-1994   Senator Republican  IA  87
+(1961-1962)
+Senator Republican  IA  88
+(1963-1964)
+Senator Republican  IA  89
+(1965-1966)
+Senator Republican  IA  90
+(1967-1968)
+Senator Republican  IA  91
+(1969-1970)
+Senator Republican  IA  92
+(1971-1972)
+MILLER, John Franklin   1831-1886   Senator Republican  CA  47
+(1881-1882)
+Senator Republican  CA  48
+(1883-1884)
+Senator Republican  CA  49
+(1885-1886)
+MILLER, Warner  1838-1918   Senator Republican  NY  47
+(1881-1882)
+Senator Republican  NY  48
+(1883-1884)
+Senator Republican  NY  49
+(1885-1886)
+MILLIKIN, Eugene Donald 1891-1958   Senator Republican  CO  77
+(1941-1942)
+Senator Republican  CO  78
+(1943-1944)
+Senator Republican  CO  79
+(1945-1946)
+Senator Republican  CO  80
+(1947-1948)
+Senator Republican  CO  81
+(1949-1950)
+Senator Republican  CO  82
+(1951-1952)
+Senator Republican  CO  83
+(1953-1954)
+Senator Republican  CO  84
+(1955-1956)
+MITCHELL, John Hipple   1835-1905   Senator Republican  OR  43
+(1873-1874)
+Senator Republican  OR  44
+(1875-1876)
+Senator Republican  OR  45
+(1877-1878)
+Senator Republican  OR  49
+(1885-1886)
+Senator Republican  OR  50
+(1887-1888)
+Senator Republican  OR  51
+(1889-1890)
+Senator Republican  OR  52
+(1891-1892)
+Senator Republican  OR  53
+(1893-1894)
+Senator Republican  OR  54
+(1895-1896)
+Senator Republican  OR  57
+(1901-1902)
+Senator Republican  OR  58
+(1903-1904)
+Senator Republican  OR  59
+(1905-1906)
+MITCHELL, John Inscho   1838-1907   Senator Republican  PA  47
+(1881-1882)
+Senator Republican  PA  48
+(1883-1884)
+Senator Republican  PA  49
+(1885-1886)
+MOODY, Gideon Curtis    1832-1904   Senator Republican  SD  51
+(1889-1890)
+MOORE, Edward Hall  1871-1950   Senator Republican  OK  78
+(1943-1944)
+Senator Republican  OK  79
+(1945-1946)
+Senator Republican  OK  80
+(1947-1948)
+MORAN, Jerry    1954-   Senator Republican  KS  112
+(2011-2012)
+Senator Republican  KS  113
+(2013-2014)
+Senator Republican  KS  114
+(2015-2016)
+Senator Republican  KS  115
+(2017-2018)
+MORGAN, Edwin Denison   1811-1883   Senator Republican  NY  38
+(1863-1864)
+Senator Republican  NY  39
+(1865-1866)
+Senator Republican  NY  40
+(1867-1868)
+MORRILL, Justin Smith   1810-1898   Senator Republican  VT  40
+(1867-1868)
+Senator Republican  VT  41
+(1869-1870)
+Senator Republican  VT  42
+(1871-1872)
+Senator Republican  VT  43
+(1873-1874)
+Senator Republican  VT  44
+(1875-1876)
+Senator Republican  VT  45
+(1877-1878)
+Senator Republican  VT  46
+(1879-1880)
+Senator Republican  VT  47
+(1881-1882)
+Senator Republican  VT  48
+(1883-1884)
+Senator Republican  VT  49
+(1885-1886)
+Senator Republican  VT  50
+(1887-1888)
+Senator Republican  VT  51
+(1889-1890)
+Senator Republican  VT  52
+(1891-1892)
+Senator Republican  VT  53
+(1893-1894)
+Senator Republican  VT  54
+(1895-1896)
+Senator Republican  VT  55
+(1897-1898)
+MORRILL, Lot Myrick 1813-1883   Senator Republican  ME  36
+(1859-1860)
+Senator Republican  ME  37
+(1861-1862)
+Senator Republican  ME  38
+(1863-1864)
+Senator Republican  ME  39
+(1865-1866)
+Senator Republican  ME  40
+(1867-1868)
+Senator Republican  ME  41
+(1869-1870)
+Senator Republican  ME  42
+(1871-1872)
+Senator Republican  ME  43
+(1873-1874)
+Senator Republican  ME  44
+(1875-1876)
+MORROW, Dwight Whitney  1873-1931   Senator Republican  NJ  71
+(1929-1930)
+Senator Republican  NJ  72
+(1931-1932)
+MORSE, Wayne Lyman  1900-1974   Senator Republican  OR  79
+(1945-1946)
+Senator Republican  OR  80
+(1947-1948)
+Senator Republican  OR  81
+(1949-1950)
+Senator Republican  OR  82
+(1951-1952)
+MORTON, Oliver Hazard Perry Throck  1823-1877   Senator Republican  IN  40
+(1867-1868)
+Senator Republican  IN  41
+(1869-1870)
+Senator Republican  IN  42
+(1871-1872)
+Senator Republican  IN  43
+(1873-1874)
+Senator Republican  IN  44
+(1875-1876)
+Senator Republican  IN  45
+(1877-1878)
+MORTON, Thruston Ballard    1907-1982   Senator Republican  KY  85
+(1957-1958)
+Senator Republican  KY  86
+(1959-1960)
+Senator Republican  KY  87
+(1961-1962)
+Senator Republican  KY  88
+(1963-1964)
+Senator Republican  KY  89
+(1965-1966)
+Senator Republican  KY  90
+(1967-1968)
+MOSES, George Higgins   1869-1944   Senator Republican  NH  65
+(1917-1918)
+Senator Republican  NH  66
+(1919-1920)
+Senator Republican  NH  67
+(1921-1922)
+Senator Republican  NH  68
+(1923-1924)
+Senator Republican  NH  69
+(1925-1926)
+Senator Republican  NH  70
+(1927-1928)
+Senator Republican  NH  71
+(1929-1930)
+Senator Republican  NH  72
+(1931-1932)
+MULKEY, Frederick William   1874-1924   Senator Republican  OR  59
+(1905-1906)
+Senator Republican  OR  65
+(1917-1918)
+MUNDT, Karl Earl    1900-1974   Senator Republican  SD  80
+(1947-1948)
+Senator Republican  SD  81
+(1949-1950)
+Senator Republican  SD  82
+(1951-1952)
+Senator Republican  SD  83
+(1953-1954)
+Senator Republican  SD  84
+(1955-1956)
+Senator Republican  SD  85
+(1957-1958)
+Senator Republican  SD  86
+(1959-1960)
+Senator Republican  SD  87
+(1961-1962)
+Senator Republican  SD  88
+(1963-1964)
+Senator Republican  SD  89
+(1965-1966)
+Senator Republican  SD  90
+(1967-1968)
+Senator Republican  SD  91
+(1969-1970)
+Senator Republican  SD  92
+(1971-1972)
+MURKOWSKI, Frank Hughes 1933-   Senator Republican  AK  97
+(1981-1982)
+Senator Republican  AK  98
+(1983-1984)
+Senator Republican  AK  99
+(1985-1986)
+Senator Republican  AK  100
+(1987-1988)
+Senator Republican  AK  101
+(1989-1990)
+Senator Republican  AK  102
+(1991-1992)
+Senator Republican  AK  103
+(1993-1994)
+Senator Republican  AK  104
+(1995-1996)
+Senator Republican  AK  105
+(1997-1998)
+Senator Republican  AK  106
+(1999-2000)
+Senator Republican  AK  107
+(2001-2002)
+MURKOWSKI, Lisa 1957-   Senator Republican  AK  107
+(2001-2002)
+Senator Republican  AK  108
+(2003-2004)
+Senator Republican  AK  109
+(2005-2006)
+Senator Republican  AK  110
+(2007-2008)
+Senator Republican  AK  111
+(2009-2010)
+Senator Republican  AK  112
+(2011-2012)
+Senator Republican  AK  113
+(2013-2014)
+Senator Republican  AK  114
+(2015-2016)
+Senator Republican  AK  115
+(2017-2018)
+MURPHY, George Lloyd    1902-1992   Senator Republican  CA  88
+(1963-1964)
+Senator Republican  CA  89
+(1965-1966)
+Senator Republican  CA  90
+(1967-1968)
+Senator Republican  CA  91
+(1969-1970)
+MURPHY, Maurice J., Jr. 1927-2002   Senator Republican  NH  87
+(1961-1962)
+NELSON, Arthur Emanuel  1892-1955   Senator Republican  MN  77
+(1941-1942)
+NELSON, Knute   1843-1923   Senator Republican  MN  54
+(1895-1896)
+Senator Republican  MN  55
+(1897-1898)
+Senator Republican  MN  56
+(1899-1900)
+Senator Republican  MN  57
+(1901-1902)
+Senator Republican  MN  58
+(1903-1904)
+Senator Republican  MN  59
+(1905-1906)
+Senator Republican  MN  60
+(1907-1908)
+Senator Republican  MN  61
+(1909-1910)
+Senator Republican  MN  62
+(1911-1912)
+Senator Republican  MN  63
+(1913-1914)
+Senator Republican  MN  64
+(1915-1916)
+Senator Republican  MN  65
+(1917-1918)
+Senator Republican  MN  66
+(1919-1920)
+Senator Republican  MN  67
+(1921-1922)
+Senator Republican  MN  68
+(1923-1924)
+NEW, Harry Stewart  1858-1937   Senator Republican  IN  65
+(1917-1918)
+Senator Republican  IN  66
+(1919-1920)
+Senator Republican  IN  67
+(1921-1922)
+NEWBERRY, Truman Handy  1864-1945   Senator Republican  MI  66
+(1919-1920)
+Senator Republican  MI  67
+(1921-1922)
+NICHOLSON, Samuel Danford   1859-1923   Senator Republican  CO  67
+(1921-1922)
+Senator Republican  CO  68
+(1923-1924)
+NICKLES, Donald Lee 1948-   Senator Republican  OK  97
+(1981-1982)
+Senator Republican  OK  98
+(1983-1984)
+Senator Republican  OK  99
+(1985-1986)
+Senator Republican  OK  100
+(1987-1988)
+Senator Republican  OK  101
+(1989-1990)
+Senator Republican  OK  102
+(1991-1992)
+Senator Republican  OK  103
+(1993-1994)
+Senator Republican  OK  104
+(1995-1996)
+Senator Republican  OK  105
+(1997-1998)
+Senator Republican  OK  106
+(1999-2000)
+Senator Republican  OK  107
+(2001-2002)
+Senator Republican  OK  108
+(2003-2004)
+NIXON, George Stuart    1860-1912   Senator Republican  NV  59
+(1905-1906)
+Senator Republican  NV  60
+(1907-1908)
+Senator Republican  NV  61
+(1909-1910)
+Senator Republican  NV  62
+(1911-1912)
+NIXON, Richard Milhous  1913-1994   Senator Republican  CA  81
+(1949-1950)
+Senator Republican  CA  82
+(1951-1952)
+NORBECK, Peter  1870-1936   Senator Republican  SD  67
+(1921-1922)
+Senator Republican  SD  68
+(1923-1924)
+Senator Republican  SD  69
+(1925-1926)
+Senator Republican  SD  70
+(1927-1928)
+Senator Republican  SD  71
+(1929-1930)
+Senator Republican  SD  72
+(1931-1932)
+Senator Republican  SD  73
+(1933-1934)
+Senator Republican  SD  74
+(1935-1936)
+NORRIS, George William  1861-1944   Senator Republican  NE  63
+(1913-1914)
+Senator Republican  NE  64
+(1915-1916)
+Senator Republican  NE  65
+(1917-1918)
+Senator Republican  NE  66
+(1919-1920)
+Senator Republican  NE  67
+(1921-1922)
+Senator Republican  NE  68
+(1923-1924)
+Senator Republican  NE  69
+(1925-1926)
+Senator Republican  NE  70
+(1927-1928)
+Senator Republican  NE  71
+(1929-1930)
+Senator Republican  NE  72
+(1931-1932)
+Senator Republican  NE  73
+(1933-1934)
+Senator Republican  NE  74
+(1935-1936)
+NORTON, Daniel Sheldon  1829-1870   Senator Republican  MN  40
+(1867-1868)
+Senator Republican  MN  41
+(1869-1870)
+NOURSE, Amos    1794-1877   Senator Republican  ME  34
+(1855-1856)
+NYE, Gerald Prentice    1892-1971   Senator Republican  ND  69
+(1925-1926)
+Senator Republican  ND  70
+(1927-1928)
+Senator Republican  ND  71
+(1929-1930)
+Senator Republican  ND  72
+(1931-1932)
+Senator Republican  ND  73
+(1933-1934)
+Senator Republican  ND  74
+(1935-1936)
+Senator Republican  ND  75
+(1937-1938)
+Senator Republican  ND  76
+(1939-1940)
+Senator Republican  ND  77
+(1941-1942)
+Senator Republican  ND  78
+(1943-1944)
+NYE, James Warren   1815-1876   Senator Republican  NV  38
+(1863-1864)
+Senator Republican  NV  39
+(1865-1866)
+Senator Republican  NV  40
+(1867-1868)
+Senator Republican  NV  41
+(1869-1870)
+Senator Republican  NV  42
+(1871-1872)
+ODDIE, Tasker Lowndes   1870-1950   Senator Republican  NV  67
+(1921-1922)
+Senator Republican  NV  68
+(1923-1924)
+Senator Republican  NV  69
+(1925-1926)
+Senator Republican  NV  70
+(1927-1928)
+Senator Republican  NV  71
+(1929-1930)
+Senator Republican  NV  72
+(1931-1932)
+OGLESBY, Richard James  1824-1899   Senator Republican  IL  43
+(1873-1874)
+Senator Republican  IL  44
+(1875-1876)
+Senator Republican  IL  45
+(1877-1878)
+OLIVER, George Tener    1848-1919   Senator Republican  PA  61
+(1909-1910)
+Senator Republican  PA  62
+(1911-1912)
+Senator Republican  PA  63
+(1913-1914)
+Senator Republican  PA  64
+(1915-1916)
+OSBORN, Thomas Ward 1833-1898   Senator Republican  FL  40
+(1867-1868)
+Senator Republican  FL  41
+(1869-1870)
+Senator Republican  FL  42
+(1871-1872)
+PACKWOOD, Robert William    1932-   Senator Republican  OR  91
+(1969-1970)
+Senator Republican  OR  92
+(1971-1972)
+Senator Republican  OR  93
+(1973-1974)
+Senator Republican  OR  94
+(1975-1976)
+Senator Republican  OR  95
+(1977-1978)
+Senator Republican  OR  96
+(1979-1980)
+Senator Republican  OR  97
+(1981-1982)
+Senator Republican  OR  98
+(1983-1984)
+Senator Republican  OR  99
+(1985-1986)
+Senator Republican  OR  100
+(1987-1988)
+Senator Republican  OR  101
+(1989-1990)
+Senator Republican  OR  102
+(1991-1992)
+Senator Republican  OR  103
+(1993-1994)
+Senator Republican  OR  104
+(1995-1996)
+PADDOCK, Algernon Sidney    1830-1897   Senator Republican  NE  44
+(1875-1876)
+Senator Republican  NE  45
+(1877-1878)
+Senator Republican  NE  46
+(1879-1880)
+Senator Republican  NE  50
+(1887-1888)
+Senator Republican  NE  51
+(1889-1890)
+Senator Republican  NE  52
+(1891-1892)
+PAGE, Carroll Smalley   1843-1925   Senator Republican  VT  60
+(1907-1908)
+Senator Republican  VT  61
+(1909-1910)
+Senator Republican  VT  62
+(1911-1912)
+Senator Republican  VT  63
+(1913-1914)
+Senator Republican  VT  64
+(1915-1916)
+Senator Republican  VT  65
+(1917-1918)
+Senator Republican  VT  66
+(1919-1920)
+Senator Republican  VT  67
+(1921-1922)
+PALMER, Thomas Witherell    1830-1913   Senator Republican  MI  48
+(1883-1884)
+Senator Republican  MI  49
+(1885-1886)
+Senator Republican  MI  50
+(1887-1888)
+PARTRIDGE, Frank Charles    1861-1943   Senator Republican  VT  71
+(1929-1930)
+Senator Republican  VT  72
+(1931-1932)
+PATTERSON, James Willis 1823-1893   Senator Republican  NH  40
+(1867-1868)
+Senator Republican  NH  41
+(1869-1870)
+Senator Republican  NH  42
+(1871-1872)
+PATTERSON, John James   1830-1912   Senator Republican  SC  43
+(1873-1874)
+Senator Republican  SC  44
+(1875-1876)
+Senator Republican  SC  45
+(1877-1878)
+PATTERSON, Roscoe Conkling  1876-1954   Senator Republican  MO  71
+(1929-1930)
+Senator Republican  MO  72
+(1931-1932)
+Senator Republican  MO  73
+(1933-1934)
+PATTON, John, Jr.   1850-1907   Senator Republican  MI  53
+(1893-1894)
+PAUL, Rand  1963-   Senator Republican  KY  112
+(2011-2012)
+Senator Republican  KY  113
+(2013-2014)
+Senator Republican  KY  114
+(2015-2016)
+Senator Republican  KY  115
+(2017-2018)
+PAYNE, Frederick George 1904-1978   Senator Republican  ME  83
+(1953-1954)
+Senator Republican  ME  84
+(1955-1956)
+Senator Republican  ME  85
+(1957-1958)
+PEARSON, James Blackwood    1920-2009   Senator Republican  KS  87
+(1961-1962)
+Senator Republican  KS  88
+(1963-1964)
+Senator Republican  KS  89
+(1965-1966)
+Senator Republican  KS  90
+(1967-1968)
+Senator Republican  KS  91
+(1969-1970)
+Senator Republican  KS  92
+(1971-1972)
+Senator Republican  KS  93
+(1973-1974)
+Senator Republican  KS  94
+(1975-1976)
+Senator Republican  KS  95
+(1977-1978)
+PEASE, Henry Roberts    1835-1907   Senator Republican  MS  43
+(1873-1874)
+PENROSE, Boies  1860-1921   Senator Republican  PA  55
+(1897-1898)
+Senator Republican  PA  56
+(1899-1900)
+Senator Republican  PA  57
+(1901-1902)
+Senator Republican  PA  58
+(1903-1904)
+Senator Republican  PA  59
+(1905-1906)
+Senator Republican  PA  60
+(1907-1908)
+Senator Republican  PA  61
+(1909-1910)
+Senator Republican  PA  62
+(1911-1912)
+Senator Republican  PA  63
+(1913-1914)
+Senator Republican  PA  64
+(1915-1916)
+Senator Republican  PA  65
+(1917-1918)
+Senator Republican  PA  66
+(1919-1920)
+Senator Republican  PA  67
+(1921-1922)
+PEPPER, George Wharton  1867-1961   Senator Republican  PA  67
+(1921-1922)
+Senator Republican  PA  68
+(1923-1924)
+Senator Republican  PA  69
+(1925-1926)
+PERCY, Charles Harting  1919-2011   Senator Republican  IL  90
+(1967-1968)
+Senator Republican  IL  91
+(1969-1970)
+Senator Republican  IL  92
+(1971-1972)
+Senator Republican  IL  93
+(1973-1974)
+Senator Republican  IL  94
+(1975-1976)
+Senator Republican  IL  95
+(1977-1978)
+Senator Republican  IL  96
+(1979-1980)
+Senator Republican  IL  97
+(1981-1982)
+Senator Republican  IL  98
+(1983-1984)
+PERDUE, David Alfred, Jr.   1949-   Senator Republican  GA  114
+(2015-2016)
+Senator Republican  GA  115
+(2017-2018)
+PERKINS, Bishop Walden  1841-1894   Senator Republican  KS  52
+(1891-1892)
+PERKINS, George Clement 1839-1923   Senator Republican  CA  53
+(1893-1894)
+Senator Republican  CA  54
+(1895-1896)
+Senator Republican  CA  55
+(1897-1898)
+Senator Republican  CA  56
+(1899-1900)
+Senator Republican  CA  57
+(1901-1902)
+Senator Republican  CA  58
+(1903-1904)
+Senator Republican  CA  59
+(1905-1906)
+Senator Republican  CA  60
+(1907-1908)
+Senator Republican  CA  61
+(1909-1910)
+Senator Republican  CA  62
+(1911-1912)
+Senator Republican  CA  63
+(1913-1914)
+PETTIGREW, Richard Franklin 1848-1926   Senator Republican  SD  51
+(1889-1890)
+Senator Republican  SD  52
+(1891-1892)
+Senator Republican  SD  53
+(1893-1894)
+Senator Republican  SD  54
+(1895-1896)
+Senator Republican  SD  55
+(1897-1898)
+Senator Republican  SD  56
+(1899-1900)
+PHIPPS, Lawrence Cowle  1862-1958   Senator Republican  CO  66
+(1919-1920)
+Senator Republican  CO  67
+(1921-1922)
+Senator Republican  CO  68
+(1923-1924)
+Senator Republican  CO  69
+(1925-1926)
+Senator Republican  CO  70
+(1927-1928)
+Senator Republican  CO  71
+(1929-1930)
+PIERCE, Gilbert Ashville    1839-1901   Senator Republican  ND  51
+(1889-1890)
+PIKE, Austin Franklin   1819-1886   Senator Republican  NH  48
+(1883-1884)
+Senator Republican  NH  49
+(1885-1886)
+PILES, Samuel Henry 1858-1940   Senator Republican  WA  59
+(1905-1906)
+Senator Republican  WA  60
+(1907-1908)
+Senator Republican  WA  61
+(1909-1910)
+PINE, William Bliss 1877-1942   Senator Republican  OK  69
+(1925-1926)
+Senator Republican  OK  70
+(1927-1928)
+Senator Republican  OK  71
+(1929-1930)
+PLATT, Orville Hitchcock    1827-1905   Senator Republican  CT  46
+(1879-1880)
+Senator Republican  CT  47
+(1881-1882)
+Senator Republican  CT  48
+(1883-1884)
+Senator Republican  CT  49
+(1885-1886)
+Senator Republican  CT  50
+(1887-1888)
+Senator Republican  CT  51
+(1889-1890)
+Senator Republican  CT  52
+(1891-1892)
+Senator Republican  CT  53
+(1893-1894)
+Senator Republican  CT  54
+(1895-1896)
+Senator Republican  CT  55
+(1897-1898)
+Senator Republican  CT  56
+(1899-1900)
+Senator Republican  CT  57
+(1901-1902)
+Senator Republican  CT  58
+(1903-1904)
+PLATT, Thomas Collier   1833-1910   Senator Republican  NY  47
+(1881-1882)
+Senator Republican  NY  55
+(1897-1898)
+Senator Republican  NY  56
+(1899-1900)
+Senator Republican  NY  57
+(1901-1902)
+Senator Republican  NY  58
+(1903-1904)
+Senator Republican  NY  59
+(1905-1906)
+Senator Republican  NY  60
+(1907-1908)
+PLUMB, Preston B.   1837-1891   Senator Republican  KS  45
+(1877-1878)
+Senator Republican  KS  46
+(1879-1880)
+Senator Republican  KS  47
+(1881-1882)
+Senator Republican  KS  48
+(1883-1884)
+Senator Republican  KS  49
+(1885-1886)
+Senator Republican  KS  50
+(1887-1888)
+Senator Republican  KS  51
+(1889-1890)
+Senator Republican  KS  52
+(1891-1892)
+POINDEXTER, Miles   1868-1946   Senator Republican  WA  62
+(1911-1912)
+Senator Republican  WA  64
+(1915-1916)
+Senator Republican  WA  65
+(1917-1918)
+Senator Republican  WA  66
+(1919-1920)
+Senator Republican  WA  67
+(1921-1922)
+POLAND, Luke Potter 1815-1887   Senator Republican  VT  39
+(1865-1866)
+POMEROY, Samuel Clarke  1816-1891   Senator Republican  KS  37
+(1861-1862)
+Senator Republican  KS  38
+(1863-1864)
+Senator Republican  KS  39
+(1865-1866)
+Senator Republican  KS  40
+(1867-1868)
+Senator Republican  KS  41
+(1869-1870)
+Senator Republican  KS  42
+(1871-1872)
+POOL, John  1826-1884   Senator Republican  NC  40
+(1867-1868)
+Senator Republican  NC  41
+(1869-1870)
+Senator Republican  NC  42
+(1871-1872)
+PORTMAN, Robert Jones (Rob) 1955-   Senator Republican  OH  112
+(2011-2012)
+Senator Republican  OH  113
+(2013-2014)
+Senator Republican  OH  114
+(2015-2016)
+Senator Republican  OH  115
+(2017-2018)
+POTTER, Charles Edward  1916-1979   Senator Republican  MI  82
+(1951-1952)
+Senator Republican  MI  83
+(1953-1954)
+Senator Republican  MI  84
+(1955-1956)
+Senator Republican  MI  85
+(1957-1958)
+POWER, Thomas Charles   1839-1923   Senator Republican  MT  51
+(1889-1890)
+Senator Republican  MT  52
+(1891-1892)
+Senator Republican  MT  53
+(1893-1894)
+PRATT, Daniel Darwin    1813-1877   Senator Republican  IN  41
+(1869-1870)
+Senator Republican  IN  42
+(1871-1872)
+Senator Republican  IN  43
+(1873-1874)
+PRESSLER, Larry Lee 1942-   Senator Republican  SD  96
+(1979-1980)
+Senator Republican  SD  97
+(1981-1982)
+Senator Republican  SD  98
+(1983-1984)
+Senator Republican  SD  99
+(1985-1986)
+Senator Republican  SD  100
+(1987-1988)
+Senator Republican  SD  101
+(1989-1990)
+Senator Republican  SD  102
+(1991-1992)
+Senator Republican  SD  103
+(1993-1994)
+Senator Republican  SD  104
+(1995-1996)
+PRITCHARD, Jeter Connelly   1857-1921   Senator Republican  NC  53
+(1893-1894)
+Senator Republican  NC  54
+(1895-1896)
+Senator Republican  NC  55
+(1897-1898)
+Senator Republican  NC  56
+(1899-1900)
+Senator Republican  NC  57
+(1901-1902)
+PROCTOR, Redfield   1831-1908   Senator Republican  VT  52
+(1891-1892)
+Senator Republican  VT  53
+(1893-1894)
+Senator Republican  VT  54
+(1895-1896)
+Senator Republican  VT  55
+(1897-1898)
+Senator Republican  VT  56
+(1899-1900)
+Senator Republican  VT  57
+(1901-1902)
+Senator Republican  VT  58
+(1903-1904)
+Senator Republican  VT  59
+(1905-1906)
+Senator Republican  VT  60
+(1907-1908)
+PROUTY, Winston Lewis   1906-1971   Senator Republican  VT  86
+(1959-1960)
+Senator Republican  VT  87
+(1961-1962)
+Senator Republican  VT  88
+(1963-1964)
+Senator Republican  VT  89
+(1965-1966)
+Senator Republican  VT  90
+(1967-1968)
+Senator Republican  VT  91
+(1969-1970)
+Senator Republican  VT  92
+(1971-1972)
+PURTELL, William Arthur 1897-1978   Senator Republican  CT  82
+(1951-1952)
+Senator Republican  CT  83
+(1953-1954)
+Senator Republican  CT  84
+(1955-1956)
+Senator Republican  CT  85
+(1957-1958)
+PYLE, Gladys    1890-1989   Senator Republican  SD  75
+(1937-1938)
+QUARLES, Joseph Very    1843-1911   Senator Republican  WI  56
+(1899-1900)
+Senator Republican  WI  57
+(1901-1902)
+Senator Republican  WI  58
+(1903-1904)
+QUAY, Matthew Stanley   1833-1904   Senator Republican  PA  50
+(1887-1888)
+Senator Republican  PA  51
+(1889-1890)
+Senator Republican  PA  52
+(1891-1892)
+Senator Republican  PA  53
+(1893-1894)
+Senator Republican  PA  54
+(1895-1896)
+Senator Republican  PA  55
+(1897-1898)
+Senator Republican  PA  57
+(1901-1902)
+Senator Republican  PA  58
+(1903-1904)
+QUAYLE, James Danforth (Dan)    1947-   Senator Republican  IN  97
+(1981-1982)
+Senator Republican  IN  98
+(1983-1984)
+Senator Republican  IN  99
+(1985-1986)
+Senator Republican  IN  100
+(1987-1988)
+RAMSEY, Alexander   1815-1903   Senator Republican  MN  38
+(1863-1864)
+Senator Republican  MN  39
+(1865-1866)
+Senator Republican  MN  40
+(1867-1868)
+Senator Republican  MN  41
+(1869-1870)
+Senator Republican  MN  42
+(1871-1872)
+Senator Republican  MN  43
+(1873-1874)
+RAWSON, Charles Augustus    1867-1936   Senator Republican  IA  67
+(1921-1922)
+REED, Clyde Martin  1871-1949   Senator Republican  KS  76
+(1939-1940)
+Senator Republican  KS  77
+(1941-1942)
+Senator Republican  KS  78
+(1943-1944)
+Senator Republican  KS  79
+(1945-1946)
+Senator Republican  KS  80
+(1947-1948)
+Senator Republican  KS  81
+(1949-1950)
+REED, David Aiken   1880-1953   Senator Republican  PA  67
+(1921-1922)
+Senator Republican  PA  68
+(1923-1924)
+Senator Republican  PA  69
+(1925-1926)
+Senator Republican  PA  70
+(1927-1928)
+Senator Republican  PA  71
+(1929-1930)
+Senator Republican  PA  72
+(1931-1932)
+Senator Republican  PA  73
+(1933-1934)
+REVELS, Hiram Rhodes    1827-1901   Senator Republican  MS  41
+(1869-1870)
+REVERCOMB, William Chapman  1895-1979   Senator Republican  WV  78
+(1943-1944)
+Senator Republican  WV  79
+(1945-1946)
+Senator Republican  WV  80
+(1947-1948)
+Senator Republican  WV  84
+(1955-1956)
+Senator Republican  WV  85
+(1957-1958)
+REYNOLDS, Samuel Williams   1890-1988   Senator Republican  NE  83
+(1953-1954)
+RICE, Benjamin Franklin 1828-1905   Senator Republican  AR  40
+(1867-1868)
+Senator Republican  AR  41
+(1869-1870)
+Senator Republican  AR  42
+(1871-1872)
+RICHARDSON, Harry Alden 1853-1928   Senator Republican  DE  60
+(1907-1908)
+Senator Republican  DE  61
+(1909-1910)
+Senator Republican  DE  62
+(1911-1912)
+RIDDLEBERGER, Harrison Holt 1844-1890   Senator Republican  VA  49
+(1885-1886)
+Senator Republican  VA  50
+(1887-1888)
+RISCH, James    1943-   Senator Republican  ID  111
+(2009-2010)
+Senator Republican  ID  112
+(2011-2012)
+Senator Republican  ID  113
+(2013-2014)
+Senator Republican  ID  114
+(2015-2016)
+Senator Republican  ID  115
+(2017-2018)
+ROBERTS, Charles Patrick (Pat)  1936-   Senator Republican  KS  105
+(1997-1998)
+Senator Republican  KS  106
+(1999-2000)
+Senator Republican  KS  107
+(2001-2002)
+Senator Republican  KS  108
+(2003-2004)
+Senator Republican  KS  109
+(2005-2006)
+Senator Republican  KS  110
+(2007-2008)
+Senator Republican  KS  111
+(2009-2010)
+Senator Republican  KS  112
+(2011-2012)
+Senator Republican  KS  113
+(2013-2014)
+Senator Republican  KS  114
+(2015-2016)
+Senator Republican  KS  115
+(2017-2018)
+ROBERTSON, Edward Vivian    1881-1963   Senator Republican  WY  78
+(1943-1944)
+Senator Republican  WY  79
+(1945-1946)
+Senator Republican  WY  80
+(1947-1948)
+ROBERTSON, Thomas James 1823-1897   Senator Republican  SC  40
+(1867-1868)
+Senator Republican  SC  41
+(1869-1870)
+Senator Republican  SC  42
+(1871-1872)
+Senator Republican  SC  43
+(1873-1874)
+Senator Republican  SC  44
+(1875-1876)
+ROBINSON, Arthur Raymond    1881-1961   Senator Republican  IN  69
+(1925-1926)
+Senator Republican  IN  70
+(1927-1928)
+Senator Republican  IN  71
+(1929-1930)
+Senator Republican  IN  72
+(1931-1932)
+Senator Republican  IN  73
+(1933-1934)
+ROBSION, John Marshall  1873-1948   Senator Republican  KY  71
+(1929-1930)
+ROLLINS, Edward Henry   1824-1889   Senator Republican  NH  45
+(1877-1878)
+Senator Republican  NH  46
+(1879-1880)
+Senator Republican  NH  47
+(1881-1882)
+ROOT, Elihu 1845-1937   Senator Republican  NY  61
+(1909-1910)
+Senator Republican  NY  62
+(1911-1912)
+Senator Republican  NY  63
+(1913-1914)
+ROSS, Edmund Gibson 1826-1907   Senator Republican  KS  39
+(1865-1866)
+Senator Republican  KS  40
+(1867-1868)
+Senator Republican  KS  41
+(1869-1870)
+ROSS, Jonathan  1826-1905   Senator Republican  VT  55
+(1897-1898)
+Senator Republican  VT  56
+(1899-1900)
+ROTH, William Victor, Jr.   1921-2003   Senator Republican  DE  91
+(1969-1970)
+Senator Republican  DE  92
+(1971-1972)
+Senator Republican  DE  93
+(1973-1974)
+Senator Republican  DE  94
+(1975-1976)
+Senator Republican  DE  95
+(1977-1978)
+Senator Republican  DE  96
+(1979-1980)
+Senator Republican  DE  97
+(1981-1982)
+Senator Republican  DE  98
+(1983-1984)
+Senator Republican  DE  99
+(1985-1986)
+Senator Republican  DE  100
+(1987-1988)
+Senator Republican  DE  101
+(1989-1990)
+Senator Republican  DE  102
+(1991-1992)
+Senator Republican  DE  103
+(1993-1994)
+Senator Republican  DE  104
+(1995-1996)
+Senator Republican  DE  105
+(1997-1998)
+Senator Republican  DE  106
+(1999-2000)
+ROUNDS, Marion Michael (Mike)   1954-   Senator Republican  SD  114
+(2015-2016)
+Senator Republican  SD  115
+(2017-2018)
+RUBIO, Marco    1971-   Senator Republican  FL  112
+(2011-2012)
+Senator Republican  FL  113
+(2013-2014)
+Senator Republican  FL  114
+(2015-2016)
+Senator Republican  FL  115
+(2017-2018)
+RUDMAN, Warren Bruce    1930-2012   Senator Republican  NH  96
+(1979-1980)
+Senator Republican  NH  97
+(1981-1982)
+Senator Republican  NH  98
+(1983-1984)
+Senator Republican  NH  99
+(1985-1986)
+Senator Republican  NH  100
+(1987-1988)
+Senator Republican  NH  101
+(1989-1990)
+Senator Republican  NH  102
+(1991-1992)
+SABIN, Dwight May   1843-1902   Senator Republican  MN  48
+(1883-1884)
+Senator Republican  MN  49
+(1885-1886)
+Senator Republican  MN  50
+(1887-1888)
+SACKETT, Frederic Mosley    1868-1941   Senator Republican  KY  69
+(1925-1926)
+Senator Republican  KY  70
+(1927-1928)
+Senator Republican  KY  71
+(1929-1930)
+SALTONSTALL, Leverett   1892-1979   Senator Republican  MA  79
+(1945-1946)
+Senator Republican  MA  80
+(1947-1948)
+Senator Republican  MA  81
+(1949-1950)
+Senator Republican  MA  82
+(1951-1952)
+Senator Republican  MA  83
+(1953-1954)
+Senator Republican  MA  84
+(1955-1956)
+Senator Republican  MA  85
+(1957-1958)
+Senator Republican  MA  86
+(1959-1960)
+Senator Republican  MA  87
+(1961-1962)
+Senator Republican  MA  88
+(1963-1964)
+Senator Republican  MA  89
+(1965-1966)
+SANDERS, Newell 1850-1939   Senator Republican  TN  62
+(1911-1912)
+SANDERS, Wilbur Fiske   1834-1905   Senator Republican  MT  51
+(1889-1890)
+Senator Republican  MT  52
+(1891-1892)
+SANTORUM, Richard John (Rick)   1958-   Senator Republican  PA  104
+(1995-1996)
+Senator Republican  PA  105
+(1997-1998)
+Senator Republican  PA  106
+(1999-2000)
+Senator Republican  PA  107
+(2001-2002)
+Senator Republican  PA  108
+(2003-2004)
+Senator Republican  PA  109
+(2005-2006)
+SARGENT, Aaron Augustus 1827-1887   Senator Republican  CA  43
+(1873-1874)
+Senator Republican  CA  44
+(1875-1876)
+Senator Republican  CA  45
+(1877-1878)
+SASSE, Benjamin Eric    1972-   Senator Republican  NE  115
+(2017-2018)
+SAUNDERS, Alvin 1817-1899   Senator Republican  NE  45
+(1877-1878)
+Senator Republican  NE  46
+(1879-1880)
+Senator Republican  NE  47
+(1881-1882)
+SAWYER, Frederick Adolphus  1822-1891   Senator Republican  SC  40
+(1867-1868)
+Senator Republican  SC  41
+(1869-1870)
+Senator Republican  SC  42
+(1871-1872)
+SAWYER, Philetus    1816-1900   Senator Republican  WI  47
+(1881-1882)
+Senator Republican  WI  48
+(1883-1884)
+Senator Republican  WI  49
+(1885-1886)
+Senator Republican  WI  50
+(1887-1888)
+Senator Republican  WI  51
+(1889-1890)
+Senator Republican  WI  52
+(1891-1892)
+SAXBE, William Bart 1916-2010   Senator Republican  OH  91
+(1969-1970)
+Senator Republican  OH  92
+(1971-1972)
+Senator Republican  OH  93
+(1973-1974)
+SCHALL, Thomas David    1878-1935   Senator Republican  MN  69
+(1925-1926)
+Senator Republican  MN  70
+(1927-1928)
+Senator Republican  MN  71
+(1929-1930)
+Senator Republican  MN  72
+(1931-1932)
+Senator Republican  MN  73
+(1933-1934)
+Senator Republican  MN  74
+(1935-1936)
+SCHMITT, Harrison Hagan 1935-   Senator Republican  NM  95
+(1977-1978)
+Senator Republican  NM  96
+(1979-1980)
+Senator Republican  NM  97
+(1981-1982)
+SCHOEPPEL, Andrew Frank 1894-1962   Senator Republican  KS  81
+(1949-1950)
+Senator Republican  KS  82
+(1951-1952)
+Senator Republican  KS  83
+(1953-1954)
+Senator Republican  KS  84
+(1955-1956)
+Senator Republican  KS  85
+(1957-1958)
+Senator Republican  KS  86
+(1959-1960)
+Senator Republican  KS  87
+(1961-1962)
+SCHURZ, Carl    1829-1906   Senator Republican  MO  41
+(1869-1870)
+Senator Republican  MO  42
+(1871-1872)
+Senator Republican  MO  43
+(1873-1874)
+SCHUYLER, Karl Cortlandt    1877-1933   Senator Republican  CO  72
+(1931-1932)
+SCHWEIKER, Richard Schultz  1926-2015   Senator Republican  PA  91
+(1969-1970)
+Senator Republican  PA  92
+(1971-1972)
+Senator Republican  PA  93
+(1973-1974)
+Senator Republican  PA  94
+(1975-1976)
+Senator Republican  PA  95
+(1977-1978)
+Senator Republican  PA  96
+(1979-1980)
+SCOTT, Hugh Doggett, Jr.    1900-1994   Senator Republican  PA  86
+(1959-1960)
+Senator Republican  PA  87
+(1961-1962)
+Senator Republican  PA  88
+(1963-1964)
+Senator Republican  PA  89
+(1965-1966)
+Senator Republican  PA  90
+(1967-1968)
+Senator Republican  PA  91
+(1969-1970)
+Senator Republican  PA  92
+(1971-1972)
+Senator Republican  PA  93
+(1973-1974)
+Senator Republican  PA  94
+(1975-1976)
+SCOTT, John 1824-1896   Senator Republican  PA  41
+(1869-1870)
+Senator Republican  PA  42
+(1871-1872)
+Senator Republican  PA  43
+(1873-1874)
+SCOTT, Nathan Bay   1842-1924   Senator Republican  WV  56
+(1899-1900)
+Senator Republican  WV  57
+(1901-1902)
+Senator Republican  WV  58
+(1903-1904)
+Senator Republican  WV  59
+(1905-1906)
+Senator Republican  WV  60
+(1907-1908)
+Senator Republican  WV  61
+(1909-1910)
+SCOTT, Tim  1965-   Senator Republican  SC  113
+(2013-2014)
+Senator Republican  SC  114
+(2015-2016)
+Senator Republican  SC  115
+(2017-2018)
+SCOTT, William Lloyd    1915-1997   Senator Republican  VA  93
+(1973-1974)
+Senator Republican  VA  94
+(1975-1976)
+Senator Republican  VA  95
+(1977-1978)
+SEATON, Frederick Andrew    1909-1974   Senator Republican  NE  82
+(1951-1952)
+SESSIONS, Jefferson Beauregard, III (Jeff)  1946-   Senator Republican  AL  105
+(1997-1998)
+Senator Republican  AL  106
+(1999-2000)
+Senator Republican  AL  107
+(2001-2002)
+Senator Republican  AL  108
+(2003-2004)
+Senator Republican  AL  109
+(2005-2006)
+Senator Republican  AL  110
+(2007-2008)
+Senator Republican  AL  111
+(2009-2010)
+Senator Republican  AL  112
+(2011-2012)
+Senator Republican  AL  113
+(2013-2014)
+Senator Republican  AL  114
+(2015-2016)
+Senator Republican  AL  115
+(2017-2018)
+SEWARD, William Henry   1801-1872   Senator Republican  NY  35
+(1857-1858)
+Senator Republican  NY  36
+(1859-1860)
+SEWELL, William Joyce   1835-1901   Senator Republican  NJ  47
+(1881-1882)
+Senator Republican  NJ  48
+(1883-1884)
+Senator Republican  NJ  49
+(1885-1886)
+Senator Republican  NJ  54
+(1895-1896)
+Senator Republican  NJ  55
+(1897-1898)
+Senator Republican  NJ  56
+(1899-1900)
+SEYMOUR, John   1937-   Senator Republican  CA  102
+(1991-1992)
+SHARON, William 1821-1885   Senator Republican  NV  44
+(1875-1876)
+Senator Republican  NV  45
+(1877-1878)
+Senator Republican  NV  46
+(1879-1880)
+SHEFFIELD, William Paine    1820-1907   Senator Republican  RI  48
+(1883-1884)
+SHELBY, Richard C.  1934-   Senator Republican  AL  103
+(1993-1994)
+Senator Republican  AL  104
+(1995-1996)
+Senator Republican  AL  105
+(1997-1998)
+Senator Republican  AL  106
+(1999-2000)
+Senator Republican  AL  107
+(2001-2002)
+Senator Republican  AL  108
+(2003-2004)
+Senator Republican  AL  109
+(2005-2006)
+Senator Republican  AL  110
+(2007-2008)
+Senator Republican  AL  111
+(2009-2010)
+Senator Republican  AL  112
+(2011-2012)
+Senator Republican  AL  113
+(2013-2014)
+Senator Republican  AL  114
+(2015-2016)
+Senator Republican  AL  115
+(2017-2018)
+SHERMAN, John   1823-1900   Senator Republican  OH  37
+(1861-1862)
+Senator Republican  OH  38
+(1863-1864)
+Senator Republican  OH  39
+(1865-1866)
+Senator Republican  OH  40
+(1867-1868)
+Senator Republican  OH  41
+(1869-1870)
+Senator Republican  OH  42
+(1871-1872)
+Senator Republican  OH  43
+(1873-1874)
+Senator Republican  OH  44
+(1875-1876)
+Senator Republican  OH  45
+(1877-1878)
+Senator Republican  OH  47
+(1881-1882)
+Senator Republican  OH  48
+(1883-1884)
+Senator Republican  OH  49
+(1885-1886)
+Senator Republican  OH  50
+(1887-1888)
+Senator Republican  OH  51
+(1889-1890)
+Senator Republican  OH  52
+(1891-1892)
+Senator Republican  OH  53
+(1893-1894)
+Senator Republican  OH  54
+(1895-1896)
+Senator Republican  OH  55
+(1897-1898)
+SHERMAN, Lawrence Yates 1858-1939   Senator Republican  IL  63
+(1913-1914)
+Senator Republican  IL  64
+(1915-1916)
+Senator Republican  IL  65
+(1917-1918)
+Senator Republican  IL  66
+(1919-1920)
+SHIPSTEAD, Henrik   1881-1960   Senator Republican  MN  77
+(1941-1942)
+Senator Republican  MN  78
+(1943-1944)
+Senator Republican  MN  79
+(1945-1946)
+SHORTRIDGE, Samuel Morgan   1861-1952   Senator Republican  CA  67
+(1921-1922)
+Senator Republican  CA  68
+(1923-1924)
+Senator Republican  CA  69
+(1925-1926)
+Senator Republican  CA  70
+(1927-1928)
+Senator Republican  CA  71
+(1929-1930)
+Senator Republican  CA  72
+(1931-1932)
+SHOTT, Hugh Ike 1866-1953   Senator Republican  WV  77
+(1941-1942)
+SHOUP, George Laird 1836-1904   Senator Republican  ID  51
+(1889-1890)
+Senator Republican  ID  52
+(1891-1892)
+Senator Republican  ID  53
+(1893-1894)
+Senator Republican  ID  54
+(1895-1896)
+Senator Republican  ID  55
+(1897-1898)
+Senator Republican  ID  56
+(1899-1900)
+SIMON, Joseph   1851-1935   Senator Republican  OR  55
+(1897-1898)
+Senator Republican  OR  56
+(1899-1900)
+Senator Republican  OR  57
+(1901-1902)
+SIMPSON, Alan Kooi  1931-   Senator Republican  WY  95
+(1977-1978)
+Senator Republican  WY  96
+(1979-1980)
+Senator Republican  WY  97
+(1981-1982)
+Senator Republican  WY  98
+(1983-1984)
+Senator Republican  WY  99
+(1985-1986)
+Senator Republican  WY  100
+(1987-1988)
+Senator Republican  WY  101
+(1989-1990)
+Senator Republican  WY  102
+(1991-1992)
+Senator Republican  WY  103
+(1993-1994)
+Senator Republican  WY  104
+(1995-1996)
+SIMPSON, Milward Lee    1897-1993   Senator Republican  WY  87
+(1961-1962)
+Senator Republican  WY  88
+(1963-1964)
+Senator Republican  WY  89
+(1965-1966)
+SMITH, Frank Leslie 1867-1950   Senator Republican  IL  69
+(1925-1926)
+Senator Republican  IL  70
+(1927-1928)
+SMITH, Gordon Harold    1952-   Senator Republican  OR  105
+(1997-1998)
+Senator Republican  OR  106
+(1999-2000)
+Senator Republican  OR  107
+(2001-2002)
+Senator Republican  OR  108
+(2003-2004)
+Senator Republican  OR  109
+(2005-2006)
+Senator Republican  OR  110
+(2007-2008)
+SMITH, Howard Alexander 1880-1966   Senator Republican  NJ  78
+(1943-1944)
+Senator Republican  NJ  79
+(1945-1946)
+Senator Republican  NJ  80
+(1947-1948)
+Senator Republican  NJ  81
+(1949-1950)
+Senator Republican  NJ  82
+(1951-1952)
+Senator Republican  NJ  83
+(1953-1954)
+Senator Republican  NJ  84
+(1955-1956)
+Senator Republican  NJ  85
+(1957-1958)
+SMITH, Margaret Chase   1897-1995   Senator Republican  ME  81
+(1949-1950)
+Senator Republican  ME  82
+(1951-1952)
+Senator Republican  ME  83
+(1953-1954)
+Senator Republican  ME  84
+(1955-1956)
+Senator Republican  ME  85
+(1957-1958)
+Senator Republican  ME  86
+(1959-1960)
+Senator Republican  ME  87
+(1961-1962)
+Senator Republican  ME  88
+(1963-1964)
+Senator Republican  ME  89
+(1965-1966)
+Senator Republican  ME  90
+(1967-1968)
+Senator Republican  ME  91
+(1969-1970)
+Senator Republican  ME  92
+(1971-1972)
+SMITH, Ralph Tyler  1915-1972   Senator Republican  IL  91
+(1969-1970)
+SMITH, Robert C.    1941-   Senator Republican  NH  101
+(1989-1990)
+Senator Republican  NH  102
+(1991-1992)
+Senator Republican  NH  103
+(1993-1994)
+Senator Republican  NH  104
+(1995-1996)
+Senator Republican  NH  105
+(1997-1998)
+Senator Republican  NH  106
+(1999-2000)
+Senator Republican  NH  107
+(2001-2002)
+SMITH, William Alden    1859-1932   Senator Republican  MI  59
+(1905-1906)
+Senator Republican  MI  60
+(1907-1908)
+Senator Republican  MI  61
+(1909-1910)
+Senator Republican  MI  62
+(1911-1912)
+Senator Republican  MI  63
+(1913-1914)
+Senator Republican  MI  64
+(1915-1916)
+Senator Republican  MI  65
+(1917-1918)
+SMOOT, Reed 1862-1941   Senator Republican  UT  58
+(1903-1904)
+Senator Republican  UT  59
+(1905-1906)
+Senator Republican  UT  60
+(1907-1908)
+Senator Republican  UT  61
+(1909-1910)
+Senator Republican  UT  62
+(1911-1912)
+Senator Republican  UT  63
+(1913-1914)
+Senator Republican  UT  64
+(1915-1916)
+Senator Republican  UT  65
+(1917-1918)
+Senator Republican  UT  66
+(1919-1920)
+Senator Republican  UT  67
+(1921-1922)
+Senator Republican  UT  68
+(1923-1924)
+Senator Republican  UT  69
+(1925-1926)
+Senator Republican  UT  70
+(1927-1928)
+Senator Republican  UT  71
+(1929-1930)
+Senator Republican  UT  72
+(1931-1932)
+SNOWE, Olympia Jean 1947-   Senator Republican  ME  104
+(1995-1996)
+Senator Republican  ME  105
+(1997-1998)
+Senator Republican  ME  106
+(1999-2000)
+Senator Republican  ME  107
+(2001-2002)
+Senator Republican  ME  108
+(2003-2004)
+Senator Republican  ME  109
+(2005-2006)
+Senator Republican  ME  110
+(2007-2008)
+Senator Republican  ME  111
+(2009-2010)
+Senator Republican  ME  112
+(2011-2012)
+SPECTER, Arlen  1930-2012   Senator Republican  PA  97
+(1981-1982)
+Senator Republican  PA  98
+(1983-1984)
+Senator Republican  PA  99
+(1985-1986)
+Senator Republican  PA  100
+(1987-1988)
+Senator Republican  PA  101
+(1989-1990)
+Senator Republican  PA  102
+(1991-1992)
+Senator Republican  PA  103
+(1993-1994)
+Senator Republican  PA  104
+(1995-1996)
+Senator Republican  PA  105
+(1997-1998)
+Senator Republican  PA  106
+(1999-2000)
+Senator Republican  PA  107
+(2001-2002)
+Senator Republican  PA  108
+(2003-2004)
+Senator Republican  PA  109
+(2005-2006)
+Senator Republican  PA  110
+(2007-2008)
+SPENCER, George Eliphaz 1836-1893   Senator Republican  AL  40
+(1867-1868)
+Senator Republican  AL  41
+(1869-1870)
+Senator Republican  AL  42
+(1871-1872)
+Senator Republican  AL  43
+(1873-1874)
+Senator Republican  AL  44
+(1875-1876)
+Senator Republican  AL  45
+(1877-1878)
+SPENCER, Selden Palmer  1862-1925   Senator Republican  MO  65
+(1917-1918)
+Senator Republican  MO  66
+(1919-1920)
+Senator Republican  MO  67
+(1921-1922)
+Senator Republican  MO  68
+(1923-1924)
+Senator Republican  MO  69
+(1925-1926)
+SPOONER, John Coit  1843-1919   Senator Republican  WI  49
+(1885-1886)
+Senator Republican  WI  50
+(1887-1888)
+Senator Republican  WI  51
+(1889-1890)
+Senator Republican  WI  55
+(1897-1898)
+Senator Republican  WI  56
+(1899-1900)
+Senator Republican  WI  57
+(1901-1902)
+Senator Republican  WI  58
+(1903-1904)
+Senator Republican  WI  59
+(1905-1906)
+Senator Republican  WI  60
+(1907-1908)
+SPRAGUE, William    1830-1915   Senator Republican  RI  38
+(1863-1864)
+Senator Republican  RI  39
+(1865-1866)
+Senator Republican  RI  40
+(1867-1868)
+Senator Republican  RI  41
+(1869-1870)
+Senator Republican  RI  42
+(1871-1872)
+Senator Republican  RI  43
+(1873-1874)
+SQUIRE, Watson Carvosso 1838-1926   Senator Republican  WA  51
+(1889-1890)
+Senator Republican  WA  52
+(1891-1892)
+Senator Republican  WA  53
+(1893-1894)
+Senator Republican  WA  54
+(1895-1896)
+STAFFORD, Robert Theodore   1913-2006   Senator Republican  VT  92
+(1971-1972)
+Senator Republican  VT  93
+(1973-1974)
+Senator Republican  VT  94
+(1975-1976)
+Senator Republican  VT  95
+(1977-1978)
+Senator Republican  VT  96
+(1979-1980)
+Senator Republican  VT  97
+(1981-1982)
+Senator Republican  VT  98
+(1983-1984)
+Senator Republican  VT  99
+(1985-1986)
+Senator Republican  VT  100
+(1987-1988)
+STANFIELD, Robert Nelson    1877-1945   Senator Republican  OR  67
+(1921-1922)
+Senator Republican  OR  68
+(1923-1924)
+Senator Republican  OR  69
+(1925-1926)
+STANFILL, William Abner 1892-1971   Senator Republican  KY  79
+(1945-1946)
+STANFORD, Leland    1824-1893   Senator Republican  CA  49
+(1885-1886)
+Senator Republican  CA  50
+(1887-1888)
+Senator Republican  CA  51
+(1889-1890)
+Senator Republican  CA  52
+(1891-1892)
+Senator Republican  CA  53
+(1893-1894)
+STEARNS, Ozora Pierson  1831-1896   Senator Republican  MN  41
+(1869-1870)
+STEIWER, Frederick  1883-1939   Senator Republican  OR  70
+(1927-1928)
+Senator Republican  OR  71
+(1929-1930)
+Senator Republican  OR  72
+(1931-1932)
+Senator Republican  OR  73
+(1933-1934)
+Senator Republican  OR  74
+(1935-1936)
+Senator Republican  OR  75
+(1937-1938)
+STEPHENSON, Isaac   1829-1918   Senator Republican  WI  60
+(1907-1908)
+Senator Republican  WI  61
+(1909-1910)
+Senator Republican  WI  62
+(1911-1912)
+Senator Republican  WI  63
+(1913-1914)
+STERLING, Thomas    1851-1930   Senator Republican  SD  63
+(1913-1914)
+Senator Republican  SD  64
+(1915-1916)
+Senator Republican  SD  65
+(1917-1918)
+Senator Republican  SD  66
+(1919-1920)
+Senator Republican  SD  67
+(1921-1922)
+Senator Republican  SD  68
+(1923-1924)
+STEVENS, Theodore Fulton (Ted)  1923-2010   Senator Republican  AK  90
+(1967-1968)
+Senator Republican  AK  91
+(1969-1970)
+Senator Republican  AK  92
+(1971-1972)
+Senator Republican  AK  93
+(1973-1974)
+Senator Republican  AK  94
+(1975-1976)
+Senator Republican  AK  95
+(1977-1978)
+Senator Republican  AK  96
+(1979-1980)
+Senator Republican  AK  97
+(1981-1982)
+Senator Republican  AK  98
+(1983-1984)
+Senator Republican  AK  99
+(1985-1986)
+Senator Republican  AK  100
+(1987-1988)
+Senator Republican  AK  101
+(1989-1990)
+Senator Republican  AK  102
+(1991-1992)
+Senator Republican  AK  103
+(1993-1994)
+Senator Republican  AK  104
+(1995-1996)
+Senator Republican  AK  105
+(1997-1998)
+Senator Republican  AK  106
+(1999-2000)
+Senator Republican  AK  107
+(2001-2002)
+Senator Republican  AK  108
+(2003-2004)
+Senator Republican  AK  109
+(2005-2006)
+Senator Republican  AK  110
+(2007-2008)
+STEWART, David Wallace  1887-1974   Senator Republican  IA  69
+(1925-1926)
+STEWART, John Wolcott   1825-1915   Senator Republican  VT  60
+(1907-1908)
+STEWART, William Morris 1827-1909   Senator Republican  NV  38
+(1863-1864)
+Senator Republican  NV  39
+(1865-1866)
+Senator Republican  NV  40
+(1867-1868)
+Senator Republican  NV  41
+(1869-1870)
+Senator Republican  NV  42
+(1871-1872)
+Senator Republican  NV  43
+(1873-1874)
+Senator Republican  NV  50
+(1887-1888)
+Senator Republican  NV  51
+(1889-1890)
+Senator Republican  NV  52
+(1891-1892)
+Senator Republican  NV  57
+(1901-1902)
+Senator Republican  NV  58
+(1903-1904)
+STOCKBRIDGE, Francis Brown  1826-1894   Senator Republican  MI  50
+(1887-1888)
+Senator Republican  MI  51
+(1889-1890)
+Senator Republican  MI  52
+(1891-1892)
+Senator Republican  MI  53
+(1893-1894)
+STRANGE, Luther Johnson, III    1953-   Senator Republican  AL  115
+(2017-2018)
+SULLIVAN, Daniel Scott  1964-   Senator Republican  AK  114
+(2015-2016)
+Senator Republican  AK  115
+(2017-2018)
+SULLIVAN, Patrick Joseph    1865-1935   Senator Republican  WY  71
+(1929-1930)
+SUMNER, Charles 1811-1874   Senator Republican  MA  35
+(1857-1858)
+Senator Republican  MA  36
+(1859-1860)
+Senator Republican  MA  37
+(1861-1862)
+Senator Republican  MA  38
+(1863-1864)
+Senator Republican  MA  39
+(1865-1866)
+Senator Republican  MA  40
+(1867-1868)
+Senator Republican  MA  41
+(1869-1870)
+Senator Republican  MA  42
+(1871-1872)
+SUNUNU, John E. 1964-   Senator Republican  NH  108
+(2003-2004)
+Senator Republican  NH  109
+(2005-2006)
+Senator Republican  NH  110
+(2007-2008)
+SUTHERLAND, George  1862-1942   Senator Republican  UT  59
+(1905-1906)
+Senator Republican  UT  60
+(1907-1908)
+Senator Republican  UT  61
+(1909-1910)
+Senator Republican  UT  62
+(1911-1912)
+Senator Republican  UT  63
+(1913-1914)
+Senator Republican  UT  64
+(1915-1916)
+SUTHERLAND, Howard  1865-1950   Senator Republican  WV  65
+(1917-1918)
+Senator Republican  WV  66
+(1919-1920)
+Senator Republican  WV  67
+(1921-1922)
+SYMMS, Steven Douglas   1938-   Senator Republican  ID  97
+(1981-1982)
+Senator Republican  ID  98
+(1983-1984)
+Senator Republican  ID  99
+(1985-1986)
+Senator Republican  ID  100
+(1987-1988)
+Senator Republican  ID  101
+(1989-1990)
+Senator Republican  ID  102
+(1991-1992)
+TABOR, Horace Austin Warner 1830-1899   Senator Republican  CO  47
+(1881-1882)
+TAFT, Kingsley Arter    1903-1970   Senator Republican  OH  79
+(1945-1946)
+TAFT, Robert Alphonso   1889-1953   Senator Republican  OH  76
+(1939-1940)
+Senator Republican  OH  77
+(1941-1942)
+Senator Republican  OH  78
+(1943-1944)
+Senator Republican  OH  79
+(1945-1946)
+Senator Republican  OH  80
+(1947-1948)
+Senator Republican  OH  81
+(1949-1950)
+Senator Republican  OH  82
+(1951-1952)
+Senator Republican  OH  83
+(1953-1954)
+TAFT, Robert, Jr.   1917-1993   Senator Republican  OH  92
+(1971-1972)
+Senator Republican  OH  93
+(1973-1974)
+Senator Republican  OH  94
+(1975-1976)
+TALENT, James Matthes   1956-   Senator Republican  MO  107
+(2001-2002)
+Senator Republican  MO  108
+(2003-2004)
+Senator Republican  MO  109
+(2005-2006)
+TELLER, Henry Moore 1830-1914   Senator Republican  CO  44
+(1875-1876)
+Senator Republican  CO  45
+(1877-1878)
+Senator Republican  CO  46
+(1879-1880)
+Senator Republican  CO  47
+(1881-1882)
+Senator Republican  CO  49
+(1885-1886)
+Senator Republican  CO  50
+(1887-1888)
+Senator Republican  CO  51
+(1889-1890)
+Senator Republican  CO  52
+(1891-1892)
+Senator Republican  CO  53
+(1893-1894)
+Senator Republican  CO  54
+(1895-1896)
+TEN EYCK, John Conover  1814-1879   Senator Republican  NJ  36
+(1859-1860)
+Senator Republican  NJ  37
+(1861-1862)
+Senator Republican  NJ  38
+(1863-1864)
+THAYER, John Milton 1820-1906   Senator Republican  NE  39
+(1865-1866)
+Senator Republican  NE  40
+(1867-1868)
+Senator Republican  NE  41
+(1869-1870)
+THOMAS, Craig Lyle  1933-2007   Senator Republican  WY  104
+(1995-1996)
+Senator Republican  WY  105
+(1997-1998)
+Senator Republican  WY  106
+(1999-2000)
+Senator Republican  WY  107
+(2001-2002)
+Senator Republican  WY  108
+(2003-2004)
+Senator Republican  WY  109
+(2005-2006)
+Senator Republican  WY  110
+(2007-2008)
+THOMAS, John    1874-1945   Senator Republican  ID  70
+(1927-1928)
+Senator Republican  ID  71
+(1929-1930)
+Senator Republican  ID  72
+(1931-1932)
+Senator Republican  ID  76
+(1939-1940)
+Senator Republican  ID  77
+(1941-1942)
+Senator Republican  ID  78
+(1943-1944)
+Senator Republican  ID  79
+(1945-1946)
+THOMPSON, Fred Dalton   1942-2015   Senator Republican  TN  103
+(1993-1994)
+Senator Republican  TN  104
+(1995-1996)
+Senator Republican  TN  105
+(1997-1998)
+Senator Republican  TN  106
+(1999-2000)
+Senator Republican  TN  107
+(2001-2002)
+THUNE, John 1961-   Senator Republican  SD  109
+(2005-2006)
+Senator Republican  SD  110
+(2007-2008)
+Senator Republican  SD  111
+(2009-2010)
+Senator Republican  SD  112
+(2011-2012)
+Senator Republican  SD  113
+(2013-2014)
+Senator Republican  SD  114
+(2015-2016)
+Senator Republican  SD  115
+(2017-2018)
+THURMOND, James Strom   1902-2003   Senator Republican  SC  88
+(1963-1964)
+Senator Republican  SC  89
+(1965-1966)
+Senator Republican  SC  90
+(1967-1968)
+Senator Republican  SC  91
+(1969-1970)
+Senator Republican  SC  92
+(1971-1972)
+Senator Republican  SC  93
+(1973-1974)
+Senator Republican  SC  94
+(1975-1976)
+Senator Republican  SC  95
+(1977-1978)
+Senator Republican  SC  96
+(1979-1980)
+Senator Republican  SC  97
+(1981-1982)
+Senator Republican  SC  98
+(1983-1984)
+Senator Republican  SC  99
+(1985-1986)
+Senator Republican  SC  100
+(1987-1988)
+Senator Republican  SC  101
+(1989-1990)
+Senator Republican  SC  102
+(1991-1992)
+Senator Republican  SC  103
+(1993-1994)
+Senator Republican  SC  104
+(1995-1996)
+Senator Republican  SC  105
+(1997-1998)
+Senator Republican  SC  106
+(1999-2000)
+Senator Republican  SC  107
+(2001-2002)
+THURSTON, John Mellen   1847-1916   Senator Republican  NE  54
+(1895-1896)
+Senator Republican  NE  55
+(1897-1898)
+Senator Republican  NE  56
+(1899-1900)
+THYE, Edward John   1896-1969   Senator Republican  MN  80
+(1947-1948)
+Senator Republican  MN  81
+(1949-1950)
+Senator Republican  MN  82
+(1951-1952)
+Senator Republican  MN  83
+(1953-1954)
+Senator Republican  MN  84
+(1955-1956)
+Senator Republican  MN  85
+(1957-1958)
+TILLIS, Thomas Roland (Thom)    1960-   Senator Republican  NC  114
+(2015-2016)
+Senator Republican  NC  115
+(2017-2018)
+TIPTON, Thomas Weston   1817-1899   Senator Republican  NE  40
+(1867-1868)
+Senator Republican  NE  41
+(1869-1870)
+Senator Republican  NE  42
+(1871-1872)
+Senator Republican  NE  43
+(1873-1874)
+TOBEY, Charles William  1880-1953   Senator Republican  NH  76
+(1939-1940)
+Senator Republican  NH  77
+(1941-1942)
+Senator Republican  NH  78
+(1943-1944)
+Senator Republican  NH  79
+(1945-1946)
+Senator Republican  NH  80
+(1947-1948)
+Senator Republican  NH  81
+(1949-1950)
+Senator Republican  NH  82
+(1951-1952)
+Senator Republican  NH  83
+(1953-1954)
+TOOMEY, Patrick Joseph  1961-   Senator Republican  PA  112
+(2011-2012)
+Senator Republican  PA  113
+(2013-2014)
+Senator Republican  PA  114
+(2015-2016)
+Senator Republican  PA  115
+(2017-2018)
+TOWER, John Goodwin 1925-1991   Senator Republican  TX  87
+(1961-1962)
+Senator Republican  TX  88
+(1963-1964)
+Senator Republican  TX  89
+(1965-1966)
+Senator Republican  TX  90
+(1967-1968)
+Senator Republican  TX  91
+(1969-1970)
+Senator Republican  TX  92
+(1971-1972)
+Senator Republican  TX  93
+(1973-1974)
+Senator Republican  TX  94
+(1975-1976)
+Senator Republican  TX  95
+(1977-1978)
+Senator Republican  TX  96
+(1979-1980)
+Senator Republican  TX  97
+(1981-1982)
+Senator Republican  TX  98
+(1983-1984)
+TOWNSEND, Charles Elroy 1856-1924   Senator Republican  MI  62
+(1911-1912)
+Senator Republican  MI  63
+(1913-1914)
+Senator Republican  MI  64
+(1915-1916)
+Senator Republican  MI  65
+(1917-1918)
+Senator Republican  MI  66
+(1919-1920)
+Senator Republican  MI  67
+(1921-1922)
+TOWNSEND, John Gillis, Jr.  1871-1964   Senator Republican  DE  71
+(1929-1930)
+Senator Republican  DE  72
+(1931-1932)
+Senator Republican  DE  73
+(1933-1934)
+Senator Republican  DE  74
+(1935-1936)
+Senator Republican  DE  75
+(1937-1938)
+Senator Republican  DE  76
+(1939-1940)
+TRIBLE, Paul Seward, Jr.    1946-   Senator Republican  VA  98
+(1983-1984)
+Senator Republican  VA  99
+(1985-1986)
+Senator Republican  VA  100
+(1987-1988)
+TRUMBULL, Lyman 1813-1896   Senator Republican  IL  40
+(1867-1868)
+Senator Republican  IL  41
+(1869-1870)
+UPTON, Robert William   1884-1972   Senator Republican  NH  83
+(1953-1954)
+VAN WINKLE, Peter Godwin    1808-1872   Senator Republican  WV  39
+(1865-1866)
+Senator Republican  WV  40
+(1867-1868)
+VAN WYCK, Charles Henry 1824-1895   Senator Republican  NE  47
+(1881-1882)
+Senator Republican  NE  48
+(1883-1884)
+Senator Republican  NE  49
+(1885-1886)
+VANDENBERG, Arthur Hendrick 1884-1951   Senator Republican  MI  70
+(1927-1928)
+Senator Republican  MI  71
+(1929-1930)
+Senator Republican  MI  72
+(1931-1932)
+Senator Republican  MI  73
+(1933-1934)
+Senator Republican  MI  74
+(1935-1936)
+Senator Republican  MI  75
+(1937-1938)
+Senator Republican  MI  76
+(1939-1940)
+Senator Republican  MI  77
+(1941-1942)
+Senator Republican  MI  78
+(1943-1944)
+Senator Republican  MI  79
+(1945-1946)
+Senator Republican  MI  80
+(1947-1948)
+Senator Republican  MI  81
+(1949-1950)
+Senator Republican  MI  82
+(1951-1952)
+VITTER, David   1961-   Senator Republican  LA  109
+(2005-2006)
+Senator Republican  LA  110
+(2007-2008)
+Senator Republican  LA  111
+(2009-2010)
+Senator Republican  LA  112
+(2011-2012)
+Senator Republican  LA  113
+(2013-2014)
+Senator Republican  LA  114
+(2015-2016)
+VOINOVICH, George Victor    1936-2016   Senator Republican  OH  106
+(1999-2000)
+Senator Republican  OH  107
+(2001-2002)
+Senator Republican  OH  108
+(2003-2004)
+Senator Republican  OH  109
+(2005-2006)
+Senator Republican  OH  110
+(2007-2008)
+Senator Republican  OH  111
+(2009-2010)
+WADE, Benjamin Franklin 1800-1878   Senator Republican  OH  35
+(1857-1858)
+Senator Republican  OH  36
+(1859-1860)
+Senator Republican  OH  37
+(1861-1862)
+Senator Republican  OH  38
+(1863-1864)
+Senator Republican  OH  39
+(1865-1866)
+Senator Republican  OH  40
+(1867-1868)
+WADLEIGH, Bainbridge    1831-1891   Senator Republican  NH  43
+(1873-1874)
+Senator Republican  NH  44
+(1875-1876)
+Senator Republican  NH  45
+(1877-1878)
+WADSWORTH, James Wolcott, Jr.   1877-1952   Senator Republican  NY  64
+(1915-1916)
+Senator Republican  NY  65
+(1917-1918)
+Senator Republican  NY  66
+(1919-1920)
+Senator Republican  NY  67
+(1921-1922)
+Senator Republican  NY  68
+(1923-1924)
+Senator Republican  NY  69
+(1925-1926)
+WALCOTT, Frederic Collin    1869-1949   Senator Republican  CT  71
+(1929-1930)
+Senator Republican  CT  72
+(1931-1932)
+Senator Republican  CT  73
+(1933-1934)
+WALLOP, Malcolm 1933-2011   Senator Republican  WY  95
+(1977-1978)
+Senator Republican  WY  96
+(1979-1980)
+Senator Republican  WY  97
+(1981-1982)
+Senator Republican  WY  98
+(1983-1984)
+Senator Republican  WY  99
+(1985-1986)
+Senator Republican  WY  100
+(1987-1988)
+Senator Republican  WY  101
+(1989-1990)
+Senator Republican  WY  102
+(1991-1992)
+Senator Republican  WY  103
+(1993-1994)
+WARNER, John William    1927-   Senator Republican  VA  95
+(1977-1978)
+Senator Republican  VA  96
+(1979-1980)
+Senator Republican  VA  97
+(1981-1982)
+Senator Republican  VA  98
+(1983-1984)
+Senator Republican  VA  99
+(1985-1986)
+Senator Republican  VA  100
+(1987-1988)
+Senator Republican  VA  101
+(1989-1990)
+Senator Republican  VA  102
+(1991-1992)
+Senator Republican  VA  103
+(1993-1994)
+Senator Republican  VA  104
+(1995-1996)
+Senator Republican  VA  105
+(1997-1998)
+Senator Republican  VA  106
+(1999-2000)
+Senator Republican  VA  107
+(2001-2002)
+Senator Republican  VA  108
+(2003-2004)
+Senator Republican  VA  109
+(2005-2006)
+Senator Republican  VA  110
+(2007-2008)
+WARNER, Willard 1826-1906   Senator Republican  AL  40
+(1867-1868)
+Senator Republican  AL  41
+(1869-1870)
+WARNER, William 1840-1916   Senator Republican  MO  59
+(1905-1906)
+Senator Republican  MO  60
+(1907-1908)
+Senator Republican  MO  61
+(1909-1910)
+WARREN, Francis Emroy   1844-1929   Senator Republican  WY  51
+(1889-1890)
+Senator Republican  WY  52
+(1891-1892)
+Senator Republican  WY  54
+(1895-1896)
+Senator Republican  WY  55
+(1897-1898)
+Senator Republican  WY  56
+(1899-1900)
+Senator Republican  WY  57
+(1901-1902)
+Senator Republican  WY  58
+(1903-1904)
+Senator Republican  WY  59
+(1905-1906)
+Senator Republican  WY  60
+(1907-1908)
+Senator Republican  WY  61
+(1909-1910)
+Senator Republican  WY  62
+(1911-1912)
+Senator Republican  WY  63
+(1913-1914)
+Senator Republican  WY  64
+(1915-1916)
+Senator Republican  WY  65
+(1917-1918)
+Senator Republican  WY  66
+(1919-1920)
+Senator Republican  WY  67
+(1921-1922)
+Senator Republican  WY  68
+(1923-1924)
+Senator Republican  WY  69
+(1925-1926)
+Senator Republican  WY  70
+(1927-1928)
+Senator Republican  WY  71
+(1929-1930)
+WASHBURN, William Barrett   1820-1887   Senator Republican  MA  43
+(1873-1874)
+WASHBURN, William Drew  1831-1912   Senator Republican  MN  51
+(1889-1890)
+Senator Republican  MN  52
+(1891-1892)
+Senator Republican  MN  53
+(1893-1894)
+WATERMAN, Charles Winfield  1861-1932   Senator Republican  CO  70
+(1927-1928)
+Senator Republican  CO  71
+(1929-1930)
+Senator Republican  CO  72
+(1931-1932)
+WATKINS, Arthur Vivian  1886-1973   Senator Republican  UT  80
+(1947-1948)
+Senator Republican  UT  81
+(1949-1950)
+Senator Republican  UT  82
+(1951-1952)
+Senator Republican  UT  83
+(1953-1954)
+Senator Republican  UT  84
+(1955-1956)
+Senator Republican  UT  85
+(1957-1958)
+WATSON, James Eli   1864-1948   Senator Republican  IN  64
+(1915-1916)
+Senator Republican  IN  65
+(1917-1918)
+Senator Republican  IN  66
+(1919-1920)
+Senator Republican  IN  67
+(1921-1922)
+Senator Republican  IN  68
+(1923-1924)
+Senator Republican  IN  69
+(1925-1926)
+Senator Republican  IN  70
+(1927-1928)
+Senator Republican  IN  71
+(1929-1930)
+Senator Republican  IN  72
+(1931-1932)
+WEEKS, John Wingate 1860-1926   Senator Republican  MA  63
+(1913-1914)
+Senator Republican  MA  64
+(1915-1916)
+Senator Republican  MA  65
+(1917-1918)
+WEEKS, Sinclair 1893-1972   Senator Republican  MA  78
+(1943-1944)
+WEICKER, Lowell Palmer, Jr. 1931-   Senator Republican  CT  92
+(1971-1972)
+Senator Republican  CT  93
+(1973-1974)
+Senator Republican  CT  94
+(1975-1976)
+Senator Republican  CT  95
+(1977-1978)
+Senator Republican  CT  96
+(1979-1980)
+Senator Republican  CT  97
+(1981-1982)
+Senator Republican  CT  98
+(1983-1984)
+Senator Republican  CT  99
+(1985-1986)
+Senator Republican  CT  100
+(1987-1988)
+WELCH, Adonijah Strong  1821-1889   Senator Republican  FL  40
+(1867-1868)
+WELKER, Herman  1906-1957   Senator Republican  ID  82
+(1951-1952)
+Senator Republican  ID  83
+(1953-1954)
+Senator Republican  ID  84
+(1955-1956)
+WELLER, Ovington Eugene 1862-1947   Senator Republican  MD  67
+(1921-1922)
+Senator Republican  MD  68
+(1923-1924)
+Senator Republican  MD  69
+(1925-1926)
+WELLINGTON, George Louis    1852-1927   Senator Republican  MD  55
+(1897-1898)
+Senator Republican  MD  56
+(1899-1900)
+Senator Republican  MD  57
+(1901-1902)
+WEST, Joseph Rodman 1822-1898   Senator Republican  LA  42
+(1871-1872)
+Senator Republican  LA  43
+(1873-1874)
+Senator Republican  LA  44
+(1875-1876)
+WETMORE, George Peabody 1846-1921   Senator Republican  RI  54
+(1895-1896)
+Senator Republican  RI  55
+(1897-1898)
+Senator Republican  RI  56
+(1899-1900)
+Senator Republican  RI  57
+(1901-1902)
+Senator Republican  RI  58
+(1903-1904)
+Senator Republican  RI  59
+(1905-1906)
+Senator Republican  RI  60
+(1907-1908)
+Senator Republican  RI  61
+(1909-1910)
+Senator Republican  RI  62
+(1911-1912)
+WHERRY, Kenneth Spicer  1892-1951   Senator Republican  NE  78
+(1943-1944)
+Senator Republican  NE  79
+(1945-1946)
+Senator Republican  NE  80
+(1947-1948)
+Senator Republican  NE  81
+(1949-1950)
+Senator Republican  NE  82
+(1951-1952)
+WHITE, Wallace Humphrey, Jr.    1877-1952   Senator Republican  ME  72
+(1931-1932)
+Senator Republican  ME  73
+(1933-1934)
+Senator Republican  ME  74
+(1935-1936)
+Senator Republican  ME  75
+(1937-1938)
+Senator Republican  ME  76
+(1939-1940)
+Senator Republican  ME  77
+(1941-1942)
+Senator Republican  ME  78
+(1943-1944)
+Senator Republican  ME  79
+(1945-1946)
+Senator Republican  ME  80
+(1947-1948)
+WICKER, Roger F.    1951-   Senator Republican  MS  110
+(2007-2008)
+Senator Republican  MS  111
+(2009-2010)
+Senator Republican  MS  112
+(2011-2012)
+Senator Republican  MS  113
+(2013-2014)
+Senator Republican  MS  114
+(2015-2016)
+Senator Republican  MS  115
+(2017-2018)
+WILEY, Alexander    1884-1967   Senator Republican  WI  76
+(1939-1940)
+Senator Republican  WI  77
+(1941-1942)
+Senator Republican  WI  78
+(1943-1944)
+Senator Republican  WI  79
+(1945-1946)
+Senator Republican  WI  80
+(1947-1948)
+Senator Republican  WI  81
+(1949-1950)
+Senator Republican  WI  82
+(1951-1952)
+Senator Republican  WI  83
+(1953-1954)
+Senator Republican  WI  84
+(1955-1956)
+Senator Republican  WI  85
+(1957-1958)
+Senator Republican  WI  86
+(1959-1960)
+Senator Republican  WI  87
+(1961-1962)
+WILKINSON, Morton Smith 1819-1894   Senator Republican  MN  36
+(1859-1860)
+Senator Republican  MN  37
+(1861-1862)
+Senator Republican  MN  38
+(1863-1864)
+WILLEY, Waitman Thomas  1811-1900   Senator Republican  WV  39
+(1865-1866)
+Senator Republican  WV  40
+(1867-1868)
+Senator Republican  WV  41
+(1869-1870)
+WILLIAMS, Abram Pease   1832-1911   Senator Republican  CA  49
+(1885-1886)
+WILLIAMS, George Henry  1823-1910   Senator Republican  OR  39
+(1865-1866)
+Senator Republican  OR  40
+(1867-1868)
+Senator Republican  OR  41
+(1869-1870)
+WILLIAMS, George Howard 1871-1963   Senator Republican  MO  69
+(1925-1926)
+WILLIAMS, John James    1904-1988   Senator Republican  DE  80
+(1947-1948)
+Senator Republican  DE  81
+(1949-1950)
+Senator Republican  DE  82
+(1951-1952)
+Senator Republican  DE  83
+(1953-1954)
+Senator Republican  DE  84
+(1955-1956)
+Senator Republican  DE  85
+(1957-1958)
+Senator Republican  DE  86
+(1959-1960)
+Senator Republican  DE  87
+(1961-1962)
+Senator Republican  DE  88
+(1963-1964)
+Senator Republican  DE  89
+(1965-1966)
+Senator Republican  DE  90
+(1967-1968)
+Senator Republican  DE  91
+(1969-1970)
+WILLIS, Frank Bartlett  1871-1928   Senator Republican  OH  66
+(1919-1920)
+Senator Republican  OH  67
+(1921-1922)
+Senator Republican  OH  68
+(1923-1924)
+Senator Republican  OH  69
+(1925-1926)
+Senator Republican  OH  70
+(1927-1928)
+WILLIS, Raymond Eugene  1875-1956   Senator Republican  IN  77
+(1941-1942)
+Senator Republican  IN  78
+(1943-1944)
+Senator Republican  IN  79
+(1945-1946)
+WILMOT, David   1814-1868   Senator Republican  PA  37
+(1861-1862)
+WILSON, George Allison  1884-1953   Senator Republican  IA  78
+(1943-1944)
+Senator Republican  IA  79
+(1945-1946)
+Senator Republican  IA  80
+(1947-1948)
+WILSON, Henry   1812-1875   Senator Republican  MA  34
+(1855-1856)
+Senator Republican  MA  35
+(1857-1858)
+Senator Republican  MA  36
+(1859-1860)
+Senator Republican  MA  37
+(1861-1862)
+Senator Republican  MA  38
+(1863-1864)
+Senator Republican  MA  39
+(1865-1866)
+Senator Republican  MA  40
+(1867-1868)
+Senator Republican  MA  41
+(1869-1870)
+Senator Republican  MA  42
+(1871-1872)
+WILSON, James Falconer  1828-1895   Senator Republican  IA  48
+(1883-1884)
+Senator Republican  IA  49
+(1885-1886)
+Senator Republican  IA  50
+(1887-1888)
+Senator Republican  IA  51
+(1889-1890)
+Senator Republican  IA  52
+(1891-1892)
+Senator Republican  IA  53
+(1893-1894)
+WILSON, John Lockwood   1850-1912   Senator Republican  WA  53
+(1893-1894)
+Senator Republican  WA  54
+(1895-1896)
+Senator Republican  WA  55
+(1897-1898)
+WILSON, Pete    1933-   Senator Republican  CA  98
+(1983-1984)
+Senator Republican  CA  99
+(1985-1986)
+Senator Republican  CA  100
+(1987-1988)
+Senator Republican  CA  101
+(1989-1990)
+Senator Republican  CA  102
+(1991-1992)
+WINDOM, William 1827-1891   Senator Republican  MN  41
+(1869-1870)
+Senator Republican  MN  42
+(1871-1872)
+Senator Republican  MN  43
+(1873-1874)
+Senator Republican  MN  44
+(1875-1876)
+Senator Republican  MN  45
+(1877-1878)
+Senator Republican  MN  46
+(1879-1880)
+Senator Republican  MN  47
+(1881-1882)
+WOLCOTT, Edward Oliver  1848-1905   Senator Republican  CO  51
+(1889-1890)
+Senator Republican  CO  52
+(1891-1892)
+Senator Republican  CO  53
+(1893-1894)
+Senator Republican  CO  54
+(1895-1896)
+Senator Republican  CO  55
+(1897-1898)
+Senator Republican  CO  56
+(1899-1900)
+WORKS, John Downey  1847-1928   Senator Republican  CA  62
+(1911-1912)
+Senator Republican  CA  63
+(1913-1914)
+Senator Republican  CA  64
+(1915-1916)
+WRIGHT, George Grover   1820-1896   Senator Republican  IA  42
+(1871-1872)
+Senator Republican  IA  43
+(1873-1874)
+Senator Republican  IA  44
+(1875-1876)
+WYMAN, Louis Crosby 1917-2002   Senator Republican  NH  93
+(1973-1974)
+YATES, Richard  1815-1873   Senator Republican  IL  39
+(1865-1866)
+Senator Republican  IL  40
+(1867-1868)
+Senator Republican  IL  41
+(1869-1870)
+YOUNG, Lafayette    1848-1926   Senator Republican  IA  61
+(1909-1910)
+Senator Republican  IA  62
+(1911-1912)
+YOUNG, Milton Ruben 1897-1983   Senator Republican  ND  79
+(1945-1946)
+Senator Republican  ND  80
+(1947-1948)
+Senator Republican  ND  81
+(1949-1950)
+Senator Republican  ND  82
+(1951-1952)
+Senator Republican  ND  83
+(1953-1954)
+Senator Republican  ND  84
+(1955-1956)
+Senator Republican  ND  85
+(1957-1958)
+Senator Republican  ND  86
+(1959-1960)
+Senator Republican  ND  87
+(1961-1962)
+Senator Republican  ND  88
+(1963-1964)
+Senator Republican  ND  89
+(1965-1966)
+Senator Republican  ND  90
+(1967-1968)
+Senator Republican  ND  91
+(1969-1970)
+Senator Republican  ND  92
+(1971-1972)
+Senator Republican  ND  93
+(1973-1974)
+Senator Republican  ND  94
+(1975-1976)
+Senator Republican  ND  95
+(1977-1978)
+Senator Republican  ND  96
+(1979-1980)
+YOUNG, Todd 1972-   Senator Republican  IN  115
+(2017-2018)
