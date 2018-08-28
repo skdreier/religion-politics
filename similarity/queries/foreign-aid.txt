@@ -4,30 +4,28 @@
 
 FA_01, Disaster relief and lifesaving assistance amidst complex crises.
 FA_01a, United States should provide humanitarian relief and international assistance to global communities in need.
-FA_01a_neg, United States should focus on domestic funding/interests.
+# FA_01a_neg, United States should focus on domestic funding/interests.
 
 FA_02, Foreign aid supports global stability.
 FA_02a, Foreign aid reduces global poverty and supports sustainable development and security.
-# likely to have a ton of false positives, but...
-FA_02_neg, Other nations should contribute more foreign aid.
+# FA_02_neg, Other nations should contribute more foreign aid.
 
 FA_03, Foreign aid promotes global health.
 FA_03a, Foreign aid helps fight HIV/AIDS and malaria abroad.
 
 FA_04, Foreign aid empowers women and girls.
-FA_04a, Foreign aid empowers women and girls in developing nations.
+# FA_04a, Foreign aid empowers women and girls in developing nations.
 
 FA_05, Foreign aid promotes economic prosperity and resilience.
 FA_05a, Foreign aid boosts the economy of developing nations and alleviates poverty.
-# unlikely, but just in case
-FA_05a_neg, Foreign aid exacerbates poverty.
+# FA_05a_neg, Foreign aid exacerbates poverty.
 
 # FA_06, Foreign aid protects vulnerable populations.
 
-FA_07, Foreign aid advances human dignity.
+# FA_07, Foreign aid advances human dignity.
 FA_07a, Human rights norms are the cornerstone of U.S. foreign policy.
-FA_07b, Promoting human rights abroad serves our national interests.
-FA_07c, Poverty, aid and human rights are closely linked.
+# FA_07b, Promoting human rights abroad serves our national interests.
+# FA_07c, Poverty, aid and human rights are closely linked.
 FA_07d, We stand for human rights and democratic values abroad.
 
 # FA_08, Foreign aid lifts lives and build communities.

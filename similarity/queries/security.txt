@@ -2,7 +2,7 @@
 
 SEC_00, Government should end legal loopholes and secure our borders.
 # immigration sentiment negation, rather than exact
-SEC_00_neg, Government should provide legal path to immigration.
+# SEC_00_neg, Government should provide legal path to immigration.
 
 # SEC_01, Government should manage national cybersecurity risks.
 # SEC_02, Government should target suspicious, malicious, or nefarious actors.
@@ -10,11 +10,11 @@ SEC_00_neg, Government should provide legal path to immigration.
 SEC_03, Government should safeguard the American people, our homeland, and our values.
 SEC_03_neg, Government should provide asylum to immigrants in danger.
 
-SEC_04, Terrorists threaten the U.S. borders and security.
+# SEC_04, Terrorists threaten the U.S. borders and security.
 
 SEC_05, Terrorists attack the American people, our country, and our way of life.
-SEC_05a, Terrorists attack our way of life.
-SEC_05b, Terrorists hate our American values.
+# SEC_05a, Terrorists attack our way of life.
+# SEC_05b, Terrorists hate our American values.
 
 SEC_06, Government should identify potential terrorists and prevent attacks.
 
@@ -25,4 +25,4 @@ SEC_07, Government should enforce immigration laws and secure U.S. borders.
 SEC_09, Government should disrupt cartels, smugglers, nefarious actors, illegal border crossers.
 
 SEC_10, Government should rebuild our military.
-SEC_10_neg, Government already spends too much on the military.
+# SEC_10_neg, Government already spends too much on the military.

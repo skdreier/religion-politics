@@ -4,12 +4,14 @@ import argparse
 import csv
 import json
 
+from surt import surt
+
 
 def get_match_list(data):
     for q_data in data:
         # ignore the query itself
         for m in q_data['matches']:
-             yield (m['url'], m['checksum'], m['date'], m['sentence'])
+             yield (surt(m['url']), m['checksum'], m['date'], m['sentence'])
 
 
 def main():
