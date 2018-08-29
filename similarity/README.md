@@ -13,7 +13,7 @@
 
 2. preprocess raw-ish dotgov data (from the cluster) per bucket, e.g.:
     ```
-    python preprocess_dotgov.py \
+    python -m preprocess.preprocess_dotgov \
         /m-pinotHD/lucylin/dotgov/arcs/bucket-0 \
         /m-pinotHD/nobackup/lucylin/arcs/bucket-0
     ```
@@ -26,3 +26,5 @@
         ./queries \
         ./output
     ```
+
+4. (handle output)
