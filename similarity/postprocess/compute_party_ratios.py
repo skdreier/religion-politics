@@ -1,4 +1,4 @@
-# compute_party_ratios.py
+# postprocess.compute_party_ratios
 
 import common.disable_warnings
 import common.configure_logging
