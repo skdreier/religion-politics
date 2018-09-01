@@ -1,6 +1,9 @@
 # Religion and Politics
 ## Lucy Lin, Sofia Serrano, Emily Kalah Gade, Sarah Dreier
 
+## Policy attitude matching
+... is located in the `similarity` directory; refer to the README there.
+
 ## Running non-template pig scripts (i.e., ExtractCounts_keywords.pig)
 
 For a script extracting counts for a custom list of keywords from the corpus, see the cooccurrence_and_counting directory readme instead. Otherwise:
