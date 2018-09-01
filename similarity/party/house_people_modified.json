@@ -225,7 +225,9 @@
       "start_year": 2003,
       "end_year": 2010,
       "party": "rep"
-    },
+    }
+  ],
+  "barrett-": [
     {
       "first_name": "william",
       "start_year": 1991,
@@ -361,7 +363,9 @@
       "start_year": 1995,
       "end_year": 2012,
       "party": "rep"
-    },
+    }
+  ],
+  "bilbray-": [
     {
       "first_name": "james",
       "start_year": 1987,
@@ -819,6 +823,14 @@
   ],
   "campbell": [
     {
+      "first_name": "john",
+      "start_year": 2005,
+      "end_year": 2014,
+      "party": "rep"
+    }
+  ],
+  "campbell-": [
+    {
       "first_name": "thomas",
       "start_year": 1989,
       "end_year": 2000,
@@ -1175,13 +1187,15 @@
       "party": "rep"
     }
   ],
-  "costello": [
+  "costello-": [
     {
       "first_name": "ryan",
       "start_year": 2015,
       "end_year": 2018,
       "party": "rep"
-    },
+    }
+  ],
+  "costello": [
     {
       "first_name": "jerry",
       "start_year": 1987,
@@ -1211,7 +1225,9 @@
       "start_year": 1989,
       "end_year": 2006,
       "party": "rep"
-    },
+    }
+  ],
+  "cox-": [
     {
       "first_name": "john",
       "start_year": 1991,
@@ -1219,13 +1235,15 @@
       "party": "dem"
     }
   ],
-  "cramer": [
+  "cramer-": [
     {
       "first_name": "kevin",
       "start_year": 2013,
       "end_year": 2018,
       "party": "rep"
-    },
+    }
+  ],
+  "cramer": [
     {
       "first_name": "robert",
       "start_year": 1991,
@@ -1677,6 +1695,14 @@
       "party": "rep"
     }
   ],
+  "ellmersforms": [
+    {
+      "first_name": "renee",
+      "start_year": 2011,
+      "end_year": 2016,
+      "party": "rep"
+    }
+  ],
   "emerson": [
     {
       "first_name": "jo",
@@ -1926,6 +1952,14 @@
     }
   ],
   "forbes": [
+    {
+      "first_name": "j.",
+      "start_year": 2001,
+      "end_year": 2016,
+      "party": "rep"
+    }
+  ],
+  "forbes-": [
     {
       "first_name": "michael",
       "start_year": 1995,
@@ -2367,13 +2401,15 @@
       "party": "rep"
     }
   ],
-  "griffith": [
+  "morgangriffith": [
     {
       "first_name": "h.",
       "start_year": 2011,
       "end_year": 2018,
       "party": "rep"
-    },
+    }
+  ],
+  "griffith": [
     {
       "first_name": "parker",
       "start_year": 2009,
@@ -3835,13 +3871,15 @@
       "party": "rep"
     }
   ],
-  "mccollum": [
+  "mccollum-": [
     {
       "first_name": "ira",
       "start_year": 1981,
       "end_year": 2000,
       "party": "rep"
-    },
+    }
+  ],
+  "mccollum": [
     {
       "first_name": "betty",
       "start_year": 2001,
@@ -3903,7 +3941,9 @@
       "start_year": 1993,
       "end_year": 2010,
       "party": "rep"
-    },
+    }
+  ],
+  "mchugh-": [
     {
       "first_name": "matthew",
       "start_year": 1975,
@@ -4091,13 +4131,15 @@
       "party": "rep"
     }
   ],
-  "mitchell": [
+  "mitchell-": [
     {
       "first_name": "paul",
       "start_year": 2017,
       "end_year": 2018,
       "party": "rep"
-    },
+    }
+  ],
+  "mitchell": [
     {
       "first_name": "harry",
       "start_year": 2007,
@@ -4927,7 +4969,9 @@
       "start_year": 2009,
       "end_year": 2018,
       "party": "rep"
-    },
+    }
+  ],
+  "roe-": [
     {
       "first_name": "robert",
       "start_year": 1969,
@@ -5025,7 +5069,17 @@
       "start_year": 2011,
       "end_year": 2018,
       "party": "rep"
-    },
+    }
+  ],
+  "mikerossforms": [
+    {
+      "first_name": "michael",
+      "start_year": 2001,
+      "end_year": 2012,
+      "party": "dem"
+    }
+  ],
+  "mikeross": [
     {
       "first_name": "michael",
       "start_year": 2001,
@@ -5193,13 +5247,15 @@
       "party": "rep"
     }
   ],
-  "schiff": [
+  "schiff-": [
     {
       "first_name": "steven",
       "start_year": 1989,
       "end_year": 1998,
       "party": "rep"
-    },
+    }
+  ],
+  "schiff": [
     {
       "first_name": "adam",
       "start_year": 2001,
@@ -5555,6 +5611,14 @@
       "party": "rep"
     }
   ],
+  "stearnsforms": [
+    {
+      "first_name": "clifford",
+      "start_year": 1989,
+      "end_year": 2012,
+      "party": "rep"
+    }
+  ],
   "stearns": [
     {
       "first_name": "clifford",
@@ -5851,7 +5915,9 @@
       "start_year": 2011,
       "end_year": 2012,
       "party": "rep"
-    },
+    }
+  ],
+  "turner-": [
     {
       "first_name": "jim",
       "start_year": 1997,
@@ -6901,7 +6967,9 @@
       "start_year": 2007,
       "end_year": 2010,
       "party": "dem"
-    },
+    }
+  ],
+  "johncarney": [
     {
       "first_name": "john",
       "start_year": 2011,
@@ -9901,6 +9969,14 @@
       "party": "dem"
     }
   ],
+  "shulerforms": [
+    {
+      "first_name": "heath",
+      "start_year": 2007,
+      "end_year": 2012,
+      "party": "dem"
+    }
+  ],
   "sikorski": [
     {
       "first_name": "gerald",
@@ -10291,13 +10367,15 @@
       "party": "dem"
     }
   ],
-  "udall": [
+  "markudall": [
     {
       "first_name": "mark",
-      "start_year": 1999,
-      "end_year": 2008,
+      "start_year": 2009,
+      "end_year": 2014,
       "party": "dem"
-    },
+    }
+  ],
+  "udall": [
     {
       "first_name": "morris",
       "start_year": 1961,
@@ -10537,6 +10615,14 @@
       "party": "dem"
     }
   ],
+  "woolseyforms": [
+    {
+      "first_name": "lynn",
+      "start_year": 1993,
+      "end_year": 2012,
+      "party": "dem"
+    }
+  ],
   "woolsey": [
     {
       "first_name": "lynn",
@@ -10599,6 +10685,182 @@
       "start_year": 1991,
       "end_year": 2018,
       "party": "dem"
+    }
+  ],
+  "democrat": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "democraticleader": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "democraticwhip": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "democrats": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "dems": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "dpc": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "housedemocrats": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "hsc-democrats": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "chsdemocrats": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "chs-democrats": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "demcaucus": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "sciencedemocrats": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "scidems": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "sciencedems": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "republican": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "republicanleader": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "republicanpolicy": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "republicans": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "rpc": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "chs-republicans": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "gop": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "src": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
     }
   ]
 }

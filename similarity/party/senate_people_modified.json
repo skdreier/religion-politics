@@ -477,7 +477,9 @@
       "start_year": 1987,
       "end_year": 2004,
       "party": "dem"
-    },
+    }
+  ],
+  "lgraham": [
     {
       "first_name": "lindsey",
       "start_year": 2003,
@@ -617,7 +619,9 @@
       "start_year": 1961,
       "end_year": 2010,
       "party": "dem"
-    },
+    }
+  ],
+  "kennedy-": [
     {
       "first_name": "john",
       "start_year": 2017,
@@ -641,13 +645,15 @@
       "party": "dem"
     }
   ],
-  "kirk": [
+  "kirk-": [
     {
       "first_name": "paul",
       "start_year": 2009,
       "end_year": 2010,
       "party": "dem"
-    },
+    }
+  ],
+  "kirk": [
     {
       "first_name": "mark",
       "start_year": 2009,
@@ -1003,13 +1009,15 @@
       "party": "dem"
     }
   ],
-  "shelby": [
+  "shelby-": [
     {
       "first_name": "richard",
       "start_year": 1987,
       "end_year": 1992,
       "party": "dem"
-    },
+    }
+  ],
+  "shelby": [
     {
       "first_name": "richard",
       "start_year": 1993,
@@ -1083,13 +1091,15 @@
       "party": "dem"
     }
   ],
-  "udall": [
+  "markudall": [
     {
       "first_name": "mark",
       "start_year": 2009,
       "end_year": 2014,
       "party": "dem"
-    },
+    }
+  ],
+  "tomudall": [
     {
       "first_name": "thomas",
       "start_year": 2009,
@@ -1119,7 +1129,9 @@
       "start_year": 2009,
       "end_year": 2018,
       "party": "dem"
-    },
+    }
+  ],
+  "warner-": [
     {
       "first_name": "john",
       "start_year": 1977,
@@ -2181,6 +2193,134 @@
     {
       "first_name": "todd",
       "start_year": 2017,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "democrat": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "democraticleader": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "democraticwhip": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "democrats": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "dems": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "dpc": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "chs-democrats": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "demcaucus": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "dem"
+    }
+  ],
+  "republican": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "republicanleader": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "republicanpolicy": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "republicans": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "rpc": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "chs-republicans": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "gop": [
+    {
+      "first_name": "",
+      "start_year": 0,
+      "end_year": 2018,
+      "party": "rep"
+    }
+  ],
+  "src": [
+    {
+      "first_name": "",
+      "start_year": 0,
       "end_year": 2018,
       "party": "rep"
     }

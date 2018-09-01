@@ -5,11 +5,35 @@ import common.configure_logging
 
 import argparse
 import json
+import logging
 
 from collections import defaultdict
 from itertools import product
 from openpyxl import Workbook
 from urllib.parse import urlparse
+
+
+def annotate(data, output_prefix):
+    logging.info('Loading name-party maps...')
+    name_maps = load_name_maps()
+
+    logging.info('Adding party info...')
+    data, warnings = add_party_info(data, name_maps)
+    data = aggregate_parties(data)
+
+    ratio_path = '{}-party-ratios.txt'.format(output_prefix)
+    write_ratios(ratio_path, data)
+
+    with open('{}-party-conflicts.json'.format(output_prefix), 'w') as f:
+        json.dump(warnings['conflict'], f, indent=2)
+
+    with open('{}-party-notfound.txt'.format(output_prefix), 'w') as f:
+        names = sorted(list(warnings['notfound'].keys()))
+        f.write('\n'.join(names))
+
+    # wb_path = '{}-parties.xlsx'.format(output_prefix)
+    # write_spreadsheet(wb_path, data)
+    return data
 
 
 def load_name_maps():
@@ -159,26 +183,10 @@ def main():
     ap.add_argument('output_prefix')
     args = ap.parse_args()
 
-    name_maps = load_name_maps()
-
     with open(args.input_path, 'r') as f:
         data = json.load(f)
 
-    data, warnings = add_party_info(data, name_maps)
-    data = aggregate_parties(data)
-
-    ratio_path = '{}-ratios.txt'.format(args.output_prefix)
-    write_ratios(ratio_path, data)
-
-    with open('{}-conflicts.json'.format(args.output_prefix), 'w') as f:
-        json.dump(warnings['conflict'], f, indent=2)
-
-    with open('{}-notfound.txt'.format(args.output_prefix), 'w') as f:
-        names = sorted(list(warnings['notfound'].keys()))
-        f.write('\n'.join(names))
-
-    wb_path = '{}-parties.xlsx'.format(args.output_prefix)
-    write_spreadsheet(wb_path, data)
+    annotate(data, output_prefix)
 
 
 if __name__ == '__main__':
