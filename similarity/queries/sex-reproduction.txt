@@ -1,0 +1,35 @@
+# sex/reproduction queries
+
+SR_00, States should defend traditional marriage and oppose gay marriage.
+SR_00a, Americans overwhelmingly oppose same-sex marriage.
+# others duplicates of SR_03_{a,b}
+# SR_00_neg, States should support/legalize gay marriage.
+# SR_00a_neg, Americans overwhelmingly support same-sex marriage.
+SR_00b_neg, Americans support marriage equality.
+
+SR_01, Marriage is between a man and a woman.
+
+# SR_02, Children need a mother and a father.
+
+SR_03, Gay marriage causes societal collapse.
+# SR_03a, I oppose same-sex marriage.
+SR_03b, I do not support gay marriage.
+# SR_03c, Weakening the legal status of marriage will only exacerbate these problems.
+# other negations just variations on this
+# SR_03a_neg, I support same-sex marriage.
+
+SR_04, Gay marriage erodes/deteriorates traditional marriage and family.
+SR_04a, Traditional marriage and the family are the foundation of American society.
+# not sure what the right negation for this is
+
+# SR_05, Government must protect the lives of unborn or pre-born children.
+
+SR_06, Abortion kills unborn children.
+SR_06a, Partial birth abortion is murder.
+SR_06b, Partial birth abortion is a violent procedure that is truly traumatic for the mother and her unborn child.
+SR_06c, Partial birth abortion is cruel and inhumane.
+# not exactly negation, but should get at the opposite sentiment
+SR_06_neg, A woman has the right to have an abortion.
+# SR_06a_neg, Women should have control/autonomy over their bodies.
+
+# SR_07, Providers can exercise religious freedom to refuse providing contraception and abortion.
