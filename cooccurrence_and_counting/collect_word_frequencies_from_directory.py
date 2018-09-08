@@ -1,3 +1,8 @@
+# sample usage:
+# python collect_word_frequencies_from_directory.py /input/dir/ /output/dir/ Doc
+# OR
+# python collect_word_frequencies_from_directory.py /input/dir/ /output/dir/ Corpus
+
 import os
 import sys
 import pickle
@@ -15,7 +20,7 @@ if not output_dir.endswith('/'):
     output_dir += '/'
 
 
-default_num_multiprocessing_threads = 80
+default_num_multiprocessing_threads = 8
 filestart_counter = 0
 in_progress_pkl_filename = "mid-collection_doc_frequency_counts.pkl"
 

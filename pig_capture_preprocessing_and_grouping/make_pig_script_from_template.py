@@ -51,8 +51,8 @@ if __name__ == '__main__':
         num_terms_to_collect = 0
         output_dir_stub = ''
         use_checksum = sys.argv[2]
-    elif template_to_make == 'religious_files':
-        corresponding_text_file = "all_religious_words.txt"
+    elif template_to_make == 'initialized_religious_files' or template_to_make == 'filtered_religious_files':
+        corresponding_text_file = "../all_religious_words.txt"
         window_size = 0
         num_terms_to_collect = 0
         output_dir_stub = ''
@@ -240,7 +240,7 @@ def make_regex(inner_keyword, phrases_to_exclude, allow_wildcard_before, allow_w
                                                               longer_keyword[starting_ind_of_inner_keyword_in_larger:]))
             longer_keyword = longer_keyword[starting_ind_of_inner_keyword_in_larger + len(inner_keyword):]
 
-    regex = "'"
+    regex = "'(?:"
     for unmatch in strings_not_to_match_before_and_after:
         regex += "(?:(?<!"
         for letter in unmatch[0]:
@@ -291,7 +291,7 @@ def make_regex(inner_keyword, phrases_to_exclude, allow_wildcard_before, allow_w
             regex += letter
         regex += ")"
 
-    regex += "'"
+    regex += ")'"
     return regex
 
 
@@ -328,7 +328,28 @@ def make_keyword_tuples(str_keywords, strs_to_avoid_for_keyword, check_for_nonal
 
 
 if __name__ == '__main__':
-    keyword_tuples = make_keyword_tuples(keywords, strings_to_avoid_for_keyword)
+    keyword_tuples = make_keyword_tuples(keywords, {})  # strings_to_avoid_for_keyword)
+    word_tuples_without_caveats = []
+    word_tuples_with_caveats = []
+    all_caveats_sorted = []
+    for i in range(len(keywords)):
+        keyword = keywords[i]
+        try:
+            caveats = strings_to_avoid_for_keyword[keyword]
+            if len(caveats) == 0:
+                word_tuples_without_caveats.append(keyword_tuples[i])
+            else:
+                word_tuples_with_caveats.append(keyword_tuples[i])
+                all_caveats_sorted += caveats
+        except:
+            word_tuples_without_caveats.append(keyword_tuples[i])
+    caveat_phrase_tuples = []
+    all_caveats_sorted = sorted(all_caveats_sorted, key=(lambda x: len(x)), reverse=True)
+    for i in range(len(all_caveats_sorted)):
+        caveat = all_caveats_sorted[i]
+        caveat_phrase_tuples.append((make_plain_version_of_term(caveat),
+                                     make_exact_match_regex(caveat, all_caveats_sorted[:i], {}),
+                                     make_simplified_version_of_keyword(caveat)))
     print("There are " + str(len(keyword_tuples)) + " distinct keywords.")
 
 ###########################################################
@@ -337,15 +358,86 @@ if __name__ == '__main__':
 
 
 def fill_in_repeated_line_section(lines_to_repeat_inner, script_inner, needs_closure, is_pig,
-                                  needs_continuation_char):
-    for keyword_ind in range(len(keyword_tuples)):
-        keyword_tuple = keyword_tuples[keyword_ind]
+                                  needs_continuation_char, tuples_to_fill_in_with):
+    pig_regex_term = get_all_pig_regexes(tuples_to_fill_in_with)
+    just_needs_one_line = False
+    for line in lines_to_repeat_inner:
+        if "INSERTNOBOOKENDSPIGREGEXHERE" in line or "INSERTPIGREGEXHERE" in line:
+            just_needs_one_line = True
+    if not just_needs_one_line:
+        for keyword_ind in range(len(tuples_to_fill_in_with)):
+            keyword_tuple = tuples_to_fill_in_with[keyword_ind]
+            term_itself = keyword_tuple[0]
+            regex_term = keyword_tuple[1]
+            simplified_term = keyword_tuple[2]
+            for line_inner_ind in range(len(lines_to_repeat_inner)):
+                line_inner = lines_to_repeat_inner[line_inner_ind]
+
+                regex_to_use = regex_term
+                pig_regex_to_use = pig_regex_term
+                if 'MATCHES' in line_inner:
+                    # then make sure both terms end with .*
+                    if not regex_to_use.startswith("'.*"):
+                        regex_to_use = "'.*" + regex_to_use[1:-1] + ".*'"
+                    if not pig_regex_to_use.startswith("'.*"):
+                        pig_regex_to_use = "'.*" + pig_regex_to_use[1:-1] + ".*'"
+                elif 'REPLACE' in line_inner:
+                    # then make sure neither term ends with .*
+                    if regex_to_use.startswith("'.*"):
+                        regex_to_use = "'" + regex_to_use[3:-3] + "'"
+                    if pig_regex_to_use.startswith("'.*"):
+                        pig_regex_to_use = "'" + pig_regex_to_use[3:-3] + "'"
+
+                line_inner = line_inner.replace("INSERTNOBOOKENDSPIGREGEXHERE", "'" +
+                                                pig_regex_term[pig_regex_term.index(']') + 1:
+                                                               pig_regex_term.rfind('[')] + "'")
+                line_inner = line_inner.replace("INSERTWINDOWSIZEHERE", str(window_size))
+                line_inner = line_inner.replace("INSERTNUMTERMSTOCOLLECT", str(num_terms_to_collect))
+                line_inner = line_inner.replace("INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES", output_dir_stub)
+                line_inner = line_inner.replace("INSERTTERMHERE", term_itself)
+                line_inner = line_inner.replace("INSERTREGEXHERE", regex_to_use)
+                line_inner = line_inner.replace("INSERTPIGREGEXHERE", pig_regex_to_use)
+                line_inner = line_inner.replace("INSERTWORDWITHNOSPECIALCHARSORAPOSTROPHES", simplified_term)
+                line_inner = line_inner.replace("INSERTTERMINDEXHERE", str(keyword_ind))
+                line_inner = line_inner.replace("INSERTREPEATINDEXHERE", str(keyword_ind))
+                if line_inner_ind == len(lines_to_repeat_inner) - 1 and line_inner.strip() != '':
+                    # decide whether to add a comma or nothing after it
+                    line_inner = line_inner.rstrip()
+                    if is_pig:
+                        if keyword_ind == len(tuples_to_fill_in_with) - 1:
+                            if needs_closure:
+                                line_inner += ';'
+                            else:
+                                line_inner += ''
+                        elif ' MATCHES ' in line_inner:
+                            line_inner += ' OR'
+                        else:
+                            line_inner += ','
+                    else:
+                        if keyword_ind == len(tuples_to_fill_in_with) - 1:
+                            if needs_closure:
+                                line_inner += ''
+                            else:
+                                line_inner += ''
+                        else:
+                            line_inner += ','
+                    if keyword_ind != len(tuples_to_fill_in_with) - 1:
+                        if needs_continuation_char:
+                            line_inner += ' \\'
+                    line_inner += '\n'
+                script_inner.write(line_inner)
+    else:
+        keyword_ind = 0
+        tuples_to_fill_in_with = tuples_to_fill_in_with[:1]
+        keyword_tuple = tuples_to_fill_in_with[keyword_ind]
         term_itself = keyword_tuple[0]
         regex_term = keyword_tuple[1]
         simplified_term = keyword_tuple[2]
-        pig_regex_term = keyword_tuple[3]
         for line_inner_ind in range(len(lines_to_repeat_inner)):
             line_inner = lines_to_repeat_inner[line_inner_ind]
+            line_inner = line_inner.replace("INSERTNOBOOKENDSPIGREGEXHERE", "'" +
+                                            pig_regex_term[pig_regex_term.index(']') + 1:
+                                                           pig_regex_term.rfind('[')] + "'")
             line_inner = line_inner.replace("INSERTWINDOWSIZEHERE", str(window_size))
             line_inner = line_inner.replace("INSERTNUMTERMSTOCOLLECT", str(num_terms_to_collect))
             line_inner = line_inner.replace("INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES", output_dir_stub)
@@ -359,7 +451,7 @@ def fill_in_repeated_line_section(lines_to_repeat_inner, script_inner, needs_clo
                 # decide whether to add a comma or nothing after it
                 line_inner = line_inner.rstrip()
                 if is_pig:
-                    if keyword_ind == len(keyword_tuples) - 1:
+                    if keyword_ind == len(tuples_to_fill_in_with) - 1:
                         if needs_closure:
                             line_inner += ';'
                         else:
@@ -369,14 +461,14 @@ def fill_in_repeated_line_section(lines_to_repeat_inner, script_inner, needs_clo
                     else:
                         line_inner += ','
                 else:
-                    if keyword_ind == len(keyword_tuples) - 1:
+                    if keyword_ind == len(tuples_to_fill_in_with) - 1:
                         if needs_closure:
                             line_inner += ''
                         else:
                             line_inner += ''
                     else:
                         line_inner += ','
-                if keyword_ind != len(keyword_tuples) - 1:
+                if keyword_ind != len(tuples_to_fill_in_with) - 1:
                     if needs_continuation_char:
                         line_inner += ' \\'
                 line_inner += '\n'
@@ -384,9 +476,10 @@ def fill_in_repeated_line_section(lines_to_repeat_inner, script_inner, needs_clo
 
 
 def fill_in_repeated_line_section_limited(lines_to_repeat_inner, script_inner, limit, needs_closure, is_pig,
-                                          needs_continuation_char, constraint_on_regexes_per_line):
+                                          needs_continuation_char, constraint_on_regexes_per_line,
+                                          tuples_to_fill_in_with):
     if constraint_on_regexes_per_line:
-        limit = len(keyword_tuples) / limit
+        limit = len(tuples_to_fill_in_with) / limit
         if limit == int(limit):
             limit = int(limit)
         else:
@@ -396,11 +489,11 @@ def fill_in_repeated_line_section_limited(lines_to_repeat_inner, script_inner, l
     # we USED to do this when we'd commonly have really complex regexes with lots of exceptions, but now that we
     # have fewer exceptions in the regexes, we've changed this
     # resorted_keyword_tuples = sorted(keyword_tuples, key=(lambda x: [char for char in x[1]].count('(')), reverse=True)
-    resorted_keyword_tuples = sorted(keyword_tuples, key=(lambda x: len(x)), reverse=True)
+    resorted_keyword_tuples = sorted(tuples_to_fill_in_with, key=(lambda x: len(x)), reverse=True)
 
     # for some reason grouping regexes as unevenly as possible seems to run much faster, so that's what we do
-    num_each_one_gets = int(len(keyword_tuples) * 1.0 / limit)
-    num_getting_an_extra = len(keyword_tuples) % limit
+    num_each_one_gets = int(len(tuples_to_fill_in_with) * 1.0 / limit)
+    num_getting_an_extra = len(tuples_to_fill_in_with) % limit
     counter = 0
     for i in range(limit):
         for j in range(num_each_one_gets):
@@ -433,6 +526,9 @@ def fill_in_repeated_line_section_limited(lines_to_repeat_inner, script_inner, l
         pig_regex_term = keyword_tuple[3]
         for line_inner_ind in range(len(lines_to_repeat_inner)):
             line_inner = lines_to_repeat_inner[line_inner_ind]
+            line_inner = line_inner.replace("INSERTNOBOOKENDSPIGREGEXHERE", "'" +
+                                            pig_regex_term[pig_regex_term.index(']') + 1:
+                                                           pig_regex_term.rfind('[')] + "'")
             line_inner = line_inner.replace("INSERTWINDOWSIZEHERE", str(window_size))
             line_inner = line_inner.replace("INSERTNUMTERMSTOCOLLECT", str(num_terms_to_collect))
             line_inner = line_inner.replace("INSERTOUTPUTDIRSTUBWITHNOAPOSTROPHES", output_dir_stub)
@@ -486,7 +582,7 @@ def get_single_pig_regex(regex_with_quotes):
 
 
 def get_all_pig_regexes(some_keyword_tuples):
-    all_regexes_inner = "'.*[^a-z]"
+    all_regexes_inner = "'.*[^a-z](?:"
     for i in range(len(some_keyword_tuples) - 1):
         regex_with_quotes = get_single_pig_regex(some_keyword_tuples[i][1])[1:-1]\
             .replace("(?<![a-z])", '').replace("(?![a-z])", '')
@@ -494,7 +590,7 @@ def get_all_pig_regexes(some_keyword_tuples):
     regex_with_quotes = get_single_pig_regex(some_keyword_tuples[-1][1])[1:-1]\
         .replace("(?<![a-z])", '').replace("(?![a-z])", '')
     all_regexes_inner += regex_with_quotes
-    all_regexes_inner += "[^a-z].*'"
+    all_regexes_inner += ")[^a-z].*'"
     return all_regexes_inner
 
 
@@ -512,6 +608,7 @@ if __name__ == '__main__':
     needs_continuation_char = False
     limit_by_regexes_per_line = False
     replace_references_to_single_regex_with_more = False
+    set_of_keywords_to_use = "original"
     with open("templates/get_" + template_to_make + "TEMPLATE.pig", "r") as f:
         for line in f:
             if line.startswith("-- Get Cooccurrence Words TEMPLATE Pig Script: Template for a"):
@@ -547,17 +644,32 @@ if __name__ == '__main__':
                 else:
                     is_pig = False
                 in_repeat_section = True
-                if "ATMOST" in line and len(keyword_tuples) > int(line.strip()[line.strip().index("ATMOST") + 6:]):
+                if '_' in line:
+                    tag = line[line.index('_') + 1:line.rfind('_')].lower()
+                    if tag == 'onlyfalsematches':
+                        tuple_list_to_check = caveat_phrase_tuples
+                    elif tag == 'onlymatcheswithcaveats':
+                        tuple_list_to_check = word_tuples_with_caveats
+                    elif tag == 'onlynocaveatmatches':
+                        tuple_list_to_check = word_tuples_without_caveats
+                else:
+                    tag = "original"
+                    tuple_list_to_check = keyword_tuples
+                if "ATMOST" in line and len(tuple_list_to_check) > int(line.strip()[line.strip().index("ATMOST") + 6:]):
                     limited_repeat_section = True
                     limit_on_repeat_section = int(line.strip()[line.strip().index("ATMOST") + 6:])
                     limit_by_regexes_per_line = False
                 elif "REGEXESPERLINE" in line and \
-                        len(keyword_tuples) > int(line.strip()[line.strip().index("REGEXESPERLINE") + 14:]):
+                        len(tuple_list_to_check) > int(line.strip()[line.strip().index("REGEXESPERLINE") + 14:]):
                     limited_repeat_section = True
                     limit_on_repeat_section = int(line.strip()[line.strip().index("REGEXESPERLINE") + 14:])
                     limit_by_regexes_per_line = True
                 elif "REGEXESPERLINE" in line:
-                    replace_references_to_single_regex_with_more = True
+                    if not template_to_make == "initialized_religious_files" and \
+                            not template_to_make == 'filtered_religious_files':
+                        replace_references_to_single_regex_with_more = True
+                    else:
+                        limited_repeat_section = False
                 else:
                     limited_repeat_section = False
                 if prev_line.strip().endswith('\\'):
@@ -598,14 +710,14 @@ if __name__ == '__main__':
                 if replace_references_to_single_regex_with_more:
                     replace_references_to_single_regex_with_more = False
                     in_repeat_section = False
-                    continue
                 if limited_repeat_section:
                     fill_in_repeated_line_section_limited(lines_to_repeat, pig_script, limit_on_repeat_section,
                                                           repeat_section_needs_closure, is_pig,
-                                                          needs_continuation_char, limit_by_regexes_per_line)
+                                                          needs_continuation_char, limit_by_regexes_per_line,
+                                                          tuple_list_to_check)
                 else:
                     fill_in_repeated_line_section(lines_to_repeat, pig_script, repeat_section_needs_closure, is_pig,
-                                                  needs_continuation_char)
+                                                  needs_continuation_char, tuple_list_to_check)
                 in_repeat_section = False
                 continue
             elif not use_checksum and collecting_checksum_changes:
@@ -680,6 +792,7 @@ if __name__ == '__main__':
     udfs = open("get_" + template_to_make + "_udfs.py", "w")
     in_repeat_section = False
     prev_line = ''
+    tag = "original"
     with open("templates/get_" + template_to_make + "_udfsTEMPLATE.py", "r") as f:
         for line in f:
             if not in_repeat_section and line.strip().startswith("STARTLINEREPEAT"):
@@ -732,10 +845,11 @@ if __name__ == '__main__':
                 if limited_repeat_section:
                     fill_in_repeated_line_section_limited(lines_to_repeat, udfs, limit_on_repeat_section,
                                                           repeat_section_needs_closure, is_pig,
-                                                          needs_continuation_char, limit_by_regexes_per_line)
+                                                          needs_continuation_char, limit_by_regexes_per_line,
+                                                          keyword_tuples)
                 else:
                     fill_in_repeated_line_section(lines_to_repeat, udfs, repeat_section_needs_closure, is_pig,
-                                                  needs_continuation_char)
+                                                  needs_continuation_char, keyword_tuples)
                 in_repeat_section = False
                 continue
             line = line.replace("INSERTWINDOWSIZEHERE", str(window_size))

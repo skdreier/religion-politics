@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Sample usage:
+# bash download_hdfs_files.sh workbench local_name_of_hdfs_output_dir_to_pull
+
 if [ "$#" -ne 2 ]
 then
     echo "Usage: $1 <name given to ssh portal to cluster> $2 <local name of directory to grab from cluster hdfs filesystem>"

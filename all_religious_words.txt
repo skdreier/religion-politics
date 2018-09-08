@@ -1,3 +1,30 @@
+# Search Words
+#
+# Current list is union of chapp_relig.csv and liwc_relig.csv lists,
+# but the script will work if replaced with any list of at least two
+# words. Matches will be case-insensitive. Each phrase to search must
+# be contained in exactly one line.
+#
+# Words removed from the original list:
+#     all repeated words (though the script would have filtered them out anyway)
+#     angle (I think it might have been a typo of angel?)
+#     agonstic (changed to "agnostic" instead, seemed like typo)
+#
+# Reserved phrases (also case-insensitive):
+#     anything that includes ```````` or starts/ends with `
+#     anything containing *
+#        * signifies "here is a string that is allowed to come after"
+#        ** signifies "here is a string that is allowed to come before"
+#        example:   un**ironic*ally
+#        Can also allow wild card matches before or after word, or both before
+#        and after (example: **ironic*)
+#     anything containing # (since # is used to denote the start of a list
+#        of phrases, and subsequent separations between phrases, that *aren't*
+#        supposed to be captured as a match for the expression)
+#        (these exceptions may NOT use * to denote multiple possible exceptions;
+#         all exceptions must be spelled out exactly)
+#        example:   un**ironic*ally  # unironic
+
 adventist
 adventists
 afterlife
@@ -546,7 +573,6 @@ sect
 sectarian
 sectarianism
 sects
-seminar
 seminarian
 seminaries
 seminary

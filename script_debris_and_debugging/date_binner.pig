@@ -17,7 +17,7 @@ DEFINE SURTURL org.archive.porky.SurtUrlKey();
 -- when you load data, you have to use the same "name" for the data that you do in the command line command -
 -- so this is the name of the directory or file that you want to run this script on
 
-all_records = LOAD '/user/sofias6/all_dates_religious_only/' USING PigStorage('\t') AS (date:chararray,
+all_records = LOAD '/user/sofias6/religious_house_senate_nonchecksum_dates/' USING PigStorage('\t') AS (date:chararray,
                                                                          URL:chararray,
                                                                          surt:chararray,
                                                                          checksum:chararray);
@@ -27,12 +27,12 @@ all_records = FOREACH all_records GENERATE make_correct_length(date) AS date:cha
                                            surt AS surt:chararray,
                                            checksum AS checksum:chararray;
 
-all_records = FOREACH all_records GENERATE (long) date AS date:long,
+all_records = FOREACH all_records GENERATE (int) date AS date:int,
                                            URL AS URL:chararray,
                                            surt AS surt:chararray,
                                            checksum AS checksum:chararray;
 
-all_records = FOREACH all_records GENERATE (date - (19950000 * 1000000) - (($BIN_WIDTH % 100) * 10000 * 10000) - (($BIN_WIDTH % 10000) * 1000000)) / ((long) $BIN_WIDTH * 1000000) AS bin_id,
+all_records = FOREACH all_records GENERATE (date / ((int) $BIN_WIDTH)) AS bin_id,
                                                                                                               date AS date,
                                                                                                               URL AS URL;
 
@@ -41,7 +41,7 @@ bin_count = FOREACH (GROUP all_records BY bin_id) GENERATE FLATTEN(group) AS bin
 
 bin_count = ORDER bin_count BY bin_id;
 
-STORE bin_count INTO '$BINSPLIT-religious-bins/' USING PigStorage('\t');
+STORE bin_count INTO '$BINSPLIT-religiousunchecksum/' USING PigStorage('\t');
 
 all_records_distinct_urls = DISTINCT all_records;
 
@@ -50,4 +50,4 @@ bin_count = FOREACH (GROUP all_records_distinct_urls BY bin_id) GENERATE FLATTEN
 
 bin_count = ORDER bin_count BY bin_id;
 
-STORE bin_count INTO '$BINSPLIT-religious-distincturlbins/' USING PigStorage('\t');
+STORE bin_count INTO '$BINSPLIT-religiousunchecksum-distincturl/' USING PigStorage('\t');

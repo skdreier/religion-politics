@@ -1,39 +1,46 @@
-## Running cooccurence/keyword-counting scripts
+For all scripts, sample usage is described in comments at the top.
 
-1. Copy the repository up to your personal workbench
+If you haven't already, first preprocess the captures and set aside religious-match (or, more generally, keyword-match) captures as described in `pig_capture_preprocessing_and_grouping/`.
 
-2. Populate the text file corresponding to the script you're planning to run with the keywords or searchwords that you want to use. See the directions at the top of the file for details.
+NOTE: ANY OUTPUT DIRECTORY PROVIDED TO PIG SCRIPT MUST NOT EXIST YET, OTHERWISE PIG WILL THROW AN ERROR.
 
-   Text file correspondences:
-   
-   * get_cooccurrence_words.sh: get_cooccurrence_words_words_to_search.txt
-   * get_keyword_counts.sh: get_keyword_counts_keywords_to_count.txt
-   * get_keyword_doc_counts.sh: get_keyword_doc_counts_keywords_to_count.txt
+## Running PMI calculations
 
-3. From inside the cooccurrence_and_counting directory of the repository, run some variation on a command calling a bash script within this directory. For example:
+Run `get_pmi_from_start_to_end.pig`.
 
-   ```
-   bash get_cooccurrence_words.sh 30 1000 cooccuroutput /dataset-derived/gov/parsed/arcs/bucket-0/ /dataset/gov/url-ts-checksum/ False
-   ```
+(I didn't get around to turning this script into a template, so if you want to change the set of keywords and/or what counts as a false match when creating the match snippets, you'd need to manually edit the first few lines of `get_pmi_from_start_to_end_udfs.py`.)
 
-   For get_cooccurrence_words.sh, these are the six arguments in the order they're provided:
-   
-   * half window size: the number of words to take both before and after an appearance of a search term as "cooccurring" with that term
-   * number of top results to output: for each search term (as well as the two aggregated result types, anysearchword and allsearchwords), the number of top-scoring cooccurring words to report
-   * output directory name stub: the string to prepend to the directories of all the results files. Make sure that the directories starting with this string and ending in the provided search terms don't already exist in the hadoop file system, or hadoop will throw an error. Do not end this with /
-   * I_PARSED_DATA: EITHER the full path on the hadoop file system to the input parsed data (if skip_pig is False), OR the path stub that the two necessary directories of data on the local system have in common (i.e., /data/bucket0  to represent /data/bucket0-fulltext/ and /data/bucket0-sampledocfrequencies/)
-   * CHECKSUM_DATA: the full path on the hadoop file system to the checksum data. (If not using checksum data, replace this argument with the string None)
-   * skip_pig: True or False. Set to True if pig script referenced in get_cooccurrence_words.sh still needs to be run, or False if pig script has already been run and results are in files off the hdfs filesystem.
-   
-   For get_keyword_counts.sh or get_keyword_doc_counts.sh, these are the three arguments in the order they're provided:
-   
-   * output directory name (doubles as base of name of text file that will store aggregated results). Do not end this with /
-   * I_PARSED_DATA: the full path on the hadoop file system to the input parsed data
-   * CHECKSUM_DATA: the full path on the hadoop file system to the checksum data. (If not using checksum data, replace this argument with the string None)
-   
-   The bash script will first run a separate script to generate a pig script from the template in the repository with the provided search terms in the corresponding .txt file hard-coded in (for get_cooccurrence_words.sh, those are read from get_cooccurrence_words_words_to_search.txt). Then, the script will run that automatically generated script.
-   
-## Troubleshooting Issues
+(If running PMI calculations for a second time using the same corpus and set of religious snippets, consider modifying the script to take advantage of the intermediate output generated to save time on the first run.)
+
+## Counting the number of preprocessed page captures in a directory
+
+Run `count_number_of_captures_in_dir.pig`.
+
+## Getting the number of counts for loose keyword matches
+
+1. If desired, modify `non_pig_loose_keyword_match.txt` to contain different keywords
+
+2. Run `../misc_bash/download_hdfs_files.sh` to get local, python-workable copies of the HDFS files to check (might need to modify if HDFS system being used is accessed locally, not by ssh)
+
+3. Run `non_pig_keyword_count.py`
+
+## Counting the number of captures in an HDFS directory
+
+Run `count_number_of_captures_in_dir.pig`
+
+## Getting document frequencies for all words appearing in directory
+
+1. Run `../misc_bash/download_hdfs_files.sh` to get local, python-workable copies of the HDFS files to use while calculating (might need to modify if HDFS system being used is accessed locally, not by ssh)
+
+2. Run `collect_word_frequencies_from_directory.py` with `Doc` as third argument
+
+## Getting full count of all words appearing in directory
+
+1. Run `../misc_bash/download_hdfs_files.sh` to get local, python-workable copies of the HDFS files to use while calculating (might need to modify if HDFS system being used is accessed locally, not by ssh)
+
+2. Run `collect_word_frequencies_from_directory.py` with `Corpus` as third argument
+
+## Troubleshooting issues
 
 * A pig script sets up successfully, but then gets stuck at 0% completion for hours: after killing this job, check whether there's a phantom yarn thread running from a previous job, and if so, kill it.
 
