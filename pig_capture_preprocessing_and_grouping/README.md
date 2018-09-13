@@ -14,8 +14,8 @@ Run `preprocess_captures.pig`.
 
 3. Optionally, run
 
-   * `sampl`../misc_bash/download_hdfs_files.sh` (might need to modify if HDFS system being used is accessed locally, not by ssh)e_preprocessed_captures_from_directory.pig`
-   *
+   * `sample_preprocessed_captures_from_directory.pig`
+   * `../misc_bash/download_hdfs_files.sh` (might need to modify if HDFS system being used is accessed locally, not by ssh)
       * With the appropriate arguments, copies the sampled captures from the HDFS system to the local one
    * `collect_all_keyword_contexts_from_sampled_captures.py`
       * These contexts can then be manually inspected for false-match phrases to add to `../all_religious_words.txt` using #
