@@ -11,6 +11,7 @@ __pycache__/
 get_cooccurrence_words.pig
 script_output/
 misc_files/
+stanford-corenlp*/
 
 # C extensions
 *.so

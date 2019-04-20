@@ -12,7 +12,7 @@
 #
 # Reserved phrases (also case-insensitive):
 #     anything that includes ```````` or starts/ends with `
-#     anything containing *
+#     (DEPRECATED) anything containing *
 #        * signifies "here is a string that is allowed to come after"
 #        ** signifies "here is a string that is allowed to come before"
 #        example:   un**ironic*ally
@@ -573,6 +573,7 @@ sect
 sectarian
 sectarianism
 sects
+seminar
 seminarian
 seminaries
 seminary
