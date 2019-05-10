@@ -1,0 +1,36 @@
+House Democrats:	
+bishop, sanford dixon, jr.  1947-   representative  democrat    ga  103
+bishop, timothy h.  1950-   representative  democrat    ny  108
+bishop, william darius  1827-1904   representative  democrat    ct  35
+church, denver samuel   1862-1952   representative  democrat    ca  63
+lord, frederick william 1800-1860   representative  democrat    ny  30
+lord, scott 1820-1885   representative  democrat    ny  44
+moses, charles leavell  1856-1910   representative  democrat    ga  52
+pastor, ed  1943-   representative  democrat    az  102
+priest, james percy 1900-1956   representative  democrat    tn  77
+temple, william 1814-1863   representative  democrat    de  38
+
+Senate Democrats:
+bible, alan harvey  1909-1988   senator democrat    nv  83
+church, frank forrester 1924-1984   senator democrat    id  85
+moses, john 1885-1945   senator democrat    nd  79
+pope, james pinckney    1884-1966   senator democrat    id  73
+
+House Republicans:
+bishop, cecil william (runt)    1890-1971   representative  republican  il  77
+bishop, michael dean    1967-   representative  republican  mi  114
+bishop, phanuel 1739-1812   representative  republican  ma  6
+bishop, robert (rob)    1951-   representative  republican  ut  108
+bishop, roswell peter   1843-1920   representative  republican  mi  54
+christie, gabriel   1755-1808   representative  republican  md  4
+church, marguerite stitt    1892-1990   representative  republican  il  82
+church, ralph edwin 1883-1950   representative  republican  il  74
+devine, samuel leeper   1915-1997   representative  republican  oh  86
+lord, bert  1869-1939   representative  republican  ny  74
+lord, henry william 1821-1891   representative  republican  mi  47
+pray, charles nelson    1868-1963   representative  republican  mt  60
+temple, henry wilson    1864-1955   representative  republican  pa  64
+zion, roger herschel    1921-   representative  republican  in  90
+
+Senate Republicans:
+moses, george higgins   1869-1944   senator republican  nh  65
