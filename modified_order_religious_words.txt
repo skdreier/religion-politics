@@ -1,0 +1,658 @@
+# Search Words
+#
+# Current list is union of chapp_relig.csv and liwc_relig.csv lists,
+# but the script will work if replaced with any list of at least two
+# words. Matches will be case-insensitive. Each phrase to search must
+# be contained in exactly one line.
+#
+# Words removed from the original list:
+#     all repeated words (though the script would have filtered them out anyway)
+#     angle (I think it might have been a typo of angel?)
+#     agonstic (changed to "agnostic" instead, seemed like typo)
+#
+# Reserved phrases (also case-insensitive):
+#     anything that includes ```````` or starts/ends with `
+#     (DEPRECATED) anything containing *
+#        * signifies "here is a string that is allowed to come after"
+#        ** signifies "here is a string that is allowed to come before"
+#        example:   un**ironic*ally
+#        Can also allow wild card matches before or after word, or both before
+#        and after (example: **ironic*)
+#     anything containing # (since # is used to denote the start of a list
+#        of phrases, and subsequent separations between phrases, that *aren't*
+#        supposed to be captured as a match for the expression)
+#        (these exceptions may NOT use * to denote multiple possible exceptions;
+#         all exceptions must be spelled out exactly)
+#        example:   un**ironic*ally  # unironic
+
+adventists
+adventist
+afterlife
+afterlives
+agape
+agnostics
+agnostic
+allah
+alla
+almighty
+altars
+altar
+amens
+amen
+amish
+angels    # angels in adoption
+angelically
+angelic
+angel		#angel in adoption
+anglicans
+anglican
+apostles
+apostle
+apostolic
+archabbeys
+archabbey
+archabbots
+archabbot
+archbishops
+archbishop
+archdioceses
+archdiocese
+arks
+ark		#anderson's ark and associates
+atonements
+atonement
+baptisms
+baptism
+baptists
+baptistries
+baptistry
+baptist
+baptized
+baptizes
+baptize
+basilicas
+basilica
+beatitudes
+beatitude
+beliefs
+belief
+believers  # strong believers
+believer		#strong believer
+believeth
+bibles
+bible		#sen. bible  #senator bible  #bible, alan  #bible, a.  #alan harvey bible  #alan h. bible  #alan bible
+biblically
+bishops
+bishop		#congressman bishop  #jeff bishop  #rob bishop  #sanford d. bishop  #mr. bishop  #bishop.0  #bishop.1  #bishop.2  #bishop.3  #bishop.4  #bishop.5  #bishop.6  #bishop.7  #bishop.8  #bishop.9  #rep. bishop  #representative bishop  #bishop(ut)  #bishop (ut)  #bishop street  #bishop, sanford  #sanford bishop  #sanford dixon bishop  #bishop, timothy  #timothy bishop  #timothy h. bishop  #bishop, william  #william bishop  #william darius bishop  #william d. bishop  #bishop, w.  #bishop, t.  #bishop, s.  #bishop, cecil  #bishop, c.  #cecil william bishop  #cecil w. bishop  #cecil bishop  #bishop, michael  #bishop, m.  #michael dean bishop  #michael d. bishop  #michael bishop  #bishop, phanuel  #bishop, p.  #phanuel bishop  #bishop, robert  #bishop, rob  #bishop, r.  #robert bishop  #bishop, roswell  #roswell peter bishop  #roswell p. bishop  #roswell bishop
+blessedly
+blessed
+blesses
+blessings
+blessing
+bless
+buddhas
+buddha
+calvinists
+calvinist
+canonized
+canonizes
+canonize
+cardinals
+cardinal		#cardinal point partners labarge
+cathedrals
+cathedral
+catholicism
+catholicos
+catholics
+catholic
+cbn
+chapels
+chapel		#chapel hill
+chaplains
+chaplain
+christ
+christain
+christened
+christening
+christens
+christen		#christen markovich
+christianity
+christians
+christian		#christian kennedy
+christmases
+christmas
+churchgoer
+churchgoers
+churchgoing
+churchyard
+churchyards
+churches
+church		#church st  #church street  #sen. church  #senator church  #rep. church  #representative church  #church, denver samuel  #denver samuel church  #denver s. church  #church, d.  #church, frank  #church, f.  #frank forrester church  #frank f. church  #frank church  #church, marguerite  #church, m.  #marguerite stitt church  #marguerite s. church  #marguerite church  #church, ralph  #church, r.  #ralph edwin church  #ralph e. church  #ralph church
+clergyman
+clergymen
+clergy
+commandments
+commandment
+communions
+communion
+confessed
+confesses
+confessing
+confess
+congregants
+congregant
+congregations
+congregation
+convents
+convent
+conversions
+conversion		#debt reduction and conversion
+coreligionists
+coreligionist
+corinthians
+covenants
+covenant
+creator		#job creator
+creeds
+creed
+crucified
+crucifies
+crucifixes
+crucifix
+crucifixions
+crucifixion
+crucifying
+crucify
+crucif
+crusaders
+crusader
+crusades
+crusade
+deacons
+deacon
+deities
+deity
+deit
+demonically
+demonic
+demons
+demon
+denominations
+denomination
+deuteronomy
+devils
+devil
+devined
+devines
+devine		#rep. devine  #representative devine  #devine, samuel  #devine, s.  #samuel leeper devine  #samuel l. devine  #samuel devine
+devoutly
+devout
+diocesan
+dioceses
+diocese
+dioses
+dios
+disciples
+disciple
+divinely
+divine
+doomed
+doom
+dooms
+easters
+easter
+ecclesiastes
+ecclesiastical
+ecclesiastic
+emmanual
+emmanuel
+ephesians
+episcopalians
+episcopalian
+episcopals
+episcopal
+epistles
+epistle
+espirituales
+espiritual
+eternities
+eternity
+eternit
+evangelicals
+evangelical
+evangelic
+evangelism
+evangelist
+evildoer
+evildoers
+evilly
+evil
+exaltations
+exaltation
+exalted
+exalteth
+exalts
+exalt
+exodus
+ezekiel
+faithfuls
+faithful        # party faithful
+faiths
+faith		#full faith and credit  #good faith effort  #good faith negotiations  #good-faith effort
+fellowship		#congressional fellowship
+flock
+forsaken
+forsake
+forsaking
+fundamentalism
+fundamentalists
+fundamentalist
+gabriel		#gabriel christie  #christie, gabriel
+galatians
+genesis
+gentiles
+gentile
+glorious
+glory		#former glory
+god-given
+goddesses
+goddess
+godgiven
+godless
+ungodly
+godly
+gods
+godsend
+godsends
+godspeed
+god
+gospels
+gospel
+graces
+grace		#congresswoman grace napolitano  #napolitano, grace  #rep grace
+hallelujahs
+hallelujah
+haloes
+halo
+hashanah
+hashana
+heavenly
+heavens
+heaven		#match made in heaven  #matches made in heaven
+hellish
+hells
+hell
+herod
+hindus
+hindu
+holier
+holiest
+holiness
+unholy
+holy
+hymns
+hymn
+imams
+imam
+immorally
+immoral
+immortal
+interreligions
+interreligion
+interreligious
+irreligion
+irreligious
+isaiah
+ishmael
+islam
+israelites
+israelite
+jesuits
+jesuit
+jesus
+jews
+jewish
+jew
+judah
+judas
+juda
+karmas
+karma
+kingdom		#united kingdom  #animal kingdom
+kippur
+korans
+koran
+kosher
+lazarus
+lenten
+lent
+leviathans
+leviathan
+leviticus
+lord		#rep. lord  #representative lord  #lord, frederick  #frederick lord  #frederick william lord  #frederick w. lord  #scott lord  #lord, scott  #lord, s.  #lord, f.  #lord, bert  #lord, b.  #bert lord  #lord, henry  #lord, h.  #henry william lord  #henry w. lord  #henry lord
+lucifer
+lutheran
+magi
+malachi
+martyrs
+martyr
+mass		#mass transit  #weight or mass  #d-mass  #r-mass  #weapon of mass destruction  #weapons of mass destruction  #mass communications  #mass killings  #mass mailings  #mass killing  #mass mailing
+mecca
+meditated
+meditates
+meditate
+mennonites
+mennonite
+mercifully
+merciful
+mercy
+messiah
+messianic
+methodists
+methodist
+micah
+ministered
+ministers  #ministers of foreign affairs  #prime ministers  #foreign ministers  #finance ministers
+ministership
+minister		#minister of foreign affairs  #prime minister  #foreign minister
+ministries
+ministry
+miracles
+miracle
+miraculous
+missionaries
+missionary
+mitzvahs
+mitzvah
+mohammad
+monasteries
+monastery
+monastry
+monks
+monk
+monotheism
+monotheistic
+monsignors
+monsignor
+morals
+morality
+moral
+mormons
+mormon
+moses		#sen. moses  #senator moses  #rep. moses  #representative moses  #moses, charles  #charles leavell moses  #charles moses  #charles l. moses  #moses, c.  #moses, john  #moses, j.  #john moses  #moses, george  #moses, g.  #george higgins moses  #george h. moses  #george moses
+mosques
+mosque
+muhammed
+mujahideen
+mujahid
+multisectarian
+muslims
+muslim
+navidades
+navidad
+nazarenes
+nazarene
+nehemiah
+nuns
+nun
+optimi
+orthodox
+pagans
+pagan		#pagan amum okiech
+papal
+paradises
+paradise
+parishes     # river parishes
+parishioners
+parishioner
+parish
+passover
+pastorates
+pastorate
+pastors
+pastor		#bill pastor  #rep. pastor  #representative pastor  #ed pastor  #pastor, ed  #pastor, e.
+penances
+penance
+pentecostal
+pentecosts
+pentecost
+pews
+pew
+pharaohs
+pharaoh
+pharoahs
+pharoah
+pieties
+pietists
+pietist
+piety
+piet
+pilgrims
+pilgrim
+pious
+pontiffs
+pontiff
+pontifically
+pontifical
+pontius
+popes
+pope		#sen. pope  #senator pope  #pope, james  #pope, j.  #james pinckney pope  #james p. pope  #james pope
+prayed
+prayerful
+prayerfully
+prayers
+prayer
+praying
+prays
+pray		#rep. pray  #representative pray  #pray, charles  #pray, c.  #charles nelson pray  #charles n. pray  #charles pray
+preached
+preachers
+preacher
+preaches
+preaching
+preach
+presbyterian
+priesthoods
+priesthood
+priests
+priest		#rep. priest  #representative priest  #priest, james  #james percy priest  #james p. priest  #james priest  #priest, j.
+prophecies
+prophecy
+prophec
+prophesized
+prophesizes
+prophesizing
+prophesied
+prophesies
+prophesiz
+prophesi
+prophesy
+prophes
+prophetesses
+prophetess
+prophets
+prophet
+proselytizers
+proselytizes
+proselytizing
+proselytized
+proselytizers
+proselytizer
+proselytization
+proselytising
+proselytisers
+proselytised
+proselytiser
+proselytises
+proselytise
+proselytism
+proselytize
+proselytes
+proselyte
+protestants
+protestant
+proverbs
+proverb
+psalmists
+psalmist
+psalms
+psalm
+pulpits
+pulpit
+purgatories
+purgatory
+purgator
+puritanical
+puritans
+puritan
+quakers
+quaker
+qurans
+quran
+rabbinical
+rabbis
+rabbi
+ramadan
+redeemers
+redeemer
+redemptions
+redemption
+religions
+religion
+religious
+relig
+repenting
+repented
+repents
+repent
+revelations
+revelation
+reverends
+reverend
+rites
+rite
+ritually
+ritual
+rosaries
+rosary
+rosar
+sabbaths
+sabbath
+sacredly
+sacredness
+sacred
+sacrifices
+sacrifice
+sacrilegious
+saintly
+saints
+saint
+salvations
+salvation
+samaritans
+samaritan
+sanctification
+sanctified
+sanctifies
+sanctifying
+sanctify
+sanctities
+sanctity
+sanctit
+sanctuaries		#marine sanctuaries  #wildlife sanctuaries
+sanctuary		#marine sanctuary  #wildlife sanctuary
+sanctuar
+satanic
+satan
+saviors
+savior
+saviours
+saviour
+scripturally
+scriptural
+scriptures
+scripture
+sectarian
+sectarianism
+sects
+sect
+seminarian
+seminaries
+seminary
+sermons
+sermon
+serpents
+serpent
+shia
+shiites
+shiite
+shrines
+shrine
+sikhs
+sikh
+sinfully
+sinful
+sinned
+sinners
+sinner
+sinning
+sinn
+sins
+sin
+souls
+soul
+spirituality
+spiritually
+spirituals
+spiritual
+spirits        #imported spirits
+spirit		#spirit of commerce  #spirit of bipartisan  #spirit of bipartisanship  #spirit of cooperation  #spirit of compromise  #bipartisan spirit
+steeples
+steeple
+sunnis
+sunni
+tabernacles
+tabernacle
+temples
+temple		#temple lake park  #rep. temple  #representative temple  #temple, pa  #temple city  #temple, william  #william temple  #temple, w.  #temple, henry  #temple, h.  #henry wilson temple  #henry w. temple  #henry temple
+testaments
+testament		#a testament to
+theocracies
+theocracy
+theocrac
+theocratically
+theocratic
+theologically
+theologians
+theological
+theologies
+theologian
+theology
+theolog
+torah
+vatican
+veils
+veil		#behind the veil
+vestments
+vestment
+vicars
+vicar
+vigils
+vigil
+worshippers
+worshipping
+worshipers
+worshiping
+worshipped
+worshipper
+worshiped
+worshiper
+worships
+worship
+wrath
+yiddish
+zaccheus
+zen
+zionism
+zionist
+zion		#rep. zion  #representative zion  #zion, roger  #zion, r.  #roger herschel zion  #roger h. zion  #roger zion

@@ -1,0 +1,657 @@
+# Search Words
+#
+# Current list is union of chapp_relig.csv and liwc_relig.csv lists,
+# but the script will work if replaced with any list of at least two
+# words. Matches will be case-insensitive. Each phrase to search must
+# be contained in exactly one line.
+#
+# Words removed from the original list:
+#     all repeated words (though the script would have filtered them out anyway)
+#     angle (I think it might have been a typo of angel?)
+#     agonstic (changed to "agnostic" instead, seemed like typo)
+#
+# Reserved phrases (also case-insensitive):
+#     anything that includes ```````` or starts/ends with `
+#     (DEPRECATED) anything containing *
+#        * signifies "here is a string that is allowed to come after"
+#        ** signifies "here is a string that is allowed to come before"
+#        example:   un**ironic*ally
+#        Can also allow wild card matches before or after word, or both before
+#        and after (example: **ironic*)
+#     anything containing # (since # is used to denote the start of a list
+#        of phrases, and subsequent separations between phrases, that *aren't*
+#        supposed to be captured as a match for the expression)
+#        (these exceptions may NOT use * to denote multiple possible exceptions;
+#         all exceptions must be spelled out exactly)
+#        example:   un**ironic*ally  # unironic
+
+adventist
+adventists
+afterlife
+afterlives
+agape
+agnostic
+agnostics
+alla
+allah
+almighty
+altar
+altars
+amen
+amens
+amish
+angel		#angel in adoption  #angel fire
+angelic
+angelically
+angels		#angels in adoption
+anglican
+anglicans
+apostle
+apostles
+apostolic
+archabbey
+archabbeys
+archabbot
+archabbots
+archbishop
+archbishops
+archdiocese
+archdioceses
+ark		#anderson's ark and associates
+arks
+atonement
+atonements
+baptism
+baptisms
+baptist
+baptistries
+baptistry
+baptists
+baptize
+baptized
+baptizes
+basilica
+basilicas
+beatitude
+beatitudes
+belief
+beliefs
+believer
+believers		#strong believers
+believeth
+bible		#sen. bible  #senator bible  #bible, alan  #bible, a.  #alan harvey bible  #alan h. bible  #alan bible  #mr. bible  #ms. bible  #mrs. bible  #miss bible  #mr bible  #ms bible  #mrs bible  #congressman bible  #congresswoman bible  #sens. bible  #senators bible  #congressmen bible  #congresswomen bible  #a. bible  #h. bible
+bibles
+biblical
+biblically
+bishop		#congressman bishop  #jeff bishop  #rob bishop  #sanford d. bishop  #mr. bishop  #bishop.0  #bishop.1  #bishop.2  #bishop.3  #bishop.4  #bishop.5  #bishop.6  #bishop.7  #bishop.8  #bishop.9  #rep. bishop  #representative bishop  #bishop(ut)  #bishop (ut)  #bishop street  #bishop, sanford  #sanford bishop  #sanford dixon bishop  #bishop, timothy  #timothy bishop  #timothy h. bishop  #bishop, william  #william bishop  #william darius bishop  #william d. bishop  #bishop, w.  #bishop, t.  #bishop, s.  #bishop, cecil  #bishop, c.  #cecil william bishop  #cecil w. bishop  #cecil bishop  #bishop, michael  #bishop, m.  #michael dean bishop  #michael d. bishop  #michael bishop  #bishop, phanuel  #bishop, p.  #phanuel bishop  #bishop, robert  #bishop, rob  #bishop, r.  #robert bishop  #bishop, roswell  #roswell peter bishop  #roswell p. bishop  #roswell bishop  #ms. bishop  #mrs. bishop  #miss bishop  #mr bishop  #ms bishop  #mrs bishop  #congresswoman bishop  #reps. bishop  #representatives bishop  #congressmen bishop  #congresswomen bishop  #d. bishop  #s. bishop  #h. bishop  #t. bishop  #w. bishop  #c. bishop  #m. bishop  #p. bishop  #r. bishop
+bishops
+bless
+blessed
+blessedly
+blesses
+blessing
+buddha
+buddhas
+calvinist
+calvinists
+canonize
+canonized
+canonizes
+cardinal		#cardinal point partners labarge
+cardinals
+cathedral		#cathedral square
+cathedrals
+catholic
+catholicism
+catholicos
+catholics
+cbn
+chapel		#chapel hill
+chapels
+chaplain		#mr. chaplain  #ms. chaplain  #mrs. chaplain  #miss chaplain  #mr chaplain  #ms chaplain  #mrs chaplain  #congressman chaplain  #congresswoman chaplain
+chaplains
+christ
+christain
+christen		#christen markovich
+christened
+christening
+christens
+christian		#christian kennedy  #mr. christian  #mr christian  #congressman christian  #congresswoman christian
+christianity
+christians
+christmas
+christmases
+church		#church st  #church street  #sen. church  #senator church  #rep. church  #representative church  #church, denver samuel  #denver samuel church  #denver s. church  #church, d.  #church, frank  #church, f.  #frank forrester church  #frank f. church  #frank church  #church, marguerite  #church, m.  #marguerite stitt church  #marguerite s. church  #marguerite church  #church, ralph  #church, r.  #ralph edwin church  #ralph e. church  #ralph church  #mr. church  #ms. church  #mrs. church  #miss church  #mr church  #mrs church  #ms church  #congressman church  #congresswoman church  #sens. church  #senators church  #congressmen church  #congresswomen church  #reps. church  #representatives church  #s. church  #d. church  #f. church  #m. church  #r. church  #e. church
+churches
+churchgoer
+churchgoers
+churchgoing
+churchyard
+churchyards
+clergy
+clergyman
+clergymen
+commandment
+commandments
+communion
+communions
+confess
+confessed		#confessed to the crime
+confesses
+confessing
+congregant
+congregants
+congregation
+congregations
+convent
+convents
+conversion		#debt reduction and conversion  #contract conversion
+conversions		#conversions of traditional iras to
+coreligionist
+coreligionists
+corinthians
+covenant
+covenants
+creator		#job creator
+creed
+creeds
+crucif
+crucified
+crucifies
+crucifix
+crucifixes
+crucifixion
+crucifixions
+crucify
+crucifying
+crusade
+crusader		#mr. crusader  #mr crusader  #congressman crusader  #congresswoman crusader
+crusaders
+crusades
+deacon		#mr. deacon  #mr deacon  #congressman deacon  #congresswoman deacon
+deacons
+deit
+deities
+deity
+demon
+demonic
+demonically
+demons
+denomination
+denominations
+deuteronomy
+devil
+devils
+devine		#rep. devine  #representative devine  #devine, samuel  #devine, s.  #samuel leeper devine  #samuel l. devine  #samuel devine  #mr. devine  #ms. devine  #mrs. devine  #miss devine  #mr devine  #mrs devine  #ms devine  #congressman devine  #congresswoman devine  #reps. devine  #representatives devine  #congressmen devine  #congresswomen devine  #s. devine  #l. devine
+devined
+devines
+devout
+devoutly
+diocesan
+diocese
+dioceses
+dios
+dioses
+disciple
+disciples
+divine
+divinely
+doom
+doomed
+dooms
+easter
+easters
+ecclesiastes
+ecclesiastic
+ecclesiastical
+emmanual
+emmanuel
+ephesians
+episcopal
+episcopalian
+episcopalians
+episcopals
+epistle
+epistles
+espiritual
+espirituales
+eternit
+eternities
+eternity
+evangelic
+evangelical
+evangelicals
+evangelism
+evangelist
+evil
+evildoer
+evildoers
+evilly
+exalt
+exaltation
+exaltations
+exalted
+exalteth
+exalts
+exodus
+ezekiel
+faith		#full faith and credit  #good faith effort  #good faith negotiations  #good-faith effort
+faithful		#party faithful
+faithfuls
+faiths
+fellowship		#congressional fellowship
+flock
+forsake
+forsaken
+forsaking
+fundamentalism
+fundamentalist
+fundamentalists
+gabriel		#gabriel christie  #christie, gabriel  #mr. gabriel  #mr gabriel  #san gabriel  #congressman gabriel  #congresswoman gabriel
+galatians
+genesis
+gentile
+gentiles
+glorious
+glory		#former glory
+god
+god-given
+goddess
+goddesses
+godgiven
+godless
+godly
+gods
+godsend
+godsends
+godspeed
+gospel
+gospels
+grace		#congresswoman grace napolitano  #napolitano, grace  #rep grace  #rep. grace  #representative grace  #grace napolitano  #ms. grace  #mrs. grace  #miss grace  #mr. grace  #mr grace  #mrs grace  #ms grace  #congresswoman grace
+graces
+hallelujah
+hallelujahs
+halo
+haloes
+hashana
+hashanah
+heaven		#match made in heaven  #matches made in heaven
+heavenly
+heavens
+hell
+hellish
+hells
+herod
+hindu
+hindus
+holier
+holiest
+holiness
+holy
+hymn
+hymns
+imam
+imams
+immoral
+immorally
+immortal
+interreligion
+interreligions
+interreligious
+irreligion
+irreligious
+isaiah
+ishmael
+islam		#mr. islam  #mr islam
+israelite
+israelites
+jesuit
+jesuits
+jesus
+jew
+jewish
+jews
+juda
+judah
+judas
+karma
+karmas
+kingdom		#united kingdom  #animal kingdom  #kingdom of bhutan  #kingdom of thailand  #kingdom of bahrain  #kingdom of belgium  #kingdom of brunei  #kingdom of cambodia  #kingdom of denmark  #kingdom of japan  #kingdom of jordan  #kingdom of kuwait  #kingdom of lesotho  #kingdom of liechtenstein  #kingdom of luxembourg  #kingdom of malaysia  #kingdom of monaco  #kingdom of morocco  #kingdom of netherlands  #kingdom of norway  #kingdom of oman  #kingdom of qatar  #kingdom of samoa  #kingdom of saudi arabia  #kingdom of spain  #kingdom of swaziland  #kingdom of sweden  #kingdom of tonga  #kingdom of england  #kingdom of scotland  #kingdom of wales
+kippur
+koran
+korans
+kosher
+lazarus
+lent
+lenten
+leviathan
+leviathans
+leviticus
+lord		#rep. lord  #representative lord  #lord, frederick  #frederick lord  #frederick william lord  #frederick w. lord  #scott lord  #lord, scott  #lord, s.  #lord, f.  #lord, bert  #lord, b.  #bert lord  #lord, henry  #lord, h.  #henry william lord  #henry w. lord  #henry lord  #mr. lord  #ms. lord  #mrs. lord  #miss lord  #congressman lord  #congresswoman lord  #reps. lord  #representatives lord  #congressmen lord  #congresswomen lord  #f. lord  #w. lord  #s. lord  #b. lord  #h. lord
+lucifer
+lutheran
+magi
+malachi
+martyr
+martyrs
+mass		#mass transit  #weight or mass  #d-mass  #r-mass  #weapon of mass destruction  #weapons of mass destruction  #mass communications  #mass killings  #mass mailings  #mass killing  #mass mailing
+mecca
+meditate
+meditated
+meditates
+mennonite
+mennonites
+merciful
+mercifully
+mercy
+messiah
+messianic
+methodist
+methodists
+micah
+minister		#minister of foreign affairs  #prime minister  #foreign minister
+ministered
+ministers		#ministers of foreign affairs  #prime ministers  #foreign ministers  #finance ministers
+ministership
+ministries
+ministry
+miracle
+miracles
+miraculous
+missionaries
+missionary
+mitzvah
+mitzvahs
+mohammad		#mr. mohammad  #ms. mohammad  #mrs. mohammad  #miss mohammad  #mr mohammad  #mrs mohammad  #ms mohammad  #congressman mohammad  #congresswoman mohammad
+monasteries
+monastery
+monastry
+monk
+monks
+monotheism
+monotheistic
+monsignor
+monsignors
+moral
+morality
+morals
+mormon
+mormons
+moses		#sen. moses  #senator moses  #rep. moses  #representative moses  #moses, charles  #charles leavell moses  #charles moses  #charles l. moses  #moses, c.  #moses, john  #moses, j.  #john moses  #moses, george  #moses, g.  #george higgins moses  #george h. moses  #george moses  #mr. moses  #ms. moses  #mrs. moses  #miss moses  #mr moses  #mrs moses  #ms moses  #congressman moses  #congresswoman moses  #sens. moses  #senators moses  #congressmen moses  #congresswomen moses  #reps. moses  #representatives moses  #c. moses  #l. moses  #j. moses  #g. moses  #h. moses
+mosque
+mosques
+muhammed
+mujahid
+mujahideen
+multisectarian
+muslim
+muslims
+navidad
+navidades
+nazarene
+nazarenes
+nehemiah
+nun
+nuns
+optimi
+orthodox
+pagan		#pagan amum okiech
+pagans
+papal
+paradise
+paradises
+parish		#parish, la  #parish, louisiana  #mr. parish  #ms. parish  #mrs. parish  #miss parish  #mr parish  #ms parish  #mrs parish  #congressman parish  #congresswoman parish
+parishes		#river parishes
+parishioner
+parishioners
+passover
+pastor		#bill pastor  #rep. pastor  #representative pastor  #ed pastor  #pastor, ed  #pastor, e.  #mr. pastor  #ms. pastor  #mrs. pastor  #miss pastor  #mr pastor  #ms pastor  #mrs pastor  #congressman pastor  #congresswoman pastor  #reps. pastor  #representatives pastor  #congressmen pastor  #congresswomen pastor  #e. pastor
+pastorate
+pastorates
+pastors
+penance
+penances
+pentecost
+pentecostal
+pentecosts
+pew
+pews
+pharaoh
+pharaohs
+pharoah
+pharoahs
+piet
+pieties
+pietist
+pietists
+piety
+pilgrim
+pilgrims
+pious
+pontiff
+pontiffs
+pontifical
+pontifically
+pontius
+pope		#sen. pope  #senator pope  #pope, james  #pope, j.  #james pinckney pope  #james p. pope  #james pope  #mr. pope  #ms. pope  #mrs. pope  #miss pope  #mr pope  #ms pope  #mrs pope  #congressman pope  #congresswoman pope  #sens. pope  #senators pope  #congressmen pope  #congresswomen pope  #j. pope  #p. pope
+popes
+pray		#rep. pray  #representative pray  #pray, charles  #pray, c.  #charles nelson pray  #charles n. pray  #charles pray  #mr. pray  #ms. pray  #mrs. pray  #miss pray  #mr pray  #ms pray  #mrs pray  #congressman pray  #congresswoman pray  #reps. pray  #representatives pray  #congressmen pray  #congresswomen pray  #c. pray  #n. pray
+prayed
+prayer
+prayerful
+prayerfully
+prayers
+praying
+prays
+preach
+preached
+preacher
+preachers
+preaches
+preaching
+presbyterian
+priest		#rep. priest  #representative priest  #priest, james  #james percy priest  #james p. priest  #james priest  #priest, j.  #mr. priest  #ms. priest  #mrs. priest  #miss priest  #mr priest  #mrs priest  #ms priest  #congressman priest  #congresswoman priest  #reps. priest  #representatives priest  #congressmen priest  #congresswomen priest  #j. priest  #p. priest
+priesthood
+priesthoods
+priests
+prophec
+prophecies
+prophecy
+prophes
+prophesi
+prophesied
+prophesies
+prophesiz
+prophesized
+prophesizes
+prophesizing
+prophesy
+prophet
+prophetess
+prophetesses
+prophets
+proselyte
+proselytes
+proselytise
+proselytised
+proselytiser
+proselytisers
+proselytises
+proselytising
+proselytism
+proselytization
+proselytize
+proselytized
+proselytizer
+proselytizers
+proselytizes
+proselytizing
+protestant
+protestants
+proverb
+proverbs
+psalm
+psalmist
+psalmists
+psalms
+pulpit
+pulpits
+purgator
+purgatories
+purgatory
+puritan
+puritanical
+puritans
+quaker
+quakers
+quran
+qurans
+rabbi
+rabbinical
+rabbis
+ramadan
+redeemer
+redeemers
+redemption
+redemptions
+relig
+religion
+religions
+religious
+repent
+repented
+repenting
+repents
+revelation
+revelations		#revelations that the torture  #revelations about republicans  #new revelations
+reverend
+reverends
+rite
+rites
+ritual
+ritually
+rosar
+rosaries
+rosary
+sabbath
+sabbaths
+sacred
+sacredly
+sacredness
+sacrifice
+sacrifices
+sacrilegious
+saint		#saint paul, minnesota  #saint paul, mn  #saint cloud, minnesota  #saint cloud, mn  #saint louis, illinois  #saint louis, il  #saint louis, missouri  #saint louis, mo
+saintly
+saints
+salvation
+salvations
+samaritan
+samaritans
+sanctification
+sanctified
+sanctifies
+sanctify
+sanctifying
+sanctit
+sanctities
+sanctity
+sanctuar
+sanctuaries		#marine sanctuaries  #wildlife sanctuaries
+sanctuary		#marine sanctuary  #wildlife sanctuary  #sanctuary city  #sanctuary cities
+satan
+satanic
+savior
+saviors
+saviour
+saviours
+scriptural
+scripturally
+scripture
+scriptures
+sect
+sectarian
+sectarianism
+sects
+seminarian
+seminaries
+seminary
+sermon
+sermons
+serpent
+serpents
+shia
+shiite
+shiites
+shrine
+shrines
+sikh
+sikhs
+sin		#sin sobrecargar  #sin hogar  #sin participantes
+sinful
+sinfully
+sinn
+sinned
+sinner
+sinners
+sinning
+sins
+soul
+souls
+spirit		#spirit of commerce  #spirit of bipartisan  #spirit of bipartisanship  #spirit of cooperation  #spirit of compromise  #bipartisan spirit
+spirits		#imported spirits
+spiritual
+spirituality
+spiritually
+spirituals
+steeple
+steeples
+sunni
+sunnis
+tabernacle
+tabernacles
+temple		#temple lake park  #rep. temple  #representative temple  #temple, pa  #temple city  #temple, william  #william temple  #temple, w.  #temple, henry  #temple, h.  #henry wilson temple  #henry w. temple  #henry temple  #mr. temple  #ms. temple  #mrs. temple  #miss temple  #mr temple  #ms temple  #mrs temple  #temple st  #temple street  #congressman temple  #congresswoman temple  #reps. temple  #representatives temple  #congressmen temple  #congresswomen temple  #w. temple  #h. temple
+temples
+testament		#a testament to
+testaments
+theocrac
+theocracies
+theocracy
+theocratic
+theocratically
+theolog
+theologian
+theologians
+theological
+theologically
+theologies
+theology
+torah
+ungodly
+unholy
+vatican
+veil		#behind the veil
+veils
+vestment
+vestments
+vicar
+vicars
+vigil
+vigils
+worship
+worshiped
+worshiper
+worshipers
+worshiping
+worshipped
+worshipper
+worshippers
+worshipping
+worships
+wrath
+yiddish
+zaccheus
+zen
+zion		#rep. zion  #representative zion  #zion, roger  #zion, r.  #roger herschel zion  #roger h. zion  #roger zion  #mr. zion  #ms. zion  #mrs. zion  #miss zion  #mr zion  #ms zion  #mrs zion  #congressman zion  #congresswoman zion  #reps. zion  #representatives zion  #congressmen zion  #congresswomen zion  #r. zion  #h. zion
+zionism
+zionist

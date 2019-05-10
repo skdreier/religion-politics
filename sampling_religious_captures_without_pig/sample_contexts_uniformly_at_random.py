@@ -9,8 +9,8 @@ from filter_contexts import get_inds_of_actual_matches_in_text
 how_many_to_sample = 200
 num_chars_around_match_to_pull = 50
 num_words_around_match_to_pull = 10  # deprecated
-output_filename = 'sampled_religious_word_contexts.txt'
-dir_of_all_matches = 'all_religious_word_contexts/'
+output_filename = 'sampled_religious_word_contexts_4-22.txt'
+dir_of_all_matches = 'all_religious_word_contexts_gapfixed/'
 keyword_file = 'all_religious_words.txt'
 
 

@@ -1,14 +1,17 @@
 import sys
 import os
 import re
-from glob import glob
+from glob import glob, iglob
 from tqdm import tqdm
 import multiprocessing
+import datetime
 
 
 context_window_size = 30  # number of words from either side of a religious match to pull
-num_snippets_per_file = 500
-total_threads_to_use = 7
+num_snippets_per_file = 50000
+total_threads_to_use = 10
+total_num_fnames_processed_per_thread = None
+report_every_x_percent_of_files_done = 1
 
 
 def get_list_of_keywords_and_exceptions(fname_of_keywords):
@@ -19,7 +22,13 @@ def get_list_of_keywords_and_exceptions(fname_of_keywords):
                 continue
             else:
                 keyword = line.strip()
-                keyword = keyword.split('#')
+                keyword = list(re.split(r'(?<!\\)#', keyword))
+                for j in range(len(keyword)):
+                    actual_exception = ''
+                    for letter in keyword[j]:
+                        if letter != '\\':
+                            actual_exception += letter
+                    keyword[j] = actual_exception
                 exceptions = [word.strip() for word in keyword[1:]]
                 keyword = keyword[0].strip()
                 keywords.append((keyword, exceptions))
@@ -165,7 +174,7 @@ def get_end_ind_plus_1_of_context(doc, end_ind_plus_1_of_match, cws, stop_if_get
     cur_ind = end_ind_plus_1_of_match
     if cur_ind == len(doc):
         return len(doc)
-    while cur_ind < len(doc) and num_complete_words_captured_so_far < cws:
+    while cur_ind < len(doc) and num_complete_words_captured_so_far <= cws:
         cur_ind = get_endp1_ind_of_next_word_to_right(doc, cur_ind)
         if stop_if_gets_to is not None and cur_ind >= stop_if_gets_to:
             return -1
@@ -218,35 +227,59 @@ def get_list_of_distinct_religious_snippets_in_doc(doc, cws, list_of_actual_matc
                 tups_of_matchkeywordlist_contextstart_contextendplus1]
 
 
+def get_tab_separated_fields(doc):
+    doc_fields = doc.split('\t')
+    url = doc_fields[0]
+    surt = doc_fields[1]
+    checksum = doc_fields[2]
+    date = doc_fields[3]
+    doc_text = doc_fields[-1]
+    doc_text = doc_text.lower()
+    return url, surt, checksum, date, doc_text
+
+
+def get_chr1_separated_fields(doc):
+    doc_fields = doc.split(chr(1))
+    url = doc_fields[0]
+    surt = doc_fields[1]
+    checksum = doc_fields[2]
+    date = doc_fields[3]
+    doc_text = doc_fields[-1]
+    doc_text = doc_text.lower()
+    return url, surt, checksum, date, doc_text
+
+
 def process_files_on_thread(list_of_files):
     if len(list_of_files) == 0:
         return
     thread_ind = list_of_files[0]
-    thread_ind = int(thread_ind[thread_ind.rfind('-') + 1: thread_ind.rfind('.')])
+    end_of_thread_ind_str = thread_ind.rfind('.')
+    if end_of_thread_ind_str < 0:
+        end_of_thread_ind_str = len(thread_ind)
+    thread_ind = int(thread_ind[thread_ind.rfind('-') + 1: end_of_thread_ind_str])
 
     num_snippets_in_cur_file = 0
     cur_file_starting_ind = 1
     cur_file_ending_ind_inclusive = num_snippets_per_file
     cur_open_file = open(output_religious_contexts_directory + str(thread_ind) + '_'+ str(cur_file_starting_ind) +
                          '-' + str(cur_file_ending_ind_inclusive) + '.txt', 'w')
-    for doc_fname in list_of_files:
+    step_size = total_num_fnames_processed_per_thread / (100 / report_every_x_percent_of_files_done)
+    next_marker = step_size
+    for file_ind in range(len(list_of_files)):
+        doc_fname = list_of_files[file_ind]
         with open(doc_fname, 'r') as f:
             for doc_line in f:
                 doc = doc_line.strip()
                 if doc == '':
                     continue
-                doc_fields = doc.split('\t')
-                url = doc_fields[0]
-                surt = doc_fields[1]
-                checksum = doc_fields[2]
-                date = doc_fields[3]
-                doc_text = doc_fields[-1]
-                doc_text = doc_text.lower()
-                matchwords_matchsnippets = get_list_of_distinct_religious_snippets_in_doc(doc_text,
-                                                                                          context_window_size)
+                url, surt, checksum, date, doc_text = get_chr1_separated_fields(doc)  # get_tab_separated_fields(doc)
 
-                for match_tup in matchwords_matchsnippets:
-                    cur_open_file.write('\t'.join([match_tup[0], match_tup[1],
+                matchwords_matchsnippets_nummatches = \
+                    get_list_of_distinct_religious_snippets_in_doc(doc_text, context_window_size,
+                                                                   include_num_matches_in_each_snippet=True)
+
+                for match_tup in matchwords_matchsnippets_nummatches:
+                    cur_open_file.write('\t'.join([match_tup[0], str(match_tup[2]), match_tup[1],
                                                    url, surt, checksum, date]) + '\n')
                     num_snippets_in_cur_file += 1
                     if num_snippets_in_cur_file == num_snippets_per_file:
@@ -257,7 +290,11 @@ def process_files_on_thread(list_of_files):
                                              str(cur_file_starting_ind) + '-' + str(cur_file_ending_ind_inclusive) +
                                              '.txt', 'w')
                         num_snippets_in_cur_file = 0
-        print("Done processing " + doc_fname)
+        #print("Done processing " + doc_fname + " at " + str(datetime.datetime.now()))
+        if file_ind + 1 >= next_marker:
+            print(str(int(100 * next_marker / total_num_fnames_processed_per_thread)) +
+                  '% done with files on thread ' + str(thread_ind) + ' at ' + str(datetime.datetime.now()))
+            next_marker += step_size
 
     # now rename last file to be accurate about its end ind
     cur_open_file.close()
@@ -275,17 +312,32 @@ def process_files_on_thread(list_of_files):
 
 
 def try_pool(num_threads):
-    all_doc_filenames = sorted(list(glob(all_religious_docs_directory + '*')))
+    #all_doc_filenames = sorted(list(glob(all_religious_docs_directory + '*')))
+    all_doc_filenames = sorted(list(iglob(all_religious_docs_directory + '**/part-*', recursive=True)))
+    global total_num_fnames_processed_per_thread
+    total_num_fnames_processed_per_thread = len(all_doc_filenames) / num_threads
+
     lists_of_filenames = []
     for i in range(num_threads):
         lists_of_filenames.append([])
     for i in range(len(all_doc_filenames)):
         lists_of_filenames[i % num_threads].append(all_doc_filenames[i])
+    for list_of_filenames in lists_of_filenames:
+        initial_len_list = len(list_of_filenames)
+        list_of_filenames.reverse()  # big files first to help estimate worst-case scenario for time
+        list_of_filenames.insert(0, list_of_filenames[-1])
+        assert list_of_filenames[0] == list_of_filenames[-1]
+        del list_of_filenames[-1]
+        assert initial_len_list == len(list_of_filenames)
     try:
+        print("Total num doc filenames: " + str(len(all_doc_filenames)) + " (" + str(datetime.datetime.now()) + ")")
         pool = multiprocessing.Pool(processes=num_threads)
         list_of_wordcount_dicts = pool.map(process_files_on_thread, lists_of_filenames)
-    except:
+    except Exception as e:
+
         pool.close()
+        print("Issue with pool: ")
+        print(e)
         return False
     pool.close()
     return list_of_wordcount_dicts

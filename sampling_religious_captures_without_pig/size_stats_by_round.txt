@@ -1,0 +1,42 @@
+With no exceptions:
+    - Total num matches: 94055378
+    - Total num snippets: 60280247
+    - Total num page captures: 30832902
+
+With only round 1 exceptions:
+    - Total num matches: 79045119
+    - Total num snippets: 50341485
+    - Total num page captures: 25730256
+
+With round 1 and round 2 exceptions:
+    - Total num matches: 76448977
+    - Total num snippets: 48368009
+    - Total num page captures: 24849435
+
+With round 1, round 2, and round 3 exceptions (not "round 3 prev" exceptions, which filter out less):
+    - Total num matches: 73776363
+    - Total num snippets: 46097895
+    - Total num page captures: 23697655
+
+--------------------------------------------------------------------------
+
+As counted from the earlier script that started filtering after pig had already filtered down to a set
+of religious page captures (can ignore this, though; I think that when collecting the set of page captures
+via pig, I might have collapsed a couple of the "id" fields (like checksum, surt, date) or something in a
+way that slightly decreased the number of returned captures. So the numbers above the dividing line are
+the actual ones to report):
+
+With only round 1 exceptions:
+    - Total num non-seminar matches: 78,101,934 = 78236626 - 134692
+    - Total num snippets that are still valid even without seminar: 49767987
+    - Total num page captures that are still valid even without seminar: 25158610
+
+With round 1 and round 2 exceptions ("seminar" had been filtered out by here):
+    - Total num matches: 75511053
+    - Total num snippets: 47794599
+    - Total num page captures: 24284617
+
+With round 1, round 2, and "round 3 prev" exceptions:
+    - Total num matches: 72973102
+    - Total num snippets: 45609991
+    - Total num page captures: 23178409
