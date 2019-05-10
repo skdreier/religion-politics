@@ -40,11 +40,11 @@ def load_name_maps():
     parties = ['dem', 'rep']
     sites = ['senate', 'house']
 
-    print('loading house')
+    logging.info('Loading house data')
     with open('party/house_people_modified.json', 'r') as f:
         house = json.load(f)
 
-    print('loading senate')
+    logging.info('Loading senate data')
     with open('party/senate_people_modified.json', 'r') as f:
         senate = json.load(f)
 
